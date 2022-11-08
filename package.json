@@ -19,11 +19,6 @@
     "start": "craco start",
     "build": "craco build"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -37,10 +32,6 @@
     ]
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.42.1",
-    "@typescript-eslint/parser": "^5.42.1",
-    "eslint": "^8.27.0",
-    "eslint-plugin-react": "^7.31.10",
     "prettier": "^2.7.1"
   }
 }
