@@ -1,5 +1,5 @@
 import { Grid } from '@mantine/core';
-import styles from './app.module.css';
+import styles from './styles.module.css';
 import { Sidebar } from '@/components/Sidebar';
 
 export function LeadGrid() {
