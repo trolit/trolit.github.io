@@ -10,9 +10,10 @@ import {
   Blockquote,
 } from '@mantine/core';
 
+import { ThemeSwitcher } from '@/components/common/ThemeSwitcher';
 import styles from './styles.module.css';
 import { avatarSrc } from '@/assets/data/common';
-import { name, badges, links } from '@/assets/data/profile';
+import { name, badges, links, title } from '@/assets/data/profile';
 
 export function Sidebar() {
   return (
@@ -27,17 +28,21 @@ export function Sidebar() {
       className={styles.sidebar}
     >
       <Stack justify='center' className={styles.stack}>
+        <ThemeSwitcher />
+
         <Avatar src={avatarSrc} size={120} radius={120} mx='auto' />
 
         <Divider my='sm' variant='dashed' />
 
-        <Text align='center' size='lg' weight={500} mt='md'>
+        <Text align='center' size='lg' weight={500}>
           {name}
         </Text>
 
-        <div className={styles.sub}>
-          <Kbd>Software Developer</Kbd>
-        </div>
+        {title && (
+          <div className={styles.title}>
+            <Kbd>{title}</Kbd>
+          </div>
+        )}
 
         <div className={styles.badges}>
           {badges.map(({ text }, index) => (

@@ -1,23 +1,44 @@
-import { Container, MantineProvider, Center } from '@mantine/core';
+import {
+  Container,
+  MantineProvider,
+  Center,
+  ColorSchemeProvider,
+  ColorScheme,
+} from '@mantine/core';
+import { useState } from 'react';
 
 import { LeadGrid } from './Grid';
 import styles from './styles.module.css';
 import { backgroundSrc } from '@/assets/data/common';
 
 export default function App() {
+  const [colorScheme, setColorScheme] = useState<ColorScheme>('light');
+
+  const toggleColorScheme = (value?: ColorScheme) =>
+    setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
+
   return (
-    <MantineProvider withGlobalStyles withNormalizeCSS>
-      <Container
-        fluid
-        className={styles.container}
-        style={{
-          backgroundImage: `url(${backgroundSrc})`,
-        }}
+    <ColorSchemeProvider
+      colorScheme={colorScheme}
+      toggleColorScheme={toggleColorScheme}
+    >
+      <MantineProvider
+        theme={{ colorScheme }}
+        withGlobalStyles
+        withNormalizeCSS
       >
-        <Center className={styles.container}>
-          <LeadGrid />
-        </Center>
-      </Container>
-    </MantineProvider>
+        <Container
+          fluid
+          className={styles.container}
+          style={{
+            backgroundImage: `url(${backgroundSrc})`,
+          }}
+        >
+          <Center className={styles.container}>
+            <LeadGrid />
+          </Center>
+        </Container>
+      </MantineProvider>
+    </ColorSchemeProvider>
   );
 }
