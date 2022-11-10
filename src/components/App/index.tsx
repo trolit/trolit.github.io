@@ -1,7 +1,7 @@
 import { Container, MantineProvider, Center } from '@mantine/core';
 
 import { LeadGrid } from './Grid';
-import styles from './app.module.css';
+import styles from './styles.module.css';
 import { backgroundSrc } from '@/assets/data/common';
 
 export default function App() {
