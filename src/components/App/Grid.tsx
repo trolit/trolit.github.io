@@ -5,7 +5,7 @@ import { Sidebar } from '@/components/Sidebar';
 export function LeadGrid() {
   return (
     <Grid grow className={styles.grid}>
-      <Grid.Col span={4} className={styles.sidebar}>
+      <Grid.Col span={4}>
         <Sidebar />
       </Grid.Col>
 
