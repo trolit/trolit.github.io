@@ -1,16 +1,18 @@
 import {
-  Avatar,
-  Text,
-  Paper,
-  Blockquote,
-  Badge,
-  Stack,
-  Center,
   Kbd,
+  Text,
+  Badge,
+  Paper,
+  Stack,
+  Avatar,
   Divider,
+  ThemeIcon,
+  Blockquote,
 } from '@mantine/core';
-import { name, avatar, badges } from '@/assets/data/profile';
+
 import styles from './sidebar.module.css';
+import { avatarSrc } from '@/assets/data/common';
+import { name, badges, links } from '@/assets/data/profile';
 
 export function Sidebar() {
   return (
@@ -33,7 +35,9 @@ export function Sidebar() {
           {name}
         </Text>
 
-        <Kbd>Software Developer</Kbd>
+        <div className={styles.sub}>
+          <Kbd>Software Developer</Kbd>
+        </div>
 
         <div className={styles.badges}>
           {badges.map(({ text }, index) => (
@@ -43,9 +47,30 @@ export function Sidebar() {
           ))}
         </div>
 
-        <Blockquote cite='-Thomas Edison'>
-          I have not failed. I just found 10,000 ways that won't work.
-        </Blockquote>
+        <div>
+          <Blockquote cite='-Thomas Edison'>
+            I have not failed. I just found 10,000 ways that won't work.
+          </Blockquote>
+        </div>
+
+        <div className={styles.links}>
+          {links.map(({ icon, url }, index) => {
+            const LinkIcon = icon;
+
+            return (
+              <a key={index} href={url} target='_blank' rel='noreferrer'>
+                <ThemeIcon
+                  size='xl'
+                  radius='xs'
+                  variant='light'
+                  className={styles.link}
+                >
+                  <LinkIcon />
+                </ThemeIcon>
+              </a>
+            );
+          })}
+        </div>
       </Stack>
     </Paper>
   );
