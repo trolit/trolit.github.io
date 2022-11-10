@@ -25,7 +25,7 @@ export function Sidebar() {
       className={styles.sidebar}
     >
       <Stack justify='center' className={styles.stack}>
-        <Avatar src={avatar} size={120} radius={120} mx='auto' />
+        <Avatar src={avatarSrc} size={120} radius={120} mx='auto' />
 
         <Divider my='sm' variant='dashed' />
 
