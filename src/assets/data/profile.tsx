@@ -4,6 +4,8 @@ import { IconBrandGithub } from '@tabler/icons';
 
 export const name = 'p4w31 !d21k0w541';
 
+export const title = 'Software Developer';
+
 export const badges: IBadge[] = [
   { text: 'TypeScript' },
   { text: 'JavaScript', color: 'yellow' },
