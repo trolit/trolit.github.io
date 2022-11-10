@@ -10,7 +10,7 @@ import {
   Blockquote,
 } from '@mantine/core';
 
-import styles from './sidebar.module.css';
+import styles from './styles.module.css';
 import { avatarSrc } from '@/assets/data/common';
 import { name, badges, links } from '@/assets/data/profile';
 
