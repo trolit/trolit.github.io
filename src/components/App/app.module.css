@@ -5,11 +5,11 @@
 
 .container {
   height: 100vh;
+  overflow: hidden;
   background-size: cover;
   background-position: center;
 }
 
 .sidebar {
-  display: flex;
-  align-items: center;
+  border: 1px solid red;
 }
