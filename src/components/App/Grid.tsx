@@ -1,31 +1,20 @@
-import { Container, Grid, SimpleGrid, Skeleton, useMantineTheme } from '@mantine/core';
-
-const PRIMARY_COL_HEIGHT = 600;
+import { Grid } from '@mantine/core';
+import styles from './app.module.css';
 
 export function LeadGrid() {
-  const theme = useMantineTheme();
-  const SECONDARY_COL_HEIGHT = PRIMARY_COL_HEIGHT / 2 - theme.spacing.md / 2;
-
   return (
-    <Container my="md">
-      <SimpleGrid cols={2} spacing="md" breakpoints={[{ maxWidth: 'sm', cols: 1 }]}>
+    <Grid grow className={styles.grid}>
+      <Grid.Col span={12} sm={6}>
+        1
+      </Grid.Col>
 
-        <Skeleton height={PRIMARY_COL_HEIGHT} width="400px" radius="lg" animate={false} />
+      <Grid.Col span={6}>
+        <Grid>
+          <Grid.Col span={12}>2</Grid.Col>
 
-        <Grid gutter="md">
-          <Grid.Col>
-            <Skeleton height={SECONDARY_COL_HEIGHT} radius="md" animate={false} />
-          </Grid.Col>
-
-          <Grid.Col span={6}>
-            <Skeleton height={SECONDARY_COL_HEIGHT} radius="md" animate={false} />
-          </Grid.Col>
-
-          <Grid.Col span={6}>
-            <Skeleton height={SECONDARY_COL_HEIGHT} radius="md" animate={false} />
-          </Grid.Col>
+          <Grid.Col span={12}>3</Grid.Col>
         </Grid>
-      </SimpleGrid>
-    </Container>
+      </Grid.Col>
+    </Grid>
   );
 }
