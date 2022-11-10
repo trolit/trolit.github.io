@@ -12,15 +12,18 @@ export default function App() {
       <BackgroundImage
         src={require('@/assets/images/background.svg').default}
         radius='xs'
-        style={{ height: '100vh' }}
+        style={{ height: '100vh', width: '100vw' }}
       >
-        <Center
-          style={{ width: '100%', height: '100%', border: '1px solid red' }}
+        <Container
+          fluid
+          style={{ width: '100%', height: '100%', border: '1px solid blue' }}
         >
-          <Container>
+          <Center
+            style={{ width: '100%', height: '100%', border: '1px solid green' }}
+          >
             <LeadGrid />
-          </Container>
-        </Center>
+          </Center>
+        </Container>
       </BackgroundImage>
     </MantineProvider>
   );
