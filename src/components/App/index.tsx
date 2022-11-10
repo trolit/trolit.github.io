@@ -4,7 +4,9 @@ import {
   BackgroundImage,
   Center,
 } from '@mantine/core';
+
 import { LeadGrid } from './Grid';
+import styles from './app.module.css';
 
 export default function App() {
   return (
@@ -12,15 +14,10 @@ export default function App() {
       <BackgroundImage
         src={require('@/assets/images/background.svg').default}
         radius='xs'
-        style={{ height: '100vh', width: '100vw' }}
+        className={styles.background}
       >
-        <Container
-          fluid
-          style={{ width: '100%', height: '100%', border: '1px solid blue' }}
-        >
-          <Center
-            style={{ width: '100%', height: '100%', border: '1px solid green' }}
-          >
+        <Container fluid className={styles.container}>
+          <Center className={styles.container}>
             <LeadGrid />
           </Center>
         </Container>
