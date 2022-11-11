@@ -12,11 +12,8 @@
   justify-content: center;
 }
 
-.badges {
-  gap: 20px;
-  display: flex;
+.badgesGroup {
   margin: 10px 20px;
-  justify-content: center;
 }
 
 .links {
