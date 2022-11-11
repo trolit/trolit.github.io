@@ -1,5 +1,6 @@
 .sidebar {
   height: 100%;
+  opacity: 0.95;
 }
 
 .stack {
@@ -12,19 +13,11 @@
   justify-content: center;
 }
 
-.badges {
-  gap: 20px;
-  display: flex;
+.group {
   margin: 10px 20px;
-  justify-content: center;
-}
-
-.links {
-  gap: 20px;
-  display: flex;
-  justify-content: center;
 }
 
 .link:hover {
-  filter: grayscale(90%);
+  border: 2px dotted;
+  filter: grayscale(100%);
 }

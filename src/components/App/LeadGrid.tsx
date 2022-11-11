@@ -1,4 +1,5 @@
 import { Grid } from '@mantine/core';
+
 import styles from './styles.module.css';
 import { Sidebar } from '@/components/Sidebar';
 

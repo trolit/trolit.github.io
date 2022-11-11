@@ -8,8 +8,8 @@ export const title = 'Software Developer';
 
 export const badges: IBadge[] = [
   { text: 'TypeScript' },
-  { text: 'JavaScript', color: 'yellow' },
-  { text: 'C#', color: 'violet' },
+  { text: 'JavaScript' },
+  { text: 'C#' },
 ];
 
 export const links: ILink[] = [
