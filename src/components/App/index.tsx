@@ -9,7 +9,7 @@ import { useState } from 'react';
 
 import { LeadGrid } from './Grid';
 import styles from './styles.module.css';
-import { backgroundSrc } from '@/assets/data/common';
+import { backgroundSrc, primaryColor } from '@/assets/data/common';
 
 export default function App() {
   const [colorScheme, setColorScheme] = useState<ColorScheme>('light');
@@ -23,7 +23,7 @@ export default function App() {
       toggleColorScheme={toggleColorScheme}
     >
       <MantineProvider
-        theme={{ colorScheme }}
+        theme={{ colorScheme, primaryColor }}
         withGlobalStyles
         withNormalizeCSS
       >
