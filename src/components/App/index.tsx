@@ -1,9 +1,9 @@
 import {
-  Container,
-  MantineProvider,
   Center,
-  ColorSchemeProvider,
+  Container,
   ColorScheme,
+  MantineProvider,
+  ColorSchemeProvider,
 } from '@mantine/core';
 import { useState } from 'react';
 
