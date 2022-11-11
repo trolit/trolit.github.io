@@ -7,7 +7,7 @@ import {
 } from '@mantine/core';
 import { useState } from 'react';
 
-import { LeadGrid } from './Grid';
+import { LeadGrid } from './LeadGrid';
 import styles from './styles.module.css';
 import { backgroundSrc, primaryColor } from '@/assets/data/common';
 
