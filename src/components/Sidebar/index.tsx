@@ -19,16 +19,7 @@ import { name, badges, links, title } from '@/assets/data/profile';
 
 export function Sidebar() {
   return (
-    <Paper
-      radius='md'
-      withBorder
-      p='lg'
-      sx={(theme) => ({
-        backgroundColor:
-          theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.white,
-      })}
-      className={styles.sidebar}
-    >
+    <Paper p='lg' radius='md' withBorder className={styles.sidebar}>
       <Stack justify='center' className={styles.stack}>
         <ThemeSwitcher />
 
