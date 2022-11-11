@@ -12,16 +12,11 @@
   justify-content: center;
 }
 
-.badgesGroup {
+.group {
   margin: 10px 20px;
 }
 
-.links {
-  gap: 20px;
-  display: flex;
-  justify-content: center;
-}
-
 .link:hover {
-  filter: grayscale(90%);
+  border: 2px dotted;
+  filter: grayscale(100%);
 }

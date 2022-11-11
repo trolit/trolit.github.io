@@ -46,7 +46,7 @@ export function Sidebar() {
           </div>
         )}
 
-        <Group position='center' spacing='lg' className={styles.badgesGroup}>
+        <Group position='center' spacing='lg' className={styles.group}>
           {badges.map(({ text }, index) => (
             <Badge key={index} radius='xs'>
               {text}
@@ -58,7 +58,7 @@ export function Sidebar() {
           I have not failed. I just found 10,000 ways that won't work.
         </Blockquote>
 
-        <div className={styles.links}>
+        <Group position='center' spacing='lg' className={styles.group}>
           {links.map(({ icon, url }, index) => {
             const LinkIcon = icon;
 
@@ -75,7 +75,7 @@ export function Sidebar() {
               </a>
             );
           })}
-        </div>
+        </Group>
       </Stack>
     </Paper>
   );
