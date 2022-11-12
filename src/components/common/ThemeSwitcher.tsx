@@ -32,6 +32,7 @@ export function ThemeSwitcher() {
               </Center>
             ),
           },
+
           {
             value: 'dark',
             label: (
