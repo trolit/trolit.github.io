@@ -14,7 +14,14 @@ import {
 import styles from './styles.module.css';
 import { getColorByShade } from '@/helpers/getColorByShade';
 import { ThemeSwitcher } from '@/components/common/ThemeSwitcher';
-import { avatarSrc, name, badges, links, title } from '@/assets/data/profile';
+import {
+  name,
+  links,
+  quote,
+  title,
+  badges,
+  avatarSrc,
+} from '@/assets/data/profile';
 
 export function Profile() {
   return (
@@ -44,8 +51,8 @@ export function Profile() {
           ))}
         </Group>
 
-        <Blockquote cite='-Thomas Edison' color={getColorByShade('4')}>
-          I have not failed. I just found 10,000 ways that won't work.
+        <Blockquote cite={`-${quote.author}`} color={getColorByShade('4')}>
+          {quote.text}
         </Blockquote>
 
         <Group position='center' spacing='lg' className={styles.group}>
