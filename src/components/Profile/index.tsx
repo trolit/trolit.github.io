@@ -12,14 +12,13 @@ import {
 } from '@mantine/core';
 
 import styles from './styles.module.css';
-import { avatarSrc } from '@/assets/data/common';
 import { getColorByShade } from '@/helpers/getColorByShade';
 import { ThemeSwitcher } from '@/components/common/ThemeSwitcher';
-import { name, badges, links, title } from '@/assets/data/profile';
+import { avatarSrc, name, badges, links, title } from '@/assets/data/profile';
 
-export function Sidebar() {
+export function Profile() {
   return (
-    <Paper p='lg' radius='md' withBorder className={styles.sidebar}>
+    <Paper p='lg' radius='md' withBorder className={styles.profile}>
       <Stack justify='center' className={styles.stack}>
         <ThemeSwitcher />
 

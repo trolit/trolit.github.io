@@ -1,13 +1,13 @@
 import { Grid, Paper } from '@mantine/core';
 
 import styles from './styles.module.css';
-import { Sidebar } from '@/components/Sidebar';
+import { Profile } from '@/components/Profile';
 
 export function LeadGrid() {
   return (
     <Grid grow className={styles.grid}>
       <Grid.Col span={3}>
-        <Sidebar />
+        <Profile />
       </Grid.Col>
 
       <Grid.Col span={9}>
