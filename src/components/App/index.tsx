@@ -7,7 +7,7 @@ import {
 import { useSelector } from 'react-redux';
 
 import { RootState } from '@/store';
-import { LeadGrid } from './LeadGrid';
+import { MainGrid } from './MainGrid';
 import styles from './styles.module.css';
 import { toggleColorScheme } from '@/store/preferences';
 import { backgroundSrc, primaryColor } from '@/assets/data/common';
@@ -35,7 +35,7 @@ export default function App() {
           }}
         >
           <Center className={styles.container}>
-            <LeadGrid />
+            <MainGrid />
           </Center>
         </Container>
       </MantineProvider>

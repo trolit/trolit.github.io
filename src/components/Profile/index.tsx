@@ -12,14 +12,20 @@ import {
 } from '@mantine/core';
 
 import styles from './styles.module.css';
-import { avatarSrc } from '@/assets/data/common';
 import { getColorByShade } from '@/helpers/getColorByShade';
 import { ThemeSwitcher } from '@/components/common/ThemeSwitcher';
-import { name, badges, links, title } from '@/assets/data/profile';
+import {
+  name,
+  links,
+  quote,
+  title,
+  badges,
+  avatarSrc,
+} from '@/assets/data/profile';
 
-export function Sidebar() {
+export function Profile() {
   return (
-    <Paper p='lg' radius='md' withBorder className={styles.sidebar}>
+    <Paper p='lg' radius='md' withBorder className={styles.profile}>
       <Stack justify='center' className={styles.stack}>
         <ThemeSwitcher />
 
@@ -45,8 +51,8 @@ export function Sidebar() {
           ))}
         </Group>
 
-        <Blockquote cite='-Thomas Edison' color={getColorByShade('4')}>
-          I have not failed. I just found 10,000 ways that won't work.
+        <Blockquote cite={`-${quote.author}`} color={getColorByShade('4')}>
+          {quote.text}
         </Blockquote>
 
         <Group position='center' spacing='lg' className={styles.group}>
