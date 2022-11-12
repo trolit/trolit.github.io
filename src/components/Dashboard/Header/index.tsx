@@ -1,6 +1,6 @@
 import { RootState } from '@/store';
-import { IconMaximize, IconMinimize } from '@tabler/icons';
 import { useSelector } from 'react-redux';
+import { IconMaximize, IconMinimize } from '@tabler/icons';
 
 import { DashboardViewToggler } from './DashboardViewToggler';
 
@@ -11,7 +11,7 @@ export function Header() {
 
   return (
     <DashboardViewToggler
-      icon={isDashboardMaximized ? IconMaximize : IconMinimize}
+      icon={isDashboardMaximized ? IconMinimize : IconMaximize}
     />
   );
 }
