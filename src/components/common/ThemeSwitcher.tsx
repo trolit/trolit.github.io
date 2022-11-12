@@ -4,18 +4,23 @@ import {
   Center,
   SegmentedControl,
   useMantineColorScheme,
+  ColorScheme,
 } from '@mantine/core';
+import { useDispatch } from 'react-redux';
 import { IconSun, IconMoon } from '@tabler/icons';
 
+import { toggleColorScheme } from '@/store/preferences';
+
 export function ThemeSwitcher() {
-  const { colorScheme, toggleColorScheme } = useMantineColorScheme();
+  const dispatch = useDispatch();
+  const { colorScheme } = useMantineColorScheme();
 
   return (
     <Group position='center'>
       <SegmentedControl
         value={colorScheme}
         transitionDuration={400}
-        onChange={(value: 'light' | 'dark') => toggleColorScheme(value)}
+        onChange={(value: ColorScheme) => dispatch(toggleColorScheme(value))}
         data={[
           {
             value: 'light',
