@@ -1,6 +1,7 @@
-import { ILink } from '@/interfaces/ILink';
-import { IBadge } from '@/interfaces/IBadge';
 import { IconBrandGithub } from '@tabler/icons';
+
+import { ILink } from '@/interfaces/profile/ILink';
+import { IBadge } from '@/interfaces/profile/IBadge';
 
 export const avatarSrc = require('@/assets/media/avatar.png');
 
