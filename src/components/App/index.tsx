@@ -1,21 +1,21 @@
 import {
   Center,
   Container,
-  ColorScheme,
   MantineProvider,
   ColorSchemeProvider,
 } from '@mantine/core';
-import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
+import { RootState } from '@/store';
 import { LeadGrid } from './LeadGrid';
 import styles from './styles.module.css';
+import { toggleColorScheme } from '@/store/preferences';
 import { backgroundSrc, primaryColor } from '@/assets/data/common';
 
 export default function App() {
-  const [colorScheme, setColorScheme] = useState<ColorScheme>('dark');
-
-  const toggleColorScheme = (value?: ColorScheme) =>
-    setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
+  const colorScheme = useSelector(
+    (state: RootState) => state.preferences.colorScheme,
+  );
 
   return (
     <ColorSchemeProvider
