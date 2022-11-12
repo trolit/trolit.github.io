@@ -13,6 +13,7 @@ import { toggleColorScheme } from '@/store/preferences';
 
 export function ThemeSwitcher() {
   const dispatch = useDispatch();
+
   const { colorScheme } = useMantineColorScheme();
 
   return (
