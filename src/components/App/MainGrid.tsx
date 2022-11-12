@@ -6,7 +6,7 @@ import { Dashboard } from '@/components/Dashboard';
 
 export function MainGrid() {
   return (
-    <Grid grow className={styles.grid}>
+    <Grid grow className={styles.mainGrid}>
       <Grid.Col span={3}>
         <Profile />
       </Grid.Col>

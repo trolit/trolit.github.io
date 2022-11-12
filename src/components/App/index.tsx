@@ -1,6 +1,7 @@
 import {
   Center,
   Container,
+  ScrollArea,
   MantineProvider,
   ColorSchemeProvider,
 } from '@mantine/core';
@@ -27,17 +28,18 @@ export default function App() {
         withGlobalStyles
         withNormalizeCSS
       >
-        <Container
-          fluid
-          className={styles.container}
+        <ScrollArea
+          className={styles.scrollArea}
           style={{
             backgroundImage: `url(${backgroundSrc})`,
           }}
         >
-          <Center className={styles.container}>
-            <MainGrid />
-          </Center>
-        </Container>
+          <Container fluid className={styles.container}>
+            <Center className={styles.center}>
+              <MainGrid />
+            </Center>
+          </Container>
+        </ScrollArea>
       </MantineProvider>
     </ColorSchemeProvider>
   );
