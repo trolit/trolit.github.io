@@ -2,7 +2,6 @@ import {
   Box,
   Text,
   Group,
-  Anchor,
   Center,
   Button,
   Divider,
@@ -11,17 +10,16 @@ import {
 } from '@mantine/core';
 import { IconChevronDown } from '@tabler/icons';
 
-import { Link } from './Link';
-import { ILink } from '@/interfaces/dashboard/ILink';
+import { useStyles } from '@/components/Dashboard/styles';
 
 interface IProps {
   title: string;
 
-  links: ILink[];
+  links: JSX.Element[];
 }
 
 export function NavigationCard({ title, links }: IProps) {
-  const renderedLinks = links.map((item) => <Link item={item} />);
+  const { classes } = useStyles();
 
   return (
     <HoverCard
@@ -32,7 +30,7 @@ export function NavigationCard({ title, links }: IProps) {
       withinPortal
     >
       <HoverCard.Target>
-        <Anchor>
+        <a href='#' className={classes.link}>
           <Center inline>
             <Box component='span' mr={5}>
               {title}
@@ -40,7 +38,7 @@ export function NavigationCard({ title, links }: IProps) {
 
             <IconChevronDown size={16} />
           </Center>
-        </Anchor>
+        </a>
       </HoverCard.Target>
 
       <HoverCard.Dropdown sx={{ overflow: 'hidden' }}>
@@ -53,7 +51,7 @@ export function NavigationCard({ title, links }: IProps) {
         <Divider my='sm' mx='-md' />
 
         <SimpleGrid cols={2} spacing={0}>
-          {renderedLinks}
+          {links}
         </SimpleGrid>
       </HoverCard.Dropdown>
     </HoverCard>
