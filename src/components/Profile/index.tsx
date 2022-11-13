@@ -13,7 +13,6 @@ import {
 
 import styles from './styles.module.css';
 import { getColorByShade } from '@/helpers/getColorByShade';
-import { ThemeSwitcher } from '@/components/common/ThemeSwitcher';
 import {
   name,
   links,
@@ -27,8 +26,6 @@ export function Profile() {
   return (
     <Paper p='lg' radius='md' withBorder className={styles.profile}>
       <Stack justify='center' className={styles.stack}>
-        <ThemeSwitcher />
-
         <Avatar src={avatarSrc} size={160} radius={120} mx='auto' />
 
         <Divider variant='dashed' />

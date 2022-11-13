@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { IconMinimize, IconMaximize } from '@tabler/icons';
 
 import { DashboardViewToggler } from './DashboardViewToggler';
+import { ThemeSwitcher } from '@/components/common/ThemeSwitcher';
 
 export function Toolbar() {
   const isDashboardMaximized = useSelector(
@@ -12,6 +13,8 @@ export function Toolbar() {
 
   return (
     <Group>
+      <ThemeSwitcher />
+
       <DashboardViewToggler
         icon={isDashboardMaximized ? IconMinimize : IconMaximize}
       />
