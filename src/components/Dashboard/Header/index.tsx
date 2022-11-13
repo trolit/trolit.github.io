@@ -1,10 +1,9 @@
 import {
-  Header,
+  Box,
   Group,
-  Button,
+  Header,
   Divider,
   Center,
-  Box,
   Burger,
   Drawer,
   Collapse,
@@ -12,6 +11,7 @@ import {
   UnstyledButton,
 } from '@mantine/core';
 
+import { Toolbar } from './Toolbar';
 import { Link } from './NavigationCard/Link';
 import { useDisclosure } from '@mantine/hooks';
 import { IconChevronDown } from '@tabler/icons';
@@ -51,11 +51,7 @@ export function MegaHeader() {
             </a>
           </Group>
 
-          <Group>
-            <Button variant='default'>Log in</Button>
-
-            <Button>Sign up</Button>
-          </Group>
+          <Toolbar />
 
           <Burger
             opened={drawerOpened}
