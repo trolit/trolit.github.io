@@ -10,14 +10,18 @@ import {
   ScrollArea,
   UnstyledButton,
 } from '@mantine/core';
+import { useSelector } from 'react-redux';
 
+import { RootState } from '@/store';
 import { Toolbar } from './Toolbar';
 import { Link } from './NavigationCard/Link';
 import { useDisclosure } from '@mantine/hooks';
 import { IconChevronDown } from '@tabler/icons';
 import { NavigationCard } from './NavigationCard';
 import { projects } from '@/assets/data/dashboard';
-import { useStyles } from '@/components/Dashboard/styles';
+import { primaryColor } from '@/assets/data/common';
+import { useCommonStyles } from '@/assets/styles/common';
+import { useDashboardStyles } from '@/assets/styles/dashboard';
 
 export function MegaHeader() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
@@ -25,39 +29,46 @@ export function MegaHeader() {
 
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
 
-  const { classes, theme } = useStyles();
+  const commonStyles = useCommonStyles();
+
+  const dashboardStyles = useDashboardStyles();
+
+  const colorScheme = useSelector(
+    (state: RootState) => state.preferences.colorScheme,
+  );
 
   const projectLinks = projects.links || [];
 
-  const openSourceTabLinks = projectLinks.map((item) => <Link item={item} />);
+  const openSourceTabLinks = projectLinks.map((item, index) => (
+    <Link item={item} key={index} />
+  ));
 
   return (
     <Box>
       <Header height={60} px='md'>
-        <Group position='apart' sx={{ height: '100%' }}>
+        <Group position='apart' className={commonStyles.h100}>
           <Group
             spacing={0}
-            sx={{ height: '100%' }}
-            className={classes.hiddenMobile}
+            className={`${commonStyles.hiddenMobile} ${commonStyles.h100} `}
           >
             <NavigationCard title='Open source' links={openSourceTabLinks} />
 
-            <a href='#' className={classes.link}>
+            <a href='#' className={dashboardStyles.link}>
               Posts
             </a>
 
-            <a href='#' className={classes.link}>
+            <a href='#' className={dashboardStyles.link}>
               Tracks
             </a>
           </Group>
 
-          <Toolbar />
-
           <Burger
             opened={drawerOpened}
             onClick={toggleDrawer}
-            className={classes.hiddenDesktop}
+            className={commonStyles.hiddenDesktop}
           />
+
+          <Toolbar />
         </Group>
       </Header>
 
@@ -68,26 +79,31 @@ export function MegaHeader() {
         title='Navigation'
         opened={drawerOpened}
         onClose={closeDrawer}
-        className={classes.hiddenDesktop}
+        className={commonStyles.hiddenDesktop}
       >
         <ScrollArea sx={{ height: 'calc(100vh - 60px)' }} mx='-md'>
           <Divider
             my='sm'
-            color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'}
+            color={colorScheme === 'dark' ? 'dark.5' : 'gray.1'}
           />
 
-          <a href='#' className={classes.link}>
+          <a href='#' className={dashboardStyles.link}>
             Home
           </a>
 
-          <UnstyledButton className={classes.link} onClick={toggleLinks}>
+          <UnstyledButton
+            className={dashboardStyles.link}
+            onClick={toggleLinks}
+          >
             <Center inline>
               <Box component='span' mr={5}>
                 Features
               </Box>
-              <IconChevronDown size={16} color={theme.fn.primaryColor()} />
+
+              <IconChevronDown size={16} color={primaryColor} />
             </Center>
           </UnstyledButton>
+
           <Collapse in={linksOpened}>{openSourceTabLinks}</Collapse>
         </ScrollArea>
       </Drawer>
