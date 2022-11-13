@@ -2,3 +2,16 @@
   height: 100%;
   opacity: 0.95;
 }
+
+.link {
+  height: '100%';
+  display: 'flex';
+  font-weight: 500;
+  align-items: 'center';
+  text-decoration: 'none';
+}
+
+.subLink {
+  width: '100%';
+  padding: 20px;
+}
