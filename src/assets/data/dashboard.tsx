@@ -10,6 +10,7 @@ import {
 import { ISection } from '@/interfaces/dashboard/ISection';
 
 export const projects: ISection = {
+  name: 'Open source',
   routeName: 'open-source',
   links: [
     {
