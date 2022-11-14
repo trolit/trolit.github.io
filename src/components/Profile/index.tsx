@@ -19,15 +19,18 @@ import {
   badges,
   avatarSrc,
 } from '@/assets/data/profile';
+import { useCommonStyles } from '@/assets/styles/common';
 import { useProfileStyles } from '@/assets/styles/profile';
 import { getColorByShade } from '@/helpers/getColorByShade';
 
 export function Profile() {
+  const commonStyles = useCommonStyles();
+
   const profileStyles = useProfileStyles();
 
   return (
-    <Paper p='lg' radius='md' withBorder className={profileStyles.profile}>
-      <Stack justify='center' className={profileStyles.stack}>
+    <Paper p='lg' radius='md' withBorder className={profileStyles.paper}>
+      <Stack justify='center' className={commonStyles.h100}>
         <Avatar src={avatarSrc} size={160} radius={120} mx='auto' />
 
         <Divider variant='dashed' />

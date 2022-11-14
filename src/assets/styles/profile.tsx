@@ -3,13 +3,9 @@ import { createStyles } from '@mantine/core';
 export const useProfileStyles = () => {
   const { classes } = createStyles((theme) => {
     const classes = {
-      profile: {
+      paper: {
         height: '100%',
         opacity: 0.95,
-      },
-
-      stack: {
-        height: '100%',
       },
 
       title: {
