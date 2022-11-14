@@ -63,6 +63,7 @@ export function MegaHeader() {
           </Group>
 
           <Burger
+            px='md'
             opened={drawerOpened}
             onClick={toggleDrawer}
             className={commonStyles.hiddenDesktop}
