@@ -21,7 +21,7 @@ export function DashboardViewToggler() {
   const Icon = isDashboardMaximized ? IconMinimize : IconMaximize;
 
   return (
-    <Tooltip label={label} position='bottom' withArrow>
+    <Tooltip label={label} position='bottom' withArrow withinPortal>
       <ActionIcon
         variant='light'
         color={primaryColor}
