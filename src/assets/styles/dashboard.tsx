@@ -31,7 +31,7 @@ export const useDashboardStyles = () => {
               ? theme.colors.dark[6]
               : theme.colors.gray[0],
 
-          '&:first-child': {
+          '&:first-of-type': {
             borderTopLeftRadius: '8px',
           },
         }),
