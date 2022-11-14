@@ -37,9 +37,7 @@ export function MegaHeader() {
     (state: RootState) => state.preferences.colorScheme,
   );
 
-  const projectLinks = projects.links || [];
-
-  const openSourceTabLinks = projectLinks.map((item, index) => (
+  const projectsLinks = projects.links?.map((item, index) => (
     <Link item={item} key={index} />
   ));
 
@@ -51,7 +49,9 @@ export function MegaHeader() {
             spacing={0}
             className={`${commonStyles.hiddenMobile} ${commonStyles.h100} `}
           >
-            <NavigationCard title='Open source' links={openSourceTabLinks} />
+            {projectsLinks && (
+              <NavigationCard title='Open source' links={projectsLinks} />
+            )}
 
             <a href='#' className={dashboardStyles.link}>
               Posts
@@ -91,20 +91,24 @@ export function MegaHeader() {
             Home
           </a>
 
-          <UnstyledButton
-            className={dashboardStyles.link}
-            onClick={toggleLinks}
-          >
-            <Center inline>
-              <Box component='span' mr={5}>
-                Features
-              </Box>
+          {projectsLinks && (
+            <div>
+              <UnstyledButton
+                className={dashboardStyles.link}
+                onClick={toggleLinks}
+              >
+                <Center inline>
+                  <Box component='span' mr={5}>
+                    Features
+                  </Box>
 
-              <IconChevronDown size={16} color={primaryColor} />
-            </Center>
-          </UnstyledButton>
+                  <IconChevronDown size={16} color={primaryColor} />
+                </Center>
+              </UnstyledButton>
 
-          <Collapse in={linksOpened}>{openSourceTabLinks}</Collapse>
+              <Collapse in={linksOpened}>{projectsLinks}</Collapse>
+            </div>
+          )}
         </ScrollArea>
       </Drawer>
     </Box>
