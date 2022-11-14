@@ -11,8 +11,6 @@ import {
   Blockquote,
 } from '@mantine/core';
 
-import styles from './styles.module.css';
-import { getColorByShade } from '@/helpers/getColorByShade';
 import {
   name,
   links,
@@ -21,11 +19,15 @@ import {
   badges,
   avatarSrc,
 } from '@/assets/data/profile';
+import { useProfileStyles } from '@/assets/styles/profile';
+import { getColorByShade } from '@/helpers/getColorByShade';
 
 export function Profile() {
+  const profileStyles = useProfileStyles();
+
   return (
-    <Paper p='lg' radius='md' withBorder className={styles.profile}>
-      <Stack justify='center' className={styles.stack}>
+    <Paper p='lg' radius='md' withBorder className={profileStyles.profile}>
+      <Stack justify='center' className={profileStyles.stack}>
         <Avatar src={avatarSrc} size={160} radius={120} mx='auto' />
 
         <Divider variant='dashed' />
@@ -35,12 +37,12 @@ export function Profile() {
         </Text>
 
         {title && (
-          <div className={styles.title}>
+          <div className={profileStyles.title}>
             <Kbd>{title}</Kbd>
           </div>
         )}
 
-        <Group position='center' spacing='lg' className={styles.group}>
+        <Group position='center' spacing='lg' className={profileStyles.group}>
           {badges.map(({ text }, index) => (
             <Badge key={index} radius='xs'>
               {text}
@@ -52,7 +54,7 @@ export function Profile() {
           {quote.text}
         </Blockquote>
 
-        <Group position='center' spacing='lg' className={styles.group}>
+        <Group position='center' spacing='lg' className={profileStyles.group}>
           {links.map(({ icon, url }, index) => {
             const LinkIcon = icon;
 
@@ -62,7 +64,7 @@ export function Profile() {
                   size='xl'
                   radius='xs'
                   variant='light'
-                  className={styles.link}
+                  className={profileStyles.link}
                 >
                   <LinkIcon />
                 </ThemeIcon>
