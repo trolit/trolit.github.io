@@ -8,7 +8,6 @@ export function Dashboard() {
 
   return (
     <Paper
-      p='lg'
       radius='md'
       withBorder
       className={`${commonStyles.panel} ${commonStyles.h100}`}
@@ -18,9 +17,9 @@ export function Dashboard() {
           <MegaHeader />
         </Grid.Col>
 
-        <Grid.Col span={3}>2</Grid.Col>
-
-        <Grid.Col span={9}>3</Grid.Col>
+        <Grid.Col p='lg' span={12}>
+          2
+        </Grid.Col>
       </Grid>
     </Paper>
   );

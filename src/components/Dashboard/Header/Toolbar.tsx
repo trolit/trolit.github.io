@@ -7,7 +7,7 @@ import { ThemeSwitcher } from '@/components/common/ThemeSwitcher';
 export function Toolbar() {
   return (
     <motion.div layout>
-      <Group>
+      <Group px='md'>
         <ThemeSwitcher />
 
         <DashboardViewToggler />
