@@ -1,11 +1,18 @@
 import { Grid, Paper } from '@mantine/core';
 
 import { MegaHeader } from './Header';
-import styles from './styles.module.css';
+import { useCommonStyles } from '@/assets/styles/common';
 
 export function Dashboard() {
+  const commonStyles = useCommonStyles();
+
   return (
-    <Paper p='lg' radius='md' withBorder className={styles.dashboard}>
+    <Paper
+      p='lg'
+      radius='md'
+      withBorder
+      className={`${commonStyles.panel} ${commonStyles.h100}`}
+    >
       <Grid>
         <Grid.Col span={12}>
           <MegaHeader />

@@ -5,6 +5,10 @@ export const useCommonStyles = () => {
     const { fn } = theme;
 
     const classes = {
+      panel: {
+        opacity: 0.95,
+      },
+
       hiddenMobile: {
         [fn.smallerThan('sm')]: {
           display: 'none',
