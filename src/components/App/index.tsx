@@ -9,11 +9,13 @@ import { useSelector } from 'react-redux';
 
 import { RootState } from '@/store';
 import { MainGrid } from './MainGrid';
-import styles from './styles.module.css';
+import { useAppStyles } from '@/assets/styles/app';
 import { toggleColorScheme } from '@/store/preferences';
 import { backgroundSrc, primaryColor } from '@/assets/data/common';
 
 export default function App() {
+  const appStyles = useAppStyles();
+
   const colorScheme = useSelector(
     (state: RootState) => state.preferences.colorScheme,
   );
@@ -29,13 +31,13 @@ export default function App() {
         withNormalizeCSS
       >
         <ScrollArea
-          className={styles.scrollArea}
+          className={appStyles.scrollArea}
           style={{
             backgroundImage: `url(${backgroundSrc})`,
           }}
         >
-          <Container fluid className={styles.container}>
-            <Center className={styles.center}>
+          <Container fluid className={appStyles.container}>
+            <Center className={appStyles.center}>
               <MainGrid />
             </Center>
           </Container>
