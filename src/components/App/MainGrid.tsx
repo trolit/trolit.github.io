@@ -13,23 +13,15 @@ export function MainGrid() {
     (state: RootState) => state.preferences.isDashboardMaximized,
   );
 
-  if (isDashboardMaximized) {
-    return (
-      <Grid grow className={appStyles.mainGrid}>
-        <Grid.Col span={12}>
-          <Dashboard />
-        </Grid.Col>
-      </Grid>
-    );
-  }
-
   return (
     <Grid grow className={appStyles.mainGrid}>
-      <Grid.Col span={3}>
-        <Profile />
-      </Grid.Col>
+      {!isDashboardMaximized && (
+        <Grid.Col span={3}>
+          <Profile />
+        </Grid.Col>
+      )}
 
-      <Grid.Col span={9}>
+      <Grid.Col span={isDashboardMaximized ? 12 : 9}>
         <Dashboard />
       </Grid.Col>
     </Grid>
