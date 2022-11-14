@@ -3,6 +3,10 @@ import { createStyles } from '@mantine/core';
 export const useDashboardStyles = () => {
   const { classes } = createStyles((theme) => {
     const classes = {
+      header: {
+        borderRadius: '8px 8px 0 0',
+      },
+
       link: {
         display: 'flex',
         alignItems: 'center',
@@ -26,6 +30,10 @@ export const useDashboardStyles = () => {
             theme.colorScheme === 'dark'
               ? theme.colors.dark[6]
               : theme.colors.gray[0],
+
+          '&:first-child': {
+            borderTopLeftRadius: '8px',
+          },
         }),
       },
 

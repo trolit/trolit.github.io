@@ -43,8 +43,7 @@ export function MegaHeader() {
 
   return (
     <Box>
-      <Header
-        height={headerHeight}
+      <Header height={headerHeight} className={dashboardStyles.header}>
         <Group position='apart' className={commonStyles.h100}>
           <Group
             spacing={0}
