@@ -14,13 +14,13 @@ import { useSelector } from 'react-redux';
 
 import { RootState } from '@/store';
 import { Toolbar } from './Toolbar';
-import { Link } from './NavigationCard/Link';
 import { useDisclosure } from '@mantine/hooks';
 import { IconChevronDown } from '@tabler/icons';
 import { NavigationCard } from './NavigationCard';
 import { projects } from '@/assets/data/dashboard';
 import { primaryColor } from '@/assets/data/common';
 import { useCommonStyles } from '@/assets/styles/common';
+import { Link } from '@/components/Dashboard/Header/Link';
 import { useDashboardStyles } from '@/assets/styles/dashboard';
 
 export function MegaHeader() {
