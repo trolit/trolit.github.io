@@ -3,11 +3,6 @@ import { createStyles } from '@mantine/core';
 export const useProfileStyles = () => {
   const { classes } = createStyles((theme) => {
     const classes = {
-      paper: {
-        height: '100%',
-        opacity: 0.95,
-      },
-
       title: {
         display: 'flex',
         justifyContent: 'center',

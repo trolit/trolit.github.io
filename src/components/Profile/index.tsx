@@ -29,7 +29,12 @@ export function Profile() {
   const profileStyles = useProfileStyles();
 
   return (
-    <Paper p='lg' radius='md' withBorder className={profileStyles.paper}>
+    <Paper
+      p='lg'
+      radius='md'
+      withBorder
+      className={`${commonStyles.panel} ${commonStyles.h100}`}
+    >
       <Stack justify='center' className={commonStyles.h100}>
         <Avatar src={avatarSrc} size={160} radius={120} mx='auto' />
 
