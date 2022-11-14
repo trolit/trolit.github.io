@@ -1,23 +1,17 @@
-import { RootState } from '@/store';
 import { Group } from '@mantine/core';
-import { useSelector } from 'react-redux';
-import { IconMinimize, IconMaximize } from '@tabler/icons';
+import { motion } from 'framer-motion';
 
 import { DashboardViewToggler } from './DashboardViewToggler';
 import { ThemeSwitcher } from '@/components/common/ThemeSwitcher';
 
 export function Toolbar() {
-  const isDashboardMaximized = useSelector(
-    (state: RootState) => state.preferences.isDashboardMaximized,
-  );
-
   return (
-    <Group>
-      <ThemeSwitcher />
+    <motion.div layout>
+      <Group>
+        <ThemeSwitcher />
 
-      <DashboardViewToggler
-        icon={isDashboardMaximized ? IconMinimize : IconMaximize}
-      />
-    </Group>
+        <DashboardViewToggler />
+      </Group>
+    </motion.div>
   );
 }
