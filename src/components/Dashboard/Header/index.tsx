@@ -18,7 +18,7 @@ import { useDisclosure } from '@mantine/hooks';
 import { IconChevronDown } from '@tabler/icons';
 import { NavigationCard } from './NavigationCard';
 import { projects } from '@/assets/data/dashboard';
-import { primaryColor } from '@/assets/data/common';
+import { primaryColor, headerHeight } from '@/assets/data/common';
 import { useCommonStyles } from '@/assets/styles/common';
 import { Link } from '@/components/Dashboard/Header/Link';
 import { useDashboardStyles } from '@/assets/styles/dashboard';
@@ -43,7 +43,8 @@ export function MegaHeader() {
 
   return (
     <Box>
-      <Header height={60} px='md'>
+      <Header
+        height={headerHeight}
         <Group position='apart' className={commonStyles.h100}>
           <Group
             spacing={0}
@@ -81,7 +82,7 @@ export function MegaHeader() {
         onClose={closeDrawer}
         className={commonStyles.hiddenDesktop}
       >
-        <ScrollArea sx={{ height: 'calc(100vh - 60px)' }} mx='-md'>
+        <ScrollArea sx={{ height: `calc(100vh - ${headerHeight}px)` }} mx='-md'>
           <Divider
             my='sm'
             color={colorScheme === 'dark' ? 'dark.5' : 'gray.1'}
