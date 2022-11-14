@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { Grid } from '@mantine/core';
 import { motion } from 'framer-motion';
 import { useSelector } from 'react-redux';
@@ -7,7 +8,11 @@ import { Profile } from '@/components/Profile';
 import { Dashboard } from '@/components/Dashboard';
 import { useCommonStyles } from '@/assets/styles/common';
 
-export function MainGrid() {
+interface IProps {
+  tab: ReactNode;
+}
+
+export function MainGrid({ tab }: IProps) {
   const commonStyles = useCommonStyles();
 
   const isDashboardMaximized = useSelector(
@@ -24,7 +29,7 @@ export function MainGrid() {
 
       <Grid.Col span={isDashboardMaximized ? 12 : 9}>
         <motion.div layout className={commonStyles.h100}>
-          <Dashboard />
+          <Dashboard tab={tab} />
         </motion.div>
       </Grid.Col>
     </Grid>

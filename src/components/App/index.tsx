@@ -5,6 +5,7 @@ import {
   MantineProvider,
   ColorSchemeProvider,
 } from '@mantine/core';
+import { ReactNode } from 'react';
 import { useSelector } from 'react-redux';
 
 import { RootState } from '@/store';
@@ -14,7 +15,11 @@ import { toggleColorScheme } from '@/store/preferences';
 import { useCommonStyles } from '@/assets/styles/common';
 import { backgroundSrc, primaryColor } from '@/assets/data/common';
 
-export default function App() {
+interface IProps {
+  tab: ReactNode;
+}
+
+export default function App({ tab }: IProps) {
   const appStyles = useAppStyles();
 
   const commonStyles = useCommonStyles();
@@ -41,7 +46,7 @@ export default function App() {
         >
           <Container fluid className={appStyles.container}>
             <Center className={commonStyles.h100}>
-              <MainGrid />
+              <MainGrid tab={tab} />
             </Center>
           </Container>
         </ScrollArea>

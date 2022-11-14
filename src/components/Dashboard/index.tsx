@@ -1,9 +1,14 @@
+import { ReactNode } from 'react';
 import { Grid, Paper } from '@mantine/core';
 
 import { MegaHeader } from './Header';
 import { useCommonStyles } from '@/assets/styles/common';
 
-export function Dashboard() {
+interface IProps {
+  tab: ReactNode;
+}
+
+export function Dashboard({ tab }: IProps) {
   const commonStyles = useCommonStyles();
 
   return (
@@ -18,7 +23,7 @@ export function Dashboard() {
         </Grid.Col>
 
         <Grid.Col p='lg' span={12}>
-          2
+          {tab}
         </Grid.Col>
       </Grid>
     </Paper>
