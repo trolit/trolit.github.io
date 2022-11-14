@@ -11,11 +11,6 @@ export const useAppStyles = () => {
       container: {
         height: '100vh',
       },
-
-      mainGrid: {
-        width: '100%',
-        height: '100%',
-      },
     };
 
     return classes;

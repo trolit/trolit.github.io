@@ -24,6 +24,10 @@ export const useCommonStyles = () => {
       h100: {
         height: '100%',
       },
+
+      w100: {
+        width: '100%',
+      },
     };
 
     return classes;
