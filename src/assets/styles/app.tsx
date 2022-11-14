@@ -12,10 +12,6 @@ export const useAppStyles = () => {
         height: '100vh',
       },
 
-      center: {
-        height: '100%',
-      },
-
       mainGrid: {
         width: '100%',
         height: '100%',

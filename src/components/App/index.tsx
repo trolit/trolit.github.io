@@ -11,10 +11,13 @@ import { RootState } from '@/store';
 import { MainGrid } from './MainGrid';
 import { useAppStyles } from '@/assets/styles/app';
 import { toggleColorScheme } from '@/store/preferences';
+import { useCommonStyles } from '@/assets/styles/common';
 import { backgroundSrc, primaryColor } from '@/assets/data/common';
 
 export default function App() {
   const appStyles = useAppStyles();
+
+  const commonStyles = useCommonStyles();
 
   const colorScheme = useSelector(
     (state: RootState) => state.preferences.colorScheme,
@@ -37,7 +40,7 @@ export default function App() {
           }}
         >
           <Container fluid className={appStyles.container}>
-            <Center className={appStyles.center}>
+            <Center className={commonStyles.h100}>
               <MainGrid />
             </Center>
           </Container>
