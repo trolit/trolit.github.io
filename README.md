@@ -39,3 +39,8 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Credits
+
+- [background](https://pixabay.com/vectors/space-astronaut-spaceship-galaxy-5756194/) ([kirillslov](https://pixabay.com/users/kirillslov-8058952/))
+- [avatar](https://open.spotify.com/album/1o09J9pVX73j8eQGZ4nomA) (Demon Hunter - Death and Resurrection)
