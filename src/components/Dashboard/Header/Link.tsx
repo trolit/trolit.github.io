@@ -1,18 +1,18 @@
-import { ILink } from '@/interfaces/dashboard/ILink';
 import { Text, UnstyledButton, Group, ThemeIcon } from '@mantine/core';
 
 import { primaryColor } from '@/assets/data/common';
-import { useStyles } from '@/components/Dashboard/styles';
+import { ILink } from '@/interfaces/dashboard/ILink';
+import { useDashboardStyles } from '@/assets/styles/dashboard';
 
 interface IProps {
   item: ILink;
 }
 
 export function Link({ item }: IProps) {
-  const { classes } = useStyles();
+  const dashboardStyles = useDashboardStyles();
 
   return (
-    <UnstyledButton className={classes.subLink} key={item.title}>
+    <UnstyledButton className={dashboardStyles.subLink} key={item.title}>
       <Group noWrap align='flex-start'>
         <ThemeIcon size={34} variant='default' radius='md'>
           <item.icon size={22} color={primaryColor} />

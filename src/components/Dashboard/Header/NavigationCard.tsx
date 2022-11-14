@@ -10,7 +10,7 @@ import {
 } from '@mantine/core';
 import { IconChevronDown } from '@tabler/icons';
 
-import { useStyles } from '@/components/Dashboard/styles';
+import { useDashboardStyles } from '@/assets/styles/dashboard';
 
 interface IProps {
   title: string;
@@ -19,7 +19,7 @@ interface IProps {
 }
 
 export function NavigationCard({ title, links }: IProps) {
-  const { classes } = useStyles();
+  const dashboardStyles = useDashboardStyles();
 
   return (
     <HoverCard
@@ -30,7 +30,7 @@ export function NavigationCard({ title, links }: IProps) {
       withinPortal
     >
       <HoverCard.Target>
-        <a href='#' className={classes.link}>
+        <a href='#' className={dashboardStyles.link}>
           <Center inline>
             <Box component='span' mr={5}>
               {title}
