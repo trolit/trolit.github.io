@@ -1,8 +1,8 @@
 import { Group } from '@mantine/core';
 import { motion } from 'framer-motion';
 
+import { ThemeSwitcher } from './ThemeSwitcher';
 import { DashboardViewToggler } from './DashboardViewToggler';
-import { ThemeSwitcher } from '@/components/common/ThemeSwitcher';
 
 export function Toolbar() {
   return (
