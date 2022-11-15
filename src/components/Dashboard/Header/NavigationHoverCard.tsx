@@ -15,14 +15,14 @@ import { ILink } from '@/interfaces/dashboard/ILink';
 import { useDashboardStyles } from '@/assets/styles/dashboard';
 
 interface IProps {
-  title: string;
+  name: string;
 
   links: ILink[];
 
-  viewAllUrl: string;
+  route: string;
 }
 
-export function NavigationHoverCard({ title, links, viewAllUrl }: IProps) {
+export function NavigationHoverCard({ name, links, route }: IProps) {
   const navigate = useNavigate();
 
   const dashboardStyles = useDashboardStyles();
@@ -37,10 +37,10 @@ export function NavigationHoverCard({ title, links, viewAllUrl }: IProps) {
     >
       <HoverCard.Target>
         <NavLink
-          key={title}
+          key={name}
           label={
             <span className={dashboardStyles.navLinkWithIcon}>
-              {title} <IconChevronDown size={16} />
+              {name} <IconChevronDown size={16} />
             </span>
           }
           className={dashboardStyles.link}
@@ -51,7 +51,7 @@ export function NavigationHoverCard({ title, links, viewAllUrl }: IProps) {
         <Group position='apart' px='md'>
           <Text weight={500}>Recent</Text>
 
-          <Button variant='outline' onClick={() => navigate(viewAllUrl)}>
+          <Button variant='outline' onClick={() => navigate(route)}>
             View all
           </Button>
         </Group>
