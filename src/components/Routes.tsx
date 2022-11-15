@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 import App from '@/components/App';
 import { Home } from './Dashboard/Home';
@@ -16,13 +16,15 @@ import {
 export function AppRoutes() {
   return (
     <Routes>
-      <Route path={HOME_ROUTE} element={<App tab={<Home />} />} />
+      <Route index path={HOME_ROUTE} element={<App tab={<Home />} />} />
 
       <Route path={PROJECTS_ROUTE} element={<App tab={<Projects />} />} />
 
       <Route path={POSTS_ROUTE} element={<App tab={<Posts />} />} />
 
       <Route path={TRACKS_ROUTE} element={<App tab={<Tracks />} />} />
+
+      <Route path='*' element={<Navigate replace to={HOME_ROUTE} />} />
     </Routes>
   );
 }
