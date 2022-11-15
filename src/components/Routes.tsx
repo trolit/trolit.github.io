@@ -6,16 +6,23 @@ import { Posts } from './Dashboard/Posts';
 import { Tracks } from './Dashboard/Tracks';
 import { Projects } from './Dashboard/Projects';
 
+import {
+  HOME_ROUTE,
+  POSTS_ROUTE,
+  TRACKS_ROUTE,
+  PROJECTS_ROUTE,
+} from '@/assets/constants/routes';
+
 export function AppRoutes() {
   return (
     <Routes>
-      <Route path='/' element={<App tab={<Home />} />} />
+      <Route path={HOME_ROUTE} element={<App tab={<Home />} />} />
 
-      <Route path='/projects' element={<App tab={<Projects />} />} />
+      <Route path={PROJECTS_ROUTE} element={<App tab={<Projects />} />} />
 
-      <Route path='/posts' element={<App tab={<Posts />} />} />
+      <Route path={POSTS_ROUTE} element={<App tab={<Posts />} />} />
 
-      <Route path='/tracks' element={<App tab={<Tracks />} />} />
+      <Route path={TRACKS_ROUTE} element={<App tab={<Tracks />} />} />
     </Routes>
   );
 }
