@@ -7,11 +7,26 @@ import {
   IconNotification,
 } from '@tabler/icons';
 
-import { ISection } from '@/interfaces/dashboard/ISection';
+import {
+  HOME_ROUTE,
+  POSTS_ROUTE,
+  TRACKS_ROUTE,
+  PROJECTS_ROUTE,
+  HOME_ROUTE_NAME,
+  POSTS_ROUTE_NAME,
+  TRACKS_ROUTE_NAME,
+  PROJECTS_ROUTE_NAME,
+} from '@/assets/constants/routes';
+import { INavigationItem } from '@/interfaces/dashboard/INavigationItem';
 
-export const projects: ISection = {
-  name: 'Open source',
-  routeName: 'open-source',
+export const home: INavigationItem = {
+  name: HOME_ROUTE_NAME,
+  route: HOME_ROUTE,
+};
+
+export const projects: INavigationItem = {
+  name: PROJECTS_ROUTE_NAME,
+  route: PROJECTS_ROUTE,
   links: [
     {
       icon: IconCode,
@@ -45,3 +60,15 @@ export const projects: ISection = {
     },
   ],
 };
+
+export const posts: INavigationItem = {
+  name: POSTS_ROUTE_NAME,
+  route: POSTS_ROUTE,
+};
+
+export const tracks: INavigationItem = {
+  name: TRACKS_ROUTE_NAME,
+  route: TRACKS_ROUTE,
+};
+
+export const sections: INavigationItem[] = [home, projects, posts, tracks];
