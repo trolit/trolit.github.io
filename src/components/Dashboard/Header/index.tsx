@@ -6,11 +6,13 @@ import {
   Center,
   Burger,
   Drawer,
+  NavLink,
   Collapse,
   ScrollArea,
   UnstyledButton,
 } from '@mantine/core';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 import { RootState } from '@/store';
 import { Toolbar } from './Toolbar';
@@ -37,29 +39,53 @@ export function MegaHeader() {
     (state: RootState) => state.preferences.colorScheme,
   );
 
+  const navigate = useNavigate();
+
   const projectsLinks = projects.links?.map((item, index) => (
     <Link item={item} key={index} />
   ));
+
+  const homeNavLink = (
+    <NavLink
+      key='home'
+      label='Home'
+      className={dashboardStyles.link}
+      onClick={() => navigate('/')}
+    />
+  );
 
   return (
     <Box>
       <Header height={headerHeight} className={dashboardStyles.header}>
         <Group position='apart' className={commonStyles.h100}>
           <Group
+            noWrap
             spacing={0}
             className={`${commonStyles.hiddenMobile} ${commonStyles.h100} `}
           >
+            {homeNavLink}
+
             {projectsLinks && (
-              <NavigationCard title='Open source' links={projectsLinks} />
+              <NavigationCard
+                title='Projects'
+                links={projectsLinks}
+                viewAllUrl='/projects'
+              />
             )}
 
-            <a href='#' className={dashboardStyles.link}>
-              Posts
-            </a>
+            <NavLink
+              key='posts'
+              label='Posts'
+              className={dashboardStyles.link}
+              onClick={() => navigate('/posts')}
+            />
 
-            <a href='#' className={dashboardStyles.link}>
-              Tracks
-            </a>
+            <NavLink
+              key='tracks'
+              label='Tracks'
+              className={dashboardStyles.link}
+              onClick={() => navigate('/tracks')}
+            />
           </Group>
 
           <Burger
@@ -88,9 +114,7 @@ export function MegaHeader() {
             color={colorScheme === 'dark' ? 'dark.5' : 'gray.1'}
           />
 
-          <a href='#' className={dashboardStyles.link}>
-            Home
-          </a>
+          {homeNavLink}
 
           {projectsLinks && (
             <div>
