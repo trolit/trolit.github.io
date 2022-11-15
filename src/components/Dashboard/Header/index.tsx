@@ -14,17 +14,6 @@ import {
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-import { RootState } from '@/store';
-import { Toolbar } from './Toolbar';
-import { useDisclosure } from '@mantine/hooks';
-import { IconChevronDown } from '@tabler/icons';
-import { NavigationCard } from './NavigationCard';
-import { projects } from '@/assets/data/dashboard';
-import { primaryColor, headerHeight } from '@/assets/data/common';
-import { useCommonStyles } from '@/assets/styles/common';
-import { Link } from '@/components/Dashboard/Header/Link';
-import { useDashboardStyles } from '@/assets/styles/dashboard';
-
 import {
   HOME_ROUTE,
   POSTS_ROUTE,
@@ -35,6 +24,16 @@ import {
   TRACKS_ROUTE_NAME,
   PROJECTS_ROUTE_NAME,
 } from '@/assets/constants/routes';
+import { RootState } from '@/store';
+import { Toolbar } from './Toolbar';
+import { useDisclosure } from '@mantine/hooks';
+import { IconChevronDown } from '@tabler/icons';
+import { NavigationCard } from './NavigationCard';
+import { projects } from '@/assets/data/dashboard';
+import { useCommonStyles } from '@/assets/styles/common';
+import { Link } from '@/components/Dashboard/Header/Link';
+import { useDashboardStyles } from '@/assets/styles/dashboard';
+import { primaryColor, headerHeight } from '@/assets/data/common';
 
 export function MegaHeader() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
