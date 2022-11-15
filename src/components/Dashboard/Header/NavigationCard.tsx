@@ -7,15 +7,17 @@ import {
   HoverCard,
   SimpleGrid,
 } from '@mantine/core';
-import { IconChevronDown } from '@tabler/icons';
 import { useNavigate } from 'react-router-dom';
+import { IconChevronDown } from '@tabler/icons';
 
+import { Link } from './Link';
+import { ILink } from '@/interfaces/dashboard/ILink';
 import { useDashboardStyles } from '@/assets/styles/dashboard';
 
 interface IProps {
   title: string;
 
-  links: JSX.Element[];
+  links: ILink[];
 
   viewAllUrl: string;
 }
@@ -57,7 +59,9 @@ export function NavigationCard({ title, links, viewAllUrl }: IProps) {
         <Divider my='sm' mx='-md' />
 
         <SimpleGrid cols={2} spacing={0}>
-          {links}
+          {links.map((item) => (
+            <Link item={item} />
+          ))}
         </SimpleGrid>
       </HoverCard.Dropdown>
     </HoverCard>
