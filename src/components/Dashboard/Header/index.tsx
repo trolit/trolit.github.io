@@ -30,6 +30,7 @@ import { useDisclosure } from '@mantine/hooks';
 import { IconChevronDown } from '@tabler/icons';
 import { NavigationCard } from './NavigationCard';
 import { projects } from '@/assets/data/dashboard';
+import { DARK_THEME } from '@/assets/constants/themes';
 import { useCommonStyles } from '@/assets/styles/common';
 import { Link } from '@/components/Dashboard/Header/Link';
 import { useDashboardStyles } from '@/assets/styles/dashboard';
@@ -121,7 +122,7 @@ export function MegaHeader() {
         <ScrollArea sx={{ height: `calc(100vh - ${headerHeight}px)` }} mx='-md'>
           <Divider
             my='sm'
-            color={colorScheme === 'dark' ? 'dark.5' : 'gray.1'}
+            color={colorScheme === DARK_THEME ? 'dark.5' : 'gray.1'}
           />
 
           {homeNavLink}
