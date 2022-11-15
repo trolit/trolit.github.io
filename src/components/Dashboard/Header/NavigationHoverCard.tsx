@@ -60,6 +60,7 @@ export function NavigationHoverCard({ name, links, route }: IProps) {
 
         <SimpleGrid cols={2} spacing={0}>
           {links.map((item) => (
+            // @TODO - navigate on click
             <Link item={item} />
           ))}
         </SimpleGrid>
