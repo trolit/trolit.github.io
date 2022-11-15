@@ -71,4 +71,9 @@ export const tracks: INavigationItem = {
   route: TRACKS_ROUTE,
 };
 
-export const sections: INavigationItem[] = [home, projects, posts, tracks];
+export const navigationItems: INavigationItem[] = [
+  home,
+  projects,
+  posts,
+  tracks,
+];
