@@ -1,7 +1,26 @@
-export const HOME_ROUTE_NAME = 'home';
+export const BASE_ROUTE = '/';
 
-export const PROJECTS_ROUTE_NAME = 'projects';
+// Home
+export const HOME_ROUTE_NAME = 'Home';
 
-export const POSTS_ROUTE_NAME = 'posts';
+export const HOME_ROUTE = BASE_ROUTE;
 
-export const TRACKS_ROUTE_NAME = 'tracks';
+// Projects
+
+export const PROJECTS_ROUTE_NAME = 'Projects';
+
+export const PROJECTS_ROUTE = BASE_ROUTE.concat(
+  PROJECTS_ROUTE_NAME.toLowerCase(),
+);
+
+// Posts
+
+export const POSTS_ROUTE_NAME = 'Posts';
+
+export const POSTS_ROUTE = BASE_ROUTE.concat(POSTS_ROUTE_NAME.toLowerCase());
+
+// Tracks
+
+export const TRACKS_ROUTE_NAME = 'Tracks';
+
+export const TRACKS_ROUTE = BASE_ROUTE.concat(TRACKS_ROUTE_NAME.toLowerCase());
