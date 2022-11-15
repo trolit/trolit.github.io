@@ -1,6 +1,8 @@
 import { ColorScheme } from '@mantine/core';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
+import { DARK_THEME } from '@/assets/constants/themes';
+
 interface IState {
   colorScheme: ColorScheme;
 
@@ -8,7 +10,7 @@ interface IState {
 }
 
 const initialState: IState = {
-  colorScheme: 'dark',
+  colorScheme: DARK_THEME,
 
   isDashboardMaximized: false,
 };

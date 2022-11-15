@@ -10,6 +10,7 @@ import { useDispatch } from 'react-redux';
 import { IconSun, IconMoon } from '@tabler/icons';
 
 import { toggleColorScheme } from '@/store/preferences';
+import { DARK_THEME, LIGHT_THEME } from '@/assets/constants/themes';
 
 export function ThemeSwitcher() {
   const dispatch = useDispatch();
@@ -24,7 +25,7 @@ export function ThemeSwitcher() {
         onChange={(value: ColorScheme) => dispatch(toggleColorScheme(value))}
         data={[
           {
-            value: 'light',
+            value: LIGHT_THEME,
             label: (
               <Center>
                 <IconSun size={16} stroke={1.5} />
@@ -34,7 +35,7 @@ export function ThemeSwitcher() {
           },
 
           {
-            value: 'dark',
+            value: DARK_THEME,
             label: (
               <Center>
                 <IconMoon size={16} stroke={1.5} />

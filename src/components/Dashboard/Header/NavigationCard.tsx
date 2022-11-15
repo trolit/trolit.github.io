@@ -1,14 +1,14 @@
 import {
-  Box,
   Text,
   Group,
-  Center,
   Button,
   Divider,
+  NavLink,
   HoverCard,
   SimpleGrid,
 } from '@mantine/core';
 import { IconChevronDown } from '@tabler/icons';
+import { useNavigate } from 'react-router-dom';
 
 import { useDashboardStyles } from '@/assets/styles/dashboard';
 
@@ -16,9 +16,13 @@ interface IProps {
   title: string;
 
   links: JSX.Element[];
+
+  viewAllUrl: string;
 }
 
-export function NavigationCard({ title, links }: IProps) {
+export function NavigationCard({ title, links, viewAllUrl }: IProps) {
+  const navigate = useNavigate();
+
   const dashboardStyles = useDashboardStyles();
 
   return (
@@ -30,22 +34,24 @@ export function NavigationCard({ title, links }: IProps) {
       withinPortal
     >
       <HoverCard.Target>
-        <a href='#' className={dashboardStyles.link}>
-          <Center inline>
-            <Box component='span' mr={5}>
-              {title}
-            </Box>
-
-            <IconChevronDown size={16} />
-          </Center>
-        </a>
+        <NavLink
+          key={title}
+          label={
+            <span className={dashboardStyles.navLinkWithIcon}>
+              {title} <IconChevronDown size={16} />
+            </span>
+          }
+          className={dashboardStyles.link}
+        />
       </HoverCard.Target>
 
       <HoverCard.Dropdown sx={{ overflow: 'hidden' }}>
         <Group position='apart' px='md'>
           <Text weight={500}>Recent</Text>
 
-          <Button variant='outline'>View all</Button>
+          <Button variant='outline' onClick={() => navigate(viewAllUrl)}>
+            View all
+          </Button>
         </Group>
 
         <Divider my='sm' mx='-md' />

@@ -6,22 +6,35 @@ import {
   Center,
   Burger,
   Drawer,
+  NavLink,
   Collapse,
   ScrollArea,
   UnstyledButton,
 } from '@mantine/core';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
+import {
+  HOME_ROUTE,
+  POSTS_ROUTE,
+  TRACKS_ROUTE,
+  PROJECTS_ROUTE,
+  HOME_ROUTE_NAME,
+  POSTS_ROUTE_NAME,
+  TRACKS_ROUTE_NAME,
+  PROJECTS_ROUTE_NAME,
+} from '@/assets/constants/routes';
 import { RootState } from '@/store';
 import { Toolbar } from './Toolbar';
 import { useDisclosure } from '@mantine/hooks';
 import { IconChevronDown } from '@tabler/icons';
 import { NavigationCard } from './NavigationCard';
 import { projects } from '@/assets/data/dashboard';
-import { primaryColor, headerHeight } from '@/assets/data/common';
+import { DARK_THEME } from '@/assets/constants/themes';
 import { useCommonStyles } from '@/assets/styles/common';
 import { Link } from '@/components/Dashboard/Header/Link';
 import { useDashboardStyles } from '@/assets/styles/dashboard';
+import { primaryColor, headerHeight } from '@/assets/data/common';
 
 export function MegaHeader() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
@@ -37,29 +50,53 @@ export function MegaHeader() {
     (state: RootState) => state.preferences.colorScheme,
   );
 
+  const navigate = useNavigate();
+
   const projectsLinks = projects.links?.map((item, index) => (
     <Link item={item} key={index} />
   ));
+
+  const homeNavLink = (
+    <NavLink
+      key={HOME_ROUTE_NAME}
+      label={HOME_ROUTE_NAME}
+      className={dashboardStyles.link}
+      onClick={() => navigate(HOME_ROUTE)}
+    />
+  );
 
   return (
     <Box>
       <Header height={headerHeight} className={dashboardStyles.header}>
         <Group position='apart' className={commonStyles.h100}>
           <Group
+            noWrap
             spacing={0}
             className={`${commonStyles.hiddenMobile} ${commonStyles.h100} `}
           >
+            {homeNavLink}
+
             {projectsLinks && (
-              <NavigationCard title='Open source' links={projectsLinks} />
+              <NavigationCard
+                title={PROJECTS_ROUTE_NAME}
+                links={projectsLinks}
+                viewAllUrl={PROJECTS_ROUTE}
+              />
             )}
 
-            <a href='#' className={dashboardStyles.link}>
-              Posts
-            </a>
+            <NavLink
+              key={POSTS_ROUTE_NAME}
+              label={POSTS_ROUTE_NAME}
+              className={dashboardStyles.link}
+              onClick={() => navigate(POSTS_ROUTE)}
+            />
 
-            <a href='#' className={dashboardStyles.link}>
-              Tracks
-            </a>
+            <NavLink
+              key={TRACKS_ROUTE}
+              label={TRACKS_ROUTE_NAME}
+              className={dashboardStyles.link}
+              onClick={() => navigate(TRACKS_ROUTE)}
+            />
           </Group>
 
           <Burger
@@ -85,12 +122,10 @@ export function MegaHeader() {
         <ScrollArea sx={{ height: `calc(100vh - ${headerHeight}px)` }} mx='-md'>
           <Divider
             my='sm'
-            color={colorScheme === 'dark' ? 'dark.5' : 'gray.1'}
+            color={colorScheme === DARK_THEME ? 'dark.5' : 'gray.1'}
           />
 
-          <a href='#' className={dashboardStyles.link}>
-            Home
-          </a>
+          {homeNavLink}
 
           {projectsLinks && (
             <div>

@@ -1,5 +1,7 @@
 import { createStyles } from '@mantine/core';
 
+import { DARK_THEME } from '@/assets/constants/themes';
+
 export const useDashboardStyles = () => {
   const { classes } = createStyles((theme) => {
     const classes = {
@@ -14,7 +16,7 @@ export const useDashboardStyles = () => {
         paddingLeft: theme.spacing.md,
         paddingRight: theme.spacing.md,
         textDecoration: 'none',
-        color: theme.colorScheme === 'dark' ? theme.white : theme.black,
+        color: theme.colorScheme === DARK_THEME ? theme.white : theme.black,
         fontWeight: 500,
         fontSize: theme.fontSizes.sm,
 
@@ -27,7 +29,7 @@ export const useDashboardStyles = () => {
 
         ...theme.fn.hover({
           backgroundColor:
-            theme.colorScheme === 'dark'
+            theme.colorScheme === DARK_THEME
               ? theme.colors.dark[6]
               : theme.colors.gray[0],
 
@@ -44,12 +46,17 @@ export const useDashboardStyles = () => {
 
         ...theme.fn.hover({
           backgroundColor:
-            theme.colorScheme === 'dark'
+            theme.colorScheme === DARK_THEME
               ? theme.colors.dark[7]
               : theme.colors.gray[0],
         }),
 
         '&:active': theme.activeStyles,
+      },
+
+      navLinkWithIcon: {
+        display: 'flex',
+        alignItems: 'center',
       },
     };
 
