@@ -22,7 +22,7 @@ interface IProps {
   viewAllUrl: string;
 }
 
-export function NavigationCard({ title, links, viewAllUrl }: IProps) {
+export function NavigationHoverCard({ title, links, viewAllUrl }: IProps) {
   const navigate = useNavigate();
 
   const dashboardStyles = useDashboardStyles();
