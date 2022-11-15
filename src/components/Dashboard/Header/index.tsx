@@ -25,6 +25,17 @@ import { useCommonStyles } from '@/assets/styles/common';
 import { Link } from '@/components/Dashboard/Header/Link';
 import { useDashboardStyles } from '@/assets/styles/dashboard';
 
+import {
+  HOME_ROUTE,
+  POSTS_ROUTE,
+  TRACKS_ROUTE,
+  PROJECTS_ROUTE,
+  HOME_ROUTE_NAME,
+  POSTS_ROUTE_NAME,
+  TRACKS_ROUTE_NAME,
+  PROJECTS_ROUTE_NAME,
+} from '@/assets/constants/routes';
+
 export function MegaHeader() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false);
@@ -47,10 +58,10 @@ export function MegaHeader() {
 
   const homeNavLink = (
     <NavLink
-      key='home'
-      label='Home'
+      key={HOME_ROUTE_NAME}
+      label={HOME_ROUTE_NAME}
       className={dashboardStyles.link}
-      onClick={() => navigate('/')}
+      onClick={() => navigate(HOME_ROUTE)}
     />
   );
 
@@ -67,24 +78,24 @@ export function MegaHeader() {
 
             {projectsLinks && (
               <NavigationCard
-                title='Projects'
+                title={PROJECTS_ROUTE_NAME}
                 links={projectsLinks}
-                viewAllUrl='/projects'
+                viewAllUrl={PROJECTS_ROUTE}
               />
             )}
 
             <NavLink
-              key='posts'
-              label='Posts'
+              key={POSTS_ROUTE_NAME}
+              label={POSTS_ROUTE_NAME}
               className={dashboardStyles.link}
-              onClick={() => navigate('/posts')}
+              onClick={() => navigate(POSTS_ROUTE)}
             />
 
             <NavLink
-              key='tracks'
-              label='Tracks'
+              key={TRACKS_ROUTE}
+              label={TRACKS_ROUTE_NAME}
               className={dashboardStyles.link}
-              onClick={() => navigate('/tracks')}
+              onClick={() => navigate(TRACKS_ROUTE)}
             />
           </Group>
 
