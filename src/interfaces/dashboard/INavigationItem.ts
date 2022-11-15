@@ -1,9 +1,9 @@
 import { ILink } from './ILink';
 
-export interface ISection {
+export interface INavigationItem {
   name: string;
 
-  routeName: string;
+  route: string;
 
   links?: ILink[];
 }
