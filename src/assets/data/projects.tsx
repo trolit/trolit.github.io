@@ -160,4 +160,222 @@ export const projects: IProject[] = [
     thumbnail: require(`@/${IMAGES}/3vry.png`),
     target: 'https://github.com/trolit/3vry#3vry',
   },
+
+  {
+    name: 'Document And Compare',
+    date: '2020-04-17',
+    languages: ['C#'],
+    tags: [
+      {
+        text: 'Xamarin.Forms',
+      },
+      {
+        text: 'Android',
+      },
+      {
+        text: 'SQLite',
+      },
+    ],
+    description:
+      'Mobile app made to simplify documenting any "thing" under tag(s) and then quickly compare differences in generated doc.',
+    thumbnail: require(`@/${IMAGES}/doc-and-compare.png`),
+    target:
+      'https://github.com/OS-expected/document-and-compare#document-and-compare',
+  },
+
+  {
+    name: 'sShuffler',
+    date: '2020-04-12',
+    languages: ['C#'],
+    tags: [
+      {
+        text: 'WinForms',
+      },
+      {
+        text: '.NET Framework',
+      },
+    ],
+    description:
+      'Small, handy tool to give music playlists second life in format that is respected by car players.',
+    thumbnail: require(`@/${IMAGES}/sshuffler.PNG`),
+    target: 'https://github.com/trolit/sShuffler',
+  },
+
+  {
+    name: 'EzGitDoc',
+    date: '2020-02-23',
+    languages: ['JavaScript'],
+    tags: [
+      {
+        text: 'MDBootstrap',
+      },
+      {
+        text: 'LESS',
+      },
+    ],
+    description:
+      'WYSIWYG web tool to let users easily and quickly develop repos documentation. First, stable version got released in 6 days.',
+    thumbnail: require(`@/${IMAGES}/ezgitdoc.png`),
+    target: 'https://github.com/OS-expected/EzGitDoc',
+  },
+
+  {
+    name: 'Project Zero',
+    date: '2019-06-16',
+    languages: ['C#'],
+    tags: [
+      {
+        text: 'Unity 3D',
+      },
+    ],
+    description:
+      'Complete, educational, sandbox game about programming with 40 unique levels, 4 minigames, installer and rich documentation.',
+    thumbnail: require(`@/${IMAGES}/project-zero.jpg`),
+    target: 'https://github.com/trolit/projectZero',
+  },
+
+  {
+    name: 'NB Research Project',
+    date: '2019-05-19',
+    languages: ['C#'],
+    tags: [
+      {
+        text: 'CSP 2019',
+      },
+    ],
+    description:
+      'Naive Bayes Classifier efficency test when TRN set contains duplicates (Bootstrap) vs TRN containing unique objects only (Monte Carlo).',
+    thumbnail: require(`@/${IMAGES}/naive-bayes.jpg`),
+    target:
+      'https://github.com/trolit/naive-bayes-classifiers-work#naive-bayes-classifiers-experimental-work',
+  },
+
+  {
+    name: 'A*',
+    date: '2018-08-14',
+    languages: ['C#'],
+    tags: [
+      {
+        text: 'WinForms',
+      },
+    ],
+    description:
+      'Attempt on A* algorithm visualization after finding out nice article in WinForms desktop app.',
+    thumbnail: require(`@/${IMAGES}/a-star.jpg`),
+    target:
+      'https://github.com/trolit/Inne/tree/master/Algorytm%20A_star#o-algorytmie-a',
+  },
+
+  {
+    name: 'Robots Strike',
+    date: '2018-07-29',
+    languages: ['C#'],
+    tags: [
+      {
+        text: 'Unity 3D',
+      },
+      {
+        text: 'uNet',
+      },
+    ],
+    description:
+      'Meet Unity uNet technology while extending FPS project provided by Brackeys.',
+    thumbnail: require(`@/${IMAGES}/robo-strike.png`),
+    target: 'https://github.com/trolit/Robots_strike#robots-strike',
+  },
+
+  {
+    name: 'Last Human',
+    date: '2018-06-10',
+    languages: ['C#'],
+    tags: [
+      {
+        text: 'Unity 2D',
+      },
+    ],
+    description:
+      'Small 2D game project as personal second attempt to meet Unity IDE.',
+    thumbnail: require(`@/${IMAGES}/last-human.png`),
+    target: 'https://github.com/trolit/LastHuman#last-human',
+  },
+
+  {
+    name: 'Projekt Enigma',
+    date: '2018-01-07',
+    languages: ['C#'],
+    tags: [],
+    description: `Attempt to simulate three-rotor enigma as an project for science club. Versions before 2.0 doesn't count :p`,
+    thumbnail: require(`@/${IMAGES}/enigma.jpg`),
+    target:
+      'https://github.com/trolit/Kryptosystemy/tree/master/6.%20Enigma%20I#projekt-enigmawersja---sol3-v20',
+  },
+
+  {
+    name: 'Projekt Frog',
+    date: '2017-11-12',
+    languages: ['C#'],
+    tags: [
+      {
+        text: 'WinForms',
+      },
+    ],
+    description:
+      '2D game made in WinForms. Concept based on popular classic, Arcade Frogger with few enchancements like local coop.',
+    thumbnail: require(`@/${IMAGES}/frog.png`),
+    target: 'https://github.com/trolit/Projekt-Frog#projekt-frog',
+  },
+
+  {
+    name: 'Przepisownik 2016',
+    date: '2016-07-19',
+    languages: ['JavaScript'],
+    tags: [],
+    description:
+      'Page storing culinary recipes. Project was made to get familiar with gridster library and release web recipe book.',
+    thumbnail: require(`@/${IMAGES}/przepisownik.png`),
+    target: 'http://przepisownik2016.opx.pl/',
+  },
+
+  {
+    name: 'Przepisownik 2016',
+    date: '2016-07-19',
+    languages: ['JavaScript'],
+    tags: [],
+    description:
+      'Page storing culinary recipes. Project was made to get familiar with gridster library and release web recipe book.',
+    thumbnail: require(`@/${IMAGES}/przepisownik.png`),
+    target: 'http://przepisownik2016.opx.pl/',
+  },
+
+  {
+    name: 'cs_k1234_reedition',
+    date: '2015-01-11',
+    languages: [],
+    tags: [],
+    description:
+      'Map developed for Counter Strike 1.6, made in Valve Hammer Editor tool.',
+    thumbnail: require(`@/${IMAGES}/k1234.png`),
+    target: 'https://gamebanana.com/mods/92118',
+  },
+
+  {
+    name: 'Car Themed API',
+    date: '2020-08-15',
+    languages: ['C#'],
+    tags: [
+      {
+        text: 'NET Core 3.1',
+      },
+      {
+        text: 'MediatR',
+      },
+      {
+        text: 'integration tests',
+      },
+    ],
+    description:
+      'Basic CRUD implementation in car service theme in order to meet CQRS, MediatR, pagination and preview integration tests.',
+    thumbnail: require(`@/${IMAGES}/car-api.png`),
+    target: 'https://github.com/trolit/car-themed-API#car-themed-fake-api',
+  },
 ];
