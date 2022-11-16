@@ -28,6 +28,7 @@ export function MegaHeader() {
           name={name}
           links={links}
           route={route}
+          linksLimit={4}
         />
       );
     }
