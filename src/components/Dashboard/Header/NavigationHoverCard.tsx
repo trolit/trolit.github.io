@@ -58,7 +58,7 @@ export function NavigationHoverCard({ name, links, route }: IProps) {
         <Divider my='sm' mx='-md' />
 
         <SimpleGrid cols={2} spacing={0}>
-          {links.map((item, index) => (
+          {links.map((item) => (
             <Link item={item} key={item.name} />
           ))}
         </SimpleGrid>
