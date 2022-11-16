@@ -1,13 +1,4 @@
 import {
-  IconCode,
-  IconCoin,
-  IconBook,
-  IconFingerprint,
-  IconChartPie3,
-  IconNotification,
-} from '@tabler/icons';
-
-import {
   HOME_ROUTE,
   POSTS_ROUTE,
   TRACKS_ROUTE,
@@ -17,6 +8,7 @@ import {
   TRACKS_ROUTE_NAME,
   PROJECTS_ROUTE_NAME,
 } from '@/assets/constants/routes';
+import { projects } from './projects';
 import { INavigationItem } from '@/interfaces/dashboard/INavigationItem';
 
 export const home: INavigationItem = {
@@ -24,41 +16,10 @@ export const home: INavigationItem = {
   route: HOME_ROUTE,
 };
 
-export const projects: INavigationItem = {
+export const projectsNavigationItem: INavigationItem = {
   name: PROJECTS_ROUTE_NAME,
   route: PROJECTS_ROUTE,
-  links: [
-    {
-      icon: IconCode,
-      title: 'Open source',
-      description: 'This Pokémon’s cry is very loud and distracting',
-    },
-    {
-      icon: IconCoin,
-      title: 'Free for everyone',
-      description: 'The fluid of Smeargle’s tail secretions changes',
-    },
-    {
-      icon: IconBook,
-      title: 'Documentation',
-      description: 'Yanma is capable of seeing 360 degrees without',
-    },
-    {
-      icon: IconFingerprint,
-      title: 'Security',
-      description: 'The shell’s rounded shape and the grooves on its.',
-    },
-    {
-      icon: IconChartPie3,
-      title: 'Analytics',
-      description: 'This Pokémon uses its flying ability to quickly chase',
-    },
-    {
-      icon: IconNotification,
-      title: 'Notifications',
-      description: 'Combusken battles with the intensely hot flames it spews',
-    },
-  ],
+  links: projects,
 };
 
 export const posts: INavigationItem = {
@@ -73,7 +34,7 @@ export const tracks: INavigationItem = {
 
 export const navigationItems: INavigationItem[] = [
   home,
-  projects,
+  projectsNavigationItem,
   posts,
   tracks,
 ];
