@@ -29,7 +29,7 @@ export function HeaderDrawer({ isDrawerOpened, onDrawerClose }: IProps) {
 
   const navigation = navigationItems.map(({ name, route, links }) => {
     if (links) {
-      return <NavigationCollapse name={name} links={links} />;
+      return <NavigationCollapse key={name} name={name} links={links} />;
     }
 
     return (
@@ -57,7 +57,7 @@ export function HeaderDrawer({ isDrawerOpened, onDrawerClose }: IProps) {
           my='sm'
           color={colorScheme === DARK_THEME ? 'dark.5' : 'gray.1'}
         />
-
+        {/* @TODO Add "View All" option */}
         {navigation}
       </ScrollArea>
     </Drawer>
