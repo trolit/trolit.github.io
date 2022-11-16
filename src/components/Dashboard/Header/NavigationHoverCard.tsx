@@ -37,7 +37,6 @@ export function NavigationHoverCard({ name, links, route }: IProps) {
     >
       <HoverCard.Target>
         <NavLink
-          key={name}
           label={
             <span className={dashboardStyles.navLinkWithIcon}>
               {name} <IconChevronDown size={16} />
@@ -60,8 +59,7 @@ export function NavigationHoverCard({ name, links, route }: IProps) {
 
         <SimpleGrid cols={2} spacing={0}>
           {links.map((item) => (
-            // @TODO - navigate on click
-            <Link item={item} />
+            <Link item={item} key={item.name} />
           ))}
         </SimpleGrid>
       </HoverCard.Dropdown>

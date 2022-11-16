@@ -32,8 +32,7 @@ export function NavigationCollapse({ name, links }: IProps) {
 
       <Collapse in={linksOpened}>
         {links.map((item) => (
-          // @TODO - navigate on click
-          <Link item={item} />
+          <Link item={item} key={item.name} />
         ))}
       </Collapse>
     </div>

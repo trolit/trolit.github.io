@@ -22,7 +22,14 @@ export function MegaHeader() {
 
   const navigation = navigationItems.map(({ name, route, links }) => {
     if (links) {
-      return <NavigationHoverCard name={name} links={links} route={route} />;
+      return (
+        <NavigationHoverCard
+          key={name}
+          name={name}
+          links={links}
+          route={route}
+        />
+      );
     }
 
     return (

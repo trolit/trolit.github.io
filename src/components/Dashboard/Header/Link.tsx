@@ -1,4 +1,4 @@
-import { Text, UnstyledButton, Group, ThemeIcon } from '@mantine/core';
+import { Text, UnstyledButton, Group, ThemeIcon, Image } from '@mantine/core';
 
 import { primaryColor } from '@/assets/data/common';
 import { ILink } from '@/interfaces/dashboard/ILink';
@@ -11,16 +11,30 @@ interface IProps {
 export function Link({ item }: IProps) {
   const dashboardStyles = useDashboardStyles();
 
+  const { thumbnail } = item;
+
+  const renderedThumbnail =
+    typeof thumbnail === 'string' ? (
+      <Image src={thumbnail} alt={`${item.name} - thumbnail`} withPlaceholder />
+    ) : (
+      <ThemeIcon size={34} variant='default' radius='md'>
+        <item.thumbnail size={22} color={primaryColor} />
+      </ThemeIcon>
+    );
+
   return (
-    <UnstyledButton className={dashboardStyles.subLink} key={item.title}>
+    <UnstyledButton
+      className={dashboardStyles.subLink}
+      onClick={() => {
+        window.open(item.target, '_blank');
+      }}
+    >
       <Group noWrap align='flex-start'>
-        <ThemeIcon size={34} variant='default' radius='md'>
-          <item.icon size={22} color={primaryColor} />
-        </ThemeIcon>
+        {renderedThumbnail}
 
         <div>
           <Text size='sm' weight={500}>
-            {item.title}
+            {item.name}
           </Text>
 
           <Text size='xs' color='dimmed'>
