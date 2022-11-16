@@ -11,7 +11,7 @@ import {
 import { projects } from './projects';
 import { INavigationItem } from '@/interfaces/dashboard/INavigationItem';
 
-export const home: INavigationItem = {
+export const homeNavigationItem: INavigationItem = {
   name: HOME_ROUTE_NAME,
   route: HOME_ROUTE,
 };
@@ -22,19 +22,19 @@ export const projectsNavigationItem: INavigationItem = {
   links: projects,
 };
 
-export const posts: INavigationItem = {
+export const postsNavigationItem: INavigationItem = {
   name: POSTS_ROUTE_NAME,
   route: POSTS_ROUTE,
 };
 
-export const tracks: INavigationItem = {
+export const tracksNavigationItem: INavigationItem = {
   name: TRACKS_ROUTE_NAME,
   route: TRACKS_ROUTE,
 };
 
 export const navigationItems: INavigationItem[] = [
-  home,
+  homeNavigationItem,
   projectsNavigationItem,
-  posts,
-  tracks,
+  postsNavigationItem,
+  tracksNavigationItem,
 ];
