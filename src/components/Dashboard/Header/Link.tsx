@@ -15,7 +15,7 @@ export function Link({ item }: IProps) {
 
   const renderedThumbnail =
     typeof thumbnail === 'string' ? (
-      <Image src={thumbnail} alt={`${item.name} - thumbnail`} />
+      <Image src={thumbnail} alt={`${item.name} - thumbnail`} withPlaceholder />
     ) : (
       <ThemeIcon size={34} variant='default' radius='md'>
         <item.thumbnail size={22} color={primaryColor} />
@@ -23,7 +23,12 @@ export function Link({ item }: IProps) {
     );
 
   return (
-    <UnstyledButton className={dashboardStyles.subLink}>
+    <UnstyledButton
+      className={dashboardStyles.subLink}
+      onClick={() => {
+        window.open(item.target, '_blank');
+      }}
+    >
       <Group noWrap align='flex-start'>
         {renderedThumbnail}
 
