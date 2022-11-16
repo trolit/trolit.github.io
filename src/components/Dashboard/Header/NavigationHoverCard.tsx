@@ -20,12 +20,23 @@ interface IProps {
   links: ILink[];
 
   route: string;
+
+  linksLimit: number;
 }
 
-export function NavigationHoverCard({ name, links, route }: IProps) {
+export function NavigationHoverCard({
+  name,
+  links,
+  linksLimit,
+  route,
+}: IProps) {
   const navigate = useNavigate();
 
   const dashboardStyles = useDashboardStyles();
+
+  const slicedLinks = links.slice(0, linksLimit);
+
+  console.log(slicedLinks);
 
   return (
     <HoverCard
@@ -48,7 +59,7 @@ export function NavigationHoverCard({ name, links, route }: IProps) {
 
       <HoverCard.Dropdown sx={{ overflow: 'hidden' }}>
         <Group position='apart' px='md'>
-          <Text weight={500}>Recent</Text>
+          <Text weight={500}>Latest</Text>
 
           <Button variant='outline' onClick={() => navigate(route)}>
             View all
@@ -58,7 +69,7 @@ export function NavigationHoverCard({ name, links, route }: IProps) {
         <Divider my='sm' mx='-md' />
 
         <SimpleGrid cols={2} spacing={0}>
-          {links.map((item) => (
+          {slicedLinks.map((item) => (
             <Link item={item} key={item.name} />
           ))}
         </SimpleGrid>

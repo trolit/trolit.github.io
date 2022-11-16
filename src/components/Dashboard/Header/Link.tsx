@@ -15,7 +15,14 @@ export function Link({ item }: IProps) {
 
   const renderedThumbnail =
     typeof thumbnail === 'string' ? (
-      <Image src={thumbnail} alt={`${item.name} - thumbnail`} withPlaceholder />
+      <Image
+        width={34}
+        height={34}
+        radius='md'
+        src={thumbnail}
+        alt={`${item.name} - thumbnail`}
+        withPlaceholder
+      />
     ) : (
       <ThemeIcon size={34} variant='default' radius='md'>
         <item.thumbnail size={22} color={primaryColor} />
@@ -37,7 +44,7 @@ export function Link({ item }: IProps) {
             {item.name}
           </Text>
 
-          <Text size='xs' color='dimmed'>
+          <Text size='xs' color='dimmed' lineClamp={2}>
             {item.description}
           </Text>
         </div>
