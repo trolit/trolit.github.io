@@ -1,9 +1,10 @@
 import { defaultImageSrc } from './common';
+import { sortByDate } from '@/helpers/sortByDate';
 import { IProject } from '@/interfaces/dashboard/IProject';
 
 const IMAGES = 'assets/media/projects';
 
-export const projects: IProject[] = [
+const rawProjects: IProject[] = [
   {
     name: 'Patchron',
     date: '2022-01-18',
@@ -379,3 +380,5 @@ export const projects: IProject[] = [
     target: 'https://github.com/trolit/car-themed-API#car-themed-fake-api',
   },
 ];
+
+export const projects = sortByDate<IProject>(rawProjects);
