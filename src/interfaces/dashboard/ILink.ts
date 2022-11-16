@@ -6,4 +6,6 @@ export interface ILink {
   name: string;
 
   description: string;
+
+  target: string;
 }
