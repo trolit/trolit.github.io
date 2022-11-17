@@ -36,8 +36,6 @@ export function NavigationHoverCard({
 
   const slicedLinks = links.slice(0, linksLimit);
 
-  console.log(slicedLinks);
-
   return (
     <HoverCard
       width={600}
