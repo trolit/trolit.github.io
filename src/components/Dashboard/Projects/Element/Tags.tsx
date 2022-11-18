@@ -8,7 +8,7 @@ interface IProps {
 
 export function Tags({ tags }: IProps) {
   return (
-    <Group spacing='sm'>
+    <Group spacing='sm' position='center'>
       {tags.map(({ text, color }, index) => (
         <Badge variant='outline' key={`badge-${text}-${index}`} size='sm'>
           {text}
