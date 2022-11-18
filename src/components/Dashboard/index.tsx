@@ -1,7 +1,8 @@
 import { ReactNode } from 'react';
-import { Grid, Paper } from '@mantine/core';
+import { Grid, Paper, ScrollArea } from '@mantine/core';
 
 import { MegaHeader } from './Header';
+import { headerHeight } from '@/assets/data/common';
 import { useCommonStyles } from '@/assets/styles/common';
 
 interface IProps {
@@ -22,8 +23,10 @@ export function Dashboard({ tab }: IProps) {
           <MegaHeader />
         </Grid.Col>
 
-        <Grid.Col p='lg' span={12}>
-          {tab}
+        <Grid.Col span={12}>
+          <ScrollArea sx={{ height: `calc(100vh - ${headerHeight}px)` }}>
+            <Paper p='lg'>{tab}</Paper>
+          </ScrollArea>
         </Grid.Col>
       </Grid>
     </Paper>
