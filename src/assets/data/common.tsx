@@ -12,7 +12,7 @@ export const languages: Record<string, ILanguage> = {
   JAVASCRIPT: {
     name: 'JavaScript',
     acronym: 'JS',
-    badgeColorInHex: '#f0db4f',
+    badgeColorInHex: '#daa520',
   },
 
   TYPESCRIPT: {
@@ -36,6 +36,6 @@ export const languages: Record<string, ILanguage> = {
   JAVA: {
     name: 'Java',
     acronym: 'Java',
-    badgeColorInHex: '#FFA500',
+    badgeColorInHex: '#d97014',
   },
 };
