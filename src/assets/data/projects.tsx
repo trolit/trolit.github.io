@@ -175,7 +175,7 @@ const rawProjects: IProject[] = [
         text: 'SQLite',
       },
       {
-        text: 'YoutubeAPI',
+        text: 'Youtube API',
       },
     ],
     description: `Mobile app to encourage listening to music everyday and give a chance of finding something that wasn't heard before.`,
