@@ -18,7 +18,7 @@ export function Link({ item }: IProps) {
         window.open(item.target, '_blank');
       }}
     >
-      <Group noWrap align='flex-start'>
+      <Group align='flex-start'>
         <Thumbnail name={item.name} value={item.thumbnail} />
 
         <div>
