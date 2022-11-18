@@ -1,29 +1,17 @@
-import { Paper, Grid, Text, Group, Stack, Image } from '@mantine/core';
+import { Paper, Grid, Text, Stack } from '@mantine/core';
 
 import { Tags } from './Tags';
 import { Languages } from './Languages';
 import { useCommonStyles } from '@/assets/styles/common';
 import { IProject } from '@/interfaces/dashboard/IProject';
+import { Thumbnail } from '@/components/Dashboard/common/Thumbnail';
 
 interface IProps {
   item: IProject;
 }
 
 export function Element({ item }: IProps) {
-  const { thumbnail } = item;
-
   const commonStyles = useCommonStyles();
-
-  const renderedThumbnail = Array.isArray(thumbnail) ? (
-    thumbnail.map((Icon, index) => <Icon size={35} key={index} />)
-  ) : (
-    <Image
-      radius='md'
-      src={thumbnail}
-      alt={`${item.name} - thumbnail`}
-      withPlaceholder
-    />
-  );
 
   return (
     <Paper radius='md' withBorder className={commonStyles.h100}>
@@ -32,7 +20,7 @@ export function Element({ item }: IProps) {
       <Grid p='lg'>
         <Grid.Col span={12}>
           <Stack align='center'>
-            <Group>{renderedThumbnail}</Group>
+            <Thumbnail name={item.name} value={item.thumbnail} />
 
             <Text>{item.name}</Text>
 
