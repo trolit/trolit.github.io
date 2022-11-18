@@ -10,8 +10,8 @@ import {
 import { useNavigate } from 'react-router-dom';
 import { IconChevronDown } from '@tabler/icons';
 
-import { Link } from './Link';
 import { ILink } from '@/interfaces/dashboard/ILink';
+import { Link } from '@/components/Dashboard/common/Link';
 import { useDashboardStyles } from '@/assets/styles/dashboard';
 
 interface IProps {

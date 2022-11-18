@@ -1,8 +1,8 @@
-import { Text, UnstyledButton, Group, ThemeIcon, Image } from '@mantine/core';
+import { Text, UnstyledButton, Group } from '@mantine/core';
 
-import { primaryColor } from '@/assets/data/common';
 import { ILink } from '@/interfaces/dashboard/ILink';
 import { useDashboardStyles } from '@/assets/styles/dashboard';
+import { Thumbnail } from '@/components/Dashboard/common/Thumbnail';
 
 interface IProps {
   item: ILink;
@@ -10,24 +10,6 @@ interface IProps {
 
 export function Link({ item }: IProps) {
   const dashboardStyles = useDashboardStyles();
-
-  const { thumbnail } = item;
-
-  const renderedThumbnail =
-    typeof thumbnail === 'string' ? (
-      <Image
-        width={34}
-        height={34}
-        radius='md'
-        src={thumbnail}
-        alt={`${item.name} - thumbnail`}
-        withPlaceholder
-      />
-    ) : (
-      <ThemeIcon size={34} variant='default' radius='md'>
-        <item.thumbnail size={22} color={primaryColor} />
-      </ThemeIcon>
-    );
 
   return (
     <UnstyledButton
@@ -37,7 +19,7 @@ export function Link({ item }: IProps) {
       }}
     >
       <Group noWrap align='flex-start'>
-        {renderedThumbnail}
+        <Thumbnail name={item.name} value={item.thumbnail} />
 
         <div>
           <Text size='sm' weight={500}>
