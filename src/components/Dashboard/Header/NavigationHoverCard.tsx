@@ -10,8 +10,8 @@ import {
 import { useNavigate } from 'react-router-dom';
 import { IconChevronDown } from '@tabler/icons';
 
-import { Link } from './Link';
 import { ILink } from '@/interfaces/dashboard/ILink';
+import { Link } from '@/components/Dashboard/common/Link';
 import { useDashboardStyles } from '@/assets/styles/dashboard';
 
 interface IProps {
@@ -35,8 +35,6 @@ export function NavigationHoverCard({
   const dashboardStyles = useDashboardStyles();
 
   const slicedLinks = links.slice(0, linksLimit);
-
-  console.log(slicedLinks);
 
   return (
     <HoverCard
