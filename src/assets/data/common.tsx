@@ -9,21 +9,33 @@ export const primaryColor = 'green';
 export const headerHeight = 50;
 
 export const languages: Record<string, ILanguage> = {
-  js: {
+  JAVASCRIPT: {
     name: 'JavaScript',
     acronym: 'JS',
     badgeColorInHex: '#f0db4f',
   },
 
-  ts: {
+  TYPESCRIPT: {
     name: 'TypeScript',
     acronym: 'TS',
     badgeColorInHex: '#007acc',
   },
 
-  csharp: {
+  CSHARP: {
     name: 'C#',
     acronym: 'C#',
     badgeColorInHex: '#9b4993',
+  },
+
+  KOTLIN: {
+    name: 'Kotlin',
+    acronym: 'Kotlin',
+    badgeColorInHex: '#E24462',
+  },
+
+  JAVA: {
+    name: 'Java',
+    acronym: 'Java',
+    badgeColorInHex: '#FFA500',
   },
 };

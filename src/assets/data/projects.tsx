@@ -7,12 +7,14 @@ import {
   IconDice6,
 } from '@tabler/icons';
 
-import { defaultImageSrc } from './common';
+import { languages, defaultImageSrc } from './common';
 import { sortByDate } from '@/helpers/sortByDate';
 import { indexToIcons } from '@/helpers/indexToIcons';
 import { IProject } from '@/interfaces/dashboard/IProject';
 
 const thumbnail = defaultImageSrc;
+
+const { JAVASCRIPT, TYPESCRIPT, CSHARP, KOTLIN, JAVA } = languages;
 
 const icons = [
   IconDice1,
@@ -27,7 +29,7 @@ const rawProjects: IProject[] = [
   {
     name: 'Patchron',
     date: '2022-01-18',
-    languages: ['JavaScript'],
+    languages: [JAVASCRIPT],
     tags: [
       {
         text: 'Probot',
@@ -48,7 +50,7 @@ const rawProjects: IProject[] = [
   {
     name: 'Portfolio (Jekyll)',
     date: '2021-09-29',
-    languages: ['JavaScript'],
+    languages: [JAVASCRIPT],
     tags: [
       {
         text: 'Semantic UI',
@@ -65,7 +67,7 @@ const rawProjects: IProject[] = [
   {
     name: 'tonodedo',
     date: '2021-07-09',
-    languages: ['JavaScript'],
+    languages: [JAVASCRIPT],
     tags: [
       {
         text: 'Node.js',
@@ -88,7 +90,7 @@ const rawProjects: IProject[] = [
   {
     name: 'Leader selection algorithm',
     date: '2021-04-25',
-    languages: ['C#'],
+    languages: [CSHARP],
     tags: [
       {
         text: 'WinForms',
@@ -105,7 +107,7 @@ const rawProjects: IProject[] = [
   {
     name: 'Grocery store (frontend)',
     date: '2020-10-31',
-    languages: ['TypeScript'],
+    languages: [TYPESCRIPT],
     tags: [
       {
         text: 'Angular 10',
@@ -127,7 +129,7 @@ const rawProjects: IProject[] = [
   {
     name: 'Grocery store (backend)',
     date: '2020-09-21',
-    languages: ['Java'],
+    languages: [JAVA],
     tags: [
       {
         text: 'Maven',
@@ -149,7 +151,7 @@ const rawProjects: IProject[] = [
   {
     name: 'Wordally',
     date: '2020-08-09',
-    languages: ['JavaScript'],
+    languages: [JAVASCRIPT],
     tags: [
       {
         text: 'Bootstrap 4',
@@ -164,7 +166,7 @@ const rawProjects: IProject[] = [
   {
     name: '3vry',
     date: '2020-06-03',
-    languages: ['Kotlin'],
+    languages: [KOTLIN],
     tags: [
       {
         text: 'Android',
@@ -184,7 +186,7 @@ const rawProjects: IProject[] = [
   {
     name: 'Document And Compare',
     date: '2020-04-17',
-    languages: ['C#'],
+    languages: [CSHARP],
     tags: [
       {
         text: 'Xamarin.Forms',
@@ -206,7 +208,7 @@ const rawProjects: IProject[] = [
   {
     name: 'sShuffler',
     date: '2020-04-12',
-    languages: ['C#'],
+    languages: [CSHARP],
     tags: [
       {
         text: 'WinForms',
@@ -224,7 +226,7 @@ const rawProjects: IProject[] = [
   {
     name: 'EzGitDoc',
     date: '2020-02-23',
-    languages: ['JavaScript'],
+    languages: [JAVASCRIPT],
     tags: [
       {
         text: 'MDBootstrap',
@@ -242,7 +244,7 @@ const rawProjects: IProject[] = [
   {
     name: 'Project Zero',
     date: '2019-06-16',
-    languages: ['C#'],
+    languages: [CSHARP],
     tags: [
       {
         text: 'Unity 3D',
@@ -257,7 +259,7 @@ const rawProjects: IProject[] = [
   {
     name: 'NB Research Project',
     date: '2019-05-19',
-    languages: ['C#'],
+    languages: [CSHARP],
     tags: [
       {
         text: 'CSP 2019',
@@ -273,7 +275,7 @@ const rawProjects: IProject[] = [
   {
     name: 'A*',
     date: '2018-08-14',
-    languages: ['C#'],
+    languages: [CSHARP],
     tags: [
       {
         text: 'WinForms',
@@ -289,7 +291,7 @@ const rawProjects: IProject[] = [
   {
     name: 'Robots Strike',
     date: '2018-07-29',
-    languages: ['C#'],
+    languages: [CSHARP],
     tags: [
       {
         text: 'Unity 3D',
@@ -307,7 +309,7 @@ const rawProjects: IProject[] = [
   {
     name: 'Last Human',
     date: '2018-06-10',
-    languages: ['C#'],
+    languages: [CSHARP],
     tags: [
       {
         text: 'Unity 2D',
@@ -322,7 +324,7 @@ const rawProjects: IProject[] = [
   {
     name: 'Projekt Enigma',
     date: '2018-01-07',
-    languages: ['C#'],
+    languages: [CSHARP],
     tags: [],
     description: `Attempt to simulate three-rotor enigma as an project for science club. Versions before 2.0 doesn't count :p`,
     thumbnail,
@@ -333,7 +335,7 @@ const rawProjects: IProject[] = [
   {
     name: 'Projekt Frog',
     date: '2017-11-12',
-    languages: ['C#'],
+    languages: [CSHARP],
     tags: [
       {
         text: 'WinForms',
@@ -348,7 +350,7 @@ const rawProjects: IProject[] = [
   {
     name: 'Przepisownik 2016',
     date: '2016-07-19',
-    languages: ['JavaScript'],
+    languages: [JAVASCRIPT],
     tags: [],
     description:
       'Page storing culinary recipes. Project was made to get familiar with gridster library and release web recipe book.',
@@ -359,7 +361,7 @@ const rawProjects: IProject[] = [
   {
     name: 'Przepisownik 2016',
     date: '2016-07-19',
-    languages: ['JavaScript'],
+    languages: [JAVASCRIPT],
     tags: [],
     description:
       'Page storing culinary recipes. Project was made to get familiar with gridster library and release web recipe book.',
@@ -381,7 +383,7 @@ const rawProjects: IProject[] = [
   {
     name: 'Car Themed API',
     date: '2020-08-15',
-    languages: ['C#'],
+    languages: [CSHARP],
     tags: [
       {
         text: 'NET Core 3.1',
