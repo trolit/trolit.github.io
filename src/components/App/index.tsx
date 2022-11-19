@@ -8,12 +8,16 @@ import {
 import { ReactNode } from 'react';
 import { useSelector } from 'react-redux';
 
+import {
+  primaryColor,
+  backgroundSrc,
+  overlayPadding,
+} from '@/assets/data/common';
 import { RootState } from '@/store';
 import { MainGrid } from './MainGrid';
 import { useAppStyles } from '@/assets/styles/app';
 import { toggleColorScheme } from '@/store/preferences';
 import { useCommonStyles } from '@/assets/styles/common';
-import { backgroundSrc, primaryColor } from '@/assets/data/common';
 
 interface IProps {
   tab: ReactNode;
@@ -44,7 +48,7 @@ export default function App({ tab }: IProps) {
             backgroundImage: `url(${backgroundSrc})`,
           }}
         >
-          <Container fluid className={appStyles.container}>
+          <Container px={overlayPadding} fluid className={appStyles.container}>
             <Center className={commonStyles.h100}>
               <MainGrid tab={tab} />
             </Center>
