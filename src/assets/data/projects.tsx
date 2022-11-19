@@ -10,12 +10,12 @@ import {
 
 import { sortByDate } from '@/helpers/sortByDate';
 import { indexToIcons } from '@/helpers/indexToIcons';
-import { languages, defaultImageSrc } from '@/config';
 import { IProject } from '@/interfaces/dashboard/IProject';
+import { PREDEFINED_LANGUAGES, defaultImageSrc } from '@/config';
 
 const thumbnail = defaultImageSrc;
 
-const { JAVASCRIPT, TYPESCRIPT, CSHARP, KOTLIN, JAVA } = languages;
+const { JAVASCRIPT, TYPESCRIPT, CSHARP, KOTLIN, JAVA } = PREDEFINED_LANGUAGES;
 
 const icons = [
   IconDice1,
