@@ -1,6 +1,6 @@
 import { IconBrandGithub } from '@tabler/icons';
 
-import { ILink } from '@/interfaces/profile/ILink';
+import { ILink } from '@/interfaces/ILink';
 import { IBadge } from '@/interfaces/profile/IBadge';
 import { IQuote } from '@/interfaces/profile/IQuote';
 
