@@ -8,14 +8,19 @@ import {
   IconBrandGithub,
 } from '@tabler/icons';
 
+import { defaultImageSrc } from '@/config';
+import {
+  JAVA_LANGUAGE,
+  CSHARP_LANGUAGE,
+  KOTLIN_LANGUAGE,
+  JAVASCRIPT_LANGUAGE,
+  TYPESCRIPT_LANGUAGE,
+} from '@/assets/constants/predefined-languages';
 import { sortByDate } from '@/helpers/sortByDate';
 import { indexToIcons } from '@/helpers/indexToIcons';
 import { IProject } from '@/interfaces/dashboard/IProject';
-import { PREDEFINED_LANGUAGES, defaultImageSrc } from '@/config';
 
 const thumbnail = defaultImageSrc;
-
-const { JAVASCRIPT, TYPESCRIPT, CSHARP, KOTLIN, JAVA } = PREDEFINED_LANGUAGES;
 
 const icons = [
   IconDice1,
@@ -26,11 +31,12 @@ const icons = [
   IconDice6,
 ];
 
+// githubLink('Patchron')
 const rawProjects: IProject[] = [
   {
     name: 'Patchron',
     date: '2022-01-18',
-    languages: [JAVASCRIPT],
+    languages: [JAVASCRIPT_LANGUAGE],
     tags: [
       {
         text: 'Probot',
@@ -45,19 +51,13 @@ const rawProjects: IProject[] = [
     description:
       'GitHub bot intended to provide first, early pull request review and faster further reviews done by humans. Includes type definitions and unit tests written in Jest.',
     thumbnail,
-    links: [
-      {
-        name: 'GitHub',
-        icon: IconBrandGithub,
-        url: 'https://github.com/trolit/Patchron',
-      },
-    ],
+    links: [],
   },
 
   {
     name: 'Portfolio (Jekyll)',
     date: '2021-09-29',
-    languages: [JAVASCRIPT],
+    languages: [JAVASCRIPT_LANGUAGE],
     tags: [
       {
         text: 'Semantic UI',
@@ -80,7 +80,7 @@ const rawProjects: IProject[] = [
   {
     name: 'tonodedo',
     date: '2021-07-09',
-    languages: [JAVASCRIPT],
+    languages: [JAVASCRIPT_LANGUAGE],
     tags: [
       {
         text: 'Node.js',
@@ -109,7 +109,7 @@ const rawProjects: IProject[] = [
   {
     name: 'Leader selection algorithm',
     date: '2021-04-25',
-    languages: [CSHARP],
+    languages: [CSHARP_LANGUAGE],
     tags: [
       {
         text: 'WinForms',
@@ -132,7 +132,7 @@ const rawProjects: IProject[] = [
   {
     name: 'Grocery store (frontend)',
     date: '2020-10-31',
-    languages: [TYPESCRIPT],
+    languages: [TYPESCRIPT_LANGUAGE],
     tags: [
       {
         text: 'Angular 10',
@@ -159,7 +159,7 @@ const rawProjects: IProject[] = [
   {
     name: 'Grocery store (backend)',
     date: '2020-09-21',
-    languages: [JAVA],
+    languages: [JAVA_LANGUAGE],
     tags: [
       {
         text: 'Maven',
@@ -186,7 +186,7 @@ const rawProjects: IProject[] = [
   {
     name: 'Wordally',
     date: '2020-08-09',
-    languages: [JAVASCRIPT],
+    languages: [JAVASCRIPT_LANGUAGE],
     tags: [
       {
         text: 'Bootstrap 4',
@@ -207,7 +207,7 @@ const rawProjects: IProject[] = [
   {
     name: '3vry',
     date: '2020-06-03',
-    languages: [KOTLIN],
+    languages: [KOTLIN_LANGUAGE],
     tags: [
       {
         text: 'Android',
@@ -233,7 +233,7 @@ const rawProjects: IProject[] = [
   {
     name: 'Document And Compare',
     date: '2020-04-17',
-    languages: [CSHARP],
+    languages: [CSHARP_LANGUAGE],
     tags: [
       {
         text: 'Xamarin.Forms',
@@ -260,7 +260,7 @@ const rawProjects: IProject[] = [
   {
     name: 'sShuffler',
     date: '2020-04-12',
-    languages: [CSHARP],
+    languages: [CSHARP_LANGUAGE],
     tags: [
       {
         text: 'WinForms',
@@ -284,7 +284,7 @@ const rawProjects: IProject[] = [
   {
     name: 'EzGitDoc',
     date: '2020-02-23',
-    languages: [JAVASCRIPT],
+    languages: [JAVASCRIPT_LANGUAGE],
     tags: [
       {
         text: 'MDBootstrap',
@@ -308,7 +308,7 @@ const rawProjects: IProject[] = [
   {
     name: 'Project Zero',
     date: '2019-06-16',
-    languages: [CSHARP],
+    languages: [CSHARP_LANGUAGE],
     tags: [
       {
         text: 'Unity 3D',
@@ -329,7 +329,7 @@ const rawProjects: IProject[] = [
   {
     name: 'NB Research Project',
     date: '2019-05-19',
-    languages: [CSHARP],
+    languages: [CSHARP_LANGUAGE],
     tags: [
       {
         text: 'CSP 2019',
@@ -350,7 +350,7 @@ const rawProjects: IProject[] = [
   {
     name: 'A*',
     date: '2018-08-14',
-    languages: [CSHARP],
+    languages: [CSHARP_LANGUAGE],
     tags: [
       {
         text: 'WinForms',
@@ -371,7 +371,7 @@ const rawProjects: IProject[] = [
   {
     name: 'Robots Strike',
     date: '2018-07-29',
-    languages: [CSHARP],
+    languages: [CSHARP_LANGUAGE],
     tags: [
       {
         text: 'Unity 3D',
@@ -395,7 +395,7 @@ const rawProjects: IProject[] = [
   {
     name: 'Last Human',
     date: '2018-06-10',
-    languages: [CSHARP],
+    languages: [CSHARP_LANGUAGE],
     tags: [
       {
         text: 'Unity 2D',
@@ -416,7 +416,7 @@ const rawProjects: IProject[] = [
   {
     name: 'Projekt Enigma',
     date: '2018-01-07',
-    languages: [CSHARP],
+    languages: [CSHARP_LANGUAGE],
     tags: [],
     description: `Attempt to simulate three-rotor enigma as an project for science club. Versions before 2.0 doesn't count :p`,
     thumbnail,
@@ -432,7 +432,7 @@ const rawProjects: IProject[] = [
   {
     name: 'Projekt Frog',
     date: '2017-11-12',
-    languages: [CSHARP],
+    languages: [CSHARP_LANGUAGE],
     tags: [
       {
         text: 'WinForms',
@@ -453,7 +453,7 @@ const rawProjects: IProject[] = [
   {
     name: 'Przepisownik 2016',
     date: '2016-07-19',
-    languages: [JAVASCRIPT],
+    languages: [JAVASCRIPT_LANGUAGE],
     tags: [],
     description:
       'Page storing culinary recipes. Project was made to get familiar with gridster library and release web recipe book.',
@@ -470,7 +470,7 @@ const rawProjects: IProject[] = [
   {
     name: 'Przepisownik 2016',
     date: '2016-07-19',
-    languages: [JAVASCRIPT],
+    languages: [JAVASCRIPT_LANGUAGE],
     tags: [],
     description:
       'Page storing culinary recipes. Project was made to get familiar with gridster library and release web recipe book.',
@@ -504,7 +504,7 @@ const rawProjects: IProject[] = [
   {
     name: 'Car Themed API',
     date: '2020-08-15',
-    languages: [CSHARP],
+    languages: [CSHARP_LANGUAGE],
     tags: [
       {
         text: 'NET Core 3.1',
