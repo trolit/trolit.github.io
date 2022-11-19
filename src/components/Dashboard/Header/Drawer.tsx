@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router';
 import { headerHeight } from '@/assets/data/common';
 import { DARK_THEME } from '@/assets/constants/themes';
 import { useCommonStyles } from '@/assets/styles/common';
-import { NavigationCollapse } from './NavigationCollapse';
 import { navigationItems } from '@/assets/data/dashboard';
 import { useDashboardStyles } from '@/assets/styles/dashboard';
 
@@ -27,11 +26,7 @@ export function HeaderDrawer({ isDrawerOpened, onDrawerClose }: IProps) {
     (state: RootState) => state.preferences.colorScheme,
   );
 
-  const navigation = navigationItems.map(({ name, route, links }) => {
-    if (links) {
-      return <NavigationCollapse key={name} name={name} links={links} />;
-    }
-
+  const navigation = navigationItems.map(({ name, route }) => {
     return (
       <NavLink
         key={name}
