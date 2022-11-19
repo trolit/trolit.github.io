@@ -8,9 +8,9 @@ import {
   IconBrandGithub,
 } from '@tabler/icons';
 
-import { languages, defaultImageSrc } from './common';
 import { sortByDate } from '@/helpers/sortByDate';
 import { indexToIcons } from '@/helpers/indexToIcons';
+import { languages, defaultImageSrc } from '@/config';
 import { IProject } from '@/interfaces/dashboard/IProject';
 
 const thumbnail = defaultImageSrc;
