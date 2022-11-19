@@ -5,6 +5,7 @@ import {
   IconDice4,
   IconDice5,
   IconDice6,
+  IconBrandGithub,
 } from '@tabler/icons';
 
 import { languages, defaultImageSrc } from './common';
@@ -44,7 +45,13 @@ const rawProjects: IProject[] = [
     description:
       'GitHub bot intended to provide first, early pull request review and faster further reviews done by humans. Includes type definitions and unit tests written in Jest.',
     thumbnail,
-    target: 'https://github.com/trolit/Patchron',
+    links: [
+      {
+        name: 'GitHub',
+        icon: IconBrandGithub,
+        url: 'https://github.com/trolit/Patchron',
+      },
+    ],
   },
 
   {
@@ -61,7 +68,13 @@ const rawProjects: IProject[] = [
     ],
     description: 'Jekyll portfolio based on TechFolios template.',
     thumbnail,
-    target: 'https://github.com/trolit/trolit.github.io',
+    links: [
+      {
+        name: 'GitHub',
+        icon: IconBrandGithub,
+        url: 'https://github.com/trolit/trolit.github.io',
+      },
+    ],
   },
 
   {
@@ -84,7 +97,13 @@ const rawProjects: IProject[] = [
     ],
     description: `First approach to React with Node.js as web application for storing user's notes with some unit tests done in Mocha.`,
     thumbnail,
-    target: 'https://github.com/trolit/tonodedo',
+    links: [
+      {
+        name: 'GitHub',
+        icon: IconBrandGithub,
+        url: 'https://github.com/trolit/tonodedo',
+      },
+    ],
   },
 
   {
@@ -101,7 +120,13 @@ const rawProjects: IProject[] = [
     ],
     description: `Election algorithm simulation in ring topology (Andrew Tanenbaum's variant) using .NET sockets mechanism and UDP protocol.`,
     thumbnail,
-    target: 'https://github.com/trolit/leader-selection-Tanenbaum',
+    links: [
+      {
+        name: 'GitHub',
+        icon: IconBrandGithub,
+        url: 'https://github.com/trolit/leader-selection-Tanenbaum',
+      },
+    ],
   },
 
   {
@@ -122,8 +147,13 @@ const rawProjects: IProject[] = [
     description:
       'Grocery Store API frontend demonstration including sessionStorage, shopping cart, sorting and filtering.',
     thumbnail,
-    target:
-      'https://github.com/trolit/grocery-store-angular#-grocery-store-angular',
+    links: [
+      {
+        name: 'GitHub',
+        icon: IconBrandGithub,
+        url: 'https://github.com/trolit/grocery-store-angular#-grocery-store-angular',
+      },
+    ],
   },
 
   {
@@ -144,8 +174,13 @@ const rawProjects: IProject[] = [
     description:
       'Grocery store API implementation in Java (JDK 14) using Spring Boot, JPA, Hibernate, Querydsl.',
     thumbnail,
-    target:
-      'https://github.com/trolit/grocery-store-themed-API#-grocery-store-api-v122',
+    links: [
+      {
+        name: 'GitHub',
+        icon: IconBrandGithub,
+        url: 'https://github.com/trolit/grocery-store-themed-API#-grocery-store-api-v122',
+      },
+    ],
   },
 
   {
@@ -160,7 +195,13 @@ const rawProjects: IProject[] = [
     description:
       'Tiny web tool that offers foreign language vocabulary learning, based on personal experience (short intervals, better effects).',
     thumbnail,
-    target: 'https://github.com/trolit/Wordally#wordally',
+    links: [
+      {
+        name: 'GitHub',
+        icon: IconBrandGithub,
+        url: 'https://github.com/trolit/Wordally#wordally',
+      },
+    ],
   },
 
   {
@@ -180,7 +221,13 @@ const rawProjects: IProject[] = [
     ],
     description: `Mobile app to encourage listening to music everyday and give a chance of finding something that wasn't heard before.`,
     thumbnail,
-    target: 'https://github.com/trolit/3vry#3vry',
+    links: [
+      {
+        name: 'GitHub',
+        icon: IconBrandGithub,
+        url: 'https://github.com/trolit/3vry#3vry',
+      },
+    ],
   },
 
   {
@@ -201,8 +248,13 @@ const rawProjects: IProject[] = [
     description:
       'Mobile app made to simplify documenting any "thing" under tag(s) and then quickly compare differences in generated doc.',
     thumbnail,
-    target:
-      'https://github.com/OS-expected/document-and-compare#document-and-compare',
+    links: [
+      {
+        name: 'GitHub',
+        icon: IconBrandGithub,
+        url: 'https://github.com/OS-expected/document-and-compare#document-and-compare',
+      },
+    ],
   },
 
   {
@@ -220,7 +272,13 @@ const rawProjects: IProject[] = [
     description:
       'Small, handy tool to give music playlists second life in format that is respected by car players.',
     thumbnail,
-    target: 'https://github.com/trolit/sShuffler',
+    links: [
+      {
+        name: 'GitHub',
+        icon: IconBrandGithub,
+        url: 'https://github.com/trolit/sShuffler',
+      },
+    ],
   },
 
   {
@@ -238,7 +296,13 @@ const rawProjects: IProject[] = [
     description:
       'WYSIWYG web tool to let users easily and quickly develop repos documentation. First, stable version got released in 6 days.',
     thumbnail,
-    target: 'https://github.com/OS-expected/EzGitDoc',
+    links: [
+      {
+        name: 'GitHub',
+        icon: IconBrandGithub,
+        url: 'https://github.com/OS-expected/EzGitDoc',
+      },
+    ],
   },
 
   {
@@ -253,7 +317,13 @@ const rawProjects: IProject[] = [
     description:
       'Complete, educational, sandbox game about programming with 40 unique levels, 4 minigames, installer and rich documentation.',
     thumbnail,
-    target: 'https://github.com/trolit/projectZero',
+    links: [
+      {
+        name: 'GitHub',
+        icon: IconBrandGithub,
+        url: 'https://github.com/trolit/projectZero',
+      },
+    ],
   },
 
   {
@@ -268,8 +338,13 @@ const rawProjects: IProject[] = [
     description:
       'Naive Bayes Classifier efficency test when TRN set contains duplicates (Bootstrap) vs TRN containing unique objects only (Monte Carlo).',
     thumbnail,
-    target:
-      'https://github.com/trolit/naive-bayes-classifiers-work#naive-bayes-classifiers-experimental-work',
+    links: [
+      {
+        name: 'GitHub',
+        icon: IconBrandGithub,
+        url: 'https://github.com/trolit/naive-bayes-classifiers-work#naive-bayes-classifiers-experimental-work',
+      },
+    ],
   },
 
   {
@@ -284,8 +359,13 @@ const rawProjects: IProject[] = [
     description:
       'Attempt on A* algorithm visualization after finding out nice article in WinForms desktop app.',
     thumbnail,
-    target:
-      'https://github.com/trolit/Inne/tree/master/Algorytm%20A_star#o-algorytmie-a',
+    links: [
+      {
+        name: 'GitHub',
+        icon: IconBrandGithub,
+        url: 'https://github.com/trolit/Inne/tree/master/Algorytm%20A_star#o-algorytmie-a',
+      },
+    ],
   },
 
   {
@@ -303,7 +383,13 @@ const rawProjects: IProject[] = [
     description:
       'Meet Unity uNet technology while extending FPS project provided by Brackeys.',
     thumbnail,
-    target: 'https://github.com/trolit/Robots_strike#robots-strike',
+    links: [
+      {
+        name: 'GitHub',
+        icon: IconBrandGithub,
+        url: 'https://github.com/trolit/Robots_strike#robots-strike',
+      },
+    ],
   },
 
   {
@@ -318,7 +404,13 @@ const rawProjects: IProject[] = [
     description:
       'Small 2D game project as personal second attempt to meet Unity IDE.',
     thumbnail,
-    target: 'https://github.com/trolit/LastHuman#last-human',
+    links: [
+      {
+        name: 'GitHub',
+        icon: IconBrandGithub,
+        url: 'https://github.com/trolit/LastHuman#last-human',
+      },
+    ],
   },
 
   {
@@ -328,8 +420,13 @@ const rawProjects: IProject[] = [
     tags: [],
     description: `Attempt to simulate three-rotor enigma as an project for science club. Versions before 2.0 doesn't count :p`,
     thumbnail,
-    target:
-      'https://github.com/trolit/Kryptosystemy/tree/master/6.%20Enigma%20I#projekt-enigmawersja---sol3-v20',
+    links: [
+      {
+        name: 'GitHub',
+        icon: IconBrandGithub,
+        url: 'https://github.com/trolit/Kryptosystemy/tree/master/6.%20Enigma%20I#projekt-enigmawersja---sol3-v20',
+      },
+    ],
   },
 
   {
@@ -344,7 +441,13 @@ const rawProjects: IProject[] = [
     description:
       '2D game made in WinForms. Concept based on popular classic, Arcade Frogger with few enchancements like local coop.',
     thumbnail,
-    target: 'https://github.com/trolit/Projekt-Frog#projekt-frog',
+    links: [
+      {
+        name: 'GitHub',
+        icon: IconBrandGithub,
+        url: 'https://github.com/trolit/Projekt-Frog#projekt-frog',
+      },
+    ],
   },
 
   {
@@ -355,7 +458,13 @@ const rawProjects: IProject[] = [
     description:
       'Page storing culinary recipes. Project was made to get familiar with gridster library and release web recipe book.',
     thumbnail,
-    target: 'http://przepisownik2016.opx.pl/',
+    links: [
+      {
+        name: 'GitHub',
+        icon: IconBrandGithub,
+        url: 'http://przepisownik2016.opx.pl/',
+      },
+    ],
   },
 
   {
@@ -366,7 +475,13 @@ const rawProjects: IProject[] = [
     description:
       'Page storing culinary recipes. Project was made to get familiar with gridster library and release web recipe book.',
     thumbnail,
-    target: 'http://przepisownik2016.opx.pl/',
+    links: [
+      {
+        name: 'GitHub',
+        icon: IconBrandGithub,
+        url: 'http://przepisownik2016.opx.pl/',
+      },
+    ],
   },
 
   {
@@ -377,7 +492,13 @@ const rawProjects: IProject[] = [
     description:
       'Map developed for Counter Strike 1.6, made in Valve Hammer Editor tool.',
     thumbnail,
-    target: 'https://gamebanana.com/mods/92118',
+    links: [
+      {
+        name: 'GitHub',
+        icon: IconBrandGithub,
+        url: 'https://gamebanana.com/mods/92118',
+      },
+    ],
   },
 
   {
@@ -398,7 +519,13 @@ const rawProjects: IProject[] = [
     description:
       'Basic CRUD implementation in car service theme in order to meet CQRS, MediatR, pagination and preview integration tests.',
     thumbnail,
-    target: 'https://github.com/trolit/car-themed-API#car-themed-fake-api',
+    links: [
+      {
+        name: 'GitHub',
+        icon: IconBrandGithub,
+        url: 'https://github.com/trolit/car-themed-API#car-themed-fake-api',
+      },
+    ],
   },
 ];
 
