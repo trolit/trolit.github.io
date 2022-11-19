@@ -7,12 +7,13 @@ import {
 } from '@tabler/icons';
 
 import { ILink } from '@/interfaces/ILink';
+import { GITHUB_USERNAME } from '@/config';
 
-export const GITHUB_LINK = (target: string): ILink => {
+export const GITHUB_LINK = (target: string, username?: string): ILink => {
   return {
     name: 'GitHub',
     icon: IconBrandGithub,
-    url: `https://github.com/${target}`,
+    url: `https://github.com/${username || GITHUB_USERNAME}/${target}`,
   };
 };
 
@@ -34,7 +35,7 @@ export const WWW_LINK = (target: string, name: string): ILink => {
 
 export const CUSTOM_LINK = (
   target: string,
-  name: string = '',
+  name: string,
   icon: TablerIcon = IconX,
 ): ILink => {
   return {
