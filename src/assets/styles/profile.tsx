@@ -1,6 +1,6 @@
 import { createStyles } from '@mantine/core';
 
-import { overlayPadding } from '@/assets/data/common';
+import { overlayPadding } from '@/config';
 
 export const useProfileStyles = () => {
   const { classes } = createStyles((theme) => {
