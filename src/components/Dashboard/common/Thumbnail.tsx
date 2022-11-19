@@ -1,7 +1,7 @@
 import { Group, Image } from '@mantine/core';
 import { TablerIcon } from '@tabler/icons';
 
-import { primaryColor } from '@/assets/data/common';
+import { primaryColor } from '@/config';
 
 interface IProps {
   name: string;
