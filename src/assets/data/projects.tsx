@@ -5,10 +5,16 @@ import {
   IconDice4,
   IconDice5,
   IconDice6,
-  IconBrandGithub,
 } from '@tabler/icons';
 
 import { defaultImageSrc } from '@/config';
+import {
+  WWW_LINK,
+  VIDEO_LINK,
+  GITHUB_LINK,
+  GALLERY_LINK,
+  DOCUMENTATION_LINK,
+} from '@/assets/constants/predefined-links';
 import {
   JAVA_LANGUAGE,
   CSHARP_LANGUAGE,
@@ -51,7 +57,7 @@ const rawProjects: IProject[] = [
     description:
       'GitHub bot intended to provide first, early pull request review and faster further reviews done by humans. Includes type definitions and unit tests written in Jest.',
     thumbnail,
-    links: [],
+    links: [GITHUB_LINK('Patchron')],
   },
 
   {
@@ -68,13 +74,7 @@ const rawProjects: IProject[] = [
     ],
     description: 'Jekyll portfolio based on TechFolios template.',
     thumbnail,
-    links: [
-      {
-        name: 'GitHub',
-        icon: IconBrandGithub,
-        url: 'https://github.com/trolit/trolit.github.io',
-      },
-    ],
+    links: [GITHUB_LINK('trolit.github.io')],
   },
 
   {
@@ -97,13 +97,7 @@ const rawProjects: IProject[] = [
     ],
     description: `First approach to React with Node.js as web application for storing user's notes with some unit tests done in Mocha.`,
     thumbnail,
-    links: [
-      {
-        name: 'GitHub',
-        icon: IconBrandGithub,
-        url: 'https://github.com/trolit/tonodedo',
-      },
-    ],
+    links: [GITHUB_LINK('tonodedo')],
   },
 
   {
@@ -120,13 +114,7 @@ const rawProjects: IProject[] = [
     ],
     description: `Election algorithm simulation in ring topology (Andrew Tanenbaum's variant) using .NET sockets mechanism and UDP protocol.`,
     thumbnail,
-    links: [
-      {
-        name: 'GitHub',
-        icon: IconBrandGithub,
-        url: 'https://github.com/trolit/leader-selection-Tanenbaum',
-      },
-    ],
+    links: [GITHUB_LINK('leader-selection-Tanenbaum')],
   },
 
   {
@@ -148,11 +136,10 @@ const rawProjects: IProject[] = [
       'Grocery Store API frontend demonstration including sessionStorage, shopping cart, sorting and filtering.',
     thumbnail,
     links: [
-      {
-        name: 'GitHub',
-        icon: IconBrandGithub,
-        url: 'https://github.com/trolit/grocery-store-angular#-grocery-store-angular',
-      },
+      GITHUB_LINK('grocery-store-angular#-grocery-store-angular'),
+      GALLERY_LINK(
+        'https://github.com/trolit/grocery-store-angular#-launch-preview-',
+      ),
     ],
   },
 
@@ -174,13 +161,7 @@ const rawProjects: IProject[] = [
     description:
       'Grocery store API implementation in Java (JDK 14) using Spring Boot, JPA, Hibernate, Querydsl.',
     thumbnail,
-    links: [
-      {
-        name: 'GitHub',
-        icon: IconBrandGithub,
-        url: 'https://github.com/trolit/grocery-store-themed-API#-grocery-store-api-v122',
-      },
-    ],
+    links: [GITHUB_LINK('grocery-store-themed-API#-grocery-store-api-v122')],
   },
 
   {
@@ -191,16 +172,17 @@ const rawProjects: IProject[] = [
       {
         text: 'Bootstrap 4',
       },
+      {
+        text: 'gulp.js',
+      },
     ],
     description:
       'Tiny web tool that offers foreign language vocabulary learning, based on personal experience (short intervals, better effects).',
     thumbnail,
     links: [
-      {
-        name: 'GitHub',
-        icon: IconBrandGithub,
-        url: 'https://github.com/trolit/Wordally#wordally',
-      },
+      GITHUB_LINK('Wordally#wordally'),
+      GALLERY_LINK('https://github.com/trolit/Wordally#screenshots'),
+      WWW_LINK('https://trolit.github.io/Wordally/', 'Preview'),
     ],
   },
 
@@ -222,11 +204,9 @@ const rawProjects: IProject[] = [
     description: `Mobile app to encourage listening to music everyday and give a chance of finding something that wasn't heard before.`,
     thumbnail,
     links: [
-      {
-        name: 'GitHub',
-        icon: IconBrandGithub,
-        url: 'https://github.com/trolit/3vry#3vry',
-      },
+      GITHUB_LINK('3vry#3vry'),
+      GALLERY_LINK('https://github.com/trolit/3vry#screens'),
+      VIDEO_LINK('https://www.youtube.com/watch?v=ZJ2wglKpu5M'),
     ],
   },
 
@@ -249,11 +229,10 @@ const rawProjects: IProject[] = [
       'Mobile app made to simplify documenting any "thing" under tag(s) and then quickly compare differences in generated doc.',
     thumbnail,
     links: [
-      {
-        name: 'GitHub',
-        icon: IconBrandGithub,
-        url: 'https://github.com/OS-expected/document-and-compare#document-and-compare',
-      },
+      GITHUB_LINK('document-and-compare#document-and-compare', 'OS-expected'),
+      GALLERY_LINK(
+        'https://github.com/OS-expected/document-and-compare#screens',
+      ),
     ],
   },
 
@@ -272,13 +251,7 @@ const rawProjects: IProject[] = [
     description:
       'Small, handy tool to give music playlists second life in format that is respected by car players.',
     thumbnail,
-    links: [
-      {
-        name: 'GitHub',
-        icon: IconBrandGithub,
-        url: 'https://github.com/trolit/sShuffler',
-      },
-    ],
+    links: [GITHUB_LINK('sShuffler')],
   },
 
   {
@@ -297,11 +270,10 @@ const rawProjects: IProject[] = [
       'WYSIWYG web tool to let users easily and quickly develop repos documentation. First, stable version got released in 6 days.',
     thumbnail,
     links: [
-      {
-        name: 'GitHub',
-        icon: IconBrandGithub,
-        url: 'https://github.com/OS-expected/EzGitDoc',
-      },
+      GITHUB_LINK('EzGitDoc', 'OS-expected'),
+      DOCUMENTATION_LINK(
+        'https://os-expected.github.io/EzGitDoc-documentation/',
+      ),
     ],
   },
 
@@ -318,11 +290,9 @@ const rawProjects: IProject[] = [
       'Complete, educational, sandbox game about programming with 40 unique levels, 4 minigames, installer and rich documentation.',
     thumbnail,
     links: [
-      {
-        name: 'GitHub',
-        icon: IconBrandGithub,
-        url: 'https://github.com/trolit/projectZero',
-      },
+      GITHUB_LINK('projectZero'),
+      VIDEO_LINK('https://www.youtube.com/watch?v=W4FGTbqTwsY', '1 (features)'),
+      VIDEO_LINK('https://www.youtube.com/watch?v=UtQ0g11_Juc', '2 (levels)'),
     ],
   },
 
@@ -339,11 +309,9 @@ const rawProjects: IProject[] = [
       'Naive Bayes Classifier efficency test when TRN set contains duplicates (Bootstrap) vs TRN containing unique objects only (Monte Carlo).',
     thumbnail,
     links: [
-      {
-        name: 'GitHub',
-        icon: IconBrandGithub,
-        url: 'https://github.com/trolit/naive-bayes-classifiers-work#naive-bayes-classifiers-experimental-work',
-      },
+      GITHUB_LINK(
+        'naive-bayes-classifiers-work#naive-bayes-classifiers-experimental-work',
+      ),
     ],
   },
 
@@ -359,13 +327,7 @@ const rawProjects: IProject[] = [
     description:
       'Attempt on A* algorithm visualization after finding out nice article in WinForms desktop app.',
     thumbnail,
-    links: [
-      {
-        name: 'GitHub',
-        icon: IconBrandGithub,
-        url: 'https://github.com/trolit/Inne/tree/master/Algorytm%20A_star#o-algorytmie-a',
-      },
-    ],
+    links: [GITHUB_LINK('Inne/tree/master/Algorytm%20A_star#o-algorytmie-a')],
   },
 
   {
@@ -383,13 +345,7 @@ const rawProjects: IProject[] = [
     description:
       'Meet Unity uNet technology while extending FPS project provided by Brackeys.',
     thumbnail,
-    links: [
-      {
-        name: 'GitHub',
-        icon: IconBrandGithub,
-        url: 'https://github.com/trolit/Robots_strike#robots-strike',
-      },
-    ],
+    links: [GITHUB_LINK('Robots_strike#robots-strike')],
   },
 
   {
@@ -405,11 +361,9 @@ const rawProjects: IProject[] = [
       'Small 2D game project as personal second attempt to meet Unity IDE.',
     thumbnail,
     links: [
-      {
-        name: 'GitHub',
-        icon: IconBrandGithub,
-        url: 'https://github.com/trolit/LastHuman#last-human',
-      },
+      GITHUB_LINK('LastHuman#last-human'),
+      VIDEO_LINK('https://www.youtube.com/watch?v=hcdU7WipB5c', 'v0.31'),
+      VIDEO_LINK('https://www.youtube.com/watch?v=aM6dEtEPYnU', 'v0.40'),
     ],
   },
 
@@ -421,11 +375,9 @@ const rawProjects: IProject[] = [
     description: `Attempt to simulate three-rotor enigma as an project for science club. Versions before 2.0 doesn't count :p`,
     thumbnail,
     links: [
-      {
-        name: 'GitHub',
-        icon: IconBrandGithub,
-        url: 'https://github.com/trolit/Kryptosystemy/tree/master/6.%20Enigma%20I#projekt-enigmawersja---sol3-v20',
-      },
+      GITHUB_LINK(
+        'Kryptosystemy/tree/master/6.%20Enigma%20I#projekt-enigmawersja---sol3-v20',
+      ),
     ],
   },
 
@@ -441,13 +393,7 @@ const rawProjects: IProject[] = [
     description:
       '2D game made in WinForms. Concept based on popular classic, Arcade Frogger with few enchancements like local coop.',
     thumbnail,
-    links: [
-      {
-        name: 'GitHub',
-        icon: IconBrandGithub,
-        url: 'https://github.com/trolit/Projekt-Frog#projekt-frog',
-      },
-    ],
+    links: [GITHUB_LINK('Projekt-Frog#projekt-frog')],
   },
 
   {
@@ -458,30 +404,7 @@ const rawProjects: IProject[] = [
     description:
       'Page storing culinary recipes. Project was made to get familiar with gridster library and release web recipe book.',
     thumbnail,
-    links: [
-      {
-        name: 'GitHub',
-        icon: IconBrandGithub,
-        url: 'http://przepisownik2016.opx.pl/',
-      },
-    ],
-  },
-
-  {
-    name: 'Przepisownik 2016',
-    date: '2016-07-19',
-    languages: [JAVASCRIPT_LANGUAGE],
-    tags: [],
-    description:
-      'Page storing culinary recipes. Project was made to get familiar with gridster library and release web recipe book.',
-    thumbnail,
-    links: [
-      {
-        name: 'GitHub',
-        icon: IconBrandGithub,
-        url: 'http://przepisownik2016.opx.pl/',
-      },
-    ],
+    links: [WWW_LINK('http://przepisownik2016.opx.pl/', 'Source')],
   },
 
   {
@@ -492,13 +415,7 @@ const rawProjects: IProject[] = [
     description:
       'Map developed for Counter Strike 1.6, made in Valve Hammer Editor tool.',
     thumbnail,
-    links: [
-      {
-        name: 'GitHub',
-        icon: IconBrandGithub,
-        url: 'https://gamebanana.com/mods/92118',
-      },
-    ],
+    links: [WWW_LINK('https://gamebanana.com/mods/92118', 'Source')],
   },
 
   {
@@ -519,13 +436,7 @@ const rawProjects: IProject[] = [
     description:
       'Basic CRUD implementation in car service theme in order to meet CQRS, MediatR, pagination and preview integration tests.',
     thumbnail,
-    links: [
-      {
-        name: 'GitHub',
-        icon: IconBrandGithub,
-        url: 'https://github.com/trolit/car-themed-API#car-themed-fake-api',
-      },
-    ],
+    links: [GITHUB_LINK('car-themed-API#car-themed-fake-api')],
   },
 ];
 
