@@ -19,6 +19,8 @@ export const headerHeight = 50;
 
 export const overlayPadding = 17;
 
+export const GITHUB_USERNAME = 'trolit';
+
 export const PREDEFINED_LANGUAGES: Record<string, ILanguage> = {
   JAVASCRIPT: {
     name: 'JavaScript',
@@ -61,7 +63,7 @@ export const PREDEFINED_LINKS: Record<
     return {
       name: 'GitHub',
       icon: IconBrandGithub,
-      url: `https://github.com/${target}`,
+      url: `https://github.com/${GITHUB_USERNAME}/${target}`,
     };
   },
 
