@@ -7,10 +7,9 @@ import { useDisclosure } from '@mantine/hooks';
 import { headerHeight } from '@/assets/data/common';
 import { useCommonStyles } from '@/assets/styles/common';
 import { navigationItems } from '@/assets/data/dashboard';
-import { NavigationHoverCard } from './NavigationHoverCard';
 import { useDashboardStyles } from '@/assets/styles/dashboard';
 
-export function MegaHeader() {
+export function PanelHeader() {
   const navigate = useNavigate();
 
   const commonStyles = useCommonStyles();
@@ -20,19 +19,7 @@ export function MegaHeader() {
   const [isDrawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false);
 
-  const navigation = navigationItems.map(({ name, route, links }) => {
-    if (links) {
-      return (
-        <NavigationHoverCard
-          key={name}
-          name={name}
-          links={links}
-          route={route}
-          linksLimit={4}
-        />
-      );
-    }
-
+  const navigation = navigationItems.map(({ name, route }) => {
     return (
       <NavLink
         key={name}

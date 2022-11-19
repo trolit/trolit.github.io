@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { Paper, ScrollArea, Container } from '@mantine/core';
 
-import { MegaHeader } from './Header';
+import { PanelHeader } from './Header';
 import { useCommonStyles } from '@/assets/styles/common';
 import { useDashboardStyles } from '@/assets/styles/dashboard';
 
@@ -21,7 +21,7 @@ export function Dashboard({ tab }: IProps) {
       className={`${commonStyles.panel} ${dashboardStyles.wrapper}`}
     >
       <Container px={0} fluid>
-        <MegaHeader />
+        <PanelHeader />
       </Container>
 
       <Container px={0} fluid>
