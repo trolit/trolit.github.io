@@ -1,5 +1,6 @@
 import {
   IconX,
+  IconNotes,
   IconVideo,
   IconCamera,
   TablerIcon,
@@ -18,17 +19,25 @@ export const GITHUB_LINK = (target: string, username?: string): ILink => {
   };
 };
 
-export const GALLERY_LINK = (target: string, name: string): ILink => {
+export const GALLERY_LINK = (target: string, name?: string): ILink => {
   return {
-    name: `Album - ${name}`,
+    name: `Album ${name ? '- ' + name : ''}`,
     icon: IconCamera,
     url: target,
   };
 };
 
-export const VIDEO_LINK = (target: string, name: string): ILink => {
+export const DOCUMENTATION_LINK = (target: string, name?: string): ILink => {
   return {
-    name: `Video - ${name}`,
+    name: `Documentation ${name ? '- ' + name : ''}`,
+    icon: IconNotes,
+    url: target,
+  };
+};
+
+export const VIDEO_LINK = (target: string, name?: string): ILink => {
+  return {
+    name: `Video ${name ? '- ' + name : ''}`,
     icon: IconVideo,
     url: target,
   };
