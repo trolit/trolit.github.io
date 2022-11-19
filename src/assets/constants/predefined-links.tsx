@@ -1,8 +1,9 @@
 import {
   IconX,
+  IconVideo,
+  IconCamera,
   TablerIcon,
   IconWorldWww,
-  IconAppWindow,
   IconBrandGithub,
 } from '@tabler/icons';
 
@@ -17,10 +18,18 @@ export const GITHUB_LINK = (target: string, username?: string): ILink => {
   };
 };
 
-export const PREVIEW_LINK = (target: string): ILink => {
+export const GALLERY_LINK = (target: string, name: string): ILink => {
   return {
-    name: 'Demo',
-    icon: IconAppWindow,
+    name: `Album - ${name}`,
+    icon: IconCamera,
+    url: target,
+  };
+};
+
+export const VIDEO_LINK = (target: string, name: string): ILink => {
+  return {
+    name: `Video - ${name}`,
+    icon: IconVideo,
     url: target,
   };
 };
