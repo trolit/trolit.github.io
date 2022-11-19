@@ -9,7 +9,7 @@ import { useCommonStyles } from '@/assets/styles/common';
 import { navigationItems } from '@/assets/data/dashboard';
 import { useDashboardStyles } from '@/assets/styles/dashboard';
 
-export function MegaHeader() {
+export function PanelHeader() {
   const navigate = useNavigate();
 
   const commonStyles = useCommonStyles();
