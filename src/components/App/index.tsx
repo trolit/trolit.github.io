@@ -8,16 +8,12 @@ import {
 import { ReactNode } from 'react';
 import { useSelector } from 'react-redux';
 
-import {
-  primaryColor,
-  backgroundSrc,
-  overlayPadding,
-} from '@/assets/data/common';
 import { RootState } from '@/store';
 import { MainGrid } from './MainGrid';
 import { useAppStyles } from '@/assets/styles/app';
 import { toggleColorScheme } from '@/store/preferences';
 import { useCommonStyles } from '@/assets/styles/common';
+import { primaryColor, backgroundSrc, overlayPadding } from '@/config';
 
 interface IProps {
   tab: ReactNode;
