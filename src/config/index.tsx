@@ -1,3 +1,12 @@
+import {
+  IconX,
+  TablerIcon,
+  IconWorldWww,
+  IconAppWindow,
+  IconBrandGithub,
+} from '@tabler/icons';
+
+import { ILink } from '@/interfaces/ILink';
 import { ILanguage } from '@/interfaces/ILanguage';
 
 export const backgroundSrc = require('@/assets/media/background.svg').default;
@@ -10,7 +19,7 @@ export const headerHeight = 50;
 
 export const overlayPadding = 17;
 
-export const languages: Record<string, ILanguage> = {
+export const PREDEFINED_LANGUAGES: Record<string, ILanguage> = {
   JAVASCRIPT: {
     name: 'JavaScript',
     acronym: 'JS',
@@ -39,5 +48,44 @@ export const languages: Record<string, ILanguage> = {
     name: 'Java',
     acronym: 'Java',
     badgeColorInHex: '#d97014',
+  },
+};
+
+type PredefinedLinks = 'githubLink' | 'previewLink' | 'wwwLink' | 'customLink';
+
+export const PREDEFINED_LINKS: Record<
+  PredefinedLinks,
+  (target: string) => ILink
+> = {
+  githubLink: (target: string) => {
+    return {
+      name: 'GitHub',
+      icon: IconBrandGithub,
+      url: `https://github.com/${target}`,
+    };
+  },
+
+  previewLink: (target: string) => {
+    return {
+      name: 'Demo',
+      icon: IconAppWindow,
+      url: target,
+    };
+  },
+
+  wwwLink: (target: string, name: string = '') => {
+    return {
+      name,
+      icon: IconWorldWww,
+      url: target,
+    };
+  },
+
+  customLink: (target: string, name: string = '', icon: TablerIcon = IconX) => {
+    return {
+      name,
+      icon,
+      url: target,
+    };
   },
 };
