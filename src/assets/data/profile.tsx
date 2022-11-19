@@ -2,7 +2,7 @@ import { ILink } from '@/interfaces/ILink';
 import { IBadge } from '@/interfaces/profile/IBadge';
 import { IQuote } from '@/interfaces/profile/IQuote';
 
-import { PREDEFINED_LINKS } from '@/config';
+import { GITHUB_LINK } from '@/assets/constants/predefined-links';
 
 export const avatarSrc = require('@/assets/media/avatar.png');
 
@@ -16,9 +16,7 @@ export const badges: IBadge[] = [
   { text: 'C#' },
 ];
 
-const { githubLink } = PREDEFINED_LINKS;
-
-export const links: ILink[] = [githubLink('trolit')];
+export const links: ILink[] = [GITHUB_LINK('')];
 
 export const quote: IQuote = {
   author: 'Thomas Edison',
