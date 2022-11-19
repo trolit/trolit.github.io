@@ -1,8 +1,8 @@
-import { IconBrandGithub } from '@tabler/icons';
-
-import { ILink } from '@/interfaces/profile/ILink';
+import { ILink } from '@/interfaces/ILink';
 import { IBadge } from '@/interfaces/profile/IBadge';
 import { IQuote } from '@/interfaces/profile/IQuote';
+
+import { GITHUB_LINK } from '@/assets/constants/predefined-links';
 
 export const avatarSrc = require('@/assets/media/avatar.png');
 
@@ -16,12 +16,7 @@ export const badges: IBadge[] = [
   { text: 'C#' },
 ];
 
-export const links: ILink[] = [
-  {
-    icon: IconBrandGithub,
-    url: 'https://github.com/trolit/',
-  },
-];
+export const links: ILink[] = [GITHUB_LINK('')];
 
 export const quote: IQuote = {
   author: 'Thomas Edison',

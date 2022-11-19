@@ -1,7 +1,9 @@
 import { TablerIcon } from '@tabler/icons';
 
 export interface ILink {
-  url: string;
+  name?: string;
 
   icon: TablerIcon;
+
+  url: string;
 }

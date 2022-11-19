@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { IconMinimize, IconMaximize } from '@tabler/icons';
 
 import { RootState } from '@/store';
-import { primaryColor } from '@/assets/data/common';
+import { primaryColor } from '@/config';
 import { useCommonStyles } from '@/assets/styles/common';
 import { toggleDashboardView } from '@/store/preferences';
 

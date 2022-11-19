@@ -1,13 +1,21 @@
+import { TablerIcon } from '@tabler/icons';
+
 import { ITag } from './ITag';
-import { ILink } from './ILink';
+import { ILink } from '@/interfaces/ILink';
 import { ILanguage } from '@/interfaces/ILanguage';
 
-export interface IProject extends ILink {
-  date: string;
+export interface IProject {
+  thumbnail: string | TablerIcon[];
 
-  languages: ILanguage[];
+  name: string;
+
+  date: string;
 
   description: string;
 
+  languages: ILanguage[];
+
   tags: ITag[];
+
+  links: ILink[];
 }

@@ -7,14 +7,26 @@ import {
   IconDice6,
 } from '@tabler/icons';
 
-import { languages, defaultImageSrc } from './common';
+import { defaultImageSrc } from '@/config';
+import {
+  WWW_LINK,
+  VIDEO_LINK,
+  GITHUB_LINK,
+  GALLERY_LINK,
+  DOCUMENTATION_LINK,
+} from '@/assets/constants/predefined-links';
+import {
+  JAVA_LANGUAGE,
+  CSHARP_LANGUAGE,
+  KOTLIN_LANGUAGE,
+  JAVASCRIPT_LANGUAGE,
+  TYPESCRIPT_LANGUAGE,
+} from '@/assets/constants/predefined-languages';
 import { sortByDate } from '@/helpers/sortByDate';
 import { indexToIcons } from '@/helpers/indexToIcons';
 import { IProject } from '@/interfaces/dashboard/IProject';
 
 const thumbnail = defaultImageSrc;
-
-const { JAVASCRIPT, TYPESCRIPT, CSHARP, KOTLIN, JAVA } = languages;
 
 const icons = [
   IconDice1,
@@ -25,11 +37,12 @@ const icons = [
   IconDice6,
 ];
 
+// githubLink('Patchron')
 const rawProjects: IProject[] = [
   {
     name: 'Patchron',
     date: '2022-01-18',
-    languages: [JAVASCRIPT],
+    languages: [JAVASCRIPT_LANGUAGE],
     tags: [
       {
         text: 'Probot',
@@ -44,13 +57,13 @@ const rawProjects: IProject[] = [
     description:
       'GitHub bot intended to provide first, early pull request review and faster further reviews done by humans. Includes type definitions and unit tests written in Jest.',
     thumbnail,
-    target: 'https://github.com/trolit/Patchron',
+    links: [GITHUB_LINK('Patchron')],
   },
 
   {
     name: 'Portfolio (Jekyll)',
     date: '2021-09-29',
-    languages: [JAVASCRIPT],
+    languages: [JAVASCRIPT_LANGUAGE],
     tags: [
       {
         text: 'Semantic UI',
@@ -61,13 +74,13 @@ const rawProjects: IProject[] = [
     ],
     description: 'Jekyll portfolio based on TechFolios template.',
     thumbnail,
-    target: 'https://github.com/trolit/trolit.github.io',
+    links: [GITHUB_LINK('trolit.github.io')],
   },
 
   {
     name: 'tonodedo',
     date: '2021-07-09',
-    languages: [JAVASCRIPT],
+    languages: [JAVASCRIPT_LANGUAGE],
     tags: [
       {
         text: 'Node.js',
@@ -84,13 +97,13 @@ const rawProjects: IProject[] = [
     ],
     description: `First approach to React with Node.js as web application for storing user's notes with some unit tests done in Mocha.`,
     thumbnail,
-    target: 'https://github.com/trolit/tonodedo',
+    links: [GITHUB_LINK('tonodedo')],
   },
 
   {
     name: 'Leader selection algorithm',
     date: '2021-04-25',
-    languages: [CSHARP],
+    languages: [CSHARP_LANGUAGE],
     tags: [
       {
         text: 'WinForms',
@@ -101,13 +114,13 @@ const rawProjects: IProject[] = [
     ],
     description: `Election algorithm simulation in ring topology (Andrew Tanenbaum's variant) using .NET sockets mechanism and UDP protocol.`,
     thumbnail,
-    target: 'https://github.com/trolit/leader-selection-Tanenbaum',
+    links: [GITHUB_LINK('leader-selection-Tanenbaum')],
   },
 
   {
     name: 'Grocery store (frontend)',
     date: '2020-10-31',
-    languages: [TYPESCRIPT],
+    languages: [TYPESCRIPT_LANGUAGE],
     tags: [
       {
         text: 'Angular 10',
@@ -122,14 +135,18 @@ const rawProjects: IProject[] = [
     description:
       'Grocery Store API frontend demonstration including sessionStorage, shopping cart, sorting and filtering.',
     thumbnail,
-    target:
-      'https://github.com/trolit/grocery-store-angular#-grocery-store-angular',
+    links: [
+      GITHUB_LINK('grocery-store-angular#-grocery-store-angular'),
+      GALLERY_LINK(
+        'https://github.com/trolit/grocery-store-angular#-launch-preview-',
+      ),
+    ],
   },
 
   {
     name: 'Grocery store (backend)',
     date: '2020-09-21',
-    languages: [JAVA],
+    languages: [JAVA_LANGUAGE],
     tags: [
       {
         text: 'Maven',
@@ -144,29 +161,35 @@ const rawProjects: IProject[] = [
     description:
       'Grocery store API implementation in Java (JDK 14) using Spring Boot, JPA, Hibernate, Querydsl.',
     thumbnail,
-    target:
-      'https://github.com/trolit/grocery-store-themed-API#-grocery-store-api-v122',
+    links: [GITHUB_LINK('grocery-store-themed-API#-grocery-store-api-v122')],
   },
 
   {
     name: 'Wordally',
     date: '2020-08-09',
-    languages: [JAVASCRIPT],
+    languages: [JAVASCRIPT_LANGUAGE],
     tags: [
       {
         text: 'Bootstrap 4',
+      },
+      {
+        text: 'gulp.js',
       },
     ],
     description:
       'Tiny web tool that offers foreign language vocabulary learning, based on personal experience (short intervals, better effects).',
     thumbnail,
-    target: 'https://github.com/trolit/Wordally#wordally',
+    links: [
+      GITHUB_LINK('Wordally#wordally'),
+      GALLERY_LINK('https://github.com/trolit/Wordally#screenshots'),
+      WWW_LINK('https://trolit.github.io/Wordally/', 'Preview'),
+    ],
   },
 
   {
     name: '3vry',
     date: '2020-06-03',
-    languages: [KOTLIN],
+    languages: [KOTLIN_LANGUAGE],
     tags: [
       {
         text: 'Android',
@@ -180,13 +203,17 @@ const rawProjects: IProject[] = [
     ],
     description: `Mobile app to encourage listening to music everyday and give a chance of finding something that wasn't heard before.`,
     thumbnail,
-    target: 'https://github.com/trolit/3vry#3vry',
+    links: [
+      GITHUB_LINK('3vry#3vry'),
+      GALLERY_LINK('https://github.com/trolit/3vry#screens'),
+      VIDEO_LINK('https://www.youtube.com/watch?v=ZJ2wglKpu5M'),
+    ],
   },
 
   {
     name: 'Document And Compare',
     date: '2020-04-17',
-    languages: [CSHARP],
+    languages: [CSHARP_LANGUAGE],
     tags: [
       {
         text: 'Xamarin.Forms',
@@ -201,14 +228,18 @@ const rawProjects: IProject[] = [
     description:
       'Mobile app made to simplify documenting any "thing" under tag(s) and then quickly compare differences in generated doc.',
     thumbnail,
-    target:
-      'https://github.com/OS-expected/document-and-compare#document-and-compare',
+    links: [
+      GITHUB_LINK('document-and-compare#document-and-compare', 'OS-expected'),
+      GALLERY_LINK(
+        'https://github.com/OS-expected/document-and-compare#screens',
+      ),
+    ],
   },
 
   {
     name: 'sShuffler',
     date: '2020-04-12',
-    languages: [CSHARP],
+    languages: [CSHARP_LANGUAGE],
     tags: [
       {
         text: 'WinForms',
@@ -220,13 +251,13 @@ const rawProjects: IProject[] = [
     description:
       'Small, handy tool to give music playlists second life in format that is respected by car players.',
     thumbnail,
-    target: 'https://github.com/trolit/sShuffler',
+    links: [GITHUB_LINK('sShuffler')],
   },
 
   {
     name: 'EzGitDoc',
     date: '2020-02-23',
-    languages: [JAVASCRIPT],
+    languages: [JAVASCRIPT_LANGUAGE],
     tags: [
       {
         text: 'MDBootstrap',
@@ -238,13 +269,18 @@ const rawProjects: IProject[] = [
     description:
       'WYSIWYG web tool to let users easily and quickly develop repos documentation. First, stable version got released in 6 days.',
     thumbnail,
-    target: 'https://github.com/OS-expected/EzGitDoc',
+    links: [
+      GITHUB_LINK('EzGitDoc', 'OS-expected'),
+      DOCUMENTATION_LINK(
+        'https://os-expected.github.io/EzGitDoc-documentation/',
+      ),
+    ],
   },
 
   {
     name: 'Project Zero',
     date: '2019-06-16',
-    languages: [CSHARP],
+    languages: [CSHARP_LANGUAGE],
     tags: [
       {
         text: 'Unity 3D',
@@ -253,13 +289,17 @@ const rawProjects: IProject[] = [
     description:
       'Complete, educational, sandbox game about programming with 40 unique levels, 4 minigames, installer and rich documentation.',
     thumbnail,
-    target: 'https://github.com/trolit/projectZero',
+    links: [
+      GITHUB_LINK('projectZero'),
+      VIDEO_LINK('https://www.youtube.com/watch?v=W4FGTbqTwsY', '1 (features)'),
+      VIDEO_LINK('https://www.youtube.com/watch?v=UtQ0g11_Juc', '2 (levels)'),
+    ],
   },
 
   {
     name: 'NB Research Project',
     date: '2019-05-19',
-    languages: [CSHARP],
+    languages: [CSHARP_LANGUAGE],
     tags: [
       {
         text: 'CSP 2019',
@@ -268,14 +308,17 @@ const rawProjects: IProject[] = [
     description:
       'Naive Bayes Classifier efficency test when TRN set contains duplicates (Bootstrap) vs TRN containing unique objects only (Monte Carlo).',
     thumbnail,
-    target:
-      'https://github.com/trolit/naive-bayes-classifiers-work#naive-bayes-classifiers-experimental-work',
+    links: [
+      GITHUB_LINK(
+        'naive-bayes-classifiers-work#naive-bayes-classifiers-experimental-work',
+      ),
+    ],
   },
 
   {
     name: 'A*',
     date: '2018-08-14',
-    languages: [CSHARP],
+    languages: [CSHARP_LANGUAGE],
     tags: [
       {
         text: 'WinForms',
@@ -284,14 +327,13 @@ const rawProjects: IProject[] = [
     description:
       'Attempt on A* algorithm visualization after finding out nice article in WinForms desktop app.',
     thumbnail,
-    target:
-      'https://github.com/trolit/Inne/tree/master/Algorytm%20A_star#o-algorytmie-a',
+    links: [GITHUB_LINK('Inne/tree/master/Algorytm%20A_star#o-algorytmie-a')],
   },
 
   {
     name: 'Robots Strike',
     date: '2018-07-29',
-    languages: [CSHARP],
+    languages: [CSHARP_LANGUAGE],
     tags: [
       {
         text: 'Unity 3D',
@@ -303,13 +345,13 @@ const rawProjects: IProject[] = [
     description:
       'Meet Unity uNet technology while extending FPS project provided by Brackeys.',
     thumbnail,
-    target: 'https://github.com/trolit/Robots_strike#robots-strike',
+    links: [GITHUB_LINK('Robots_strike#robots-strike')],
   },
 
   {
     name: 'Last Human',
     date: '2018-06-10',
-    languages: [CSHARP],
+    languages: [CSHARP_LANGUAGE],
     tags: [
       {
         text: 'Unity 2D',
@@ -318,24 +360,31 @@ const rawProjects: IProject[] = [
     description:
       'Small 2D game project as personal second attempt to meet Unity IDE.',
     thumbnail,
-    target: 'https://github.com/trolit/LastHuman#last-human',
+    links: [
+      GITHUB_LINK('LastHuman#last-human'),
+      VIDEO_LINK('https://www.youtube.com/watch?v=hcdU7WipB5c', 'v0.31'),
+      VIDEO_LINK('https://www.youtube.com/watch?v=aM6dEtEPYnU', 'v0.40'),
+    ],
   },
 
   {
     name: 'Projekt Enigma',
     date: '2018-01-07',
-    languages: [CSHARP],
+    languages: [CSHARP_LANGUAGE],
     tags: [],
     description: `Attempt to simulate three-rotor enigma as an project for science club. Versions before 2.0 doesn't count :p`,
     thumbnail,
-    target:
-      'https://github.com/trolit/Kryptosystemy/tree/master/6.%20Enigma%20I#projekt-enigmawersja---sol3-v20',
+    links: [
+      GITHUB_LINK(
+        'Kryptosystemy/tree/master/6.%20Enigma%20I#projekt-enigmawersja---sol3-v20',
+      ),
+    ],
   },
 
   {
     name: 'Projekt Frog',
     date: '2017-11-12',
-    languages: [CSHARP],
+    languages: [CSHARP_LANGUAGE],
     tags: [
       {
         text: 'WinForms',
@@ -344,29 +393,18 @@ const rawProjects: IProject[] = [
     description:
       '2D game made in WinForms. Concept based on popular classic, Arcade Frogger with few enchancements like local coop.',
     thumbnail,
-    target: 'https://github.com/trolit/Projekt-Frog#projekt-frog',
+    links: [GITHUB_LINK('Projekt-Frog#projekt-frog')],
   },
 
   {
     name: 'Przepisownik 2016',
     date: '2016-07-19',
-    languages: [JAVASCRIPT],
+    languages: [JAVASCRIPT_LANGUAGE],
     tags: [],
     description:
       'Page storing culinary recipes. Project was made to get familiar with gridster library and release web recipe book.',
     thumbnail,
-    target: 'http://przepisownik2016.opx.pl/',
-  },
-
-  {
-    name: 'Przepisownik 2016',
-    date: '2016-07-19',
-    languages: [JAVASCRIPT],
-    tags: [],
-    description:
-      'Page storing culinary recipes. Project was made to get familiar with gridster library and release web recipe book.',
-    thumbnail,
-    target: 'http://przepisownik2016.opx.pl/',
+    links: [WWW_LINK('http://przepisownik2016.opx.pl/', 'Source')],
   },
 
   {
@@ -377,13 +415,13 @@ const rawProjects: IProject[] = [
     description:
       'Map developed for Counter Strike 1.6, made in Valve Hammer Editor tool.',
     thumbnail,
-    target: 'https://gamebanana.com/mods/92118',
+    links: [WWW_LINK('https://gamebanana.com/mods/92118', 'Source')],
   },
 
   {
     name: 'Car Themed API',
     date: '2020-08-15',
-    languages: [CSHARP],
+    languages: [CSHARP_LANGUAGE],
     tags: [
       {
         text: 'NET Core 3.1',
@@ -398,7 +436,7 @@ const rawProjects: IProject[] = [
     description:
       'Basic CRUD implementation in car service theme in order to meet CQRS, MediatR, pagination and preview integration tests.',
     thumbnail,
-    target: 'https://github.com/trolit/car-themed-API#car-themed-fake-api',
+    links: [GITHUB_LINK('car-themed-API#car-themed-fake-api')],
   },
 ];
 

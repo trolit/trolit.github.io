@@ -3,8 +3,8 @@ import { Box, Group, Header, Burger, NavLink } from '@mantine/core';
 
 import { Toolbar } from './Toolbar';
 import { HeaderDrawer } from './Drawer';
+import { headerHeight } from '@/config';
 import { useDisclosure } from '@mantine/hooks';
-import { headerHeight } from '@/assets/data/common';
 import { useCommonStyles } from '@/assets/styles/common';
 import { navigationItems } from '@/assets/data/dashboard';
 import { useDashboardStyles } from '@/assets/styles/dashboard';
