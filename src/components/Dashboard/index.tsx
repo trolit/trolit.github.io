@@ -1,9 +1,9 @@
 import { ReactNode } from 'react';
-import { Grid, Paper, ScrollArea } from '@mantine/core';
+import { Paper, ScrollArea, Container } from '@mantine/core';
 
 import { MegaHeader } from './Header';
-import { headerHeight } from '@/assets/data/common';
 import { useCommonStyles } from '@/assets/styles/common';
+import { useDashboardStyles } from '@/assets/styles/dashboard';
 
 interface IProps {
   tab: ReactNode;
@@ -12,23 +12,23 @@ interface IProps {
 export function Dashboard({ tab }: IProps) {
   const commonStyles = useCommonStyles();
 
+  const dashboardStyles = useDashboardStyles();
+
   return (
     <Paper
       radius='md'
       withBorder
-      className={`${commonStyles.panel} ${commonStyles.h100}`}
+      className={`${commonStyles.panel} ${dashboardStyles.wrapper}`}
     >
-      <Grid>
-        <Grid.Col span={12}>
-          <MegaHeader />
-        </Grid.Col>
+      <Container px={0} fluid>
+        <MegaHeader />
+      </Container>
 
-        <Grid.Col span={12}>
-          <ScrollArea sx={{ height: `calc(100vh - ${headerHeight}px)` }}>
-            <Paper p='lg'>{tab}</Paper>
-          </ScrollArea>
-        </Grid.Col>
-      </Grid>
+      <Container px={0} fluid>
+        <ScrollArea className={dashboardStyles.content}>
+          <Paper p='lg'>{tab}</Paper>
+        </ScrollArea>
+      </Container>
     </Paper>
   );
 }
