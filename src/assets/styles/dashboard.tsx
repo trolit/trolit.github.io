@@ -1,7 +1,7 @@
 import { createStyles } from '@mantine/core';
 
 import { DARK_THEME } from '@/assets/constants/themes';
-import { overlayPadding, headerHeight } from '@/assets/data/common';
+import { overlayPadding, headerHeight } from '@/config';
 
 export const useDashboardStyles = () => {
   const { classes } = createStyles((theme) => {
