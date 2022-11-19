@@ -2,8 +2,8 @@ import { useSelector } from 'react-redux';
 import { Drawer, Divider, ScrollArea, NavLink } from '@mantine/core';
 
 import { RootState } from '@/store';
+import { headerHeight } from '@/config';
 import { useNavigate } from 'react-router';
-import { headerHeight } from '@/assets/data/common';
 import { DARK_THEME } from '@/assets/constants/themes';
 import { useCommonStyles } from '@/assets/styles/common';
 import { navigationItems } from '@/assets/data/dashboard';
