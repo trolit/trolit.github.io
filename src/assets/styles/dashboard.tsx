@@ -63,11 +63,6 @@ export const useDashboardStyles = () => {
 
         '&:active': theme.activeStyles,
       },
-
-      navLinkWithIcon: {
-        display: 'flex',
-        alignItems: 'center',
-      },
     };
 
     return classes;
