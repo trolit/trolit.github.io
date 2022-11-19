@@ -8,7 +8,6 @@ import {
   TRACKS_ROUTE_NAME,
   PROJECTS_ROUTE_NAME,
 } from '@/assets/constants/routes';
-import { projects } from './projects';
 import { INavigationItem } from '@/interfaces/dashboard/INavigationItem';
 
 export const homeNavigationItem: INavigationItem = {
@@ -19,7 +18,6 @@ export const homeNavigationItem: INavigationItem = {
 export const projectsNavigationItem: INavigationItem = {
   name: PROJECTS_ROUTE_NAME,
   route: PROJECTS_ROUTE,
-  links: projects,
 };
 
 export const postsNavigationItem: INavigationItem = {
