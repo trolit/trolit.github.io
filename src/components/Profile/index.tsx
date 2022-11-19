@@ -55,7 +55,7 @@ export function Profile() {
           ))}
         </Group>
 
-        <Blockquote cite={`-${quote.author}`} color={getColorByShade('4')}>
+        <Blockquote cite={`-${quote.author}`} color={getColorByShade(4)}>
           {quote.text}
         </Blockquote>
 
