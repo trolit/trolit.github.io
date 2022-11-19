@@ -1,8 +1,14 @@
 import { createStyles } from '@mantine/core';
 
+import { overlayPadding } from '@/assets/data/common';
+
 export const useProfileStyles = () => {
   const { classes } = createStyles((theme) => {
     const classes = {
+      wrapper: {
+        height: `calc(100vh - ${overlayPadding}px)`,
+      },
+
       title: {
         display: 'flex',
         justifyContent: 'center',
