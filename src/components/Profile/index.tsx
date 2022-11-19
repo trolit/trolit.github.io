@@ -6,7 +6,6 @@ import {
   Paper,
   Stack,
   Avatar,
-  Divider,
   ThemeIcon,
   Blockquote,
 } from '@mantine/core';
@@ -33,12 +32,10 @@ export function Profile() {
       p='lg'
       radius='md'
       withBorder
-      className={`${commonStyles.panel} ${commonStyles.h100}`}
+      className={`${commonStyles.panel} ${profileStyles.wrapper}`}
     >
-      <Stack justify='center' className={commonStyles.h100}>
+      <Stack align='center' justify='center' className={commonStyles.h100}>
         <Avatar src={avatarSrc} size={160} radius={120} mx='auto' />
-
-        <Divider variant='dashed' />
 
         <Text align='center' size='lg' weight={500}>
           {name}
