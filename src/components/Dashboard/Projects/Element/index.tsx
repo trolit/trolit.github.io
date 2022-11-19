@@ -1,4 +1,4 @@
-import { Paper, Grid, Text, Stack } from '@mantine/core';
+import { Paper, Grid, Text, Stack, Button } from '@mantine/core';
 
 import { Tags } from './Tags';
 import { Languages } from './Languages';
@@ -17,9 +17,9 @@ export function Element({ item }: IProps) {
     <Paper radius='md' withBorder className={commonStyles.h100}>
       <Languages languages={item.languages} />
 
-      <Grid p='lg'>
+      <Grid p='lg' className={commonStyles.h100}>
         <Grid.Col span={12}>
-          <Stack align='center'>
+          <Stack align='center' className={commonStyles.h100}>
             <Thumbnail name={item.name} value={item.thumbnail} />
 
             <Text>{item.name}</Text>
@@ -30,7 +30,19 @@ export function Element({ item }: IProps) {
 
             <Tags tags={item.tags} />
 
-            <Text fz='xs'>{item.description}</Text>
+            <Text fz='xs' style={{ flexGrow: '1' }}>
+              {item.description}
+            </Text>
+
+            <Button
+              size='sm'
+              radius='xs'
+              color='gray'
+              variant='outline'
+              style={{ alignSelf: 'flex-end' }}
+            >
+              more
+            </Button>
           </Stack>
         </Grid.Col>
       </Grid>
