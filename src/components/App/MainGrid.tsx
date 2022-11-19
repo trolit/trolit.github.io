@@ -20,14 +20,18 @@ export function MainGrid({ tab }: IProps) {
   );
 
   return (
-    <Grid grow className={`${commonStyles.h100} ${commonStyles.w100}`}>
+    <Grid
+      grow
+      align='center'
+      className={`${commonStyles.h100} ${commonStyles.w100}`}
+    >
       {!isDashboardMaximized && (
-        <Grid.Col span={3}>
+        <Grid.Col pl={0} span={3}>
           <Profile />
         </Grid.Col>
       )}
 
-      <Grid.Col span={isDashboardMaximized ? 12 : 9}>
+      <Grid.Col pr={0} span={isDashboardMaximized ? 12 : 9}>
         <motion.div layout className={commonStyles.h100}>
           <Dashboard tab={tab} />
         </motion.div>

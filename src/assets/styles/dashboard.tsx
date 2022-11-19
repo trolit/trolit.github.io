@@ -1,12 +1,22 @@
 import { createStyles } from '@mantine/core';
 
 import { DARK_THEME } from '@/assets/constants/themes';
+import { overlayPadding, headerHeight } from '@/assets/data/common';
 
 export const useDashboardStyles = () => {
   const { classes } = createStyles((theme) => {
     const classes = {
+      wrapper: {
+        height: `calc(100vh - ${overlayPadding}px)`,
+      },
+
       header: {
         borderRadius: '8px 8px 0 0',
+      },
+
+      content: {
+        height: `calc(100vh - ${headerHeight}px - ${overlayPadding}px)`,
+        borderRadius: theme.fn.radius('md'),
       },
 
       link: {

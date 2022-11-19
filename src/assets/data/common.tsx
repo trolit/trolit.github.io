@@ -8,6 +8,8 @@ export const primaryColor = 'green';
 
 export const headerHeight = 50;
 
+export const overlayPadding = 17;
+
 export const languages: Record<string, ILanguage> = {
   JAVASCRIPT: {
     name: 'JavaScript',
