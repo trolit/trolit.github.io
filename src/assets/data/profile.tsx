@@ -1,5 +1,5 @@
 import { ILink } from '@/interfaces/ILink';
-import { IBadge } from '@/interfaces/profile/IBadge';
+import { IBadge } from '@/interfaces/IBadge';
 import { IQuote } from '@/interfaces/profile/IQuote';
 
 import { GITHUB_LINK } from '@/assets/constants/predefined-links';
