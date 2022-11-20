@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import { useLocation } from 'react-router-dom';
 import { Drawer, Divider, ScrollArea, NavLink } from '@mantine/core';
 
 import { RootState } from '@/store';
@@ -18,6 +19,8 @@ interface IProps {
 export function HeaderDrawer({ isDrawerOpened, onDrawerClose }: IProps) {
   const navigate = useNavigate();
 
+  const location = useLocation();
+
   const commonStyles = useCommonStyles();
 
   const dashboardStyles = useDashboardStyles();
@@ -29,10 +32,15 @@ export function HeaderDrawer({ isDrawerOpened, onDrawerClose }: IProps) {
   const navigation = navigationItems.map(({ name, route }) => {
     return (
       <NavLink
+        active={location.pathname === route}
         key={name}
         label={name}
         className={dashboardStyles.link}
-        onClick={() => navigate(route)}
+        onClick={() => {
+          navigate(route);
+
+          onDrawerClose();
+        }}
       />
     );
   });
