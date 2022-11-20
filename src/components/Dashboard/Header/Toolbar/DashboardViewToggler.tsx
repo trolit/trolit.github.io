@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { IconMinimize, IconMaximize } from '@tabler/icons';
 
 import { RootState } from '@/store';
-import { primaryColor } from '@/config';
+import { PRIMARY_COLOR } from '@/config';
 import { useCommonStyles } from '@/assets/styles/common';
 import { toggleDashboardView } from '@/store/preferences';
 
@@ -24,7 +24,7 @@ export function DashboardViewToggler() {
     <Tooltip label={label} position='bottom' withArrow withinPortal>
       <ActionIcon
         variant='light'
-        color={primaryColor}
+        color={PRIMARY_COLOR}
         className={commonStyles.hiddenMobile}
         onClick={() => dispatch(toggleDashboardView())}
       >

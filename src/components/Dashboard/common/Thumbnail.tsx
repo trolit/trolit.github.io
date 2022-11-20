@@ -1,7 +1,7 @@
 import { Group, Image } from '@mantine/core';
 import { TablerIcon } from '@tabler/icons';
 
-import { primaryColor } from '@/config';
+import { PRIMARY_COLOR } from '@/config';
 
 interface IProps {
   name: string;
@@ -35,5 +35,5 @@ export function Thumbnail({ name, value }: IProps) {
 
   const Value = value;
 
-  return <Value size={22} color={primaryColor} />;
+  return <Value size={22} color={PRIMARY_COLOR} />;
 }

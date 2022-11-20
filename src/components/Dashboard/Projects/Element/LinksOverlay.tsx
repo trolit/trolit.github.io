@@ -9,7 +9,7 @@ import {
 } from '@mantine/core';
 import { Dispatch, SetStateAction } from 'react';
 
-import { primaryColor } from '@/config';
+import { PRIMARY_COLOR } from '@/config';
 import { ILink } from '@/interfaces/ILink';
 import { useCommonStyles } from '@/assets/styles/common';
 import { useProjectsStyles } from '@/assets/styles/projects';
@@ -49,7 +49,7 @@ export function LinksOverlay({ links, toggleOverlay }: IProps) {
                   justify='center'
                   className={commonStyles.h100}
                 >
-                  <link.icon color={primaryColor} size={32} />
+                  <link.icon color={PRIMARY_COLOR} size={32} />
 
                   <Text fz='xs' c='dimmed' lineClamp={1} mt={7}>
                     {link.name}

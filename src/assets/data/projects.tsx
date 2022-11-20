@@ -7,7 +7,7 @@ import {
   IconDice6,
 } from '@tabler/icons';
 
-import { defaultImageSrc } from '@/config';
+import { DEFAULT_IMAGE_SRC } from '@/config';
 import {
   WWW_LINK,
   VIDEO_LINK,
@@ -26,7 +26,7 @@ import { sortByDate } from '@/helpers/sortByDate';
 import { indexToIcons } from '@/helpers/indexToIcons';
 import { IProject } from '@/interfaces/dashboard/IProject';
 
-const thumbnail = defaultImageSrc;
+const thumbnail = DEFAULT_IMAGE_SRC;
 
 const icons = [
   IconDice1,
