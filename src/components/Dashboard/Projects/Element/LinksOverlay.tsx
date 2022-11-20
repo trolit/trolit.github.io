@@ -4,6 +4,7 @@ import {
   Stack,
   Button,
   Overlay,
+  ScrollArea,
   SimpleGrid,
   UnstyledButton,
 } from '@mantine/core';
@@ -30,34 +31,36 @@ export function LinksOverlay({ links, toggleOverlay }: IProps) {
         p='md'
         className={`${commonStyles.h100} ${projectsStyles.overlay}`}
       >
-        <Group position='apart' align='start' grow style={{ flexGrow: 1 }}>
-          <SimpleGrid cols={3}>
-            {links.map((link, index) => (
-              <UnstyledButton
-                p='md'
-                key={index}
-                color='black'
-                className={projectsStyles.item}
-                onClick={() => {
-                  window.open(link.url, '_blank');
-                }}
-              >
-                <Stack
-                  spacing={0}
-                  align='center'
-                  justify='center'
-                  className={commonStyles.h100}
+        <ScrollArea style={{ height: '50px', flexGrow: 1 }}>
+          <Group position='apart' align='start' grow>
+            <SimpleGrid cols={3}>
+              {links.map((link, index) => (
+                <UnstyledButton
+                  p='md'
+                  key={index}
+                  color='black'
+                  className={projectsStyles.item}
+                  onClick={() => {
+                    window.open(link.url, '_blank');
+                  }}
                 >
-                  <link.icon size={32} />
+                  <Stack
+                    spacing={0}
+                    align='center'
+                    justify='center'
+                    className={commonStyles.h100}
+                  >
+                    <link.icon size={32} />
 
-                  <Text fz='xs' c='dimmed' lineClamp={1} mt={7}>
-                    {link.name}
-                  </Text>
-                </Stack>
-              </UnstyledButton>
-            ))}
-          </SimpleGrid>
-        </Group>
+                    <Text fz='xs' c='dimmed' lineClamp={1} mt={7}>
+                      {link.name}
+                    </Text>
+                  </Stack>
+                </UnstyledButton>
+              ))}
+            </SimpleGrid>
+          </Group>
+        </ScrollArea>
 
         <Button
           size='sm'
