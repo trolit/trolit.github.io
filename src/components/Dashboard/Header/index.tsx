@@ -21,9 +21,10 @@ export function PanelHeader() {
   const [isDrawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false);
 
-  const navigation = navigationItems.map(({ name, route }) => (
+  const navigation = navigationItems.map(({ icon: Icon, name, route }) => (
     <NavLink
       active={location.pathname === route}
+      icon={<Icon size={18} />}
       key={name}
       label={name}
       className={dashboardStyles.link}
