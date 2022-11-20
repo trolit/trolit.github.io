@@ -9,7 +9,6 @@ import {
 } from '@mantine/core';
 import { Dispatch, SetStateAction } from 'react';
 
-import { PRIMARY_COLOR } from '@/config';
 import { ILink } from '@/interfaces/ILink';
 import { useCommonStyles } from '@/assets/styles/common';
 import { useProjectsStyles } from '@/assets/styles/projects';
