@@ -42,11 +42,11 @@ export const useDashboardStyles = () => {
             theme.colorScheme === DARK_THEME
               ? theme.colors.dark[6]
               : theme.colors.gray[0],
-
-          '&:first-of-type': {
-            borderTopLeftRadius: '8px',
-          },
         }),
+
+        '&:first-of-type': {
+          borderTopLeftRadius: '8px',
+        },
       },
 
       subLink: {
