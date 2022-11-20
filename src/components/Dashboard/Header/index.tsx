@@ -24,7 +24,7 @@ export function PanelHeader() {
   const navigation = navigationItems.map(({ icon: Icon, name, route }) => (
     <NavLink
       active={location.pathname === route}
-      icon={<Icon size={18} />}
+      icon={<Icon size={16} />}
       key={name}
       label={name}
       className={dashboardStyles.link}
