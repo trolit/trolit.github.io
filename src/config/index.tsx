@@ -9,3 +9,5 @@ export const headerHeight = 50;
 export const overlayPadding = 17;
 
 export const GITHUB_USERNAME = 'trolit';
+
+export const DATE_FORMAT = 'DD/MM/YYYY';

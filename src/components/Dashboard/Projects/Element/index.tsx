@@ -1,7 +1,9 @@
+import dayjs from 'dayjs';
 import { useState } from 'react';
 import { Paper, Grid, Text, Stack, Button, Box } from '@mantine/core';
 
 import { Tags } from './Tags';
+import { DATE_FORMAT } from '@/config';
 import { Languages } from './Languages';
 import { LinksOverlay } from './LinksOverlay';
 import { useCommonStyles } from '@/assets/styles/common';
@@ -36,7 +38,7 @@ export function Element({ item }: IProps) {
               <Text>{name}</Text>
 
               <Text size='sm' c='dimmed'>
-                {date}
+                {dayjs(date).format(DATE_FORMAT)}
               </Text>
 
               <Tags tags={tags} />
