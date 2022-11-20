@@ -39,10 +39,13 @@ const icons = [
 
 const rawProjects: IProject[] = [
   {
-    name: 'React Portfolio',
+    name: 'Personal portfolio Y22',
     date: '2022-11-04',
     languages: [TYPESCRIPT_LANGUAGE],
     tags: [
+      {
+        text: 'React',
+      },
       {
         text: 'Redux',
       },
@@ -50,7 +53,7 @@ const rawProjects: IProject[] = [
         text: 'Mantine UI',
       },
     ],
-    description: 'Personal portfolio made in React.',
+    description: '',
     thumbnail,
     links: [GITHUB_LINK('Patchron')],
   },
@@ -77,22 +80,24 @@ const rawProjects: IProject[] = [
   },
 
   {
-    name: 'Portfolio (Jekyll)',
+    name: 'Personal portfolio Y20',
     date: '2021-09-29',
     languages: [JAVASCRIPT_LANGUAGE],
     tags: [
       {
-        text: 'Semantic UI',
+        text: 'Jekyll',
       },
       {
         text: 'Liquid',
       },
+      {
+        text: 'Semantic UI',
+      },
     ],
-    description: 'Personal portfolio based on TechFolios template.',
+    description:
+      'Portfolio website based on TechFolios v1 template. Used from 2020, reworked in 2021.',
     thumbnail,
-    links: [
-      GITHUB_LINK('jekyll-portfolio'),
-    ],
+    links: [GITHUB_LINK('jekyll-portfolio#about')],
   },
 
   {
