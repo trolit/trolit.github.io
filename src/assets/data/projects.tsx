@@ -408,17 +408,6 @@ const rawProjects: IProject[] = [
   },
 
   {
-    name: 'cs_k1234_reedition',
-    date: '2015-01-11',
-    languages: [],
-    tags: [],
-    description:
-      'Map developed for Counter Strike 1.6, made in Valve Hammer Editor tool.',
-    thumbnail,
-    links: [WWW_LINK('https://gamebanana.com/mods/92118', 'Source')],
-  },
-
-  {
     name: 'Car Themed API',
     date: '2020-08-15',
     languages: [CSHARP_LANGUAGE],
