@@ -33,7 +33,7 @@ export function LinksOverlay({ links, toggleOverlay }: IProps) {
       >
         <ScrollArea style={{ height: '50px', flexGrow: 1 }}>
           <Group position='apart' align='start' grow>
-            <SimpleGrid cols={3}>
+            <SimpleGrid p={5} cols={3}>
               {links.map((link, index) => (
                 <UnstyledButton
                   p='md'
