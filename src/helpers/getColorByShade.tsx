@@ -1,4 +1,4 @@
-import { primaryColor } from '@/config';
+import { PRIMARY_COLOR } from '@/config';
 
 export const getColorByShade = (shade: number) => {
   if (shade < 0 || shade > 9) {
@@ -7,5 +7,5 @@ export const getColorByShade = (shade: number) => {
     );
   }
 
-  return `${primaryColor}.${shade}`;
+  return `${PRIMARY_COLOR}.${shade}`;
 };

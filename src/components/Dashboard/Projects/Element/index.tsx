@@ -1,7 +1,11 @@
-import { Paper, Grid, Text, Stack } from '@mantine/core';
+import dayjs from 'dayjs';
+import { useState } from 'react';
+import { Paper, Grid, Text, Stack, Button, Box } from '@mantine/core';
 
 import { Tags } from './Tags';
+import { DATE_FORMAT } from '@/config';
 import { Languages } from './Languages';
+import { LinksOverlay } from './LinksOverlay';
 import { useCommonStyles } from '@/assets/styles/common';
 import { IProject } from '@/interfaces/dashboard/IProject';
 import { Thumbnail } from '@/components/Dashboard/common/Thumbnail';
@@ -13,27 +17,52 @@ interface IProps {
 export function Element({ item }: IProps) {
   const commonStyles = useCommonStyles();
 
+  const [isOverlayOpened, toggleOverlay] = useState(false);
+
+  const { name, thumbnail, date, description, languages, tags, links } = item;
+
   return (
     <Paper radius='md' withBorder className={commonStyles.h100}>
-      <Languages languages={item.languages} />
+      <Box className={commonStyles.h100} style={{ position: 'relative' }}>
+        {isOverlayOpened && (
+          <LinksOverlay links={links} toggleOverlay={toggleOverlay} />
+        )}
 
-      <Grid p='lg'>
-        <Grid.Col span={12}>
-          <Stack align='center'>
-            <Thumbnail name={item.name} value={item.thumbnail} />
+        <Languages languages={languages} />
 
-            <Text>{item.name}</Text>
+        <Grid p='lg' className={commonStyles.h100}>
+          <Grid.Col span={12}>
+            <Stack align='center' className={commonStyles.h100}>
+              <Thumbnail name={name} value={thumbnail} />
 
-            <Text size='sm' c='dimmed'>
-              {item.date}
-            </Text>
+              <Text>{name}</Text>
 
-            <Tags tags={item.tags} />
+              <Text size='sm' c='dimmed'>
+                {dayjs(date).format(DATE_FORMAT)}
+              </Text>
 
-            <Text fz='xs'>{item.description}</Text>
-          </Stack>
-        </Grid.Col>
-      </Grid>
+              <Tags tags={tags} />
+
+              <Text fz='xs' style={{ flexGrow: '1' }}>
+                {description}
+              </Text>
+
+              {links.length && (
+                <Button
+                  size='sm'
+                  radius='xs'
+                  color='gray'
+                  variant='outline'
+                  style={{ alignSelf: 'flex-end' }}
+                  onClick={() => toggleOverlay((isVisible) => !isVisible)}
+                >
+                  show more ({links.length})
+                </Button>
+              )}
+            </Stack>
+          </Grid.Col>
+        </Grid>
+      </Box>
     </Paper>
   );
 }

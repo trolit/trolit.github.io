@@ -13,7 +13,7 @@ import { MainGrid } from './MainGrid';
 import { useAppStyles } from '@/assets/styles/app';
 import { toggleColorScheme } from '@/store/preferences';
 import { useCommonStyles } from '@/assets/styles/common';
-import { primaryColor, backgroundSrc, overlayPadding } from '@/config';
+import { PRIMARY_COLOR, BACKGROUND_SRC, OVERLAY_PADDING } from '@/config';
 
 interface IProps {
   tab: ReactNode;
@@ -34,17 +34,17 @@ export default function App({ tab }: IProps) {
       toggleColorScheme={toggleColorScheme}
     >
       <MantineProvider
-        theme={{ colorScheme, primaryColor }}
+        theme={{ colorScheme, primaryColor: PRIMARY_COLOR }}
         withGlobalStyles
         withNormalizeCSS
       >
         <ScrollArea
           className={appStyles.scrollArea}
           style={{
-            backgroundImage: `url(${backgroundSrc})`,
+            backgroundImage: `url(${BACKGROUND_SRC})`,
           }}
         >
-          <Container px={overlayPadding} fluid className={appStyles.container}>
+          <Container px={OVERLAY_PADDING} fluid className={appStyles.container}>
             <Center className={commonStyles.h100}>
               <MainGrid tab={tab} />
             </Center>

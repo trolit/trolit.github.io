@@ -3,7 +3,7 @@ import { Box, Group, Header, Burger, NavLink } from '@mantine/core';
 
 import { Toolbar } from './Toolbar';
 import { HeaderDrawer } from './Drawer';
-import { headerHeight } from '@/config';
+import { HEADER_HEIGHT } from '@/config';
 import { useDisclosure } from '@mantine/hooks';
 import { useCommonStyles } from '@/assets/styles/common';
 import { navigationItems } from '@/assets/data/dashboard';
@@ -32,7 +32,7 @@ export function PanelHeader() {
 
   return (
     <Box>
-      <Header height={headerHeight} className={dashboardStyles.header}>
+      <Header height={HEADER_HEIGHT} className={dashboardStyles.header}>
         <Group position='apart' className={commonStyles.h100}>
           <Group
             noWrap

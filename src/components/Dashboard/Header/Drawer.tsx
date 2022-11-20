@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import { Drawer, Divider, ScrollArea, NavLink } from '@mantine/core';
 
 import { RootState } from '@/store';
-import { headerHeight } from '@/config';
+import { HEADER_HEIGHT } from '@/config';
 import { useNavigate } from 'react-router';
 import { DARK_THEME } from '@/assets/constants/themes';
 import { useCommonStyles } from '@/assets/styles/common';
@@ -47,7 +47,7 @@ export function HeaderDrawer({ isDrawerOpened, onDrawerClose }: IProps) {
       onClose={onDrawerClose}
       className={commonStyles.hiddenDesktop}
     >
-      <ScrollArea sx={{ height: `calc(100vh - ${headerHeight}px)` }} mx='-md'>
+      <ScrollArea sx={{ height: `calc(100vh - ${HEADER_HEIGHT}px)` }} mx='-md'>
         <Divider
           my='sm'
           color={colorScheme === DARK_THEME ? 'dark.5' : 'gray.1'}
