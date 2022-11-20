@@ -6,6 +6,7 @@ export const useProjectsStyles = () => {
   const { classes } = createStyles((theme) => {
     const classes = {
       overlay: {
+        borderRadius: '6px',
         backgroundColor:
           theme.colorScheme === DARK_THEME
             ? theme.colors.dark[6]
