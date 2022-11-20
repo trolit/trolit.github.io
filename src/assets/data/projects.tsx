@@ -91,8 +91,7 @@ const rawProjects: IProject[] = [
     description: 'Personal portfolio based on TechFolios template.',
     thumbnail,
     links: [
-      GITHUB_LINK('jekyll-portfolio.github.io'),
-      WWW_LINK('https://trolit.github.io/jekyll-portfolio.github.io/', 'Live'),
+      GITHUB_LINK('jekyll-portfolio'),
     ],
   },
 
