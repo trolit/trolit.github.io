@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Box, Group, Header, Burger, NavLink } from '@mantine/core';
 
 import { Toolbar } from './Toolbar';
@@ -12,6 +12,8 @@ import { useDashboardStyles } from '@/assets/styles/dashboard';
 export function PanelHeader() {
   const navigate = useNavigate();
 
+  const location = useLocation();
+
   const commonStyles = useCommonStyles();
 
   const dashboardStyles = useDashboardStyles();
@@ -19,16 +21,15 @@ export function PanelHeader() {
   const [isDrawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false);
 
-  const navigation = navigationItems.map(({ name, route }) => {
-    return (
-      <NavLink
-        key={name}
-        label={name}
-        className={dashboardStyles.link}
-        onClick={() => navigate(route)}
-      />
-    );
-  });
+  const navigation = navigationItems.map(({ name, route }) => (
+    <NavLink
+      active={location.pathname === route}
+      key={name}
+      label={name}
+      className={dashboardStyles.link}
+      onClick={() => navigate(route)}
+    />
+  ));
 
   return (
     <Box>

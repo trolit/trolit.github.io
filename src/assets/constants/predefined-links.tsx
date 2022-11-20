@@ -21,7 +21,7 @@ export const GITHUB_LINK = (target: string, username?: string): ILink => {
 
 export const GALLERY_LINK = (target: string, name?: string): ILink => {
   return {
-    name: `Album ${name ? '- ' + name : ''}`,
+    name: `Album ${name ? name : ''}`,
     icon: IconCamera,
     url: target,
   };
@@ -29,7 +29,7 @@ export const GALLERY_LINK = (target: string, name?: string): ILink => {
 
 export const DOCUMENTATION_LINK = (target: string, name?: string): ILink => {
   return {
-    name: `Documentation ${name ? '- ' + name : ''}`,
+    name: `Documentation ${name ? name : ''}`,
     icon: IconNotes,
     url: target,
   };
@@ -37,7 +37,7 @@ export const DOCUMENTATION_LINK = (target: string, name?: string): ILink => {
 
 export const VIDEO_LINK = (target: string, name?: string): ILink => {
   return {
-    name: `Video ${name ? '- ' + name : ''}`,
+    name: `Video ${name ? name : ''}`,
     icon: IconVideo,
     url: target,
   };
