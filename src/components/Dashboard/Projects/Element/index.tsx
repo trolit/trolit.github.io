@@ -13,11 +13,11 @@ interface IProps {
 }
 
 export function Element({ item }: IProps) {
-  const { name, thumbnail, date, description, languages, tags, links } = item;
-
   const commonStyles = useCommonStyles();
 
   const [isOverlayOpened, toggleOverlay] = useState(false);
+
+  const { name, thumbnail, date, description, languages, tags, links } = item;
 
   return (
     <Paper radius='md' withBorder className={commonStyles.h100}>
