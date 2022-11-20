@@ -34,7 +34,7 @@ export default function App({ tab }: IProps) {
       toggleColorScheme={toggleColorScheme}
     >
       <MantineProvider
-        theme={{ colorScheme, PRIMARY_COLOR }}
+        theme={{ colorScheme, primaryColor: PRIMARY_COLOR }}
         withGlobalStyles
         withNormalizeCSS
       >
