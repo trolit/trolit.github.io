@@ -9,20 +9,24 @@ interface IProps {
 export function Languages({ languages }: IProps) {
   return (
     <Group spacing={5} noWrap>
-      {languages.map((language, index) => (
-        <Badge
-          key={`badge-${language.name}-${index}`}
-          variant='filled'
-          radius={index === 0 ? 'md' : 0}
-          style={{
-            borderTopRightRadius: 0,
-            borderBottomLeftRadius: 0,
-            backgroundColor: language.badgeColorInHex,
-          }}
-        >
-          {language.acronym}
-        </Badge>
-      ))}
+      {languages.length ? (
+        languages.map((language, index) => (
+          <Badge
+            key={`badge-${language.name}-${index}`}
+            variant='filled'
+            radius={index === 0 ? 'md' : 0}
+            style={{
+              borderTopRightRadius: 0,
+              borderBottomLeftRadius: 0,
+              backgroundColor: language.badgeColorInHex,
+            }}
+          >
+            {language.acronym}
+          </Badge>
+        ))
+      ) : (
+        <span>&nbsp;</span>
+      )}
     </Group>
   );
 }
