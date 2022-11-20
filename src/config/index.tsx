@@ -2,7 +2,7 @@ export const BACKGROUND_SRC = require('@/assets/media/background.svg').default;
 
 export const DEFAULT_IMAGE_SRC = require('@/assets/media/projects/default.jpg');
 
-export const PRIMARY_COLOR = 'green';
+export const PRIMARY_COLOR = 'cyan';
 
 export const HEADER_HEIGHT = 50;
 
