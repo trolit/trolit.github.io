@@ -49,7 +49,7 @@ export function LinksOverlay({ links, toggleOverlay }: IProps) {
                   justify='center'
                   className={commonStyles.h100}
                 >
-                  <link.icon color={PRIMARY_COLOR} size={32} />
+                  <link.icon size={32} />
 
                   <Text fz='xs' c='dimmed' lineClamp={1} mt={7}>
                     {link.name}
