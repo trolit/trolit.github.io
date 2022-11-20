@@ -88,7 +88,7 @@ const rawProjects: IProject[] = [
         text: 'Liquid',
       },
     ],
-    description: 'Jekyll portfolio based on TechFolios template.',
+    description: 'Personal portfolio based on TechFolios template.',
     thumbnail,
     links: [GITHUB_LINK('trolit.github.io')],
   },
