@@ -37,8 +37,24 @@ const icons = [
   IconDice6,
 ];
 
-// githubLink('Patchron')
 const rawProjects: IProject[] = [
+  {
+    name: 'React Portfolio',
+    date: '2022-11-04',
+    languages: [TYPESCRIPT_LANGUAGE],
+    tags: [
+      {
+        text: 'Redux',
+      },
+      {
+        text: 'Mantine UI',
+      },
+    ],
+    description: 'Personal portfolio made in React.',
+    thumbnail,
+    links: [GITHUB_LINK('Patchron')],
+  },
+
   {
     name: 'Patchron',
     date: '2022-01-18',
