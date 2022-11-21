@@ -1,6 +1,6 @@
 import { TablerIcon } from '@tabler/icons';
 
-import { ITag } from './ITag';
+import { ITag } from '@/interfaces/ITag';
 import { ILink } from '@/interfaces/ILink';
 import { ILanguage } from '@/interfaces/ILanguage';
 

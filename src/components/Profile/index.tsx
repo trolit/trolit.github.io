@@ -11,16 +11,17 @@ import {
 } from '@mantine/core';
 
 import {
+  tags,
   name,
   links,
   quote,
   title,
-  badges,
   avatarSrc,
 } from '@/assets/data/profile';
 import { useCommonStyles } from '@/assets/styles/common';
 import { useProfileStyles } from '@/assets/styles/profile';
 import { getColorByShade } from '@/helpers/getColorByShade';
+import { PRIMARY_COLOR } from '@/config';
 
 export function Profile() {
   const commonStyles = useCommonStyles();
@@ -48,8 +49,8 @@ export function Profile() {
         )}
 
         <Group position='center' spacing='lg' className={profileStyles.group}>
-          {badges.map(({ text }, index) => (
-            <Badge key={index} radius='xs'>
+          {tags.map(({ text, color }, index) => (
+            <Badge key={index} color={color || PRIMARY_COLOR} radius='xs'>
               {text}
             </Badge>
           ))}

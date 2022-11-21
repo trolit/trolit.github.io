@@ -1,6 +1,6 @@
 import { Group, Badge } from '@mantine/core';
 
-import { ITag } from '@/interfaces/dashboard/ITag';
+import { ITag } from '@/interfaces/ITag';
 
 interface IProps {
   tags: ITag[];
