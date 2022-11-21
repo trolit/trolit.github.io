@@ -24,7 +24,7 @@ export function Element({ item }: IProps) {
         <Text ta='right'>{item.date}</Text>
       </Flex>
 
-      <Group position='left'>
+      <Group p='sm' pl={0} position='left'>
         {item.tags.map(({ text, color }, index) => (
           <Badge
             radius={0}
