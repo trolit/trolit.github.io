@@ -15,7 +15,7 @@ import {
   TRACKS_ROUTE_NAME,
   PROJECTS_ROUTE_NAME,
 } from '@/assets/constants/routes';
-import { INavigationItem } from '@/interfaces/dashboard/INavigationItem';
+import { INavigationItem } from '@/interfaces/INavigationItem';
 
 export const homeNavigationItem: INavigationItem = {
   icon: IconAt,
