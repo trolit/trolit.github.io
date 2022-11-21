@@ -10,6 +10,8 @@ const title: ITitle = {
 export const post: IPost = {
   name: 'This is post1',
 
+  tags: [{ text: 'GitHub' }],
+
   date: '2022-02-22',
 
   components: [title],
