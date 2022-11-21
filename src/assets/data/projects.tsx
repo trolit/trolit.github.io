@@ -53,7 +53,7 @@ const rawProjects: IProject[] = [
         text: 'Mantine UI',
       },
     ],
-    description: '',
+    description: 'New personal portfolio made during break on primary project.',
     thumbnail,
     links: [GITHUB_LINK('Patchron')],
   },
