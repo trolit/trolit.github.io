@@ -8,7 +8,7 @@ const title: ITitle = {
 };
 
 export const post: IPost = {
-  name: '',
+  name: 'This is post1',
 
   date: '2022-02-22',
 
