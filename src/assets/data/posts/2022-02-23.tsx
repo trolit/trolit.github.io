@@ -2,7 +2,7 @@ import { IPost } from '@/interfaces/dashboard/posts/IPost';
 import { IHeader } from '@/interfaces/dashboard/posts/IHeader';
 
 const title: IHeader = {
-  value: 'This is title 1',
+  value: 'This is title 2',
 
   order: 1,
 };
