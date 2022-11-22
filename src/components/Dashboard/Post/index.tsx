@@ -1,14 +1,10 @@
-import { Title } from '@mantine/core';
+import { Paper, Title } from '@mantine/core';
 import { useParams, Navigate } from 'react-router-dom';
 
 import { posts } from '@/assets/data/posts';
 import { POSTS_ROUTE } from '@/assets/constants/routes';
 import { IHeader } from '@/interfaces/dashboard/posts/IHeader';
-
-// @TMP
-function isHeader(object: any): object is IHeader {
-  return 'value' in object;
-}
+import { isHeader } from '@/assets/constants/post-type-checkers';
 
 export function Post() {
   type ExpectedParams = {
@@ -30,7 +26,7 @@ export function Post() {
   const { components } = posts[parsedPostId - 1];
 
   return (
-    <div>
+    <Paper>
       {components.map((component, index) => {
         if (isHeader(component)) {
           const parsedComponent = component as IHeader;
@@ -44,6 +40,6 @@ export function Post() {
 
         return <span key={index}>kok</span>;
       })}
-    </div>
+    </Paper>
   );
 }
