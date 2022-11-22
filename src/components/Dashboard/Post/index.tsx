@@ -1,8 +1,15 @@
 import { useEffect } from 'react';
+import { Title } from '@mantine/core';
 import { useParams, useNavigate } from 'react-router-dom';
 
 import { posts } from '@/assets/data/posts';
 import { POSTS_ROUTE } from '@/assets/constants/routes';
+import { IHeader } from '@/interfaces/dashboard/posts/IHeader';
+
+// @TMP
+function isHeader(object: any): object is IHeader {
+  return 'value' in object;
+}
 
 export function Post() {
   type ExpectedParams = {
@@ -25,17 +32,23 @@ export function Post() {
     }
   });
 
-  const post = posts[parsedPostId - 1];
+  const { components } = posts[parsedPostId - 1];
 
-  //   if (location.pathname === POSTS_ROUTE) {
-  //     return (
-  //       <Stack>
-  //         {posts.map((post, index) => (
-  //           <Element item={post} key={index} />
-  //         ))}
-  //       </Stack>
-  //     );
-  //   }
+  return (
+    <div>
+      {components.map((component, index) => {
+        if (isHeader(component)) {
+          const parsedComponent = component as IHeader;
 
-  return <span>Hello from {post.name}</span>;
+          return (
+            <Title key={index} order={parsedComponent.order}>
+              {parsedComponent.value}
+            </Title>
+          );
+        }
+
+        return <span key={index}>kok</span>;
+      })}
+    </div>
+  );
 }
