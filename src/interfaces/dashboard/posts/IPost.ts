@@ -1,9 +1,9 @@
 import { IPhoto } from './IPhoto';
-import { ITitle } from './IHeader';
+import { IHeader } from './IHeader';
 import { ITag } from '@/interfaces/ITag';
 import { IParagraph } from './IParagraph';
 
-type Components = IPhoto | ITitle | IParagraph;
+type Component = IPhoto | IHeader | IParagraph;
 
 export interface IPost {
   name: string;
@@ -12,5 +12,5 @@ export interface IPost {
 
   tags: ITag[];
 
-  components: Components[];
+  components: Component[];
 }

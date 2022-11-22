@@ -8,14 +8,20 @@ import {
   Badge,
   Group,
 } from '@mantine/core';
+import { useNavigate } from 'react-router-dom';
 
+import { POSTS_ROUTE } from '@/assets/constants/routes';
 import { IPost } from '@/interfaces/dashboard/posts/IPost';
 
 interface IProps {
+  id: number;
+
   item: IPost;
 }
 
-export function Element({ item }: IProps) {
+export function Element({ id, item }: IProps) {
+  const navigate = useNavigate();
+
   return (
     <Paper p='md' radius='md' withBorder>
       <Flex align='center' justify='space-between' style={{ width: '100%' }}>
@@ -44,7 +50,11 @@ export function Element({ item }: IProps) {
       </Text>
 
       <Center>
-        <Button variant='subtle' size='md'>
+        <Button
+          size='md'
+          variant='subtle'
+          onClick={() => navigate(`${POSTS_ROUTE}/${id}`)}
+        >
           Read more
         </Button>
       </Center>

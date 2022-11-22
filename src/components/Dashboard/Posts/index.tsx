@@ -7,7 +7,7 @@ export function Posts() {
   return (
     <Stack>
       {posts.map((post, index) => (
-        <Element item={post} key={index} />
+        <Element id={index + 1} item={post} key={index} />
       ))}
     </Stack>
   );

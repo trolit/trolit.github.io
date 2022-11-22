@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 
 import App from '@/components/App';
 import { Home } from './Dashboard/Home';
+import { Post } from './Dashboard/Post';
 import { Posts } from './Dashboard/Posts';
 import { Tracks } from './Dashboard/Tracks';
 import { Projects } from './Dashboard/Projects';
@@ -20,7 +21,11 @@ export function AppRoutes() {
 
       <Route path={PROJECTS_ROUTE} element={<App tab={<Projects />} />} />
 
-      <Route path={POSTS_ROUTE} element={<App tab={<Posts />} />} />
+      <Route path={POSTS_ROUTE}>
+        <Route index element={<App tab={<Posts />} />} />
+
+        <Route path=':postId' element={<App tab={<Post />} />} />
+      </Route>
 
       <Route path={TRACKS_ROUTE} element={<App tab={<Tracks />} />} />
 
