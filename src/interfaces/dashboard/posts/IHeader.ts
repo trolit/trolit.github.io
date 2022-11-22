@@ -1,5 +1,7 @@
-export interface ITitle {
+import { TitleOrder } from '@mantine/core';
+
+export interface IHeader {
   value: string;
 
-  component: string;
+  order: TitleOrder;
 }
