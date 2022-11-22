@@ -1,10 +1,10 @@
 import { IPost } from '@/interfaces/dashboard/posts/IPost';
-import { ITitle } from '@/interfaces/dashboard/posts/IHeader';
+import { IHeader } from '@/interfaces/dashboard/posts/IHeader';
 
-const title: ITitle = {
-  value: 'This is title1',
+const title: IHeader = {
+  value: 'This is title 1',
 
-  component: 'h1',
+  order: 1,
 };
 
 export const post: IPost = {
