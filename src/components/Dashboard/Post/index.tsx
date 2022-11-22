@@ -1,6 +1,5 @@
-import { useEffect } from 'react';
 import { Title } from '@mantine/core';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 
 import { posts } from '@/assets/data/posts';
 import { POSTS_ROUTE } from '@/assets/constants/routes';
@@ -16,21 +15,17 @@ export function Post() {
     postId: string;
   };
 
-  const navigate = useNavigate();
-
   const { postId } = useParams<keyof ExpectedParams>() as ExpectedParams;
 
   const parsedPostId = parseInt(postId);
 
-  useEffect(() => {
-    if (
-      Number.isNaN(postId) ||
-      parsedPostId < 1 ||
-      parsedPostId > posts.length
-    ) {
-      navigate(POSTS_ROUTE);
-    }
-  });
+  if (
+    Number.isNaN(parsedPostId) ||
+    parsedPostId < 1 ||
+    parsedPostId > posts.length
+  ) {
+    return <Navigate to={POSTS_ROUTE} replace={true} />;
+  }
 
   const { components } = posts[parsedPostId - 1];
 
