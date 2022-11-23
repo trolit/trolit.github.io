@@ -1,5 +1,5 @@
 import { IPost } from '@/interfaces/dashboard/posts/IPost';
-import { IHeader } from '@/interfaces/dashboard/posts/IHeader';
+import { IHeader } from '@/services/usePostRenderer/interfaces/IHeader';
 
 const title: IHeader = {
   value: 'This is title 2',
