@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
-import { allowedComponents } from './config';
 import { IPost } from './interfaces/IPost';
+import { allowedComponents } from './config';
 
 interface IRenderer<T> {
   render: (post: T) => ReactNode;
@@ -22,7 +22,11 @@ function render<T extends IPost<T>>(post: T) {
     );
 
     if (!result) {
-      return <span key={index}>error</span>;
+      console.error('----------------------------------------');
+      console.error('Tried to render unregistered component.');
+      console.error('----------------------------------------');
+
+      throw new Error();
     }
 
     return result.render(index, component);
