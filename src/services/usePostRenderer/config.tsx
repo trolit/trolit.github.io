@@ -7,3 +7,5 @@ const componentFactory = new ComponentFactory();
 const headerComponent = componentFactory.create<IHeader>(renderHeader);
 
 export const allowedComponents = [headerComponent];
+
+export type PostComponent = IHeader;

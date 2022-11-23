@@ -1,6 +1,5 @@
 import { ITag } from '@/interfaces/ITag';
-
-import { PostComponent } from '@/utilities/PostComponent';
+import { PostComponent } from '@/services/usePostRenderer/config';
 
 export interface IPost {
   name: string;
