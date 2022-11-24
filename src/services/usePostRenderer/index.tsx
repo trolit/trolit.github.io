@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { IBasePost } from './interfaces/IBasePost';
+import { IBasePost } from './interfaces';
 import { componentRenderers } from './config';
 
 interface IRenderer<T> {
@@ -28,6 +28,8 @@ function render<T extends IBasePost>(post: T) {
 
       throw new Error();
     }
+
+    console.log(index);
 
     return componentRenderer.render(index, component);
   });
