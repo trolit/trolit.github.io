@@ -1,4 +1,4 @@
-import { IPost } from '@/interfaces/dashboard/posts/IPost';
+import { IPost } from '@/interfaces/dashboard/IPost';
 import { Header } from '@/services/usePostRenderer/components';
 
 const title = new Header({

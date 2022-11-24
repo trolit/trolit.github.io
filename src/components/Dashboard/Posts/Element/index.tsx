@@ -10,8 +10,8 @@ import {
 } from '@mantine/core';
 import { useNavigate } from 'react-router-dom';
 
+import { IPost } from '@/interfaces/dashboard/IPost';
 import { POSTS_ROUTE } from '@/assets/constants/routes';
-import { IPost } from '@/interfaces/dashboard/posts/IPost';
 
 interface IProps {
   id: number;
