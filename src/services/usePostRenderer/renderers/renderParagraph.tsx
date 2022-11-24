@@ -11,5 +11,9 @@ export function renderParagraph(
     data: { value },
   } = paragraph;
 
-  return <Text key={index}>{value}</Text>;
+  return (
+    <Text key={index} style={{ textAlign: 'justify' }}>
+      {value}
+    </Text>
+  );
 }
