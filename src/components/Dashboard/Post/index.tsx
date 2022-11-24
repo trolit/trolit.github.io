@@ -1,4 +1,4 @@
-import { Paper } from '@mantine/core';
+import { Paper, Stack } from '@mantine/core';
 import { useParams, Navigate } from 'react-router-dom';
 
 import { posts } from '@/assets/data/posts';
@@ -27,5 +27,11 @@ export function Post() {
 
   const post = posts[parsedPostId - 1];
 
-  return <Paper>{postRenderer.render(post)}</Paper>;
+  return (
+    <Paper>
+      <Stack p={50} spacing='xl' align='center'>
+        {postRenderer.render(post)}
+      </Stack>
+    </Paper>
+  );
 }

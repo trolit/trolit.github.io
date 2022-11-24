@@ -45,8 +45,8 @@ export function Element({ id, item }: IProps) {
 
       <Divider my={10} />
 
-      <Text c='dimmed'>
-        This is test description that will come later on ok?
+      <Text p={15} my={10} c='dimmed' fs='italic' fz='sm'>
+        {item.abstract}
       </Text>
 
       <Center>

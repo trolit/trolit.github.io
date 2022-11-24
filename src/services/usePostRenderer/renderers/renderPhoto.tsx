@@ -5,7 +5,7 @@ import { Photo } from '../components';
 
 export function renderPhoto(index: number, photo: Photo): ReactNode {
   const {
-    data: { caption, src, sourceUrl, overrideImageProps },
+    data: { caption, src, sourceUrl, overrideComponentProps },
   } = photo;
 
   return (
@@ -26,7 +26,7 @@ export function renderPhoto(index: number, photo: Photo): ReactNode {
       alt={`${caption}`}
       withPlaceholder
       placeholder={<Text align='center'>This image contained {caption}</Text>}
-      {...overrideImageProps}
+      {...overrideComponentProps}
     />
   );
 }

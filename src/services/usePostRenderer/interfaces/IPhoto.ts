@@ -7,5 +7,5 @@ export interface IPhoto {
 
   sourceUrl?: string;
 
-  overrideImageProps?: ImageProps;
+  overrideComponentProps?: ImageProps;
 }
