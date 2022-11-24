@@ -1,3 +1,5 @@
+import { Base } from '../components/Base';
+
 export interface IPost<T> {
-  components: T[];
+  components: Base<T>[];
 }
