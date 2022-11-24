@@ -1,16 +1,11 @@
 import { IPost } from '@/interfaces/dashboard/posts/IPost';
-import { IHeader } from '@/services/usePostRenderer/interfaces/IHeader';
-import { IParagraph } from '@/services/usePostRenderer/interfaces/IParagraph';
+import { Header } from '@/services/usePostRenderer/components';
 
-const title: IHeader = {
+const title = new Header({
   value: 'This is title 2',
 
   order: 1,
-};
-
-const paragraph: IParagraph = {
-  value: 'this is my paragraph',
-};
+});
 
 export const post: IPost = {
   name: 'This is post2',
@@ -19,5 +14,5 @@ export const post: IPost = {
 
   date: '2022-02-22',
 
-  components: [title, paragraph],
+  components: [title],
 };
