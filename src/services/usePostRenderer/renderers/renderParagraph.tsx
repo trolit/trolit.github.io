@@ -7,5 +7,9 @@ export function renderParagraph(
   index: number,
   paragraph: Paragraph,
 ): ReactNode {
-  return <Text key={index}>{paragraph.data.value}</Text>;
+  const {
+    data: { value },
+  } = paragraph;
+
+  return <Text key={index}>{value}</Text>;
 }
