@@ -9,9 +9,8 @@ export function renderPhoto(index: number, photo: Photo): ReactNode {
   } = photo;
 
   return (
-    <div>
+    <div key={index}>
       <Image
-        key={index}
         fit='contain'
         src={src}
         caption={

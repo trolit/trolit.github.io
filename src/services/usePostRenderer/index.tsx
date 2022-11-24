@@ -29,8 +29,6 @@ function render<T extends IBasePost>(post: T) {
       throw new Error();
     }
 
-    console.log(index);
-
     return componentRenderer.render(index, component);
   });
 }
