@@ -1,4 +1,3 @@
-import { Base } from '../components/Base';
-import { IPhoto, IHeader, IParagraph } from '../interfaces';
+import type { Header, Paragraph } from '../components';
 
-export type PostComponent = Base<IHeader | IPhoto | IParagraph>;
+export type PostComponent = Header | Paragraph;
