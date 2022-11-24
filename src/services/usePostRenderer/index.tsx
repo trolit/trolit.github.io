@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 import { IPost } from './interfaces/IPost';
-import { allowedComponents } from './config';
+import { componentRenderers } from './config';
 
 interface IRenderer<T> {
   render: (post: T) => ReactNode;
@@ -17,11 +17,11 @@ function render<T extends IPost<T>>(post: T) {
   const { components } = post;
 
   return components.map((component, index) => {
-    const result = allowedComponents.find((allowedComponent) =>
-      allowedComponent.isMatching(component),
+    const componentRenderer = componentRenderers.find(
+      (componentRenderer) => componentRenderer.key === component.getKey(),
     );
 
-    if (!result) {
+    if (!componentRenderer) {
       console.error('----------------------------------------');
       console.error('Tried to render unregistered component.');
       console.error('----------------------------------------');
@@ -29,6 +29,6 @@ function render<T extends IPost<T>>(post: T) {
       throw new Error();
     }
 
-    return result.render(index, component);
+    return componentRenderer.render(index, component);
   });
 }
