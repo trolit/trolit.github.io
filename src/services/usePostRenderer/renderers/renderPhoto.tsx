@@ -10,15 +10,15 @@ export function renderPhoto(index: number, photo: Photo): ReactNode {
 
   return (
     <Image
+      style={{ width: 'fit-content' }}
       key={index}
       src={src}
       caption={
-        <Text align='center'>
-          {caption}
-
+        <Text fz='sm' align='right'>
+          {caption} &nbsp;
           {sourceUrl && (
             <a href={sourceUrl} target='_blank' rel='noreferrer'>
-              source
+              (source)
             </a>
           )}
         </Text>
