@@ -1,6 +1,6 @@
 import { Header, Paragraph } from './components';
+import { IComponentRenderer } from './interfaces';
 import { renderHeader, renderParagraph } from './renderers';
-import { IComponentRenderer } from './interfaces/IComponentRenderer';
 import { HEADER_COMPONENT_KEY, PARAGRAPH_COMPONENT_KEY } from './constants';
 
 export const componentRenderers: IComponentRenderer[] = [

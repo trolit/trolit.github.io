@@ -1,5 +1,5 @@
 import { Base } from './Base';
-import { IParagraph } from '../interfaces/IParagraph';
+import { IParagraph } from '../interfaces';
 import { PARAGRAPH_COMPONENT_KEY } from '../constants';
 
 export class Paragraph extends Base<IParagraph> {

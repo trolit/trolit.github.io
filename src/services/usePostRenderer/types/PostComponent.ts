@@ -1,6 +1,4 @@
 import { Base } from '../components/Base';
-import { IPhoto } from '../interfaces/IPhoto';
-import { IHeader } from '../interfaces/IHeader';
-import { IParagraph } from '../interfaces/IParagraph';
+import { IPhoto, IHeader, IParagraph } from '../interfaces';
 
 export type PostComponent = Base<IHeader | IPhoto | IParagraph>;

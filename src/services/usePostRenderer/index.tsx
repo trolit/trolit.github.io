@@ -1,19 +1,19 @@
 import { ReactNode } from 'react';
 
-import { IPost } from './interfaces/IPost';
+import { IBasePost } from './interfaces/IBasePost';
 import { componentRenderers } from './config';
 
 interface IRenderer<T> {
   render: (post: T) => ReactNode;
 }
 
-export function usePostRenderer<T extends IPost<T>>(): IRenderer<T> {
+export function usePostRenderer<T extends IBasePost>(): IRenderer<T> {
   return {
     render: (post: T) => render<T>(post),
   };
 }
 
-function render<T extends IPost<T>>(post: T) {
+function render<T extends IBasePost>(post: T) {
   const { components } = post;
 
   return components.map((component, index) => {
