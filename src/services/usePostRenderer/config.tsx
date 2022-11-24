@@ -1,18 +1,15 @@
-import { Header, Paragraph } from './components';
 import { IComponentRenderer } from './interfaces';
+import { ComponentRendererFactory } from './helpers';
 import { renderHeader, renderParagraph } from './renderers';
 import { HEADER_COMPONENT_KEY, PARAGRAPH_COMPONENT_KEY } from './constants';
 
-export const componentRenderers: IComponentRenderer[] = [
-  {
-    key: HEADER_COMPONENT_KEY,
-    render: (index: number, value: unknown) =>
-      renderHeader(index, value as Header),
-  },
+const { create } = new ComponentRendererFactory();
 
-  {
-    key: PARAGRAPH_COMPONENT_KEY,
-    render: (index: number, value: unknown) =>
-      renderParagraph(index, value as Paragraph),
-  },
+const headerRenderer = create(HEADER_COMPONENT_KEY, renderHeader);
+
+const paragraphRenderer = create(PARAGRAPH_COMPONENT_KEY, renderParagraph);
+
+export const componentRenderers: IComponentRenderer[] = [
+  headerRenderer,
+  paragraphRenderer,
 ];
