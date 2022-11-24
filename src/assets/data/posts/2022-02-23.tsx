@@ -1,11 +1,11 @@
-import { IPost } from '@/interfaces/dashboard/posts/IPost';
-import { IHeader } from '@/interfaces/dashboard/posts/IHeader';
+import { IPost } from '@/interfaces/dashboard/IPost';
+import { Header } from '@/services/usePostRenderer/components';
 
-const title: IHeader = {
+const title = new Header({
   value: 'This is title 2',
 
   order: 1,
-};
+});
 
 export const post: IPost = {
   name: 'This is post2',

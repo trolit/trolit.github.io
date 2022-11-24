@@ -1,15 +1,17 @@
-import { Paper, Title } from '@mantine/core';
+import { Paper } from '@mantine/core';
 import { useParams, Navigate } from 'react-router-dom';
 
 import { posts } from '@/assets/data/posts';
+import { IPost } from '@/interfaces/dashboard/IPost';
 import { POSTS_ROUTE } from '@/assets/constants/routes';
-import { IHeader } from '@/interfaces/dashboard/posts/IHeader';
-import { isHeader } from '@/assets/constants/post-type-checkers';
+import { usePostRenderer } from '@/services/usePostRenderer';
 
 export function Post() {
   type ExpectedParams = {
     postId: string;
   };
+
+  const postRenderer = usePostRenderer<IPost>();
 
   const { postId } = useParams<keyof ExpectedParams>() as ExpectedParams;
 
@@ -23,23 +25,7 @@ export function Post() {
     return <Navigate to={POSTS_ROUTE} replace={true} />;
   }
 
-  const { components } = posts[parsedPostId - 1];
+  const post = posts[parsedPostId - 1];
 
-  return (
-    <Paper>
-      {components.map((component, index) => {
-        if (isHeader(component)) {
-          const parsedComponent = component as IHeader;
-
-          return (
-            <Title key={index} order={parsedComponent.order}>
-              {parsedComponent.value}
-            </Title>
-          );
-        }
-
-        return <span key={index}>kok</span>;
-      })}
-    </Paper>
-  );
+  return <Paper>{postRenderer.render(post)}</Paper>;
 }
