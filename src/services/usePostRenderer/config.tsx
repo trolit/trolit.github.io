@@ -1,16 +1,18 @@
-import { IPhoto } from './interfaces/IPhoto';
-import { IHeader } from './interfaces/IHeader';
-import { IParagraph } from './interfaces/IParagraph';
-import { renderHeader } from './renderers/renderHeader';
-import { renderParagraph } from './renderers/renderParagraph';
-import { ComponentFactory } from './helpers/ComponentFactory';
+import { Header, Paragraph } from './components';
+import { renderHeader, renderParagraph } from './renderers';
+import { IComponentRenderer } from './interfaces/IComponentRenderer';
+import { HEADER_COMPONENT_KEY, PARAGRAPH_COMPONENT_KEY } from './constants';
 
-const componentFactory = new ComponentFactory();
+export const componentRenderers: IComponentRenderer[] = [
+  {
+    key: HEADER_COMPONENT_KEY,
+    render: (index: number, value: unknown) =>
+      renderHeader(index, value as Header),
+  },
 
-const headerComponent = componentFactory.create<IHeader>(renderHeader);
-
-const paragraphComponent = componentFactory.create<IParagraph>(renderParagraph);
-
-export const allowedComponents = [headerComponent, paragraphComponent];
-
-export type PostComponent = IHeader | IPhoto | IParagraph;
+  {
+    key: PARAGRAPH_COMPONENT_KEY,
+    render: (index: number, value: unknown) =>
+      renderParagraph(index, value as Paragraph),
+  },
+];
