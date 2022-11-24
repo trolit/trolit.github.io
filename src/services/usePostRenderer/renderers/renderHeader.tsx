@@ -5,11 +5,11 @@ import { Header } from '../components';
 
 export function renderHeader(index: number, header: Header): ReactNode {
   const {
-    data: { order, value },
+    data: { value, overrideComponentProps },
   } = header;
 
   return (
-    <Title key={index} order={order}>
+    <Title key={index} {...overrideComponentProps}>
       {value}
     </Title>
   );

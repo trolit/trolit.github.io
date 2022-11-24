@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { IBasePost } from './interfaces/IBasePost';
+import { IBasePost } from './interfaces';
 import { componentRenderers } from './config';
 
 interface IRenderer<T> {

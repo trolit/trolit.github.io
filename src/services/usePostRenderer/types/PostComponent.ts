@@ -1,3 +1,3 @@
-import type { Header, Paragraph } from '../components';
+import type { Header, Paragraph, Photo } from '../components';
 
-export type PostComponent = Header | Paragraph;
+export type PostComponent = Header | Paragraph | Photo;

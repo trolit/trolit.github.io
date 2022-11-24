@@ -8,8 +8,12 @@ export function renderParagraph(
   paragraph: Paragraph,
 ): ReactNode {
   const {
-    data: { value },
+    data: { value, overrideComponentProps },
   } = paragraph;
 
-  return <Text key={index}>{value}</Text>;
+  return (
+    <Text key={index} align='justify' {...overrideComponentProps}>
+      {value}
+    </Text>
+  );
 }

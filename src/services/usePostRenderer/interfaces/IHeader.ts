@@ -1,7 +1,7 @@
-import { TitleOrder } from '@mantine/core';
+import { TitleProps } from '@mantine/core';
 
 export interface IHeader {
   value: string;
 
-  order: TitleOrder;
+  overrideComponentProps?: TitleProps;
 }
