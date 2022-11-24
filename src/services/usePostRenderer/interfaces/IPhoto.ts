@@ -1,5 +1,5 @@
 export interface IPhoto {
-  description: string;
+  caption: string;
 
   alt: string;
 
