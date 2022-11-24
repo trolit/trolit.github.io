@@ -1,12 +1,10 @@
 import { ITag } from '@/interfaces/ITag';
-import { PostComponent } from '@/services/usePostRenderer/types';
+import { IBasePost } from '@/services/usePostRenderer/interfaces';
 
-export interface IPost {
+export interface IPost extends IBasePost {
   name: string;
 
   date: string;
 
   tags: ITag[];
-
-  components: PostComponent[];
 }

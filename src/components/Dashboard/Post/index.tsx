@@ -2,6 +2,7 @@ import { Paper } from '@mantine/core';
 import { useParams, Navigate } from 'react-router-dom';
 
 import { posts } from '@/assets/data/posts';
+import { IPost } from '@/interfaces/dashboard/IPost';
 import { POSTS_ROUTE } from '@/assets/constants/routes';
 import { usePostRenderer } from '@/services/usePostRenderer';
 
@@ -10,7 +11,7 @@ export function Post() {
     postId: string;
   };
 
-  const postRenderer = usePostRenderer();
+  const postRenderer = usePostRenderer<IPost>();
 
   const { postId } = useParams<keyof ExpectedParams>() as ExpectedParams;
 
