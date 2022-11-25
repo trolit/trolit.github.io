@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 import { IBasePost } from './interfaces';
 import { Paragraph } from './components';
 import { componentRenderers } from './config';
+import { renderReferences } from './renderers';
 import { PARAGRAPH_COMPONENT_KEY } from './constants';
 import { renderParagraphWithReferences } from './renderers/renderParagraph';
 
@@ -48,5 +49,11 @@ function render<T extends IBasePost>(post: T) {
     return componentRenderer.render(index, component);
   });
 
-  return <>{renderedComponents}</>;
+  return (
+    <>
+      {renderedComponents}
+
+      {references && references.renderAtTheEnd && renderReferences(references)}
+    </>
+  );
 }

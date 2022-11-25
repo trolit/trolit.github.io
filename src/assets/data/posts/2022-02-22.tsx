@@ -84,7 +84,7 @@ export const post: IPost = {
     items: [
       {
         match: 'Project Zero',
-        title: 'Project Zero',
+        title: 'Project Zero (repository)',
         src: 'https://github.com/trolit/projectZero',
       },
       {
