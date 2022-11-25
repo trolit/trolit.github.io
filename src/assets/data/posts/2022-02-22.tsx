@@ -41,7 +41,7 @@ export const post: IPost = {
       {
         match: 'Prensky',
         author: 'Marc Prensky',
-        title: 'Personal page',
+        title: 'Marc Prensky - bio',
         src: 'https://marcprensky.com/bio/',
       },
     ],
