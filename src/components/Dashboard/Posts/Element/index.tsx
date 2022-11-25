@@ -8,8 +8,10 @@ import {
   Badge,
   Group,
 } from '@mantine/core';
+import dayjs from 'dayjs';
 import { useNavigate } from 'react-router-dom';
 
+import { DATE_FORMAT } from '@/config';
 import { IPost } from '@/interfaces/dashboard/IPost';
 import { POSTS_ROUTE } from '@/assets/constants/routes';
 
@@ -27,7 +29,7 @@ export function Element({ id, item }: IProps) {
       <Flex align='center' justify='space-between' style={{ width: '100%' }}>
         <Text fz='xl'>{item.name}</Text>
 
-        <Text ta='right'>{item.date}</Text>
+        <Text ta='right'>{dayjs(item.date).format(DATE_FORMAT)}</Text>
       </Flex>
 
       <Group p='sm' pl={0} position='left'>
