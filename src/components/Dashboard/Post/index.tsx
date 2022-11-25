@@ -29,7 +29,7 @@ export function Post() {
 
   return (
     <Paper>
-      <Stack p={50} spacing='xl' align='center'>
+      <Stack px={20} spacing='xl' align='center'>
         {postRenderer.render(post)}
       </Stack>
     </Paper>
