@@ -4,9 +4,9 @@ import { Image, Text } from '@mantine/core';
 import { Photo } from '../components';
 
 export function renderPhoto(index: number, photo: Photo): ReactNode {
-  const {
-    data: { caption, src, sourceUrl, overrideComponentProps },
-  } = photo;
+  const { data } = photo;
+
+  const { sourceUrl, caption, src } = data;
 
   return (
     <div key={index}>
@@ -26,7 +26,7 @@ export function renderPhoto(index: number, photo: Photo): ReactNode {
         alt={`${caption}`}
         withPlaceholder
         placeholder={<Text align='center'>This image contained {caption}</Text>}
-        {...overrideComponentProps}
+        {...data}
       />
     </div>
   );
