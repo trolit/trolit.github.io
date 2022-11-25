@@ -1,5 +1,6 @@
 import {
   Photo,
+  Video,
   Header,
   Paragraph,
 } from '@/services/usePostRenderer/components';
@@ -45,7 +46,11 @@ const paragraph8 = new Paragraph({
   value: `Will there be any company that take a risk and offer AAA product that will serve as more than entertainment but also learning? I don't have idea. Maybe we should ask using "When" and not "Will". At this moment we see tiny games like Rabbids Coding from Ubisoft (F2P) which learns basic programming skills. Short trailer reference for interested:`,
 });
 
-// video
+const video = new Video({
+  title: 'RABBIDS CODING – Release trailer',
+
+  src: 'https://www.youtube.com/embed/5S9z6DFHt6o',
+});
 
 const paragraph9 = new Paragraph({
   value: `Will there be any company that take a risk and offer AAA product that will serve as more than entertainment but also learning? I don't have idea. Maybe we should ask using "When" and not "Will". At this moment we see tiny games like Rabbids Coding from Ubisoft (F2P) which learns basic programming skills. Short trailer reference for interested:`,
@@ -88,6 +93,7 @@ export const post: IPost = {
     paragraph6,
     paragraph7,
     paragraph8,
+    video,
     paragraph9,
     paragraph10,
   ],
