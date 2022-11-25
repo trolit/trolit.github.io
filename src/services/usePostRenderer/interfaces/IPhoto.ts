@@ -1,5 +1,7 @@
 import { ImageProps } from '@mantine/core';
 
-export interface IPhoto extends ImageProps {
+export interface IPhoto {
   sourceUrl?: string;
+
+  overrideComponentProps?: ImageProps;
 }
