@@ -67,10 +67,6 @@ const photo1 = new Photo({
 
   sourceUrl:
     'http://www.spencerauthor.com/game-based-learning/sketch-note-game-based-learning/',
-
-  overrideComponentProps: {
-    height: '400px',
-  },
 });
 
 export const post: IPost = {
