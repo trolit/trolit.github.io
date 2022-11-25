@@ -11,6 +11,7 @@ export function renderPhoto(index: number, photo: Photo): ReactNode {
   return (
     <div key={index}>
       <Image
+        radius={20}
         fit='contain'
         caption={
           <Text fz='sm' align='right'>
