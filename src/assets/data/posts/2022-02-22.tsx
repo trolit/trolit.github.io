@@ -27,11 +27,11 @@ const paragraph3 = new Paragraph({
 });
 
 const paragraph4 = new Paragraph({
-  value: `From the publication by Richard Van Eck you can learn that Prensky (very famous person in a field of education) prepared list of games that qualify for GBL. List includes for instance Civilization, CSI, Simcity. Civilization allows to meet history, CSI - cryminology, SimCity - management and civil engineering. They were given also examples of games that do not qualify for this title like RollerCoaster Tycoon. Reason can be found in author's publication which I recommend to check out.`,
+  value: `From the publication by Richard Van Eck (It's Not Just the Digital Natives Who Are Restless) you can learn that Prensky (very famous person in a field of education) prepared list of games that qualify for GBL. List includes for instance Civilization, CSI, Simcity. Civilization allows to meet history, CSI - cryminology, SimCity - management and civil engineering. They were given also examples of games that do not qualify for this title like RollerCoaster Tycoon. Reason can be found in author's publication which I recommend to check out.`,
 });
 
 const paragraph5 = new Paragraph({
-  value: `Ms Rashina Hoda, in turn made research on learning effectivness using Agile games. Students had opportunity to increase their cooperation skills and iterative approach to the problem(s). After classes, Ms Hoda made survey. It's participants had to rate sentences. On "I enjoyed playing games in class" 20 out of 23 people expressed their approval. Not surprising at all right?`,
+  value: `Ms Rashina Hoda, in turn, made research on learning effectiveness using Agile games (Using Agile Games to Invigorate Agile and Lean Software Development Learning in Classrooms Bringing Methodologies from Industry to the Classroom). Students had opportunity to increase their cooperation skills and iterative approach to the problem(s). After classes, Ms Hoda made survey. It's participants had to rate sentences. On "I enjoyed playing games in class" 20 out of 23 people expressed their approval. Not surprising at all right?`,
 });
 
 const paragraph6 = new Paragraph({
@@ -61,15 +61,13 @@ const paragraph10 = new Paragraph({
 });
 
 const photo1 = new Photo({
-  src: 'https://spencerauthor.com/wp-content/uploads/2018/07/sketch-note-game-based-learning.png',
-
-  caption: '',
+  description: '',
 
   sourceUrl:
     'http://www.spencerauthor.com/game-based-learning/sketch-note-game-based-learning/',
 
   overrideComponentProps: {
-    height: '400px',
+    src: 'https://spencerauthor.com/wp-content/uploads/2018/07/sketch-note-game-based-learning.png',
   },
 });
 
@@ -81,6 +79,36 @@ export const post: IPost = {
   tags: [{ text: 'Learning' }],
 
   date: '2022-02-22',
+
+  references: {
+    items: [
+      {
+        match: 'Project Zero',
+        title: 'Project Zero',
+        src: 'https://github.com/trolit/projectZero',
+      },
+      {
+        match: `It's Not Just the Digital Natives Who Are Restless`,
+        title: `It's Not Just the Digital Natives Who Are Restless`,
+        author: 'Richard Van Eck',
+        src: `https://www.researchgate.net/publication/242513283_Digital_Game_Based_LEARNING_It's_Not_Just_the_Digital_Natives_Who_Are_Restless`,
+      },
+      {
+        match: `Using Agile Games to Invigorate Agile and Lean Software Development Learning in Classrooms Bringing Methodologies from Industry to the Classroom`,
+        title: `Using Agile Games to Invigorate Agile and Lean Software Development Learning in Classrooms Bringing Methodologies from Industry to the Classroom`,
+        author: 'Rashina Hoda',
+        src: `https://www.researchgate.net/publication/328516545_Using_Agile_Games_to_Invigorate_Agile_and_Lean_Software_Development_Learning_in_Classrooms_Bringing_Methodologies_from_Industry_to_the_Classroom`,
+      },
+      {
+        title: 'How Digital Game-Based Learning Improves Student Success',
+        src: 'https://www.prodigygame.com/main-en/blog/digital-game-based-learning/',
+      },
+    ],
+
+    renderInParagraphs: true,
+
+    renderAtTheEnd: true,
+  },
 
   components: [
     photo1,

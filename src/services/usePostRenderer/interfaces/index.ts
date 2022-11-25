@@ -3,6 +3,7 @@ import { IVideo } from './IVideo';
 import { IHeader } from './IHeader';
 import { IBasePost } from './IBasePost';
 import { IParagraph } from './IParagraph';
+import { IReferences } from './IReferences';
 import { IComponentRenderer } from './IComponentRenderer';
 
 export type {
@@ -11,5 +12,6 @@ export type {
   IHeader,
   IBasePost,
   IParagraph,
+  IReferences,
   IComponentRenderer,
 };
