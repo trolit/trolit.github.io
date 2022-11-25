@@ -9,9 +9,9 @@ import { IPost } from '@/interfaces/dashboard/IPost';
 export const post: IPost = {
   name: 'DGBL - future or not?',
 
-  abstract: `DGBL is an subject which got my attention while working on engineering thesis. It means "digital game-based learning". Educational games aren't new but what if DGBL was implemented into education system? Would it improve learning quality? Some thoughts :P`,
+  abstract: `DGBL is an subject which got my attention while working on engineering thesis. It means "digital game-based learning". Educational games aren't new but what if GBL was implemented into education system? Would it improve learning quality? Personal view.`,
 
-  tags: [{ text: 'Learning' }],
+  tags: [{ text: 'Education' }, { text: 'Games' }],
 
   date: '2022-02-22',
 
