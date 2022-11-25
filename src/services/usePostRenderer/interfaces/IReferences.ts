@@ -1,5 +1,9 @@
 import { IReferenceItem } from './IReferenceItem';
 
 export interface IReferences {
-  value: IReferenceItem[];
+  items: IReferenceItem[];
+
+  renderInText: boolean;
+
+  renderAtTheEnd: boolean;
 }
