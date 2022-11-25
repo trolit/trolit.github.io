@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
-import { Text, TextProps } from '@mantine/core';
 import reactStringReplace from 'react-string-replace';
+import { Anchor, Text, TextProps } from '@mantine/core';
 
 import { Paragraph } from '../components';
 import { IReferences } from '../interfaces';
@@ -39,15 +39,14 @@ export function renderParagraphWithReferences(
       replacedValue.length ? replacedValue : value,
       match,
       (match: string, index: number) => (
-        <a
+        <Anchor
           key={`${match}-${index}`}
           href={src}
           target='_blank'
           rel='noreferrer'
-          style={{ textDecoration: 'none' }}
         >
           {match}
-        </a>
+        </Anchor>
       ),
     ) as ReactNode[];
   }
