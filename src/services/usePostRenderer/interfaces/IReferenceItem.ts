@@ -7,5 +7,5 @@ export interface IReferenceItem {
 
   excludeFromReferencesComponent?: boolean;
 
-  src: string;
+  url: string;
 }

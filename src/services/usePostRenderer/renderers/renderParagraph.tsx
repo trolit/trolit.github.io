@@ -34,14 +34,14 @@ export function renderParagraphWithReferences(
 
   let replacedValue: ReactNode[] = [];
 
-  for (const { match, src } of items) {
+  for (const { match, url } of items) {
     replacedValue = reactStringReplace(
       replacedValue.length ? replacedValue : value,
       match,
       (match: string, index: number) => (
         <Anchor
           key={`${match}-${index}`}
-          href={src}
+          href={url}
           target='_blank'
           rel='noreferrer'
         >

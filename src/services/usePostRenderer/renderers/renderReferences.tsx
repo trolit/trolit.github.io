@@ -16,7 +16,7 @@ export function renderReferences(references: IReferences): ReactNode {
   );
 
   const renderedListItems = filteredItems.map(
-    ({ title, author, src, excludeFromReferencesComponent }, itemIndex) => {
+    ({ title, author, url, excludeFromReferencesComponent }, itemIndex) => {
       return (
         <List.Item key={`reference-item-${itemIndex + 1}`}>
           {author && <Text fw={700}>{author}</Text>}
@@ -30,7 +30,7 @@ export function renderReferences(references: IReferences): ReactNode {
             {title}
           </Text>
 
-          <Anchor href={src} target='_blank' rel='noreferrer'>
+          <Anchor href={url} target='_blank' rel='noreferrer'>
             open in new tab
           </Anchor>
         </List.Item>

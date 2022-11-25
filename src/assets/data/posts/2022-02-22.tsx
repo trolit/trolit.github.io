@@ -20,29 +20,29 @@ export const post: IPost = {
       {
         match: 'Project Zero',
         title: 'Project Zero (repository)',
-        src: 'https://github.com/trolit/projectZero',
+        url: 'https://github.com/trolit/projectZero',
       },
       {
         match: `It's Not Just the Digital Natives Who Are Restless`,
         title: `It's Not Just the Digital Natives Who Are Restless`,
         author: 'Richard Van Eck',
-        src: `https://www.researchgate.net/publication/242513283_Digital_Game_Based_LEARNING_It's_Not_Just_the_Digital_Natives_Who_Are_Restless`,
+        url: `https://www.researchgate.net/publication/242513283_Digital_Game_Based_LEARNING_It's_Not_Just_the_Digital_Natives_Who_Are_Restless`,
       },
       {
         match: `Using Agile Games to Invigorate Agile and Lean Software Development Learning in Classrooms Bringing Methodologies from Industry to the Classroom`,
         title: `Using Agile Games to Invigorate Agile and Lean Software Development Learning in Classrooms Bringing Methodologies from Industry to the Classroom`,
         author: 'Rashina Hoda',
-        src: `https://www.researchgate.net/publication/328516545_Using_Agile_Games_to_Invigorate_Agile_and_Lean_Software_Development_Learning_in_Classrooms_Bringing_Methodologies_from_Industry_to_the_Classroom`,
+        url: `https://www.researchgate.net/publication/328516545_Using_Agile_Games_to_Invigorate_Agile_and_Lean_Software_Development_Learning_in_Classrooms_Bringing_Methodologies_from_Industry_to_the_Classroom`,
       },
       {
         title: 'How Digital Game-Based Learning Improves Student Success',
-        src: 'https://www.prodigygame.com/main-en/blog/digital-game-based-learning/',
+        url: 'https://www.prodigygame.com/main-en/blog/digital-game-based-learning/',
       },
       {
         match: 'Prensky',
         author: 'Marc Prensky',
         title: 'Marc Prensky - bio',
-        src: 'https://marcprensky.com/bio/',
+        url: 'https://marcprensky.com/bio/',
       },
     ],
 
