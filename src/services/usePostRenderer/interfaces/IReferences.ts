@@ -3,7 +3,7 @@ import { IReferenceItem } from './IReferenceItem';
 export interface IReferences {
   items: IReferenceItem[];
 
-  renderInText: boolean;
+  renderInParagraphs: boolean;
 
   renderAtTheEnd: boolean;
 }
