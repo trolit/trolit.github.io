@@ -1,7 +1,9 @@
 export interface IReferenceItem {
-  keywords: string[];
+  match?: string | RegExp;
 
-  caption: string;
+  title: string;
+
+  author?: string;
 
   src: string;
 }
