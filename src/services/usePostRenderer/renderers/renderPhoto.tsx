@@ -6,16 +6,15 @@ import { Photo } from '../components';
 export function renderPhoto(index: number, photo: Photo): ReactNode {
   const { data } = photo;
 
-  const { sourceUrl, caption, src } = data;
+  const { sourceUrl, description, overrideComponentProps } = data;
 
   return (
     <div key={index}>
       <Image
         fit='contain'
-        src={src}
         caption={
           <Text fz='sm' align='right'>
-            {caption} &nbsp;
+            {description} &nbsp;
             {sourceUrl && (
               <a href={sourceUrl} target='_blank' rel='noreferrer'>
                 (source)
@@ -23,10 +22,12 @@ export function renderPhoto(index: number, photo: Photo): ReactNode {
             )}
           </Text>
         }
-        alt={`${caption}`}
+        alt={`${description || photo}`}
         withPlaceholder
-        placeholder={<Text align='center'>This image contained {caption}</Text>}
-        {...data}
+        placeholder={
+          <Text align='center'>This image contained {description}</Text>
+        }
+        {...overrideComponentProps}
       />
     </div>
   );
