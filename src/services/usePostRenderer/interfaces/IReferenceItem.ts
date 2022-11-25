@@ -1,9 +1,11 @@
 export interface IReferenceItem {
   match?: string | RegExp;
 
+  author?: string;
+
   title: string;
 
-  author?: string;
+  excludeFromReferencesComponent?: boolean;
 
   src: string;
 }

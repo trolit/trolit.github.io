@@ -11,26 +11,32 @@ export function renderReferences(references: IReferences): ReactNode {
     return;
   }
 
-  const renderedListItems = items.map(({ title, author, src }, itemIndex) => {
-    return (
-      <List.Item key={`reference-item-${itemIndex + 1}`}>
-        {author && <Text fw={700}>{author}</Text>}
+  const filteredItems = items.filter(
+    (item) => !item.excludeFromReferencesComponent,
+  );
 
-        <Text
-          c='dimmed'
-          fs='italic'
-          lineClamp={1}
-          style={{ maxWidth: '500px' }}
-        >
-          {title}
-        </Text>
+  const renderedListItems = filteredItems.map(
+    ({ title, author, src, excludeFromReferencesComponent }, itemIndex) => {
+      return (
+        <List.Item key={`reference-item-${itemIndex + 1}`}>
+          {author && <Text fw={700}>{author}</Text>}
 
-        <Anchor href={src} target='_blank' rel='noreferrer'>
-          open in new tab
-        </Anchor>
-      </List.Item>
-    );
-  });
+          <Text
+            c='dimmed'
+            fs='italic'
+            lineClamp={1}
+            style={{ maxWidth: '500px' }}
+          >
+            {title}
+          </Text>
+
+          <Anchor href={src} target='_blank' rel='noreferrer'>
+            open in new tab
+          </Anchor>
+        </List.Item>
+      );
+    },
+  );
 
   return (
     <Container p={0} fluid style={{ width: '100%' }}>
