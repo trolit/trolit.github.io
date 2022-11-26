@@ -40,7 +40,6 @@ export const post: IPost = {
       },
       {
         match: 'Prensky',
-        author: 'Marc Prensky',
         title: 'Marc Prensky - bio',
         url: 'https://marcprensky.com/bio/',
       },

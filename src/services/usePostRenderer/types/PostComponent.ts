@@ -1,3 +1,3 @@
-import type { Header, Video, Paragraph, Photo } from '../components';
+import type { Code, Header, Video, Paragraph, Photo } from '../components';
 
-export type PostComponent = Header | Video | Paragraph | Photo;
+export type PostComponent = Code | Header | Video | Paragraph | Photo;
