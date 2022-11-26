@@ -1,4 +1,4 @@
-import { Paper, Stack } from '@mantine/core';
+import { Stack } from '@mantine/core';
 import { useParams, Navigate } from 'react-router-dom';
 
 import { posts } from '@/assets/data/posts';
