@@ -20,18 +20,14 @@ function render(
 
 export function renderCode(index: number, code: CodeComponent): ReactNode {
   const {
-    data: {
-      label,
-      value,
-      language,
-      overrideComponentProps,
-      overridePrismProps,
-    },
+    data: { label, value, prism, overrideComponentProps },
   } = code;
 
-  if (language) {
+  if (prism) {
+    const { language, overrideProps } = prism;
+
     const codeBlock = (
-      <Prism withLineNumbers language={language} {...overridePrismProps}>
+      <Prism withLineNumbers language={language} {...overrideProps}>
         {value}
       </Prism>
     );
