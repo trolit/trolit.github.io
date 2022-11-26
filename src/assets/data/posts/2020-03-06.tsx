@@ -1,13 +1,12 @@
-import { IPost } from '@/interfaces/dashboard/IPost';
 import {
+  Photo,
   Header,
   Paragraph,
-  Photo,
-  Code,
 } from '@/services/usePostRenderer/components';
+import { IPost } from '@/interfaces/dashboard/IPost';
 
 export const post: IPost = {
-  name: `Enchancing project with developer's console`,
+  name: `Enchancing (Unity) project with developer's console`,
 
   abstract: `Testing is crucial part of game development to reduce times on solving bugs in it's final stage. If you are planning on making expanded game or app in Unity consider sacrificing some time on implementing console that will handle commands. That way you will shorten testing time. Not everything in Unity can be covered with unit tests. It can be extremely useful in built version since it allows to e.g. print logs. Without it functional testing can take much longer.`,
 
@@ -56,19 +55,11 @@ export const post: IPost = {
     }),
 
     new Paragraph({
-      value: `Developer console consists of commands which are intended to fullfil certain conditions to be able to test different scenarios without wasting time on reaching particular state by playing. Scene preconditions modification isn't that convenient because it requires you to do changes in different places, discard them and at another point restore again although it saves a lot of time when project reaches final testing phase.`,
+      value: `Developer console consists of commands which are intended to fullfil certain conditions, to be able to test different scenarios without spending time on reaching particular state. Scene preconditions modification isn't that convenient because it requires to do changes in different places, discard them and at another point restore again but it saves a lot of time when project enters final testing phase.`,
     }),
 
     new Paragraph({
-      value: `In my case, project that was eligible for adding console was Project Zero - educational game for engineering thesis. Due to the fact that it was developed in two people, it had to be large enough. Therefore in it's early stage I've wanted to include such feature.`,
-    }),
-
-    new Paragraph({
-      value: `I've managed to find an idea at Joey The Lantern's channel. I've modified his idea with few things. I didn't include Unity logs though but if you are interested, you can find how to do it on his channel. I've also shared my version from Project Zero. From the perspective of the end of that project I can say that sacrificing several hours to prepare commands and console itself definitely paid back and shorten the time spent on patching bugs in final stage of game development!`,
-    }),
-
-    new Paragraph({
-      value: `If you're interested, feel free to check console template repository and it's implementation in Project Zero as well as there are more commands that you might want to use 😁`,
+      value: `In my case, project eligible for adding console was Project Zero, educational game made prepared for engineering thesis. Due to the fact that it was developed in two people, it had to be large enough. Therefore in it's early stage I've wanted to include such feature. I've managed to find idea on Joey The Lantern's youtube channel. I've modified it with few things. I didn't include Unity logs though but if you are interested, you can find how to do it on his channel. From the perspective of that project I can say that sacrificing several hours to prepare commands and console itself definitely paid back and shorten the time spent on patching bugs in final stage of game development. It's also nice feature when you want to show certain game mechanic at any moment. If you're interested, feel free to check console template repository and it's implementation in Project Zero as well (there are more commands that you might want to use 😁)`,
     }),
 
     new Photo({
