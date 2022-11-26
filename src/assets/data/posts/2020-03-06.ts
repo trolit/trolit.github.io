@@ -10,7 +10,7 @@ export const post: IPost = {
 
   abstract: `Testing is crucial part of game development to reduce times on solving bugs in it's final stage. If you are planning on making expanded game or app in Unity consider sacrificing some time on implementing console that will handle commands. That way you will shorten testing time. Not everything in Unity can be covered with unit tests. It can be extremely useful in built version since it allows to e.g. print logs. Without it functional testing can take much longer.`,
 
-  tags: [{ text: 'Unity' }, { text: 'Games' }],
+  tags: [{ text: 'Unity' }],
 
   date: '2020-03-06',
 
