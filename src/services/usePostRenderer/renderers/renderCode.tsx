@@ -10,7 +10,12 @@ function render(
   label?: string,
 ): ReactNode {
   return (
-    <Container p={0} key={index}>
+    <Container
+      p={0}
+      fluid
+      key={index}
+      style={{ width: '100%', overflow: 'hidden' }}
+    >
       {label && <Text mb={5}>{label}</Text>}
 
       {codeBlock}
