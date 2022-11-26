@@ -1,10 +1,12 @@
 import {
+  renderCode,
   renderPhoto,
   renderVideo,
   renderHeader,
   renderParagraph,
 } from './renderers';
 import {
+  CODE_COMPONENT_KEY,
   PHOTO_COMPONENT_KEY,
   VIDEO_COMPONENT_KEY,
   HEADER_COMPONENT_KEY,
@@ -23,7 +25,10 @@ const photoRenderer = create(PHOTO_COMPONENT_KEY, renderPhoto);
 
 const videoRenderer = create(VIDEO_COMPONENT_KEY, renderVideo);
 
+const codeRenderer = create(CODE_COMPONENT_KEY, renderCode);
+
 export const componentRenderers: IComponentRenderer[] = [
+  codeRenderer,
   photoRenderer,
   videoRenderer,
   headerRenderer,

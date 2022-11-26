@@ -1,3 +1,4 @@
+import { ICode } from './ICode';
 import { IPhoto } from './IPhoto';
 import { IVideo } from './IVideo';
 import { IHeader } from './IHeader';
@@ -7,6 +8,7 @@ import { IReferences } from './IReferences';
 import { IComponentRenderer } from './IComponentRenderer';
 
 export type {
+  ICode,
   IPhoto,
   IVideo,
   IHeader,
