@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
-import { Text, Container, Code } from '@mantine/core';
 import { Prism } from '@mantine/prism';
+import { Text, Container, Code } from '@mantine/core';
 
 import { Code as CodeComponent } from '../components';
 
@@ -10,7 +10,7 @@ function render(
   label?: string,
 ): ReactNode {
   return (
-    <Container fluid p={0} key={index} style={{ width: '100%' }}>
+    <Container p={0} key={index}>
       {label && <Text mb={5}>{label}</Text>}
 
       {codeBlock}
@@ -27,9 +27,12 @@ export function renderCode(index: number, code: CodeComponent): ReactNode {
     const { language, overrideProps } = prism;
 
     const codeBlock = (
-      <Prism withLineNumbers language={language} {...overrideProps}>
-        {value}
-      </Prism>
+      <Prism
+        withLineNumbers
+        children={value}
+        language={language}
+        {...overrideProps}
+      />
     );
 
     return render(index, codeBlock, label);
