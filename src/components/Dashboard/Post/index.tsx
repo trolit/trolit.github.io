@@ -28,10 +28,8 @@ export function Post() {
   const post = posts[parsedPostId - 1];
 
   return (
-    <Paper>
-      <Stack px={20} spacing='xl' align='center'>
-        {postRenderer.render(post)}
-      </Stack>
-    </Paper>
+    <Stack px={20} spacing='xl' align='center'>
+      {postRenderer.render(post)}
+    </Stack>
   );
 }
