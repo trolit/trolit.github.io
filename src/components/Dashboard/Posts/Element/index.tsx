@@ -10,6 +10,7 @@ import {
 } from '@mantine/core';
 import { useNavigate } from 'react-router-dom';
 
+import { formatDate } from '@/helpers/formatDate';
 import { IPost } from '@/interfaces/dashboard/IPost';
 import { POSTS_ROUTE } from '@/assets/constants/routes';
 
@@ -27,7 +28,7 @@ export function Element({ id, item }: IProps) {
       <Flex align='center' justify='space-between' style={{ width: '100%' }}>
         <Text fz='xl'>{item.name}</Text>
 
-        <Text ta='right'>{item.date}</Text>
+        <Text ta='right'>{formatDate(item.date)}</Text>
       </Flex>
 
       <Group p='sm' pl={0} position='left'>
