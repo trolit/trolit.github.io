@@ -1,4 +1,5 @@
 import {
+  Code,
   Photo,
   Header,
   Paragraph,
@@ -6,11 +7,11 @@ import {
 import { IPost } from '@/interfaces/dashboard/IPost';
 
 export const post: IPost = {
-  name: `Enchancing (Unity) project with developer's console`,
+  name: `Enchancing (Unity) project development`,
 
-  abstract: `Testing is crucial part of game development to reduce times on solving bugs in it's final stage. If you are planning on making expanded game or app in Unity consider sacrificing some time on implementing console that will handle commands. That way you will shorten testing time. Not everything in Unity can be covered with unit tests. It can be extremely useful in built version since it allows to e.g. print logs. Without it functional testing can take much longer.`,
+  abstract: `Testing is crucial part of game development to reduce times on solving bugs in it's final stage. If you are planning on making expanded game or app in Unity, consider sacrificing some time on implementing features that will shorten testing time. Not everything in Unity can be covered with unit tests. Post mentions two things that improved personal project development.`,
 
-  tags: [{ text: 'Unity' }, { text: 'Games' }],
+  tags: [{ text: 'Unity' }],
 
   date: '2020-03-06',
 
@@ -20,6 +21,11 @@ export const post: IPost = {
         match: 'Project Zero',
         title: 'Project Zero (repository)',
         url: 'https://github.com/trolit/projectZero',
+      },
+      {
+        match: 'EasyButtons',
+        title: 'Easy Buttons (repository)',
+        url: 'https://github.com/madsbangh/EasyButtons',
       },
       {
         match: 'Joey The Lantern',
@@ -47,29 +53,78 @@ export const post: IPost = {
 
   components: [
     new Header({
-      value: `Enchancing project with developer's console`,
+      value: `Enchancing (Unity) project development`,
 
       overrideComponentProps: {
         order: 1,
       },
     }),
 
-    new Paragraph({
-      value: `Developer console consists of commands which are intended to fullfil certain conditions, to be able to test different scenarios without spending time on reaching particular state. Scene preconditions modification isn't that convenient because it requires to do changes in different places, discard them and at another point restore again but it saves a lot of time when project enters final testing phase.`,
+    new Header({
+      value: `Developer's console`,
+
+      overrideComponentProps: {
+        order: 2,
+      },
     }),
 
     new Paragraph({
-      value: `In my case, project eligible for adding console was Project Zero, educational game made prepared for engineering thesis. Due to the fact that it was developed in two people, it had to be large enough. Therefore in it's early stage I've wanted to include such feature. I've managed to find idea on Joey The Lantern's youtube channel. I've modified it with few things. I didn't include Unity logs though but if you are interested, you can find how to do it on his channel. From the perspective of that project I can say that sacrificing several hours to prepare commands and console itself definitely paid back and shorten the time spent on patching bugs in final stage of game development. It's also nice feature when you want to show certain game mechanic at any moment. If you're interested, feel free to check console template repository and it's implementation in Project Zero as well (there are more commands that you might want to use 😁)`,
+      value: `First and worth concept to add into the project is dev's console. It consists of commands which are intended to setup state or certain conditions, to allow to test different scenarios (or specific features) without spending time on reaching particular phase or manipulating project's source code. It can also be used in built version of the project which is cool feature. Since I was working on engineering thesis project with another person, our project (Project Zero) had to be large enough. In it's early stage I knew I wanted to add such feature to improve future testing. I've managed to find an idea on Joey The Lantern's youtube channel which I've used and modified with few things. I didn't include Unity logs though but if you are interested, you can find how to do it on his channel. After finishing the project I can say that  sacrificing several hours to prepare commands and console itself definitely paid back and shorten the time spent on patching bugs in final stage of game development. It's also nice feature when you want to show certain game mechanic at any moment or let players play with it. If you're interested, feel free to check console template repository and it's implementation applied into Project Zero (there are more commands that may be useful for you 😁)`,
+    }),
+
+    new Header({
+      value: `Easy Buttons`,
+
+      overrideComponentProps: {
+        order: 2,
+      },
+    }),
+
+    new Paragraph({
+      value: `Another nice way to improve project testing are buttons placed in the inspector. Imagine that you want to check whether all books give valid notification after they are read by player. You can get each book by 1) wandering around the world and spending currency on it, 2) making special command to dev console that will unlock them at once, or... 3) adding an button to the inspector.`,
+    }),
+
+    new Paragraph({
+      value: `At first spot console command seems reasonable but in some scenarios it might be more convenient to make button and omit necessity of typing in command(s) to setup particular state or e.g. get information on demand to not flood console. Unity does not include such feature by default but there is ready solution which I've used - EasyButtons. Buttons are rendered within special attribute placed above functions. After using it, effect is as follows:`,
     }),
 
     new Photo({
-      description: 'Short preview of Unity Dev Console',
-
-      sourceUrl: 'https://github.com/trolit/unity-dev-console',
+      description: 'Unity Inspector Preview',
 
       overrideComponentProps: {
-        src: 'https://raw.githubusercontent.com/trolit/unity-dev-console/images/images/ezgif.gif',
+        src: require('@/assets/media/posts/2020-03-06/1.png'),
       },
+    }),
+
+    new Paragraph({
+      value: `You may wonder if these functions can have parameters. In EasyButtons you can't decorate functions with [Button] that have parameters (or they won't appear in the Inspector). At first look it might look as an obstacle but if you would like to pass some data, you could just call another function inside decorated method that can have parameters. Simple example:`,
+    }),
+
+    new Code({
+      value: `using EasyButtons;
+
+[Header("Teleport To Destination Button Data")]
+[SerializeField]
+private float _X;
+
+[SerializeField]
+private float _Y;
+
+[SerializeField]
+private float _Z;
+
+[Button]
+public void TeleportToDestination()
+{
+    SetCharacterPosition(_X, _Y, _Z);
+}`,
+      prism: {
+        language: 'clike',
+      },
+    }),
+
+    new Paragraph({
+      value: `Using EasyButtons is quite simple. If you are planning on making medium to large project in Unity, consider at least one of these features and you will surely won't regret spending time in early stage to faster later QA and exclude bugs. Dev console for me is a must (after applying it to Project Zero) but EasyButtons is also nice extra addition worth to consider.`,
     }),
   ],
 };
