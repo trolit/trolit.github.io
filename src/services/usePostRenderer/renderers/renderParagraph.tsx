@@ -26,9 +26,13 @@ export function renderParagraphWithReferences(
     data: { value, overrideComponentProps },
   } = paragraph;
 
-  const { items } = references;
+  const { items, renderInParagraphs } = references;
 
-  if (!items?.length || !items.some((item) => item.match)) {
+  if (
+    !items?.length ||
+    !renderInParagraphs ||
+    !items.some((item) => item.match)
+  ) {
     return renderComponent(index, value, overrideComponentProps);
   }
 
