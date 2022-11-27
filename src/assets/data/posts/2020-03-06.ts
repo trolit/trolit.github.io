@@ -23,6 +23,11 @@ export const post: IPost = {
         url: 'https://github.com/trolit/projectZero',
       },
       {
+        match: 'EasyButtons',
+        title: 'Easy Buttons (repository)',
+        url: 'https://github.com/madsbangh/EasyButtons',
+      },
+      {
         match: 'Joey The Lantern',
         title: 'Joey The Lantern YT Channel',
         url: 'https://www.youtube.com/channel/UCmG1UbEI0iFE1tAw2SyvvXg',
@@ -64,17 +69,7 @@ export const post: IPost = {
     }),
 
     new Paragraph({
-      value: `First and worth concept to add into the project is dev's console. It consists of commands which are intended to arrange certain conditions, to allow to test different scenarios (or specific features) without spending time on reaching particular state or manipulating project's source code. Since I was working on engineering thesis project with another person our project had to be large enough. We were working on Project Zero - sandbox, educational game with RPG elements. In it's early stage I knew I wanted to add such feature. I've managed to find an idea on Joey The Lantern's youtube channel which I've used and modified with few things. I didn't include Unity logs though but if you are interested, you can find how to add it on his channel. After finishing the project I can say that  sacrificing several hours to prepare commands and console itself definitely paid back and shorten the time spent on patching bugs in final stage of game development. It's also nice feature when you want to show certain game mechanic at any moment. If you're interested, feel free to check console template repository and it's implementation in Project Zero (there are more commands that you might want to use 😁)`,
-    }),
-
-    new Photo({
-      description: 'GIF showing Unity Dev Console',
-
-      sourceUrl: 'https://github.com/trolit/unity-dev-console',
-
-      overrideComponentProps: {
-        src: 'https://raw.githubusercontent.com/trolit/unity-dev-console/images/images/ezgif.gif',
-      },
+      value: `First and worth concept to add into the project is dev's console. It consists of commands which are intended to setup state or certain conditions, to allow to test different scenarios (or specific features) without spending time on reaching particular phase or manipulating project's source code. It can also be used in built version of the project which is cool feature. Since I was working on engineering thesis project with another person, our project (Project Zero) had to be large enough. In it's early stage I knew I wanted to add such feature to improve future testing. I've managed to find an idea on Joey The Lantern's youtube channel which I've used and modified with few things. I didn't include Unity logs though but if you are interested, you can find how to do it on his channel. After finishing the project I can say that  sacrificing several hours to prepare commands and console itself definitely paid back and shorten the time spent on patching bugs in final stage of game development. It's also nice feature when you want to show certain game mechanic at any moment or let players play with it. If you're interested, feel free to check console template repository and it's implementation applied into Project Zero (there are more commands that may be useful for you 😁)`,
     }),
 
     new Header({
@@ -86,7 +81,7 @@ export const post: IPost = {
     }),
 
     new Paragraph({
-      value: `Another nice way to improve project testing are buttons in inspector. Imagine that you want to check whether all books give valid notification after they are read by player. You can get each book by 1) wandering around the world and spending currency on it, 2) making special command to dev console that will unlock them at once, or... 3) adding an button to the inspector.`,
+      value: `Another nice way to improve project testing are buttons placed in the inspector. Imagine that you want to check whether all books give valid notification after they are read by player. You can get each book by 1) wandering around the world and spending currency on it, 2) making special command to dev console that will unlock them at once, or... 3) adding an button to the inspector.`,
     }),
 
     new Paragraph({
@@ -129,7 +124,7 @@ public void TeleportToDestination()
     }),
 
     new Paragraph({
-      value: `Using EasyButtons is that simple. You just need to add it to your project, import dependencies and decorate parameterless function with attribute.`,
+      value: `Using EasyButtons is quite simple. If you are planning on making medium to large project in Unity, consider at least one of these features and you will surely won't regret spending time in early stage to faster later QA and exclude bugs. Dev console for me is a must (after applying it to Project Zero) but EasyButtons is also nice extra addition worth to consider.`,
     }),
   ],
 };
