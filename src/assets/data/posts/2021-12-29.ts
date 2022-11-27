@@ -55,20 +55,14 @@ export const post: IPost = {
     }),
 
     new Paragraph({
-      value: `When working with git, mistakes happen quite often. For instance someone can commit with wrong email :D. Situation gets complicated when we find it out after doing push. Fortunately commit details can be updated. Below example on how to do this using git rebase and commit with amend flag. Of course there are other ways of solving that (e.g. inserting commands directly under commit(s) we want to change while editing rebase config) but that one came out to be hassle-free and easy to control for me ¯\\_(ツ )_/¯`,
+      value: `When working with git, mistakes happen quite often (especially if you need to switch between few projects). For instance someone can commit with wrong email :D. Situation gets complicated when we find it out after doing push. Fortunately commit details can be updated. Below example on how to do this using git rebase and commit with amend flag. Of course there are other ways (e.g. inserting commands directly under commit(s) that we want to change while editing rebase config) but that one came out to be hassle-free and easy to control (for me) ¯\\_(ツ )_/¯`,
     }),
 
     new Paragraph({
-      value: `Move onto the branch whose commits you want to change.`,
-    }),
-
-    new Paragraph({
-      value: `Check on how big Z (Z = 1, 2, ..., n + 1) value you need to access that commit(s).`,
+      value: `Move onto the branch whose commits you want to change. Check on how big Z (Z = 1, 2, ..., n + 1) value you need to access that commit(s). For given Z execute command:`,
     }),
 
     new Code({
-      label: 'For given <strong>Z</strong> execute command:',
-
       value: `git rebase -i HEAD~Z`,
 
       prism: {
@@ -77,16 +71,10 @@ export const post: IPost = {
     }),
 
     new Paragraph({
-      value: `You will get last <strong>Z</strong> commit(s) in editor. Open remote repository and go to the same branch to display list of commits. Compare commit(s) identifiers. Change pick to edit for commit(s) that you want to update (in vi editor click A to turn on INSERT mode).`,
-    }),
-
-    new Paragraph({
-      value: `Exit INSERT mode (in vi click Escape to do so). Save file and exit editor (in vi type :wq! and hit Enter).`,
+      value: `You will get last Z commit(s) in editor. Open remote repository and go to the same branch to display list of commits. Compare commit(s) identifiers. Change pick to edit for commit(s) that you want to update (in vi editor click A to turn on INSERT mode). Exit INSERT mode (in vi click Escape to do so). Save file and exit editor (in vi type :wq! and hit Enter). Modify --author value in command below and execute these`,
     }),
 
     new Code({
-      label: 'Modify --author value in command below and execute these:',
-
       value: `git commit --amend --author="Fikcyjny Kowalski <fikcyjny@example.com>"
       
 git rebase --continue`,
@@ -97,7 +85,7 @@ git rebase --continue`,
     }),
 
     new Paragraph({
-      value: `until you see - Successfully rebased and updated... In the meantime conflicts may interrupt rebase process (if they occured to the indicated commit) and screens asking for filling in comments for commits that are being changed. Pay attention to the terminal messages to complete rebase process.`,
+      value: `until you see, Successfully rebased and updated... In the meantime conflicts may interrupt rebase process (if they occured to the indicated commit) and screens asking for filling in comments for commits that are being changed. Pay attention to the terminal messages to complete rebase process.`,
     }),
 
     new Code({
