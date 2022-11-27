@@ -103,21 +103,21 @@ export const post: IPost = {
     new Code({
       value: `using EasyButtons;
 
-[Header("Teleport To Destination Button Data")]
-[SerializeField]
-private float _X;
+      [Header("Teleport To Destination Button Data")]
+      [SerializeField]
+      private float _X;
 
-[SerializeField]
-private float _Y;
+      [SerializeField]
+      private float _Y;
 
-[SerializeField]
-private float _Z;
+      [SerializeField]
+      private float _Z;
 
-[Button]
-public void TeleportToDestination()
-{
-    SetCharacterPosition(_X, _Y, _Z);
-}`,
+      [Button]
+      public void TeleportToDestination()
+      {
+          SetCharacterPosition(_X, _Y, _Z);
+      }`,
       prism: {
         language: 'clike',
       },

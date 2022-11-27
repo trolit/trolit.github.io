@@ -29,13 +29,14 @@ export const post: IPost = {
     }),
 
     new Code({
-      value: `<!-- expected formatting (good) -->
-<label for="search">
-    Search
-</label>
-      
-<!-- received formatting (wrong) -->
-<label for="search"> Search </label>
+      value: `
+      <!-- expected formatting (good) -->
+      <label for="search">
+          Search
+      </label>
+            
+      <!-- received formatting (wrong) -->
+      <label for="search"> Search </label>
       `,
       prism: {
         noCopy: true,
@@ -49,19 +50,20 @@ export const post: IPost = {
     }),
 
     new Code({
-      value: `<b-container fluid>
-    <b-row>
-        <b-col>
-            <!-- label1 -->
-            <label for="search">
-                Search
-            </label>
+      value: `
+      <b-container fluid>
+          <b-row>
+              <b-col>
+                  <!-- label1 -->
+                  <label for="search">
+                      Search
+                  </label>
 
-            <!-- label2 -->
-            <label for="search"> Search </label>
-        </b-col>
-    </b-row>
-</b-container>`,
+                  <!-- label2 -->
+                  <label for="search"> Search </label>
+              </b-col>
+          </b-row>
+      </b-container>`,
       prism: {
         noCopy: true,
 
@@ -74,16 +76,17 @@ export const post: IPost = {
     }),
 
     new Code({
-      value: `<b-container fluid>
-    <b-row>
-        <b-col>
-            <!-- label1 -->
-            <label for="search">
-                Search
-            </label>
-        </b-col>
-    </b-row>
-</b-container>`,
+      value: `
+      <b-container fluid>
+          <b-row>
+              <b-col>
+                  <!-- label1 -->
+                  <label for="search">
+                      Search
+                  </label>
+              </b-col>
+          </b-row>
+      </b-container>`,
       prism: {
         noCopy: true,
 
