@@ -29,14 +29,17 @@ export function renderCode(index: number, code: CodeComponent): ReactNode {
   } = code;
 
   if (prism) {
-    const { language, overrideProps } = prism;
+    const { language, noCopy, copyLabel, copiedLabel, highlightLines } = prism;
 
     const codeBlock = (
       <Prism
         withLineNumbers
         children={value}
         language={language}
-        {...overrideProps}
+        copyLabel={copyLabel}
+        noCopy={noCopy || false}
+        copiedLabel={copiedLabel}
+        highlightLines={highlightLines}
       />
     );
 
