@@ -7,7 +7,7 @@ import { IReferences } from '../interfaces';
 export function renderReferences(references: IReferences): ReactNode {
   const { items } = references;
 
-  if (!items?.length || !items.some((item) => item.match)) {
+  if (!items?.length) {
     return;
   }
 
@@ -16,7 +16,7 @@ export function renderReferences(references: IReferences): ReactNode {
   );
 
   const renderedListItems = filteredItems.map(
-    ({ title, author, url, excludeFromReferencesComponent }, itemIndex) => {
+    ({ title, author, url }, itemIndex) => {
       return (
         <List.Item key={`reference-item-${itemIndex + 1}`}>
           {author && <Text fw={700}>{author}</Text>}
