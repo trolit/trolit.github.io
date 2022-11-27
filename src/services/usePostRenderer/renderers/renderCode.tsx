@@ -1,3 +1,4 @@
+import dedent from 'dedent';
 import { ReactNode } from 'react';
 import { Prism } from '@mantine/prism';
 import { Text, Container, Code } from '@mantine/core';
@@ -28,15 +29,17 @@ export function renderCode(index: number, code: CodeComponent): ReactNode {
     data: { label, value, prism, overrideComponentProps },
   } = code;
 
+  const dedentValue = dedent(value);
+
   if (prism) {
     const { language, noCopy, copyLabel, copiedLabel, highlightLines } = prism;
 
     const codeBlock = (
       <Prism
         withLineNumbers
-        children={value}
         language={language}
         copyLabel={copyLabel}
+        children={dedentValue}
         noCopy={noCopy || false}
         copiedLabel={copiedLabel}
         highlightLines={highlightLines}
@@ -48,7 +51,7 @@ export function renderCode(index: number, code: CodeComponent): ReactNode {
 
   const codeBlock = (
     <Code block {...overrideComponentProps}>
-      {value}
+      {dedentValue}
     </Code>
   );
 
