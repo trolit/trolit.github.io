@@ -5,7 +5,7 @@ import { Code, Header, Paragraph } from '@/services/usePostRenderer/components';
 export const post: IPost = {
   name: `Flexible single line/multi-line formatting`,
 
-  abstract: `Recently while I was working on one of the projects, Prettier was forcing single line formatting for tags when spread but I wanted them to stay spread. Here's simple tip on how to fix it.`,
+  abstract: `Recently while I was working on one of the projects, Prettier was forcing single line formatting for tags when spread but I wanted them to stay spread.. Fix is relatively simple although I've spent some time to find the source of the problem so I'm putting it here as it might save time for others.`,
 
   tags: [{ text: 'Prettier' }],
 
@@ -21,7 +21,7 @@ export const post: IPost = {
     }),
 
     new Paragraph({
-      value: `Prettier combined with ESLint can sometimes cause headache problems. Even if we add dependencies that are supposed to help them work together by e.g. disabling conflicting rules. I've thought that my case concerns interaction of these tools. I've changed ESLint version, configuration and it did not help.`,
+      value: `Prettier combined with ESLint can sometimes cause headache problems. Even if we add dependencies that are supposed to help them work together by e.g. disabling conflicting rules. I've thought that my case concerns interaction of these tools. I've changed ESLint version, it's configuration and it did not help.`,
     }),
 
     new Paragraph({
@@ -94,7 +94,7 @@ export const post: IPost = {
     }),
 
     new Paragraph({
-      value: `20 spaces (4 tabs) between document start and Search word are not taken into account. Prettier (v2) treats that indentation like it would be single whitespace character and because of that label1 has 70 characters instead of 90 which means that it didn't exceed limit and is formatted into single line. Once we return to prettier^1, indentations inside label tag will be correctly taken into account (correctly in the context of set goal - fix without changing config file) and we will be able to write down label in two ways: label1 or label2 🤠👍.`,
+      value: `20 spaces (4 tabs) between document start and Search word are not taken into account. Prettier (v2) treats that indentation like it would be single whitespace character and because of that label1 has 70 characters instead of 90 which means that it didn't exceed limit and is formatted into single line. Once we return to prettier^1, indentations inside label tag will be correctly taken into account (correctly in the context of set goal - fix without changing prettier config file) and we will be able to write down label in two ways: label1 or label2 🤠👍. There is probably some setting in v2 to allows to change strategy but I didn't spend time to research that.`,
     }),
   ],
 };
