@@ -11,7 +11,7 @@ const title = `Update pushed commit(s) details`;
 export const post: IPost = {
   name: title,
 
-  abstract: `If you've accidentally pushed commit to repository that you would like to fix (e.g. committer details) check how to solve it using git rebase and commit with amend flag.`,
+  abstract: `If you've accidentally pushed commit to repository that you would like to change(e.g. committer details) check this post on how to do it using git rebase and commit with amend flag.`,
 
   tags: [{ text: 'Git' }],
 
