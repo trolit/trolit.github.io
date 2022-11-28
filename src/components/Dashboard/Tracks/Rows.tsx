@@ -23,7 +23,11 @@ export function Rows() {
               justify='center'
             >
               {authors.map((author, authorIndex) => (
-                <Badge radius={0} key={`track-${index}-author-${authorIndex}`}>
+                <Badge
+                  size='sm'
+                  radius={0}
+                  key={`track-${index}-author-${authorIndex}`}
+                >
                   {author}
                 </Badge>
               ))}
@@ -41,7 +45,11 @@ export function Rows() {
               justify='center'
             >
               {tags.map(({ text }, tagIndex) => (
-                <Badge radius={0} key={`track-${index}-tag-${tagIndex}`}>
+                <Badge
+                  size='sm'
+                  radius={0}
+                  key={`track-${index}-tag-${tagIndex}`}
+                >
                   {text}
                 </Badge>
               ))}
