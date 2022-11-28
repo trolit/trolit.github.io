@@ -6,7 +6,7 @@ export const PRIMARY_COLOR = 'green';
 
 export const HEADER_HEIGHT = 50;
 
-export const OVERLAY_PADDING = 17;
+export const OVERLAY_PADDING = 15;
 
 export const GITHUB_USERNAME = 'trolit';
 
