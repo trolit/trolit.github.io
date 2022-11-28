@@ -19,11 +19,11 @@ export function Tracks() {
 
               <th>Title</th>
 
-              <th>Authors</th>
+              <th>Author(s)</th>
 
               <th>Added on</th>
 
-              <th>Tags</th>
+              <th>Tag(s)</th>
 
               <th></th>
             </tr>
