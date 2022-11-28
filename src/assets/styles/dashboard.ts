@@ -1,13 +1,20 @@
 import { createStyles } from '@mantine/core';
 
+import {
+  HEADER_HEIGHT,
+  OVERLAY_PADDING,
+  MEDIUM_SCREEN_THRESHOLD,
+} from '@/config';
 import { DARK_THEME } from '@/assets/constants/themes';
-import { OVERLAY_PADDING, HEADER_HEIGHT } from '@/config';
 
 export const useDashboardStyles = () => {
   const { classes } = createStyles((theme) => {
     const classes = {
       wrapper: {
         height: `calc(100vh - ${OVERLAY_PADDING}px)`,
+        [`@media (max-width: ${MEDIUM_SCREEN_THRESHOLD})`]: {
+          marginTop: `${OVERLAY_PADDING}px`,
+        },
       },
 
       header: {
