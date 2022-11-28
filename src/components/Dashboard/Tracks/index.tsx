@@ -4,7 +4,7 @@ import { Rows } from './Rows';
 
 export function Tracks() {
   return (
-    <Container p={0} fluid style={{ overflow: 'hidden' }}>
+    <Container p={0} fluid>
       <ScrollArea>
         <Table
           striped
@@ -25,7 +25,7 @@ export function Tracks() {
 
               <th>Tags</th>
 
-              <th>YouTube</th>
+              <th></th>
             </tr>
           </thead>
 
