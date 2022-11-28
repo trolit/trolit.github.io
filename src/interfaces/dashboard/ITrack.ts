@@ -8,4 +8,6 @@ export interface ITrack {
   date: string;
 
   tags: ITag[];
+
+  youtubeId: string;
 }
