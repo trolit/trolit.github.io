@@ -25,13 +25,24 @@ export function MainGrid({ tab }: IProps) {
   return (
     <Grid grow gutter='xs' align='center' className={appStyles.mainGrid}>
       {!isDashboardMaximized && (
-        <Grid.Col py={0} span={3}>
+        <Grid.Col
+          py={0}
+          span={3}
+          className={`${commonStyles.h100} ${commonStyles.w100}`}
+        >
           <Profile />
         </Grid.Col>
       )}
 
-      <Grid.Col py={0} span={isDashboardMaximized ? 12 : 9}>
-        <motion.div layout className={commonStyles.h100}>
+      <Grid.Col
+        py={0}
+        span={isDashboardMaximized ? 12 : 9}
+        className={`${commonStyles.h100} ${commonStyles.w100}`}
+      >
+        <motion.div
+          layout
+          className={`${commonStyles.h100} ${commonStyles.w100}`}
+        >
           <Dashboard tab={tab} />
         </motion.div>
       </Grid.Col>
