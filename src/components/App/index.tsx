@@ -13,7 +13,7 @@ import { MainGrid } from './MainGrid';
 import { useAppStyles } from '@/assets/styles/app';
 import { toggleColorScheme } from '@/store/preferences';
 import { useCommonStyles } from '@/assets/styles/common';
-import { PRIMARY_COLOR, BACKGROUND_SRC, OVERLAY_PADDING } from '@/config';
+import { PRIMARY_COLOR, BACKGROUND_SRC } from '@/config';
 
 interface IProps {
   tab: ReactNode;
@@ -44,8 +44,8 @@ export default function App({ tab }: IProps) {
             backgroundImage: `url(${BACKGROUND_SRC})`,
           }}
         >
-          <Container px={OVERLAY_PADDING} fluid className={appStyles.container}>
-            <Center className={commonStyles.h100}>
+          <Container fluid className={appStyles.container}>
+            <Center className={`${commonStyles.h100} ${commonStyles.w100}`}>
               <MainGrid tab={tab} />
             </Center>
           </Container>
