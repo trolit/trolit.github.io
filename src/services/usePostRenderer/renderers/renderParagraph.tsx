@@ -43,12 +43,7 @@ export function renderParagraphWithReferences(
       replacedValue.length ? replacedValue : value,
       match,
       (match: string, index: number) => (
-        <Anchor
-          key={`${match}-${index}`}
-          href={url}
-          target='_blank'
-          rel='noreferrer'
-        >
+        <Anchor key={`${match}-${index}`} href={url} target='_blank'>
           {match}
         </Anchor>
       ),
