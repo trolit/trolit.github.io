@@ -27,7 +27,7 @@ const videoRenderer = create(VIDEO_COMPONENT_KEY, renderVideo);
 
 const codeRenderer = create(CODE_COMPONENT_KEY, renderCode);
 
-export const componentRenderers: IComponentRenderer[] = [
+export const COMPONENT_RENDERERS: IComponentRenderer[] = [
   codeRenderer,
   photoRenderer,
   videoRenderer,
