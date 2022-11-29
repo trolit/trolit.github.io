@@ -28,6 +28,10 @@ export const useCommonStyles = () => {
       w100: {
         width: '100%',
       },
+
+      textCenter: {
+        textAlign: 'center' as const,
+      },
     };
 
     return classes;
