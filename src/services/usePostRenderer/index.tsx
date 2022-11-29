@@ -2,9 +2,8 @@ import { ReactNode } from 'react';
 
 import { IBasePost } from './interfaces';
 import { Paragraph } from './components';
-import { COMPONENT_RENDERERS } from './config';
 import { renderReferences } from './renderers';
-import { PARAGRAPH_COMPONENT_KEY } from './constants';
+import { COMPONENT_RENDERERS, PARAGRAPH_COMPONENT_KEY } from './config';
 import { renderParagraphWithReferences } from './renderers/renderParagraph';
 
 interface IRenderer<T> {
