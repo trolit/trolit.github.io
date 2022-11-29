@@ -25,8 +25,8 @@ export function Dashboard({ tab }: IProps) {
       </Container>
 
       <Container px={0} fluid>
-        <ScrollArea className={dashboardStyles.content}>
-          <Paper p='lg'>{tab}</Paper>
+        <ScrollArea className={dashboardStyles.scrollArea}>
+          <Paper className={dashboardStyles.content}>{tab}</Paper>
         </ScrollArea>
       </Container>
     </Paper>
