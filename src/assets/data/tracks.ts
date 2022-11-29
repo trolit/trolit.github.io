@@ -7,6 +7,18 @@ const { SOUNDTRACK } = COMMON_TAGS;
 
 const rawTracks: ITrack[] = [
   {
+    authors: ['Nicholas Britell'],
+
+    title: `The King OST Suite`,
+
+    date: '2022-11-29',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'HiNcCjQSz6o',
+  },
+
+  {
     authors: ['Thomas Newman'],
 
     title: `1917`,
