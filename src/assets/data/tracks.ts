@@ -7,6 +7,138 @@ const { SOUNDTRACK } = COMMON_TAGS;
 
 const rawTracks: ITrack[] = [
   {
+    authors: ['Joseph Trapanese'],
+
+    title: `Tell Me What You Want (Witcher, Season 2)`,
+
+    date: '2021-12-26',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: '7sRqApGHCdg',
+  },
+
+  {
+    authors: ['Joseph Trapanese'],
+
+    title: `I Believe in You (Witcher, Season 2)`,
+
+    date: '2021-12-26',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'PKQCOP3tkuw',
+  },
+
+  {
+    authors: ['Joseph Trapanese'],
+
+    title: `Remembering Cintra (Witcher, Season 2)`,
+
+    date: '2021-12-26',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 't7Y-oHwN0Qs',
+  },
+
+  {
+    authors: ['Lorne Balfe'],
+
+    title: `Assassins Creed Theme`,
+
+    date: '2021-10-23',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'qOvw6t-cxOs',
+  },
+
+  {
+    authors: ['Two Steps From Hell'],
+
+    title: `Protectors of the Earth`,
+
+    date: '2021-11-12',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'ASj81daun5Q',
+  },
+
+  {
+    authors: ['Audiomachine'],
+
+    title: `Legions of Doom`,
+
+    date: '2021-11-12',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'sjBjmwvikVc',
+  },
+
+  {
+    authors: ['Gustavo Santaolalla', 'Mac Quayle'],
+
+    title: `The Last of Us Part 2 OST`,
+
+    date: '2021-11-12',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'X-swJqjzjCI',
+  },
+
+  {
+    authors: ['Hans Zimmer', 'Lisa Gerrard', 'Moya Brennan'],
+
+    title: `Sorrow (King Arthur)`,
+
+    date: '2021-11-12',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: '_ak9rTRuEJg',
+  },
+
+  {
+    authors: ['Hans Zimmer'],
+
+    title: `Red Warrior (The Last Samurai)`,
+
+    date: '2021-11-12',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'f2omHyq6Lrg',
+  },
+
+  {
+    authors: ['Hans Zimmer'],
+
+    title: `Soundtrack mix (King Arthur)`,
+
+    date: '2021-11-12',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'sKFLpfv4hSY',
+  },
+
+  {
+    authors: ['Dougie MacLean'],
+
+    title: `Promentory (The Last of the Mohicans)`,
+
+    date: '2021-11-12',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'ygNuRpwZqRU',
+  },
+
+  {
     authors: ['Nicholas Britell'],
 
     title: `The King OST Suite`,
@@ -28,6 +160,18 @@ const rawTracks: ITrack[] = [
     tags: [SOUNDTRACK],
 
     youtubeId: 'KzmdfOh6su4',
+  },
+
+  {
+    authors: ['James Horner'],
+
+    title: `Braveheart (Main Theme)`,
+
+    date: '2021-11-12',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'JYMySrHL0Fo',
   },
 
   {
