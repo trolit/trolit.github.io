@@ -3,12 +3,15 @@ import { createStyles } from '@mantine/core';
 import {
   HEADER_HEIGHT,
   OVERLAY_PADDING,
+  SMALL_SCREEN_THRESHOLD,
   MEDIUM_SCREEN_THRESHOLD,
 } from '@/config';
 import { DARK_THEME } from '@/assets/constants/themes';
 
 export const useDashboardStyles = () => {
   const { classes } = createStyles((theme) => {
+    const { spacing } = theme;
+
     const classes = {
       wrapper: {
         height: `calc(100vh - ${OVERLAY_PADDING}px)`,
@@ -21,17 +24,24 @@ export const useDashboardStyles = () => {
         borderRadius: '8px 8px 0 0',
       },
 
-      content: {
+      scrollArea: {
         height: `calc(100vh - ${HEADER_HEIGHT}px - ${OVERLAY_PADDING}px)`,
         borderRadius: theme.fn.radius('md'),
+      },
+
+      content: {
+        padding: spacing.lg,
+        [`@media (max-width: ${SMALL_SCREEN_THRESHOLD})`]: {
+          width: `calc(100vw - ${spacing.lg}px - 10px)`,
+        },
       },
 
       link: {
         display: 'flex',
         alignItems: 'center',
         height: '100%',
-        paddingLeft: theme.spacing.md,
-        paddingRight: theme.spacing.md,
+        paddingLeft: spacing.md,
+        paddingRight: spacing.md,
         textDecoration: 'none',
         color: theme.colorScheme === DARK_THEME ? theme.white : theme.black,
         fontWeight: 500,
@@ -58,7 +68,7 @@ export const useDashboardStyles = () => {
 
       subLink: {
         width: '100%',
-        padding: `${theme.spacing.xs}px ${theme.spacing.md}px`,
+        padding: `${spacing.xs}px ${spacing.md}px`,
         borderRadius: theme.radius.md,
 
         ...theme.fn.hover({

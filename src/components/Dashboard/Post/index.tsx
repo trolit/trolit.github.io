@@ -28,7 +28,7 @@ export function Post() {
   const post = posts[parsedPostId - 1];
 
   return (
-    <Stack px={20} spacing='xl' align='center'>
+    <Stack spacing='xl' align='center'>
       {postRenderer.render(post)}
     </Stack>
   );

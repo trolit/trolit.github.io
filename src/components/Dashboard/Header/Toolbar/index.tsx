@@ -7,7 +7,7 @@ import { DashboardViewToggler } from './DashboardViewToggler';
 export function Toolbar() {
   return (
     <motion.div layout>
-      <Group px='md'>
+      <Group noWrap px='sm'>
         <ThemeSwitcher />
 
         <DashboardViewToggler />
