@@ -35,7 +35,7 @@ export function PanelHeader() {
   return (
     <Box>
       <Header height={HEADER_HEIGHT} className={dashboardStyles.header}>
-        <Group position='apart' className={commonStyles.h100}>
+        <Group noWrap position='apart' className={commonStyles.h100}>
           <Group
             noWrap
             spacing={0}
