@@ -2,9 +2,8 @@ import { ReactNode } from 'react';
 
 import { IBasePost } from './interfaces';
 import { Paragraph } from './components';
-import { componentRenderers } from './config';
 import { renderReferences } from './renderers';
-import { PARAGRAPH_COMPONENT_KEY } from './constants';
+import { COMPONENT_RENDERERS, PARAGRAPH_COMPONENT_KEY } from './config';
 import { renderParagraphWithReferences } from './renderers/renderParagraph';
 
 interface IRenderer<T> {
@@ -21,24 +20,22 @@ function render<T extends IBasePost>(post: T) {
   const { components, references } = post;
 
   const renderedComponents = components.map((component, index) => {
-    const componentKey = component.getKey();
+    const key = component.getKey();
 
-    const componentRenderer = componentRenderers.find(
-      (componentRenderer) => componentRenderer.key === componentKey,
+    const COMPONENT_RENDERER = COMPONENT_RENDERERS.find(
+      (COMPONENT_RENDERER) => COMPONENT_RENDERER.key === key,
     );
 
-    if (!componentRenderer) {
+    if (!COMPONENT_RENDERER) {
       console.error('------------------------------------------------------');
-      console.error(
-        `Tried to render unregistered component (${componentKey}).`,
-      );
+      console.error(`Tried to render unregistered component (${key}).`);
       console.error(component);
       console.error('------------------------------------------------------');
 
       throw new Error();
     }
 
-    if (componentKey === PARAGRAPH_COMPONENT_KEY && references) {
+    if (key === PARAGRAPH_COMPONENT_KEY && references) {
       return renderParagraphWithReferences(
         index,
         component as Paragraph,
@@ -46,7 +43,7 @@ function render<T extends IBasePost>(post: T) {
       );
     }
 
-    return componentRenderer.render(index, component);
+    return COMPONENT_RENDERER.render(index, component);
   });
 
   return (
