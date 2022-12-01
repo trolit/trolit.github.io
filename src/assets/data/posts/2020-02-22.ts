@@ -14,7 +14,7 @@ export const POST: IPost = {
 
   tags: [{ text: 'Education' }, { text: 'Games' }],
 
-  date: '2022-02-22',
+  date: '2020-02-22',
 
   references: {
     items: [
