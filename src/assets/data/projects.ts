@@ -460,4 +460,4 @@ export const PROJECTS = sortByDate<IProject>(RAW_PROJECTS).map(
   }),
 );
 
-export const ALL_DATES = new Set(RAW_PROJECTS.map(({ date }) => date));
+export const ALL_DATES = RAW_PROJECTS.map(({ date }) => date);
