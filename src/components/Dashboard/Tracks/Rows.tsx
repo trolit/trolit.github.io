@@ -1,11 +1,11 @@
 import { Badge, Anchor, Flex, FlexProps } from '@mantine/core';
 
-import { tracks } from '@/assets/data/tracks';
+import { TRACKS } from '@/assets/data/tracks';
 import { formatDate } from '@/helpers/formatDate';
 import { useCommonStyles } from '@/assets/styles/common';
 
 export function Rows() {
-  const tracksLength = tracks.length;
+  const tracksLength = TRACKS.length;
 
   const commonStyles = useCommonStyles();
 
@@ -18,7 +18,7 @@ export function Rows() {
 
   return (
     <>
-      {tracks.map(({ authors, title, date, tags, youtubeId }, index) => (
+      {TRACKS.map(({ authors, title, date, tags, youtubeId }, index) => (
         <tr key={`track-${index}`}>
           <td className={commonStyles.textCenter}>{tracksLength - index}</td>
 

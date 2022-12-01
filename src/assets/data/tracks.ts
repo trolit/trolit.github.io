@@ -5,7 +5,7 @@ import { COMMON_TAGS } from '@/assets/constants/common-tags';
 
 const { SOUNDTRACK } = COMMON_TAGS;
 
-const rawTracks: ITrack[] = [
+const RAW_TRACKS: ITrack[] = [
   {
     authors: ['Joseph Trapanese'],
 
@@ -523,4 +523,6 @@ const rawTracks: ITrack[] = [
   },
 ];
 
-export const tracks = sortByDate<ITrack>(rawTracks);
+export const TRACKS = sortByDate<ITrack>(RAW_TRACKS);
+
+export const ALL_DATES = new Set(TRACKS.map(({ date }) => date));
