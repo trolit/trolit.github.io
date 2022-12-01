@@ -97,7 +97,7 @@ export function Home() {
         Recent Activity
       </Title>
 
-      <Flex style={{ height: `calc(${h100} - ${titleStyles.height})` }}>
+      <Flex style={{ height: `calc(100% - ${titleStyles.height})` }}>
         {horizontalView}
       </Flex>
     </Container>
