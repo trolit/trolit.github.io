@@ -59,13 +59,7 @@ export function Home() {
             className={w100}
             style={{ height: '50px', width: '100%' }}
           >
-            <Group
-              noWrap
-              style={{
-                height: '100%',
-                border: '1px solid red',
-              }}
-            >
+            <Group noWrap className={h100}>
               <Kbd
                 style={{
                   height: '100%',
