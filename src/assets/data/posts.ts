@@ -11,4 +11,4 @@ const RAW_POSTS: IPost[] = [POST1, POST2, POST3, POST4, POST5];
 
 export const POSTS = sortByDate<IPost>(RAW_POSTS);
 
-export const ALL_DATES = new Set(POSTS.map(({ date }) => date));
+export const ALL_DATES = POSTS.map(({ date }) => date);
