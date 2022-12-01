@@ -6,7 +6,7 @@ import {
 } from '@/services/usePostRenderer/components';
 import { IPost } from '@/interfaces/dashboard/IPost';
 
-export const post: IPost = {
+export const POST: IPost = {
   name: 'DGBL - future or not?',
 
   abstract: `DGBL is an subject which got my attention while working on engineering thesis. It means "digital game-based learning". Educational games aren't new but what if GBL was implemented into education system? Would it improve learning quality? Personal view.`,

@@ -2,7 +2,7 @@ import { PRIMARY_COLOR } from '@/config';
 import { IPost } from '@/interfaces/dashboard/IPost';
 import { Code, Header, Paragraph } from '@/services/usePostRenderer/components';
 
-export const post: IPost = {
+export const POST: IPost = {
   name: `Flexible single line/multi-line formatting`,
 
   abstract: `Recently while I was working on one of the projects, Prettier was forcing single line formatting for tags when spread but I wanted them to stay spread.. Fix is relatively simple although I've spent some time to find the source of the problem so I'm putting it here as it might save time for others.`,

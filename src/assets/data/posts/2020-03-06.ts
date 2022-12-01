@@ -6,7 +6,7 @@ import {
 } from '@/services/usePostRenderer/components';
 import { IPost } from '@/interfaces/dashboard/IPost';
 
-export const post: IPost = {
+export const POST: IPost = {
   name: `Enchancing (Unity) project development`,
 
   abstract: `Testing is crucial part of game development to reduce times on solving bugs in it's final stage. If you are planning on making expanded game or app in Unity, consider sacrificing some time on implementing features that will shorten testing time. Not everything in Unity can be covered with unit tests. Post mentions two things that improved personal project development.`,

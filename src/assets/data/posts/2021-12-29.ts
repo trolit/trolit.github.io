@@ -8,7 +8,7 @@ import { IPost } from '@/interfaces/dashboard/IPost';
 
 const title = `Update pushed commit(s) details`;
 
-export const post: IPost = {
+export const POST: IPost = {
   name: title,
 
   abstract: `If you've accidentally pushed commit to repository that you would like to change(e.g. committer details) check this post on how to do it using git rebase and commit with amend flag.`,
