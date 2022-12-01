@@ -20,7 +20,7 @@ export const MEDIUM_SCREEN_THRESHOLD = '861px';
 
 export const HOME_INTEREST_POINTS = 4;
 
-export const HOME_ELEMENT_HEIGHT = 50;
+export const HOME_ELEMENT_HEIGHT = 70;
 
 export const YOUTUBE_WATCH_URL = `https://www.youtube.com/watch?v=`;
 
