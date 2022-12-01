@@ -1,32 +1,20 @@
-import {
-  Kbd,
-  Flex,
-  Text,
-  Badge,
-  Paper,
-  Stack,
-  Title,
-  Group,
-  Container,
-  UnstyledButton,
-} from '@mantine/core';
 import { CSSProperties } from 'react';
+import { Flex, Badge, Stack, Title, Container } from '@mantine/core';
 
+import { PostElement } from './Element/Post';
+import { TRACKS } from '@/assets/data/tracks';
+import { TrackElement } from './Element/Track';
 import { dateSort } from '@/utilities/dateSort';
-import { HOME_INTEREST_POINTS, PRIMARY_COLOR } from '@/config';
 import { formatDate } from '@/helpers/formatDate';
+import { ProjectElement } from './Element/Project';
 import { useCommonStyles } from '@/assets/styles/common';
+import { HOME_INTEREST_POINTS, PRIMARY_COLOR } from '@/config';
 import { useDashboardStyles } from '@/assets/styles/dashboard';
-import { ALL_DATES as POSTS_DATES } from '@/assets/data/posts';
-import { ALL_DATES as TRACKS_DATES } from '@/assets/data/tracks';
-import { ALL_DATES as PROJECTS_DATES } from '@/assets/data/projects';
+import { ALL_DATES as POSTS_DATES, POSTS } from '@/assets/data/posts';
+import { ALL_DATES as PROJECTS_DATES, PROJECTS } from '@/assets/data/projects';
 
 export function Home() {
-  const SORTED_DATES = [
-    ...POSTS_DATES,
-    ...TRACKS_DATES,
-    ...PROJECTS_DATES,
-  ].sort(dateSort);
+  const SORTED_DATES = [...POSTS_DATES, ...PROJECTS_DATES].sort(dateSort);
 
   const interestPoints: string[] = [];
 
@@ -40,11 +28,33 @@ export function Home() {
     }
   }
 
-  const { w100, h100 } = useCommonStyles();
+  const { w100 } = useCommonStyles();
 
   const dashboardStyles = useDashboardStyles();
 
   const horizontalView = interestPoints.map((interestPoint) => {
+    const matchedProjects = PROJECTS.filter(
+      (project) => project.date === interestPoint,
+    );
+
+    const renderedProjects = matchedProjects.map((project, index) => (
+      <ProjectElement key={`project-${index}`} item={project} />
+    ));
+
+    const matchedPosts = POSTS.filter((post) => post.date === interestPoint);
+
+    const renderedPosts = matchedPosts.map((post, index) => (
+      <PostElement key={`post-${index}`} item={post} />
+    ));
+
+    const matchedTracks = TRACKS.filter(
+      (track) => track.date === interestPoint,
+    );
+
+    const renderedTracks = matchedTracks.map((track, index) => (
+      <TrackElement key={`track-${index}`} item={track} />
+    ));
+
     return (
       <Flex key={interestPoint} direction='column' className={w100}>
         <Stack
@@ -55,28 +65,11 @@ export function Home() {
             borderRight: '1px dashed gray',
           }}
         >
-          <UnstyledButton
-            className={w100}
-            style={{ height: '50px', width: '100%' }}
-          >
-            <Group noWrap className={h100}>
-              <Kbd
-                style={{
-                  height: '100%',
-                  display: 'flex',
-                  alignItems: 'center',
-                }}
-              >
-                Project
-              </Kbd>
+          {renderedProjects}
 
-              <Paper>
-                <Text fz='sm' lineClamp={1}>
-                  TMP
-                </Text>
-              </Paper>
-            </Group>
-          </UnstyledButton>
+          {renderedPosts}
+
+          {renderedTracks}
         </Stack>
 
         <Badge size='lg' fullWidth radius={0} color={PRIMARY_COLOR}>
