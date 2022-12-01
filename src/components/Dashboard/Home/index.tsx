@@ -79,7 +79,7 @@ export function Home() {
           </UnstyledButton>
         </Stack>
 
-        <Badge fullWidth radius={0} color={PRIMARY_COLOR}>
+        <Badge size='lg' fullWidth radius={0} color={PRIMARY_COLOR}>
           {formatDate(interestPoint)}
         </Badge>
       </Flex>
