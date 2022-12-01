@@ -19,3 +19,5 @@ export const SMALL_SCREEN_THRESHOLD = '658px';
 export const MEDIUM_SCREEN_THRESHOLD = '861px';
 
 export const HOME_INTEREST_POINTS = 4;
+
+export const HOME_ELEMENT_HEIGHT = 50;
