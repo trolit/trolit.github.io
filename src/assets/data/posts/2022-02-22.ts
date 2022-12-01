@@ -1,3 +1,4 @@
+import { YOUTUBE_EMBED_URL } from '@/config';
 import {
   Photo,
   Video,
@@ -105,7 +106,7 @@ export const POST: IPost = {
     new Video({
       title: 'RABBIDS CODING – Release trailer',
 
-      src: 'https://www.youtube.com/embed/5S9z6DFHt6o',
+      src: `${YOUTUBE_EMBED_URL}/5S9z6DFHt6o`,
     }),
 
     new Paragraph({
