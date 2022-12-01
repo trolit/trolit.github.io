@@ -37,7 +37,7 @@ const icons = [
   IconDice6,
 ];
 
-const rawProjects: IProject[] = [
+const RAW_PROJECTS: IProject[] = [
   {
     name: 'Personal portfolio Y22',
     date: '2022-11-04',
@@ -453,9 +453,11 @@ const rawProjects: IProject[] = [
   },
 ];
 
-export const projects = sortByDate<IProject>(rawProjects).map(
+export const PROJECTS = sortByDate<IProject>(RAW_PROJECTS).map(
   (project, index) => ({
     ...project,
-    thumbnail: indexToIcons(icons, index, rawProjects.length),
+    thumbnail: indexToIcons(icons, index, RAW_PROJECTS.length),
   }),
 );
+
+export const ALL_DATES = new Set(RAW_PROJECTS.map(({ date }) => date));
