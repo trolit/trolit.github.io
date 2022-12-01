@@ -1,4 +1,7 @@
+import { Anchor } from '@mantine/core';
+
 import { Element } from '.';
+import { YOUTUBE_WATCH_URL } from '@/config';
 import { ITrack } from '@/interfaces/dashboard/ITrack';
 import { tracksNavigationItem } from '@/assets/data/dashboard';
 
@@ -7,7 +10,15 @@ interface IProps {
 }
 
 export function TrackElement({ item }: IProps) {
-  const { title } = item;
+  const { title, youtubeId } = item;
 
-  return <Element icon={tracksNavigationItem.icon} text={title} />;
+  const extra = (
+    <Anchor size='xs' target='_blank' href={`${YOUTUBE_WATCH_URL}${youtubeId}`}>
+      (YouTube)
+    </Anchor>
+  );
+
+  return (
+    <Element icon={tracksNavigationItem.icon} text={title} extra={extra} />
+  );
 }
