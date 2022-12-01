@@ -1,39 +1,47 @@
-import { UnstyledButton, Group, Kbd, Paper, Text } from '@mantine/core';
+import { TablerIcon } from '@tabler/icons';
+import { Group, Paper, Text, ThemeIcon, Stack } from '@mantine/core';
 
 import { useCommonStyles } from '@/assets/styles/common';
 import { HOME_ELEMENT_HEIGHT } from '@/config';
+import { ReactNode } from 'react';
 
 interface IProps {
+  icon: TablerIcon;
+
   text: string;
 
-  type: string;
+  extra?: ReactNode;
 }
 
-export function Element({ text, type }: IProps) {
+export function Element({ icon, extra, text }: IProps) {
   const { w100, h100 } = useCommonStyles();
 
+  const Icon = icon;
+
+  const innerSpace = 10;
+
   return (
-    <UnstyledButton
+    <Paper
+      withBorder
+      pl={innerSpace}
       className={w100}
       style={{ height: `${HOME_ELEMENT_HEIGHT}px` }}
     >
-      <Group noWrap className={h100}>
-        <Kbd
-          style={{
-            height: '100%',
-            display: 'flex',
-            alignItems: 'center',
-          }}
-        >
-          {type}
-        </Kbd>
+      <Group align='center' noWrap className={`${h100}`} spacing={innerSpace}>
+        <ThemeIcon p={5} size={30} radius={0}>
+          <Icon />
+        </ThemeIcon>
 
-        <Paper>
-          <Text fz='sm' lineClamp={1}>
-            {text}
-          </Text>
+        <Paper className={w100} mr={innerSpace}>
+          <Stack align='flex-start' spacing={3}>
+            <Text fz='xs' lineClamp={1}>
+              {text}
+            </Text>
+
+            {extra}
+          </Stack>
         </Paper>
       </Group>
-    </UnstyledButton>
+    </Paper>
   );
 }
