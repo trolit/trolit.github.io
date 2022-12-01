@@ -5,7 +5,7 @@ import {
 } from '@/services/usePostRenderer/components';
 import { IPost } from '@/interfaces/dashboard/IPost';
 
-export const post: IPost = {
+export const POST: IPost = {
   name: `Awesome browser, photo editing tool`,
 
   abstract: `If you are looking after different tool to edit images and you are not fan of desktop apps then Pixlr might be worth checking. I'm continously using it since 2012 and it still appears to me as the best photo editing tool. It contains all basic tools and nice amount of effects that can be combined to achieve interesting effects.`,
