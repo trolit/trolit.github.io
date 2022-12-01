@@ -6,7 +6,7 @@ interface IProps {
   item: IPost;
 }
 
-export function ProjectElement({ item }: IProps) {
+export function PostElement({ item }: IProps) {
   const { name } = item;
 
   return <Element icon={postsNavigationItem.icon} text={name} />;
