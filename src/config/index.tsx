@@ -24,7 +24,7 @@ export const HOME_ELEMENT_HEIGHT = 70;
 
 export const HOME_GROUP_BY = 'month';
 
-export const HOME_DATE_FORMATTER = 'MMM YYYY';
+export const HOME_DATE_FORMATTER = 'MM/YYYY';
 
 export const YOUTUBE_WATCH_URL = `https://www.youtube.com/watch?v=`;
 
