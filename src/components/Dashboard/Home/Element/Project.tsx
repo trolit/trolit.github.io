@@ -13,11 +13,12 @@ export function ProjectElement({ item }: IProps) {
   const renderedLanguages = languages.map(
     ({ acronym, badgeColorInHex }, index) => (
       <Badge
-        key={`${name}-badge-${index}`}
-        radius={0}
+        mr={5}
         size='xs'
-        style={{ backgroundColor: badgeColorInHex }}
+        radius={0}
         variant='filled'
+        key={`${name}-language-${index}`}
+        style={{ backgroundColor: badgeColorInHex }}
       >
         {acronym}
       </Badge>
@@ -31,7 +32,7 @@ export function ProjectElement({ item }: IProps) {
       radius={0}
       color='gray'
       variant='filled'
-      key={`${name}-badge-${index}`}
+      key={`${name}-tag-${index}`}
     >
       {text}
     </Badge>
@@ -39,10 +40,10 @@ export function ProjectElement({ item }: IProps) {
 
   return (
     <Element
-      icon={projectsNavigationItem.icon}
       text={name}
-      label={renderedLanguages}
       extra={renderedTags}
+      label={renderedLanguages}
+      icon={projectsNavigationItem.icon}
     />
   );
 }
