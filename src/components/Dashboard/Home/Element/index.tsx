@@ -8,12 +8,14 @@ import { useCommonStyles } from '@/assets/styles/common';
 interface IProps {
   icon: TablerIcon;
 
+  label?: ReactNode;
+
   text: string;
 
   extra?: ReactNode;
 }
 
-export function Element({ icon, extra, text }: IProps) {
+export function Element({ icon, label, text, extra }: IProps) {
   const { w100, h100 } = useCommonStyles();
 
   const Icon = icon;
@@ -38,7 +40,9 @@ export function Element({ icon, extra, text }: IProps) {
         </ThemeIcon>
 
         <Flex align='center' mr={innerSpace}>
-          <Stack align='flex-start' spacing={3}>
+          <Stack align='flex-start' spacing={0}>
+            {label}
+
             <Text fz='xs' lineClamp={1}>
               {text}
             </Text>
