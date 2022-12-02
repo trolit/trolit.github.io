@@ -1,3 +1,5 @@
+import { Badge } from '@mantine/core';
+
 import { Element } from '.';
 import { IPost } from '@/interfaces/dashboard/IPost';
 import { postsNavigationItem } from '@/assets/data/dashboard';
@@ -7,7 +9,19 @@ interface IProps {
 }
 
 export function PostElement({ item }: IProps) {
-  const { name } = item;
+  const { name, tags } = item;
 
-  return <Element icon={postsNavigationItem.icon} text={name} />;
+  const extra = tags.map(({ text, color }, index) => (
+    <Badge
+      size='xs'
+      radius={0}
+      color={color}
+      variant='filled'
+      key={`${name}-badge-${index}`}
+    >
+      {text}
+    </Badge>
+  ));
+
+  return <Element icon={postsNavigationItem.icon} text={name} extra={extra} />;
 }
