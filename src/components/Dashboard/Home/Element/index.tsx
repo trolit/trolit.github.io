@@ -23,12 +23,17 @@ export function Element({ icon, extra, text }: IProps) {
   return (
     <Paper
       withBorder
-      pl={innerSpace}
       className={w100}
       style={{ height: `${HOME_ELEMENT_HEIGHT}px` }}
     >
       <Group align='center' noWrap className={`${h100}`} spacing={innerSpace}>
-        <ThemeIcon p={5} size={30} radius={0}>
+        <ThemeIcon
+          p={5}
+          size={30}
+          radius={0}
+          className={h100}
+          variant='default'
+        >
           <Icon />
         </ThemeIcon>
 
