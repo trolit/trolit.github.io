@@ -1,4 +1,3 @@
-import dayjs, { Dayjs } from 'dayjs';
 import {
   Flex,
   Badge,
@@ -7,6 +6,7 @@ import {
   Container,
   ScrollArea,
 } from '@mantine/core';
+import dayjs, { Dayjs } from 'dayjs';
 
 import {
   HOME_GROUP_BY,
@@ -61,7 +61,7 @@ export function Home() {
 
   const { elements, date, wrapper, title, horizontalScroll } = useHomeStyles();
 
-  const view = interestPoints.map((interestPoint) => {
+  const view = interestPoints.map((interestPoint, index) => {
     const renderedProjects = matchElements(PROJECTS, interestPoint).map(
       (project, index) => (
         <ProjectElement key={`project-${index}`} item={project} />
@@ -78,7 +78,7 @@ export function Home() {
 
     return (
       <Flex key={interestPoint.format()} direction='column' className={w100}>
-        <ScrollArea className={elements}>
+        <ScrollArea className={`${elements}`}>
           <Stack align='center'>
             {renderedProjects}
 
