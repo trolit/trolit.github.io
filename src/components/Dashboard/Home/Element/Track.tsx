@@ -1,4 +1,4 @@
-import { Anchor } from '@mantine/core';
+import { Anchor, Text } from '@mantine/core';
 
 import { Element } from '.';
 import { YOUTUBE_WATCH_URL } from '@/config';
@@ -10,15 +10,26 @@ interface IProps {
 }
 
 export function TrackElement({ item }: IProps) {
-  const { title, youtubeId } = item;
+  const { authors, title, youtubeId } = item;
+
+  const label = (
+    <Text fz='xs' fw={700} lineClamp={1}>
+      {authors.join(', ')}
+    </Text>
+  );
 
   const extra = (
     <Anchor size='xs' target='_blank' href={`${YOUTUBE_WATCH_URL}${youtubeId}`}>
-      (YouTube)
+      YouTube
     </Anchor>
   );
 
   return (
-    <Element icon={tracksNavigationItem.icon} text={title} extra={extra} />
+    <Element
+      icon={tracksNavigationItem.icon}
+      label={label}
+      text={title}
+      extra={extra}
+    />
   );
 }
