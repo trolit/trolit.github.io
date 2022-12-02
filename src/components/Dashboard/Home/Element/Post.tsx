@@ -17,7 +17,7 @@ export function PostElement({ item }: IProps) {
       radius={0}
       color={color}
       variant='filled'
-      key={`${name}-badge-${index}`}
+      key={`${name}-tag-${index}`}
     >
       {text}
     </Badge>

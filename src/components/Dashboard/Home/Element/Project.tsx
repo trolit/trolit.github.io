@@ -26,12 +26,12 @@ export function ProjectElement({ item }: IProps) {
     ),
   );
 
-  const renderedTags = tags.map(({ text }, index) => (
+  const renderedTags = tags.map(({ text, color }, index) => (
     <Badge
       mr={5}
       size='xs'
       radius={0}
-      color='gray'
+      color={color}
       variant='filled'
       key={`${name}-tag-${index}`}
     >
