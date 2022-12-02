@@ -1,5 +1,5 @@
 import { sortByDate } from '@/helpers/sortByDate';
-import { POST as POST1 } from './posts/2022-02-22';
+import { POST as POST1 } from './posts/2020-02-22';
 import { POST as POST2 } from './posts/2020-03-06';
 import { POST as POST3 } from './posts/2021-12-27';
 import { POST as POST4 } from './posts/2021-12-29';

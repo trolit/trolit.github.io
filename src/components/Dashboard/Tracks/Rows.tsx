@@ -1,5 +1,6 @@
 import { Badge, Anchor, Flex, FlexProps } from '@mantine/core';
 
+import { YOUTUBE_WATCH_URL } from '@/config';
 import { TRACKS } from '@/assets/data/tracks';
 import { formatDate } from '@/helpers/formatDate';
 import { useCommonStyles } from '@/assets/styles/common';
@@ -55,10 +56,7 @@ export function Rows() {
           </td>
 
           <td className={commonStyles.textCenter}>
-            <Anchor
-              href={`https://www.youtube.com/watch?v=${youtubeId}`}
-              target='_blank'
-            >
+            <Anchor href={`${YOUTUBE_WATCH_URL}${youtubeId}`} target='_blank'>
               YouTube
             </Anchor>
           </td>
