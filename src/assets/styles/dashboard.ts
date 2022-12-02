@@ -13,22 +13,16 @@ export const useDashboardStyles = () => {
     const { spacing } = theme;
 
     const classes = {
+      header: {
+        borderRadius: '8px 8px 0 0',
+      },
+
       wrapper: {
         height: `calc(100vh - ${OVERLAY_PADDING}px)`,
 
         [`@media (max-width: ${MEDIUM_SCREEN_THRESHOLD})`]: {
           marginTop: `${OVERLAY_PADDING}px`,
         },
-      },
-
-      homeContainer: {
-        height: `calc(100vh - ${HEADER_HEIGHT}px - ${
-          spacing.lg * 2
-        }px - ${OVERLAY_PADDING}px)`,
-      },
-
-      header: {
-        borderRadius: '8px 8px 0 0',
       },
 
       scrollArea: {
