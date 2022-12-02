@@ -8,10 +8,10 @@ interface IProps {
 }
 
 export function ProjectElement({ item }: IProps) {
-  const { name, languages } = item;
+  const { name, languages, tags } = item;
 
   const renderedLanguages = languages.map(
-    ({ name, badgeColorInHex }, index) => (
+    ({ acronym, badgeColorInHex }, index) => (
       <Badge
         key={`${name}-badge-${index}`}
         radius={0}
@@ -19,16 +19,30 @@ export function ProjectElement({ item }: IProps) {
         style={{ backgroundColor: badgeColorInHex }}
         variant='filled'
       >
-        {name}
+        {acronym}
       </Badge>
     ),
   );
+
+  const renderedTags = tags.map(({ text }, index) => (
+    <Badge
+      mr={5}
+      size='xs'
+      radius={0}
+      color='gray'
+      variant='filled'
+      key={`${name}-badge-${index}`}
+    >
+      {text}
+    </Badge>
+  ));
 
   return (
     <Element
       icon={projectsNavigationItem.icon}
       text={name}
-      extra={renderedLanguages}
+      label={renderedLanguages}
+      extra={renderedTags}
     />
   );
 }
