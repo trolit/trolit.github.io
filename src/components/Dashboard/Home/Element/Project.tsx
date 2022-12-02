@@ -3,6 +3,7 @@ import { Badge } from '@mantine/core';
 import { Element } from '.';
 import { IProject } from '@/interfaces/dashboard/IProject';
 import { projectsNavigationItem } from '@/assets/data/dashboard';
+
 interface IProps {
   item: IProject;
 }
