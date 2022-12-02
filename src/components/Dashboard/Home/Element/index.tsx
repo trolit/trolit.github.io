@@ -1,9 +1,9 @@
-import { TablerIcon } from '@tabler/icons';
-import { Group, Paper, Text, ThemeIcon, Stack } from '@mantine/core';
-
-import { useCommonStyles } from '@/assets/styles/common';
-import { HOME_ELEMENT_HEIGHT } from '@/config';
 import { ReactNode } from 'react';
+import { TablerIcon } from '@tabler/icons';
+import { Group, Paper, Text, ThemeIcon, Stack, Flex } from '@mantine/core';
+
+import { HOME_ELEMENT_HEIGHT } from '@/config';
+import { useCommonStyles } from '@/assets/styles/common';
 
 interface IProps {
   icon: TablerIcon;
@@ -32,15 +32,15 @@ export function Element({ icon, extra, text }: IProps) {
           <Icon />
         </ThemeIcon>
 
-        <Paper className={w100} mr={innerSpace}>
+        <Flex align='center' mr={innerSpace}>
           <Stack align='flex-start' spacing={3}>
             <Text fz='xs' lineClamp={1}>
               {text}
             </Text>
 
-            {extra}
+            <div style={{ overflow: 'hidden' }}>{extra}</div>
           </Stack>
-        </Paper>
+        </Flex>
       </Group>
     </Paper>
   );
