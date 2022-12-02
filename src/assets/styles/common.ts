@@ -6,7 +6,7 @@ export const useCommonStyles = () => {
 
     const classes = {
       panel: {
-        opacity: 0.95,
+        opacity: 0.98,
       },
 
       hiddenMobile: {
