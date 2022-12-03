@@ -11,7 +11,7 @@ import { Dispatch, SetStateAction } from 'react';
 import { ILink } from '@/interfaces/ILink';
 import { useCommonStyles } from '@/assets/styles/common';
 import { Link } from '@/components/Dashboard/common/Link';
-import { useProjectsStyles } from '@/assets/styles/projects';
+import { useProjectsStyles } from '@/assets/styles/dashboard/projects';
 
 interface IProps {
   links: ILink[];
@@ -22,11 +22,11 @@ interface IProps {
 export function LinksOverlay({ links, toggleOverlay }: IProps) {
   const { h100 } = useCommonStyles();
 
-  const projectsStyles = useProjectsStyles();
+  const { overlay } = useProjectsStyles();
 
   return (
     <Overlay radius='md' opacity={1}>
-      <Stack p='md' className={`${h100} ${projectsStyles.overlay}`}>
+      <Stack p='md' className={`${h100} ${overlay}`}>
         <ScrollArea style={{ flexGrow: 1 }}>
           <Group position='apart' align='start' grow>
             <SimpleGrid p={5} cols={3}>
