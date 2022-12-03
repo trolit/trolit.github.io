@@ -15,9 +15,27 @@ interface IProps {
   extra?: ReactNode;
 
   postExtra?: ReactNode;
+
+  labelLineClamp?: number;
+
+  extraLineClamp?: number;
+
+  textLineClamp?: number;
+
+  postExtraLineClamp?: number;
 }
 
-export function Element({ icon, label, text, extra, postExtra }: IProps) {
+export function Element({
+  icon,
+  label,
+  text,
+  extra,
+  postExtra,
+  textLineClamp = 2,
+  extraLineClamp = 1,
+  labelLineClamp = 1,
+  postExtraLineClamp = 1,
+}: IProps) {
   const { w100, h100 } = useCommonStyles();
 
   const Icon = icon;
@@ -43,17 +61,17 @@ export function Element({ icon, label, text, extra, postExtra }: IProps) {
 
         <Flex align='center' mr={innerSpace}>
           <Stack align='flex-start' spacing={0}>
-            <Text mb={3} lineClamp={1}>
+            <Text mb={3} lineClamp={labelLineClamp}>
               {label}
             </Text>
 
-            <Text fz='xs' lineClamp={2}>
+            <Text fz='xs' lineClamp={textLineClamp}>
               {text}
             </Text>
 
-            <Text lineClamp={1}>{extra}</Text>
+            <Text lineClamp={extraLineClamp}>{extra}</Text>
 
-            <Text lineClamp={1}>{postExtra}</Text>
+            <Text lineClamp={postExtraLineClamp}>{postExtra}</Text>
           </Stack>
         </Flex>
       </Group>
