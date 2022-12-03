@@ -21,9 +21,9 @@ export function HeaderDrawer({ isDrawerOpened, onDrawerClose }: IProps) {
 
   const location = useLocation();
 
-  const commonStyles = useCommonStyles();
+  const { hiddenDesktop } = useCommonStyles();
 
-  const dashboardStyles = useDashboardStyles();
+  const { navigationLink } = useDashboardStyles();
 
   const colorScheme = useSelector(
     (state: RootState) => state.preferences.colorScheme,
@@ -35,7 +35,7 @@ export function HeaderDrawer({ isDrawerOpened, onDrawerClose }: IProps) {
         active={location.pathname === route}
         key={name}
         label={name}
-        className={dashboardStyles.navigationLink}
+        className={navigationLink}
         onClick={() => {
           navigate(route);
 
@@ -53,7 +53,7 @@ export function HeaderDrawer({ isDrawerOpened, onDrawerClose }: IProps) {
       title='Navigation'
       opened={isDrawerOpened}
       onClose={onDrawerClose}
-      className={commonStyles.hiddenDesktop}
+      className={hiddenDesktop}
     >
       <ScrollArea sx={{ height: `calc(100vh - ${HEADER_HEIGHT}px)` }} mx='-md'>
         <Divider
