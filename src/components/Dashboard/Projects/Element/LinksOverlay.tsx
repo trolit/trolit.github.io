@@ -31,7 +31,7 @@ export function LinksOverlay({ links, toggleOverlay }: IProps) {
         p='md'
         className={`${commonStyles.h100} ${projectsStyles.overlay}`}
       >
-        <ScrollArea style={{ height: '50px', flexGrow: 1 }}>
+        <ScrollArea style={{ flexGrow: 1 }}>
           <Group position='apart' align='start' grow>
             <SimpleGrid p={5} cols={3}>
               {links.map((link, index) => (
