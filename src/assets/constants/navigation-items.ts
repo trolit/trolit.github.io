@@ -14,7 +14,7 @@ import {
   POSTS_ROUTE_NAME,
   TRACKS_ROUTE_NAME,
   PROJECTS_ROUTE_NAME,
-} from '@/assets/constants/routes';
+} from './routes';
 import { INavigationItem } from '@/interfaces/INavigationItem';
 
 export const HOME_NAVIGATION_ITEM: INavigationItem = {

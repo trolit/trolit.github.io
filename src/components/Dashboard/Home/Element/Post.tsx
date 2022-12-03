@@ -2,7 +2,7 @@ import { Badge } from '@mantine/core';
 
 import { Element } from '.';
 import { IPost } from '@/interfaces/dashboard/IPost';
-import { POSTS_NAVIGATION_ITEM } from '@/assets/data/dashboard';
+import { POSTS_NAVIGATION_ITEM } from '@/assets/constants/navigation-items';
 
 interface IProps {
   item: IPost;

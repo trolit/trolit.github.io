@@ -6,8 +6,8 @@ import { HeaderDrawer } from './Drawer';
 import { HEADER_HEIGHT } from '@/config';
 import { useDisclosure } from '@mantine/hooks';
 import { useCommonStyles } from '@/assets/styles/common';
-import { NAVIGATION_ITEMS } from '@/assets/data/dashboard';
 import { useDashboardStyles } from '@/assets/styles/dashboard';
+import { NAVIGATION_ITEMS } from '@/assets/constants/navigation-items';
 
 export function PanelHeader() {
   const navigate = useNavigate();

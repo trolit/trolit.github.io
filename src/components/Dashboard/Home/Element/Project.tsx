@@ -2,7 +2,7 @@ import { Badge } from '@mantine/core';
 
 import { Element } from '.';
 import { IProject } from '@/interfaces/dashboard/IProject';
-import { PROJECTS_NAVIGATION_ITEM } from '@/assets/data/dashboard';
+import { PROJECTS_NAVIGATION_ITEM } from '@/assets/constants/navigation-items';
 
 interface IProps {
   item: IProject;

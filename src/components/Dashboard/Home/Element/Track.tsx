@@ -3,7 +3,7 @@ import { Anchor, Text } from '@mantine/core';
 import { Element } from '.';
 import { YOUTUBE_WATCH_URL } from '@/config';
 import { ITrack } from '@/interfaces/dashboard/ITrack';
-import { TRACKS_NAVIGATION_ITEM } from '@/assets/data/dashboard';
+import { TRACKS_NAVIGATION_ITEM } from '@/assets/constants/navigation-items';
 
 interface IProps {
   item: ITrack;

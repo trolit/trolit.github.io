@@ -7,8 +7,8 @@ import { HEADER_HEIGHT } from '@/config';
 import { useNavigate } from 'react-router';
 import { DARK_THEME } from '@/assets/constants/themes';
 import { useCommonStyles } from '@/assets/styles/common';
-import { NAVIGATION_ITEMS } from '@/assets/data/dashboard';
 import { useDashboardStyles } from '@/assets/styles/dashboard';
+import { NAVIGATION_ITEMS } from '@/assets/constants/navigation-items';
 
 interface IProps {
   isDrawerOpened: boolean;
