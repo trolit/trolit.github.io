@@ -32,7 +32,7 @@ export function PostElement({ item }: IProps) {
 
   const postExtra = (
     <Anchor size='xs' onClick={() => navigate(`${POSTS_ROUTE}/${id}`)}>
-      View
+      (View)
     </Anchor>
   );
 

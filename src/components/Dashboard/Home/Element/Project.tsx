@@ -45,7 +45,7 @@ export function ProjectElement({
         <ActionIcon
           key={`${name}-link-${index}`}
           variant='subtle'
-          size={20}
+          size={22}
           onClick={() => {
             window.open(url, '_blank');
           }}

@@ -18,7 +18,7 @@ export function TrackElement({ item: { authors, title, youtubeId } }: IProps) {
 
   const extra = (
     <Anchor size='xs' target='_blank' href={`${YOUTUBE_WATCH_URL}${youtubeId}`}>
-      YouTube
+      (YouTube)
     </Anchor>
   );
 
