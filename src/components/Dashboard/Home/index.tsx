@@ -88,13 +88,7 @@ export function Home() {
           </Stack>
         </ScrollArea>
 
-        <Badge
-          size='lg'
-          fullWidth
-          radius={0}
-          className={date}
-          color={PRIMARY_COLOR}
-        >
+        <Badge size='lg' radius={0} className={date} color={PRIMARY_COLOR}>
           {interestPoint.format(HOME_DATE_FORMATTER)}
         </Badge>
       </Flex>
