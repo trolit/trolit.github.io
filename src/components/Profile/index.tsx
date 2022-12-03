@@ -10,16 +10,23 @@ import {
   Blockquote,
 } from '@mantine/core';
 
+import {
+  tags,
+  name,
+  links,
+  quote,
+  title,
+  avatarSrc,
+} from '@/assets/data/profile';
 import { PRIMARY_COLOR } from '@/config';
 import { useCommonStyles } from '@/assets/styles/common';
 import { useProfileStyles } from '@/assets/styles/profile';
 import { getColorByShade } from '@/helpers/getColorByShade';
-import { tags, name, links, quote, avatarSrc } from '@/assets/data/profile';
 
 export function Profile() {
   const { panel, h100 } = useCommonStyles();
 
-  const { wrapper, title, group, link } = useProfileStyles();
+  const { wrapper, titleWrapper, group, link } = useProfileStyles();
 
   return (
     <Paper p='lg' radius='md' withBorder className={`${panel} ${wrapper}`}>
@@ -31,7 +38,7 @@ export function Profile() {
         </Text>
 
         {title && (
-          <div className={title}>
+          <div className={titleWrapper}>
             <Kbd>{title}</Kbd>
           </div>
         )}
