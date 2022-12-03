@@ -2,20 +2,30 @@ import {
   Box,
   Group,
   Center,
-  SegmentedControl,
-  useMantineColorScheme,
   ColorScheme,
+  SegmentedControl,
 } from '@mantine/core';
-import { useDispatch } from 'react-redux';
-import { IconSun, IconMoon } from '@tabler/icons';
+import { IconSun, IconMoon, TablerIcon } from '@tabler/icons';
+import { useDispatch, useSelector } from 'react-redux';
 
+import { RootState } from '@/store';
 import { toggleColorScheme } from '@/store/preferences';
 import { DARK_THEME, LIGHT_THEME } from '@/assets/constants/themes';
 
 export function ThemeSwitcher() {
   const dispatch = useDispatch();
 
-  const { colorScheme } = useMantineColorScheme();
+  const colorScheme = useSelector(
+    (state: RootState) => state.preferences.colorScheme,
+  );
+
+  const Label = ({ text, icon: Icon }: { text: string; icon: TablerIcon }) => (
+    <Center>
+      <Icon size={16} stroke={1.5} />
+
+      <Box ml={10}>{text}</Box>
+    </Center>
+  );
 
   return (
     <Group position='center'>
@@ -26,22 +36,12 @@ export function ThemeSwitcher() {
         data={[
           {
             value: LIGHT_THEME,
-            label: (
-              <Center>
-                <IconSun size={16} stroke={1.5} />
-                <Box ml={10}>Light</Box>
-              </Center>
-            ),
+            label: <Label icon={IconSun} text='Light' />,
           },
 
           {
             value: DARK_THEME,
-            label: (
-              <Center>
-                <IconMoon size={16} stroke={1.5} />
-                <Box ml={10}>Dark</Box>
-              </Center>
-            ),
+            label: <Label icon={IconMoon} text='Dark' />,
           },
         ]}
       />
