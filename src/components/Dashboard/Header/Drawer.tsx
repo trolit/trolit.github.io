@@ -7,7 +7,7 @@ import { HEADER_HEIGHT } from '@/config';
 import { useNavigate } from 'react-router';
 import { DARK_THEME } from '@/assets/constants/themes';
 import { useCommonStyles } from '@/assets/styles/common';
-import { navigationItems } from '@/assets/data/dashboard';
+import { NAVIGATION_ITEMS } from '@/assets/data/dashboard';
 import { useDashboardStyles } from '@/assets/styles/dashboard';
 
 interface IProps {
@@ -29,7 +29,7 @@ export function HeaderDrawer({ isDrawerOpened, onDrawerClose }: IProps) {
     (state: RootState) => state.preferences.colorScheme,
   );
 
-  const navigation = navigationItems.map(({ name, route }) => {
+  const navigation = NAVIGATION_ITEMS.map(({ name, route }) => {
     return (
       <NavLink
         active={location.pathname === route}
@@ -60,7 +60,6 @@ export function HeaderDrawer({ isDrawerOpened, onDrawerClose }: IProps) {
           my='sm'
           color={colorScheme === DARK_THEME ? 'dark.5' : 'gray.1'}
         />
-        {/* @TODO Add "View All" option */}
         {navigation}
       </ScrollArea>
     </Drawer>

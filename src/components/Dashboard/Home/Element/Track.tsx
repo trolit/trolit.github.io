@@ -3,7 +3,7 @@ import { Anchor, Text } from '@mantine/core';
 import { Element } from '.';
 import { YOUTUBE_WATCH_URL } from '@/config';
 import { ITrack } from '@/interfaces/dashboard/ITrack';
-import { tracksNavigationItem } from '@/assets/data/dashboard';
+import { TRACKS_NAVIGATION_ITEM } from '@/assets/data/dashboard';
 
 interface IProps {
   item: ITrack;
@@ -26,10 +26,10 @@ export function TrackElement({ item }: IProps) {
 
   return (
     <Element
-      icon={tracksNavigationItem.icon}
-      label={label}
       text={title}
+      label={label}
       extra={extra}
+      icon={TRACKS_NAVIGATION_ITEM.icon}
     />
   );
 }

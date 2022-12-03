@@ -17,33 +17,33 @@ import {
 } from '@/assets/constants/routes';
 import { INavigationItem } from '@/interfaces/INavigationItem';
 
-export const homeNavigationItem: INavigationItem = {
+export const HOME_NAVIGATION_ITEM: INavigationItem = {
   icon: IconAt,
   name: HOME_ROUTE_NAME,
   route: HOME_ROUTE,
 };
 
-export const projectsNavigationItem: INavigationItem = {
+export const PROJECTS_NAVIGATION_ITEM: INavigationItem = {
   icon: IconApps,
   name: PROJECTS_ROUTE_NAME,
   route: PROJECTS_ROUTE,
 };
 
-export const postsNavigationItem: INavigationItem = {
+export const POSTS_NAVIGATION_ITEM: INavigationItem = {
   icon: IconArticle,
   name: POSTS_ROUTE_NAME,
   route: POSTS_ROUTE,
 };
 
-export const tracksNavigationItem: INavigationItem = {
+export const TRACKS_NAVIGATION_ITEM: INavigationItem = {
   icon: IconPlayerTrackNext,
   name: TRACKS_ROUTE_NAME,
   route: TRACKS_ROUTE,
 };
 
-export const navigationItems: INavigationItem[] = [
-  homeNavigationItem,
-  projectsNavigationItem,
-  postsNavigationItem,
-  tracksNavigationItem,
+export const NAVIGATION_ITEMS: INavigationItem[] = [
+  HOME_NAVIGATION_ITEM,
+  POSTS_NAVIGATION_ITEM,
+  TRACKS_NAVIGATION_ITEM,
+  PROJECTS_NAVIGATION_ITEM,
 ];

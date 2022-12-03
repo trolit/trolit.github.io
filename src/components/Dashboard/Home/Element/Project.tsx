@@ -2,7 +2,7 @@ import { Badge } from '@mantine/core';
 
 import { Element } from '.';
 import { IProject } from '@/interfaces/dashboard/IProject';
-import { projectsNavigationItem } from '@/assets/data/dashboard';
+import { PROJECTS_NAVIGATION_ITEM } from '@/assets/data/dashboard';
 
 interface IProps {
   item: IProject;
@@ -44,7 +44,7 @@ export function ProjectElement({ item }: IProps) {
       text={name}
       extra={renderedTags}
       label={renderedLanguages}
-      icon={projectsNavigationItem.icon}
+      icon={PROJECTS_NAVIGATION_ITEM.icon}
     />
   );
 }

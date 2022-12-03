@@ -6,7 +6,7 @@ import { HeaderDrawer } from './Drawer';
 import { HEADER_HEIGHT } from '@/config';
 import { useDisclosure } from '@mantine/hooks';
 import { useCommonStyles } from '@/assets/styles/common';
-import { navigationItems } from '@/assets/data/dashboard';
+import { NAVIGATION_ITEMS } from '@/assets/data/dashboard';
 import { useDashboardStyles } from '@/assets/styles/dashboard';
 
 export function PanelHeader() {
@@ -21,7 +21,7 @@ export function PanelHeader() {
   const [isDrawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false);
 
-  const navigation = navigationItems.map(({ icon: Icon, name, route }) => (
+  const navigation = NAVIGATION_ITEMS.map(({ icon: Icon, name, route }) => (
     <NavLink
       key={name}
       label={name}

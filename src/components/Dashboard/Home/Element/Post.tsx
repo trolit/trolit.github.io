@@ -2,7 +2,7 @@ import { Badge } from '@mantine/core';
 
 import { Element } from '.';
 import { IPost } from '@/interfaces/dashboard/IPost';
-import { postsNavigationItem } from '@/assets/data/dashboard';
+import { POSTS_NAVIGATION_ITEM } from '@/assets/data/dashboard';
 
 interface IProps {
   item: IPost;
@@ -23,5 +23,7 @@ export function PostElement({ item }: IProps) {
     </Badge>
   ));
 
-  return <Element icon={postsNavigationItem.icon} text={name} extra={extra} />;
+  return (
+    <Element icon={POSTS_NAVIGATION_ITEM.icon} text={name} extra={extra} />
+  );
 }
