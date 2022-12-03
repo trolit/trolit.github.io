@@ -41,13 +41,15 @@ export function Element({ icon, label, text, extra }: IProps) {
 
         <Flex align='center' mr={innerSpace}>
           <Stack align='flex-start' spacing={0}>
-            {label}
+            <Text mb={3} lineClamp={1}>
+              {label}
+            </Text>
 
-            <Text fz='xs' lineClamp={1}>
+            <Text fz='xs' lineClamp={2}>
               {text}
             </Text>
 
-            <div style={{ overflow: 'hidden' }}>{extra}</div>
+            <Text lineClamp={1}>{extra}</Text>
           </Stack>
         </Flex>
       </Group>

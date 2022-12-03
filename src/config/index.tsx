@@ -4,7 +4,7 @@ export const BACKGROUND_SRC = require('@/assets/media/background.svg').default;
 
 export const DEFAULT_IMAGE_SRC = require('@/assets/media/projects/default.jpg');
 
-export const PRIMARY_COLOR: MantineColor = 'green';
+export const PRIMARY_COLOR: MantineColor = 'violet';
 
 export const HEADER_HEIGHT = 50;
 
@@ -20,11 +20,11 @@ export const MEDIUM_SCREEN_THRESHOLD = '861px';
 
 export const HOME_INTEREST_POINTS = 5;
 
-export const HOME_ELEMENT_HEIGHT = 70;
+export const HOME_ELEMENT_HEIGHT = 90;
 
 export const HOME_GROUP_BY = 'month';
 
-export const HOME_DATE_FORMATTER = 'MMM YYYY';
+export const HOME_DATE_FORMATTER = 'MM/YYYY';
 
 export const YOUTUBE_WATCH_URL = `https://www.youtube.com/watch?v=`;
 
