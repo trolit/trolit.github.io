@@ -1,6 +1,6 @@
 import { createStyles } from '@mantine/core';
 
-import { DARK_THEME } from '../constants/themes';
+import { DARK_THEME } from '@/assets/constants/themes';
 
 export const useProjectsStyles = () => {
   const { classes } = createStyles((theme) => {
