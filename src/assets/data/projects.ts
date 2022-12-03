@@ -54,9 +54,9 @@ const RAW_PROJECTS: IProject[] = [
       },
     ],
     description:
-      'New personal portfolio made from scratch during break on primary full stack project.',
+      'New personal portfolio made from scratch during break on primary project 😴',
     thumbnail,
-    links: [GITHUB_LINK('Patchron')],
+    links: [GITHUB_LINK('trolit.github.io')],
   },
 
   {

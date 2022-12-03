@@ -1,4 +1,4 @@
-import { Badge } from '@mantine/core';
+import { Badge, ActionIcon, Group } from '@mantine/core';
 
 import { Element } from '.';
 import { IProject } from '@/interfaces/dashboard/IProject';
@@ -8,7 +8,9 @@ interface IProps {
   item: IProject;
 }
 
-export function ProjectElement({ item: { name, languages, tags } }: IProps) {
+export function ProjectElement({
+  item: { name, languages, tags, links },
+}: IProps) {
   const renderedLanguages = languages.map(
     ({ acronym, badgeColorInHex }, index) => (
       <Badge
@@ -37,10 +39,28 @@ export function ProjectElement({ item: { name, languages, tags } }: IProps) {
     </Badge>
   ));
 
+  const renderedLinks = (
+    <Group mt={5} spacing={5}>
+      {links.map(({ icon: Icon, url }, index) => (
+        <ActionIcon
+          key={`${name}-link-${index}`}
+          variant='subtle'
+          size={22}
+          onClick={() => {
+            window.open(url, '_blank');
+          }}
+        >
+          <Icon />
+        </ActionIcon>
+      ))}
+    </Group>
+  );
+
   return (
     <Element
       text={name}
       extra={renderedTags}
+      postExtra={renderedLinks}
       label={renderedLanguages}
       icon={PROJECTS_NAVIGATION_ITEM.icon}
     />
