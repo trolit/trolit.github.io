@@ -26,7 +26,7 @@ export function PanelHeader() {
       key={name}
       label={name}
       icon={<Icon size={16} />}
-      className={dashboardStyles.link}
+      className={dashboardStyles.navigationLink}
       active={location.pathname === route}
       onClick={() => navigate(route)}
     />

@@ -35,7 +35,7 @@ export function HeaderDrawer({ isDrawerOpened, onDrawerClose }: IProps) {
         active={location.pathname === route}
         key={name}
         label={name}
-        className={dashboardStyles.link}
+        className={dashboardStyles.navigationLink}
         onClick={() => {
           navigate(route);
 

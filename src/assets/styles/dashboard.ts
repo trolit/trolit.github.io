@@ -37,7 +37,7 @@ export const useDashboardStyles = () => {
         },
       },
 
-      link: {
+      navigationLink: {
         display: 'flex',
         alignItems: 'center',
         height: '100%',
@@ -64,6 +64,17 @@ export const useDashboardStyles = () => {
 
         '&:first-of-type': {
           borderTopLeftRadius: '8px',
+        },
+      },
+
+      link: {
+        borderRadius: theme.radius.md,
+        backgroundColor:
+          theme.colorScheme === DARK_THEME ? theme.colors.dark[7] : theme.white,
+
+        '&:hover': {
+          boxShadow: `${theme.shadows.md} !important`,
+          transform: 'scale(1.05)',
         },
       },
     };
