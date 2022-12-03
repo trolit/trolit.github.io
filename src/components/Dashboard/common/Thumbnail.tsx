@@ -1,5 +1,5 @@
-import { Group, Image } from '@mantine/core';
 import { TablerIcon } from '@tabler/icons';
+import { Group, Image } from '@mantine/core';
 
 import { PRIMARY_COLOR } from '@/config';
 
