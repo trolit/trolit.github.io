@@ -9,7 +9,7 @@ export const useProfileStyles = () => {
         height: `calc(100vh - ${OVERLAY_PADDING}px)`,
       },
 
-      title: {
+      titleWrapper: {
         display: 'flex',
         justifyContent: 'center',
       },
