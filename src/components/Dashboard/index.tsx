@@ -10,23 +10,19 @@ interface IProps {
 }
 
 export function Dashboard({ tab }: IProps) {
-  const commonStyles = useCommonStyles();
+  const { panel } = useCommonStyles();
 
-  const dashboardStyles = useDashboardStyles();
+  const { wrapper, scrollArea, content } = useDashboardStyles();
 
   return (
-    <Paper
-      radius='md'
-      withBorder
-      className={`${commonStyles.panel} ${dashboardStyles.wrapper}`}
-    >
+    <Paper radius='md' withBorder className={`${panel} ${wrapper}`}>
       <Container px={0} fluid>
         <PanelHeader />
       </Container>
 
       <Container px={0} fluid>
-        <ScrollArea className={dashboardStyles.scrollArea}>
-          <Paper className={dashboardStyles.content}>{tab}</Paper>
+        <ScrollArea className={scrollArea}>
+          <Paper className={content}>{tab}</Paper>
         </ScrollArea>
       </Container>
     </Paper>
