@@ -17,6 +17,10 @@ export const useDashboardStyles = () => {
         borderRadius: '8px 8px 0 0',
       },
 
+      headerDrawerScrollArea: {
+        height: `calc(100vh - ${HEADER_HEIGHT}px)`,
+      },
+
       wrapper: {
         height: `calc(100vh - ${OVERLAY_PADDING}px)`,
 
