@@ -66,21 +66,6 @@ export const useDashboardStyles = () => {
           borderTopLeftRadius: '8px',
         },
       },
-
-      subLink: {
-        width: '100%',
-        padding: `${spacing.xs}px ${spacing.md}px`,
-        borderRadius: theme.radius.md,
-
-        ...theme.fn.hover({
-          backgroundColor:
-            theme.colorScheme === DARK_THEME
-              ? theme.colors.dark[7]
-              : theme.colors.gray[0],
-        }),
-
-        '&:active': theme.activeStyles,
-      },
     };
 
     return classes;
