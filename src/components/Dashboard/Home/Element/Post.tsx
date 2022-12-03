@@ -8,9 +8,7 @@ interface IProps {
   item: IPost;
 }
 
-export function PostElement({ item }: IProps) {
-  const { name, tags } = item;
-
+export function PostElement({ item: { name, tags } }: IProps) {
   const extra = tags.map(({ text, color }, index) => (
     <Badge
       size='xs'
