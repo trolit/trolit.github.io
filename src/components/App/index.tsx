@@ -20,9 +20,9 @@ interface IProps {
 }
 
 export default function App({ tab }: IProps) {
-  const appStyles = useAppStyles();
+  const { scrollArea, container } = useAppStyles();
 
-  const commonStyles = useCommonStyles();
+  const { h100, w100 } = useCommonStyles();
 
   const colorScheme = useSelector(
     (state: RootState) => state.preferences.colorScheme,
@@ -39,13 +39,13 @@ export default function App({ tab }: IProps) {
         withNormalizeCSS
       >
         <ScrollArea
-          className={appStyles.scrollArea}
+          className={scrollArea}
           style={{
             backgroundImage: `url(${BACKGROUND_SRC})`,
           }}
         >
-          <Container fluid className={appStyles.container}>
-            <Center className={`${commonStyles.h100} ${commonStyles.w100}`}>
+          <Container fluid className={container}>
+            <Center className={`${h100} ${w100}`}>
               <MainGrid tab={tab} />
             </Center>
           </Container>
