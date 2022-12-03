@@ -11,7 +11,7 @@ interface IProps {
 
 export function TrackElement({ item: { authors, title, youtubeId } }: IProps) {
   const label = (
-    <Text fz='xs' fw={700} lineClamp={1}>
+    <Text fz='xs' fw={700} lineClamp={2}>
       {authors.join(', ')}
     </Text>
   );
