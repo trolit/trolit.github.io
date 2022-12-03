@@ -1,9 +1,4 @@
-import {
-  IconAt,
-  IconApps,
-  IconArticle,
-  IconPlayerTrackNext,
-} from '@tabler/icons';
+import { IconAt, IconApps, IconArticle, IconDisc } from '@tabler/icons';
 
 import {
   HOME_ROUTE,
@@ -36,7 +31,7 @@ export const POSTS_NAVIGATION_ITEM: INavigationItem = {
 };
 
 export const TRACKS_NAVIGATION_ITEM: INavigationItem = {
-  icon: IconPlayerTrackNext,
+  icon: IconDisc,
   name: TRACKS_ROUTE_NAME,
   route: TRACKS_ROUTE,
 };
