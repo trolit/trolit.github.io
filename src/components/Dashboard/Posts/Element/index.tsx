@@ -1,12 +1,12 @@
 import {
-  Paper,
-  Text,
-  Divider,
   Flex,
-  Button,
-  Center,
+  Text,
   Badge,
   Group,
+  Paper,
+  Button,
+  Center,
+  Divider,
 } from '@mantine/core';
 import { useNavigate } from 'react-router-dom';
 
@@ -21,12 +21,10 @@ interface IProps {
   item: IPost;
 }
 
-export function Element({ id, item }: IProps) {
+export function Element({ id, item: { name, date, tags, abstract } }: IProps) {
   const navigate = useNavigate();
 
   const { w100 } = useCommonStyles();
-
-  const { name, date, tags, abstract } = item;
 
   return (
     <Paper p='md' radius='md' withBorder>
