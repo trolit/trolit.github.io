@@ -13,7 +13,7 @@ export const PROJECTS_ROUTE = BASE_ROUTE.concat(
   PROJECTS_ROUTE_NAME.toLowerCase(),
 );
 
-// Posts
+// Post(s)
 
 export const POSTS_ROUTE_NAME = 'Posts';
 

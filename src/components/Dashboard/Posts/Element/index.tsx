@@ -1,18 +1,19 @@
 import {
-  Paper,
-  Text,
-  Divider,
   Flex,
-  Button,
-  Center,
+  Text,
   Badge,
   Group,
+  Paper,
+  Button,
+  Center,
+  Divider,
 } from '@mantine/core';
 import { useNavigate } from 'react-router-dom';
 
 import { formatDate } from '@/helpers/formatDate';
 import { IPost } from '@/interfaces/dashboard/IPost';
 import { POSTS_ROUTE } from '@/assets/constants/routes';
+import { useCommonStyles } from '@/assets/styles/common';
 
 interface IProps {
   id: number;
@@ -20,24 +21,27 @@ interface IProps {
   item: IPost;
 }
 
-export function Element({ id, item }: IProps) {
+export function Element({ id, item: { name, date, tags, abstract } }: IProps) {
   const navigate = useNavigate();
+
+  const { w100 } = useCommonStyles();
 
   return (
     <Paper p='md' radius='md' withBorder>
-      <Flex align='center' justify='space-between' style={{ width: '100%' }}>
-        <Text fz='xl'>{item.name}</Text>
+      <Flex align='center' justify='space-between' className={w100}>
+        <Text fz='xl'>{name}</Text>
 
-        <Text ta='right'>{formatDate(item.date)}</Text>
+        <Text ta='right'>{formatDate(date)}</Text>
       </Flex>
 
       <Group p='sm' pl={0} position='left'>
-        {item.tags.map(({ text, color }, index) => (
+        {tags.map(({ text, color }, index) => (
           <Badge
+            size='sm'
             radius={0}
+            color={color}
             variant='outline'
             key={`badge-${text}-${index}`}
-            size='sm'
           >
             {text}
           </Badge>
@@ -47,7 +51,7 @@ export function Element({ id, item }: IProps) {
       <Divider my={10} />
 
       <Text p={15} my={10} c='dimmed' fs='italic' fz='sm'>
-        {item.abstract}
+        {abstract}
       </Text>
 
       <Center>

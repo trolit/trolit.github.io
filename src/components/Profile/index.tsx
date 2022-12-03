@@ -10,32 +10,20 @@ import {
   Blockquote,
 } from '@mantine/core';
 
-import {
-  tags,
-  name,
-  links,
-  quote,
-  title,
-  avatarSrc,
-} from '@/assets/data/profile';
+import { PRIMARY_COLOR } from '@/config';
 import { useCommonStyles } from '@/assets/styles/common';
 import { useProfileStyles } from '@/assets/styles/profile';
 import { getColorByShade } from '@/helpers/getColorByShade';
-import { PRIMARY_COLOR } from '@/config';
+import { tags, name, links, quote, avatarSrc } from '@/assets/data/profile';
 
 export function Profile() {
-  const commonStyles = useCommonStyles();
+  const { panel, h100 } = useCommonStyles();
 
-  const profileStyles = useProfileStyles();
+  const { wrapper, title, group, link } = useProfileStyles();
 
   return (
-    <Paper
-      p='lg'
-      radius='md'
-      withBorder
-      className={`${commonStyles.panel} ${profileStyles.wrapper}`}
-    >
-      <Stack align='center' justify='center' className={commonStyles.h100}>
+    <Paper p='lg' radius='md' withBorder className={`${panel} ${wrapper}`}>
+      <Stack align='center' justify='center' className={h100}>
         <Avatar src={avatarSrc} size={160} radius={120} mx='auto' />
 
         <Text align='center' size='lg' weight={500}>
@@ -43,12 +31,12 @@ export function Profile() {
         </Text>
 
         {title && (
-          <div className={profileStyles.title}>
+          <div className={title}>
             <Kbd>{title}</Kbd>
           </div>
         )}
 
-        <Group position='center' spacing='lg' className={profileStyles.group}>
+        <Group position='center' spacing='lg' className={group}>
           {tags.map(({ text, color }, index) => (
             <Badge key={index} color={color || PRIMARY_COLOR} radius='xs'>
               {text}
@@ -60,7 +48,7 @@ export function Profile() {
           {quote.text}
         </Blockquote>
 
-        <Group position='center' spacing='lg' className={profileStyles.group}>
+        <Group position='center' spacing='lg' className={group}>
           {links.map(({ icon, url }, index) => {
             const LinkIcon = icon;
 
@@ -70,7 +58,7 @@ export function Profile() {
                   size='xl'
                   radius='xs'
                   variant='light'
-                  className={profileStyles.link}
+                  className={link}
                 >
                   <LinkIcon />
                 </ThemeIcon>

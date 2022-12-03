@@ -14,22 +14,18 @@ interface IProps {
 }
 
 export function MainGrid({ tab }: IProps) {
-  const appStyles = useAppStyles();
+  const { mainGrid } = useAppStyles();
 
-  const commonStyles = useCommonStyles();
+  const { h100, w100 } = useCommonStyles();
 
   const isDashboardMaximized = useSelector(
     (state: RootState) => state.preferences.isDashboardMaximized,
   );
 
   return (
-    <Grid grow gutter='xs' align='center' className={appStyles.mainGrid}>
+    <Grid grow gutter='xs' align='center' className={mainGrid}>
       {!isDashboardMaximized && (
-        <Grid.Col
-          py={0}
-          span={3}
-          className={`${commonStyles.h100} ${commonStyles.w100}`}
-        >
+        <Grid.Col py={0} span={3} className={`${h100} ${w100}`}>
           <Profile />
         </Grid.Col>
       )}
@@ -37,12 +33,9 @@ export function MainGrid({ tab }: IProps) {
       <Grid.Col
         py={0}
         span={isDashboardMaximized ? 12 : 9}
-        className={`${commonStyles.h100} ${commonStyles.w100}`}
+        className={`${h100} ${w100}`}
       >
-        <motion.div
-          layout
-          className={`${commonStyles.h100} ${commonStyles.w100}`}
-        >
+        <motion.div layout className={`${h100} ${w100}`}>
           <Dashboard tab={tab} />
         </motion.div>
       </Grid.Col>

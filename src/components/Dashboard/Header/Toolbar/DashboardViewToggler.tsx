@@ -8,9 +8,9 @@ import { useCommonStyles } from '@/assets/styles/common';
 import { toggleDashboardView } from '@/store/preferences';
 
 export function DashboardViewToggler() {
-  const commonStyles = useCommonStyles();
-
   const dispatch = useDispatch();
+
+  const { hiddenMobile } = useCommonStyles();
 
   const isDashboardMaximized = useSelector(
     (state: RootState) => state.preferences.isDashboardMaximized,
@@ -25,7 +25,7 @@ export function DashboardViewToggler() {
       <ActionIcon
         variant='light'
         color={PRIMARY_COLOR}
-        className={commonStyles.hiddenMobile}
+        className={hiddenMobile}
         onClick={() => dispatch(toggleDashboardView())}
       >
         <Icon size={18} />

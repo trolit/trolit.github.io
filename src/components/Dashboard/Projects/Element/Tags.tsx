@@ -10,7 +10,12 @@ export function Tags({ tags }: IProps) {
   return (
     <Group spacing='sm' position='center'>
       {tags.map(({ text, color }, index) => (
-        <Badge variant='outline' key={`badge-${text}-${index}`} size='sm'>
+        <Badge
+          size='sm'
+          color={color}
+          variant='outline'
+          key={`badge-${text}-${index}`}
+        >
           {text}
         </Badge>
       ))}

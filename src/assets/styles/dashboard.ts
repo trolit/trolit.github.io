@@ -17,6 +17,10 @@ export const useDashboardStyles = () => {
         borderRadius: '8px 8px 0 0',
       },
 
+      headerDrawerScrollArea: {
+        height: `calc(100vh - ${HEADER_HEIGHT}px)`,
+      },
+
       wrapper: {
         height: `calc(100vh - ${OVERLAY_PADDING}px)`,
 
@@ -37,7 +41,7 @@ export const useDashboardStyles = () => {
         },
       },
 
-      link: {
+      navigationLink: {
         display: 'flex',
         alignItems: 'center',
         height: '100%',
@@ -67,19 +71,15 @@ export const useDashboardStyles = () => {
         },
       },
 
-      subLink: {
-        width: '100%',
-        padding: `${spacing.xs}px ${spacing.md}px`,
+      link: {
         borderRadius: theme.radius.md,
+        backgroundColor:
+          theme.colorScheme === DARK_THEME ? theme.colors.dark[7] : theme.white,
 
-        ...theme.fn.hover({
-          backgroundColor:
-            theme.colorScheme === DARK_THEME
-              ? theme.colors.dark[7]
-              : theme.colors.gray[0],
-        }),
-
-        '&:active': theme.activeStyles,
+        '&:hover': {
+          boxShadow: `${theme.shadows.md} !important`,
+          transform: 'scale(1.05)',
+        },
       },
     };
 

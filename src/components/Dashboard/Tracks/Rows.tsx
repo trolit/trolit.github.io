@@ -8,7 +8,7 @@ import { useCommonStyles } from '@/assets/styles/common';
 export function Rows() {
   const tracksLength = TRACKS.length;
 
-  const commonStyles = useCommonStyles();
+  const { textCenter } = useCommonStyles();
 
   const flexProps: FlexProps = {
     gap: 'xs',
@@ -21,7 +21,7 @@ export function Rows() {
     <>
       {TRACKS.map(({ authors, title, date, tags, youtubeId }, index) => (
         <tr key={`track-${index}`}>
-          <td className={commonStyles.textCenter}>{tracksLength - index}</td>
+          <td className={textCenter}>{tracksLength - index}</td>
 
           <td>{title}</td>
 
@@ -55,7 +55,7 @@ export function Rows() {
             </Flex>
           </td>
 
-          <td className={commonStyles.textCenter}>
+          <td className={textCenter}>
             <Anchor href={`${YOUTUBE_WATCH_URL}${youtubeId}`} target='_blank'>
               YouTube
             </Anchor>

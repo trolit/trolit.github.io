@@ -7,7 +7,7 @@ export function Projects() {
   return (
     <Grid gutter='xl' justify='center'>
       {PROJECTS.map((project, index) => (
-        <Grid.Col key={index} xs={12} lg={4}>
+        <Grid.Col key={`project-${index}`} xs={12} lg={4}>
           <Element item={project} />
         </Grid.Col>
       ))}

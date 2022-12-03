@@ -3,12 +3,11 @@ import { useLocation } from 'react-router-dom';
 import { Drawer, Divider, ScrollArea, NavLink } from '@mantine/core';
 
 import { RootState } from '@/store';
-import { HEADER_HEIGHT } from '@/config';
 import { useNavigate } from 'react-router';
 import { DARK_THEME } from '@/assets/constants/themes';
 import { useCommonStyles } from '@/assets/styles/common';
-import { navigationItems } from '@/assets/data/dashboard';
 import { useDashboardStyles } from '@/assets/styles/dashboard';
+import { NAVIGATION_ITEMS } from '@/assets/constants/navigation-items';
 
 interface IProps {
   isDrawerOpened: boolean;
@@ -21,21 +20,21 @@ export function HeaderDrawer({ isDrawerOpened, onDrawerClose }: IProps) {
 
   const location = useLocation();
 
-  const commonStyles = useCommonStyles();
+  const { hiddenDesktop } = useCommonStyles();
 
-  const dashboardStyles = useDashboardStyles();
+  const { navigationLink, headerDrawerScrollArea } = useDashboardStyles();
 
   const colorScheme = useSelector(
     (state: RootState) => state.preferences.colorScheme,
   );
 
-  const navigation = navigationItems.map(({ name, route }) => {
+  const navigation = NAVIGATION_ITEMS.map(({ name, route }) => {
     return (
       <NavLink
         active={location.pathname === route}
         key={name}
         label={name}
-        className={dashboardStyles.link}
+        className={navigationLink}
         onClick={() => {
           navigate(route);
 
@@ -53,14 +52,13 @@ export function HeaderDrawer({ isDrawerOpened, onDrawerClose }: IProps) {
       title='Navigation'
       opened={isDrawerOpened}
       onClose={onDrawerClose}
-      className={commonStyles.hiddenDesktop}
+      className={hiddenDesktop}
     >
-      <ScrollArea sx={{ height: `calc(100vh - ${HEADER_HEIGHT}px)` }} mx='-md'>
+      <ScrollArea className={headerDrawerScrollArea} mx='-md'>
         <Divider
           my='sm'
           color={colorScheme === DARK_THEME ? 'dark.5' : 'gray.1'}
         />
-        {/* @TODO Add "View All" option */}
         {navigation}
       </ScrollArea>
     </Drawer>

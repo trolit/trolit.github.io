@@ -7,7 +7,6 @@ import {
   IconDice6,
 } from '@tabler/icons';
 
-import { DEFAULT_IMAGE_SRC } from '@/config';
 import {
   WWW_LINK,
   VIDEO_LINK,
@@ -25,6 +24,7 @@ import {
 import { sortByDate } from '@/helpers/sortByDate';
 import { indexToIcons } from '@/helpers/indexToIcons';
 import { IProject } from '@/interfaces/dashboard/IProject';
+import { DEFAULT_IMAGE_SRC, YOUTUBE_WATCH_URL } from '@/config';
 
 const thumbnail = DEFAULT_IMAGE_SRC;
 
@@ -230,7 +230,7 @@ const RAW_PROJECTS: IProject[] = [
     links: [
       GITHUB_LINK('3vry#3vry'),
       GALLERY_LINK('https://github.com/trolit/3vry#screens'),
-      VIDEO_LINK('https://www.youtube.com/watch?v=ZJ2wglKpu5M'),
+      VIDEO_LINK(`${YOUTUBE_WATCH_URL}ZJ2wglKpu5M`),
     ],
   },
 
@@ -315,8 +315,8 @@ const RAW_PROJECTS: IProject[] = [
     thumbnail,
     links: [
       GITHUB_LINK('projectZero'),
-      VIDEO_LINK('https://www.youtube.com/watch?v=W4FGTbqTwsY', '1 (features)'),
-      VIDEO_LINK('https://www.youtube.com/watch?v=UtQ0g11_Juc', '2 (levels)'),
+      VIDEO_LINK(`${YOUTUBE_WATCH_URL}W4FGTbqTwsY`, '1 (features)'),
+      VIDEO_LINK(`${YOUTUBE_WATCH_URL}UtQ0g11_Juc`, '2 (levels)'),
     ],
   },
 
@@ -386,8 +386,8 @@ const RAW_PROJECTS: IProject[] = [
     thumbnail,
     links: [
       GITHUB_LINK('LastHuman#last-human'),
-      VIDEO_LINK('https://www.youtube.com/watch?v=hcdU7WipB5c', 'v0.31'),
-      VIDEO_LINK('https://www.youtube.com/watch?v=aM6dEtEPYnU', 'v0.40'),
+      VIDEO_LINK(`${YOUTUBE_WATCH_URL}hcdU7WipB5c`, 'v0.31'),
+      VIDEO_LINK(`${YOUTUBE_WATCH_URL}aM6dEtEPYnU`, 'v0.40'),
     ],
   },
 

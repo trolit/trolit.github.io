@@ -17,6 +17,7 @@ export const POST: IPost = {
   references: {
     items: [
       {
+        match: 'Pixlr',
         title: 'Pixlr',
         url: 'https://pixlr.com',
       },

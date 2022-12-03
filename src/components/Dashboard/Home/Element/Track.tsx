@@ -3,15 +3,13 @@ import { Anchor, Text } from '@mantine/core';
 import { Element } from '.';
 import { YOUTUBE_WATCH_URL } from '@/config';
 import { ITrack } from '@/interfaces/dashboard/ITrack';
-import { tracksNavigationItem } from '@/assets/data/dashboard';
+import { TRACKS_NAVIGATION_ITEM } from '@/assets/constants/navigation-items';
 
 interface IProps {
   item: ITrack;
 }
 
-export function TrackElement({ item }: IProps) {
-  const { authors, title, youtubeId } = item;
-
+export function TrackElement({ item: { authors, title, youtubeId } }: IProps) {
   const label = (
     <Text fz='xs' fw={700} lineClamp={1}>
       {authors.join(', ')}
@@ -26,10 +24,10 @@ export function TrackElement({ item }: IProps) {
 
   return (
     <Element
-      icon={tracksNavigationItem.icon}
-      label={label}
       text={title}
+      label={label}
       extra={extra}
+      icon={TRACKS_NAVIGATION_ITEM.icon}
     />
   );
 }

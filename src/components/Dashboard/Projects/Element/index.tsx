@@ -13,25 +13,25 @@ interface IProps {
   item: IProject;
 }
 
-export function Element({ item }: IProps) {
-  const commonStyles = useCommonStyles();
+export function Element({
+  item: { name, thumbnail, date, description, languages, tags, links },
+}: IProps) {
+  const { h100 } = useCommonStyles();
 
   const [isOverlayOpened, toggleOverlay] = useState(false);
 
-  const { name, thumbnail, date, description, languages, tags, links } = item;
-
   return (
-    <Paper radius='md' withBorder className={commonStyles.h100}>
-      <Box className={commonStyles.h100} style={{ position: 'relative' }}>
+    <Paper radius='md' withBorder className={h100}>
+      <Box className={h100} style={{ position: 'relative' }}>
         {isOverlayOpened && (
           <LinksOverlay links={links} toggleOverlay={toggleOverlay} />
         )}
 
         <Languages languages={languages} />
 
-        <Grid p='lg' className={commonStyles.h100}>
+        <Grid p='lg' className={h100}>
           <Grid.Col span={12}>
-            <Stack align='center' className={commonStyles.h100}>
+            <Stack align='center' className={h100}>
               <Thumbnail name={name} value={thumbnail} />
 
               <Text>{name}</Text>
