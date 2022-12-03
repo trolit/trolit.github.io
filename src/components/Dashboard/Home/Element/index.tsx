@@ -13,9 +13,11 @@ interface IProps {
   text: string;
 
   extra?: ReactNode;
+
+  postExtra?: ReactNode;
 }
 
-export function Element({ icon, label, text, extra }: IProps) {
+export function Element({ icon, label, text, extra, postExtra }: IProps) {
   const { w100, h100 } = useCommonStyles();
 
   const Icon = icon;
@@ -50,6 +52,8 @@ export function Element({ icon, label, text, extra }: IProps) {
             </Text>
 
             <Text lineClamp={1}>{extra}</Text>
+
+            <Text lineClamp={1}>{postExtra}</Text>
           </Stack>
         </Flex>
       </Group>
