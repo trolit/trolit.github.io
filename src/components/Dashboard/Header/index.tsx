@@ -14,7 +14,7 @@ export function PanelHeader() {
 
   const location = useLocation();
 
-  const commonStyles = useCommonStyles();
+  const { hiddenDesktop, h100, hiddenMobile } = useCommonStyles();
 
   const dashboardStyles = useDashboardStyles();
 
@@ -26,8 +26,8 @@ export function PanelHeader() {
       key={name}
       label={name}
       icon={<Icon size={16} />}
-      className={dashboardStyles.navigationLink}
       active={location.pathname === route}
+      className={dashboardStyles.navigationLink}
       onClick={() => navigate(route)}
     />
   ));
@@ -35,12 +35,8 @@ export function PanelHeader() {
   return (
     <Box>
       <Header height={HEADER_HEIGHT} className={dashboardStyles.header}>
-        <Group noWrap position='apart' className={commonStyles.h100}>
-          <Group
-            noWrap
-            spacing={0}
-            className={`${commonStyles.hiddenMobile} ${commonStyles.h100} `}
-          >
+        <Group noWrap position='apart' className={h100}>
+          <Group noWrap spacing={0} className={`${hiddenMobile} ${h100} `}>
             {navigation}
           </Group>
 
@@ -48,7 +44,7 @@ export function PanelHeader() {
             px='md'
             opened={isDrawerOpened}
             onClick={toggleDrawer}
-            className={commonStyles.hiddenDesktop}
+            className={hiddenDesktop}
           />
 
           <Toolbar />
