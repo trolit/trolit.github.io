@@ -9,9 +9,7 @@ interface IProps {
   item: ITrack;
 }
 
-export function TrackElement({ item }: IProps) {
-  const { authors, title, youtubeId } = item;
-
+export function TrackElement({ item: { authors, title, youtubeId } }: IProps) {
   const label = (
     <Text fz='xs' fw={700} lineClamp={1}>
       {authors.join(', ')}
