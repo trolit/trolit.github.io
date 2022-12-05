@@ -56,6 +56,7 @@ export function HeaderDrawer({ isDrawerOpened, onDrawerClose }: IProps) {
     >
       <Divider
         my='sm'
+        mx='-md'
         color={colorScheme === DARK_THEME ? 'dark.5' : 'gray.1'}
       />
 
