@@ -22,16 +22,14 @@ export const useDashboardStyles = () => {
       },
 
       wrapper: {
-        height: `calc(100vh - ${OVERLAY_PADDING}px)`,
-
         [`@media (max-width: ${MEDIUM_SCREEN_THRESHOLD})`]: {
           marginTop: `${OVERLAY_PADDING}px`,
         },
       },
 
       scrollArea: {
-        height: `calc(100vh - ${HEADER_HEIGHT}px - ${OVERLAY_PADDING}px)`,
         borderRadius: theme.fn.radius('md'),
+        height: `calc(100vh - ${HEADER_HEIGHT}px - ${OVERLAY_PADDING}px)`,
       },
 
       content: {
