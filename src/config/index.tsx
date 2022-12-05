@@ -10,6 +10,8 @@ export const HEADER_HEIGHT = 50;
 
 export const OVERLAY_PADDING = 15;
 
+export const DASHBOARD_PADDING = 20;
+
 export const GITHUB_USERNAME = 'trolit';
 
 export const DATE_FORMAT = 'DD/MM/YYYY';
