@@ -3,8 +3,6 @@ import { createStyles } from '@mantine/core';
 import {
   HEADER_HEIGHT,
   OVERLAY_PADDING,
-  DASHBOARD_PADDING,
-  SMALL_SCREEN_THRESHOLD,
   MEDIUM_SCREEN_THRESHOLD,
 } from '@/config';
 import { DARK_THEME } from '@/assets/constants/themes';
@@ -31,14 +29,6 @@ export const useDashboardStyles = () => {
       scrollArea: {
         borderRadius: theme.fn.radius('md'),
         height: `calc(100vh - ${HEADER_HEIGHT}px - ${OVERLAY_PADDING}px)`,
-      },
-
-      content: {
-        padding: `${DASHBOARD_PADDING}px`,
-
-        [`@media (max-width: ${SMALL_SCREEN_THRESHOLD})`]: {
-          width: `calc(100vw - ${DASHBOARD_PADDING * 2}px)`,
-        },
       },
 
       navigationLink: {

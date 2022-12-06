@@ -12,7 +12,7 @@ interface IProps {
 export function Dashboard({ tab }: IProps) {
   const { panel } = useCommonStyles();
 
-  const { wrapper, scrollArea, content } = useDashboardStyles();
+  const { wrapper, scrollArea } = useDashboardStyles();
 
   return (
     <Paper radius='md' withBorder className={`${panel} ${wrapper}`}>
@@ -22,7 +22,7 @@ export function Dashboard({ tab }: IProps) {
 
       <Container px={0} fluid>
         <ScrollArea className={scrollArea}>
-          <Paper className={content}>{tab}</Paper>
+          <Paper>{tab}</Paper>
         </ScrollArea>
       </Container>
     </Paper>
