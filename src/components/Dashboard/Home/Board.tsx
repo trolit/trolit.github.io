@@ -28,7 +28,14 @@ function filterCollectionByPointOfInterest<T>(
 }
 
 export function Board() {
-  const { boardColumn, boardDate, boardItems } = useHomeStyles();
+  const {
+    boardDate,
+    boardItems,
+    boardColumn,
+    lastBoardItem,
+    firstBoardItem,
+    innerBoardItem,
+  } = useHomeStyles();
 
   const pointsOfInterest = getPointsOfInterest(
     [...POSTS_DATES, ...PROJECTS_DATES],
@@ -36,9 +43,21 @@ export function Board() {
     HOME_GROUP_BY,
   );
 
+  const getSpecificItemClass = (index: number): string => {
+    if (index === 0) {
+      return firstBoardItem;
+    }
+
+    if (index === HOME_INTEREST_POINTS - 1) {
+      return lastBoardItem;
+    }
+
+    return innerBoardItem;
+  };
+
   return (
     <Flex>
-      {pointsOfInterest.map((pointOfInterest) => {
+      {pointsOfInterest.map((pointOfInterest, index) => {
         const projects = filterCollectionByPointOfInterest(
           PROJECTS,
           pointOfInterest,
@@ -66,7 +85,9 @@ export function Board() {
             direction='column'
             className={boardColumn}
           >
-            <ScrollArea className={boardItems}>
+            <ScrollArea
+              className={`${boardItems} ${getSpecificItemClass(index)}`}
+            >
               <Stack align='center'>
                 {projects}
 

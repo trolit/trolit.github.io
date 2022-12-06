@@ -3,12 +3,13 @@ import { createStyles } from '@mantine/core';
 import {
   HEADER_HEIGHT,
   OVERLAY_PADDING,
+  DASHBOARD_PADDING,
   MEDIUM_SCREEN_THRESHOLD,
 } from '@/config';
 
-const TITLE_HEIGHT = '40px';
+const TITLE_HEIGHT = '50px';
 
-const INNER_PADDING = '10px';
+const INNER_PADDING = '7px';
 
 const DATE_BADGE_HEIGHT = '35px';
 
@@ -39,12 +40,25 @@ export const useHomeStyles = () => {
       },
 
       boardItems: {
-        padding: `0 ${INNER_PADDING} ${INNER_PADDING} ${INNER_PADDING}`,
         height: `calc(${AVAILABLE_HEIGHT} - ${TITLE_HEIGHT} - ${DATE_BADGE_HEIGHT})`,
 
         [`@media (max-width: ${MEDIUM_SCREEN_THRESHOLD})`]: {
           minWidth: '150px',
         },
+      },
+
+      firstBoardItem: {
+        paddingLeft: DASHBOARD_PADDING,
+        paddingRight: INNER_PADDING,
+      },
+
+      innerBoardItem: {
+        padding: `0 ${INNER_PADDING}`,
+      },
+
+      lastBoardItem: {
+        paddingRight: DASHBOARD_PADDING,
+        paddingLeft: INNER_PADDING,
       },
 
       boardDate: {
