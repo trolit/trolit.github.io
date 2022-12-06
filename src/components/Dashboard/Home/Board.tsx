@@ -31,7 +31,7 @@ function filterCollectionByPointOfInterest<T>(
 export function Board() {
   const { w100 } = useCommonStyles();
 
-  const { date, elements } = useHomeStyles();
+  const { date, items } = useHomeStyles();
 
   const pointsOfInterest = getPointsOfInterest(
     [...POSTS_DATES, ...PROJECTS_DATES],
@@ -67,9 +67,9 @@ export function Board() {
           <Flex
             key={pointOfInterest.format()}
             direction='column'
-            className={w100}
+            className={`${w100}`}
           >
-            <ScrollArea className={`${elements}`}>
+            <ScrollArea className={`${items}`}>
               <Stack align='center'>
                 {projects}
 

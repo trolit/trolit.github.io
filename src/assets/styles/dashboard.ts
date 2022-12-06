@@ -3,6 +3,7 @@ import { createStyles } from '@mantine/core';
 import {
   HEADER_HEIGHT,
   OVERLAY_PADDING,
+  DASHBOARD_PADDING,
   SMALL_SCREEN_THRESHOLD,
   MEDIUM_SCREEN_THRESHOLD,
 } from '@/config';
@@ -18,26 +19,25 @@ export const useDashboardStyles = () => {
       },
 
       headerDrawerScrollArea: {
-        height: `calc(100vh - ${HEADER_HEIGHT}px)`,
+        height: `calc(100vh - ${HEADER_HEIGHT}px - 20px)`,
       },
 
       wrapper: {
-        height: `calc(100vh - ${OVERLAY_PADDING}px)`,
-
         [`@media (max-width: ${MEDIUM_SCREEN_THRESHOLD})`]: {
           marginTop: `${OVERLAY_PADDING}px`,
         },
       },
 
       scrollArea: {
-        height: `calc(100vh - ${HEADER_HEIGHT}px - ${OVERLAY_PADDING}px)`,
         borderRadius: theme.fn.radius('md'),
+        height: `calc(100vh - ${HEADER_HEIGHT}px - ${OVERLAY_PADDING}px)`,
       },
 
       content: {
-        padding: spacing.lg,
+        padding: `${DASHBOARD_PADDING}px`,
+
         [`@media (max-width: ${SMALL_SCREEN_THRESHOLD})`]: {
-          width: `calc(100vw - ${spacing.lg}px - 10px)`,
+          width: `calc(100vw - ${DASHBOARD_PADDING * 2}px)`,
         },
       },
 

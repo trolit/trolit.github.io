@@ -54,11 +54,13 @@ export function HeaderDrawer({ isDrawerOpened, onDrawerClose }: IProps) {
       onClose={onDrawerClose}
       className={hiddenDesktop}
     >
+      <Divider
+        my='sm'
+        mx='-md'
+        color={colorScheme === DARK_THEME ? 'dark.5' : 'gray.1'}
+      />
+
       <ScrollArea className={headerDrawerScrollArea} mx='-md'>
-        <Divider
-          my='sm'
-          color={colorScheme === DARK_THEME ? 'dark.5' : 'gray.1'}
-        />
         {navigation}
       </ScrollArea>
     </Drawer>
