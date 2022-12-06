@@ -12,7 +12,7 @@ export function Home() {
         Recent Activity
       </Title>
 
-      <ScrollArea className={horizontalScroll} offsetScrollbars>
+      <ScrollArea className={horizontalScroll}>
         <Container p={0} fluid>
           <Board />
         </Container>
