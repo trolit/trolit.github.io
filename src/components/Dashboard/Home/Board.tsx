@@ -11,7 +11,6 @@ import { PostElement } from './Element/Post';
 import { TRACKS } from '@/assets/data/tracks';
 import { TrackElement } from './Element/Track';
 import { ProjectElement } from './Element/Project';
-import { useCommonStyles } from '@/assets/styles/common';
 import { useHomeStyles } from '@/assets/styles/dashboard/home';
 import { getPointsOfInterest } from '@/helpers/getPointsOfInterest';
 import { ALL_DATES as POSTS_DATES, POSTS } from '@/assets/data/posts';
@@ -29,9 +28,7 @@ function filterCollectionByPointOfInterest<T>(
 }
 
 export function Board() {
-  const { w100 } = useCommonStyles();
-
-  const { date, items } = useHomeStyles();
+  const { boardColumn, boardDate, boardItems } = useHomeStyles();
 
   const pointsOfInterest = getPointsOfInterest(
     [...POSTS_DATES, ...PROJECTS_DATES],
@@ -67,9 +64,10 @@ export function Board() {
           <Flex
             key={pointOfInterest.format()}
             direction='column'
-            className={`${w100}`}
+            className={boardColumn}
+            style={{ flexShrink: 1 }}
           >
-            <ScrollArea className={`${items}`}>
+            <ScrollArea className={boardItems}>
               <Stack align='center'>
                 {projects}
 
@@ -79,7 +77,12 @@ export function Board() {
               </Stack>
             </ScrollArea>
 
-            <Badge size='lg' radius={0} className={date} color={PRIMARY_COLOR}>
+            <Badge
+              size='xl'
+              radius={0}
+              className={boardDate}
+              color={PRIMARY_COLOR}
+            >
               {pointOfInterest.format(HOME_DATE_FORMATTER)}
             </Badge>
           </Flex>
