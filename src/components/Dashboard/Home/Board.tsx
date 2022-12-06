@@ -65,7 +65,6 @@ export function Board() {
             key={pointOfInterest.format()}
             direction='column'
             className={boardColumn}
-            style={{ flexShrink: 1 }}
           >
             <ScrollArea className={boardItems}>
               <Stack align='center'>
