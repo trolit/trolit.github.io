@@ -6,9 +6,12 @@ export const usePostStyles = () => {
   const { classes } = createStyles((theme) => {
     const classes = {
       wrapper: {
-        padding: DASHBOARD_PADDING,
+        padding: DASHBOARD_PADDING * 2,
+
         [`@media (max-width: ${SMALL_SCREEN_THRESHOLD})`]: {
-          width: `calc(100vw - ${DASHBOARD_PADDING * 2}px)`,
+          paddingLeft: 20,
+          paddingRight: 15,
+          width: `calc(100vw - 35px)`,
         },
       },
     };
