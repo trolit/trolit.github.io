@@ -18,13 +18,13 @@ export const useDashboardStyles = (route?: string) => {
       },
 
       wrapper: {
-        [`@media (max-width: ${route === HOME_ROUTE ? '965px' : '861px'})`]: {
+        [`@media (max-width: ${route === HOME_ROUTE ? '959px' : '861px'})`]: {
           marginTop: `${OVERLAY_PADDING}px`,
         },
       },
 
       viewToggler: {
-        [`@media (max-width: ${route === HOME_ROUTE ? '965px' : '884px'})`]: {
+        [`@media (max-width: ${route === HOME_ROUTE ? '959px' : '884px'})`]: {
           display: 'none',
         },
       },
