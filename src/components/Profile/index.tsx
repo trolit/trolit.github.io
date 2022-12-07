@@ -39,9 +39,9 @@ export function Profile() {
         </Text>
 
         {title && (
-          <div className={titleWrapper}>
+          <Text className={titleWrapper} lineClamp={1}>
             <Kbd>{title}</Kbd>
-          </div>
+          </Text>
         )}
 
         <ScrollArea>
