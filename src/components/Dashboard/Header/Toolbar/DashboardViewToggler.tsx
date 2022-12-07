@@ -1,16 +1,19 @@
+import { useLocation } from 'react-router-dom';
 import { ActionIcon, Tooltip } from '@mantine/core';
 import { useDispatch, useSelector } from 'react-redux';
 import { IconMinimize, IconMaximize } from '@tabler/icons';
 
 import { RootState } from '@/store';
 import { PRIMARY_COLOR } from '@/config';
-import { useCommonStyles } from '@/assets/styles/common';
 import { toggleDashboardView } from '@/store/preferences';
+import { useDashboardStyles } from '@/assets/styles/dashboard';
 
 export function DashboardViewToggler() {
   const dispatch = useDispatch();
 
-  const { hiddenMobile } = useCommonStyles();
+  const location = useLocation();
+
+  const { viewToggler } = useDashboardStyles(location.pathname);
 
   const isDashboardMaximized = useSelector(
     (state: RootState) => state.preferences.isDashboardMaximized,
@@ -25,7 +28,7 @@ export function DashboardViewToggler() {
       <ActionIcon
         variant='light'
         color={PRIMARY_COLOR}
-        className={hiddenMobile}
+        className={viewToggler}
         onClick={() => dispatch(toggleDashboardView())}
       >
         <Icon size={18} />

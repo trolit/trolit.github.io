@@ -1,5 +1,5 @@
 import { Title, Container, ScrollArea } from '@mantine/core';
-
+import { IconClock2 } from '@tabler/icons';
 import { Board } from './Board';
 import { useHomeStyles } from '@/assets/styles/dashboard/home';
 
@@ -9,7 +9,7 @@ export function Home() {
   return (
     <Container p={0} fluid>
       <Title order={4} align='center' className={title}>
-        Recent Activity
+        <IconClock2 /> &nbsp; Recent Activity
       </Title>
 
       <ScrollArea className={horizontalScroll}>

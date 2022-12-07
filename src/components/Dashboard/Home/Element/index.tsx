@@ -46,7 +46,7 @@ export function Element({
     <Paper
       withBorder
       className={w100}
-      style={{ height: `${HOME_ELEMENT_HEIGHT}px` }}
+      style={{ height: `${HOME_ELEMENT_HEIGHT}px`, borderLeft: 'unset' }}
     >
       <Group align='center' noWrap className={`${h100}`} spacing={innerSpace}>
         <ThemeIcon
