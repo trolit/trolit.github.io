@@ -5,11 +5,14 @@ import { POSTS } from '@/assets/data/posts';
 import { IPost } from '@/interfaces/dashboard/IPost';
 import { POSTS_ROUTE } from '@/assets/constants/routes';
 import { usePostRenderer } from '@/services/usePostRenderer';
+import { usePostStyles } from '@/assets/styles/dashboard/post';
 
 export function Post() {
   type ExpectedParams = {
     postId: string;
   };
+
+  const { wrapper } = usePostStyles();
 
   const postRenderer = usePostRenderer<IPost>();
 
@@ -28,7 +31,7 @@ export function Post() {
   const post = POSTS[parsedPostId - 1];
 
   return (
-    <Stack spacing='xl' align='center'>
+    <Stack spacing='xl' align='center' className={wrapper}>
       {postRenderer.render(post)}
     </Stack>
   );

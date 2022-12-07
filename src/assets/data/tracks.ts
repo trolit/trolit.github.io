@@ -7,6 +7,30 @@ const { SOUNDTRACK } = COMMON_TAGS;
 
 const RAW_TRACKS: ITrack[] = [
   {
+    authors: ['Harry Gregson-Williams'],
+
+    title: `The End`,
+
+    date: '2022-12-07',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'ik1GPvmeoac',
+  },
+
+  {
+    authors: ['Hans Zimmer'],
+
+    title: `Kopano Part III (Tears Of The Sun)`,
+
+    date: '2022-12-07',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'F8OSiaHmXQM',
+  },
+
+  {
     authors: ['Joseph Trapanese'],
 
     title: `Tell Me What You Want (Witcher, Season 2)`,
