@@ -4,10 +4,10 @@ import { Board } from './Board';
 import { useHomeStyles } from '@/assets/styles/dashboard/home';
 
 export function Home() {
-  const { title, horizontalScroll } = useHomeStyles();
+  const { wrapper, title, horizontalScroll } = useHomeStyles();
 
   return (
-    <Container p={0} fluid>
+    <Container className={wrapper} fluid>
       <Title order={4} align='center' className={title}>
         Recent Activity
       </Title>
