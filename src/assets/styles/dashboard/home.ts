@@ -18,11 +18,6 @@ export const useHomeStyles = () => {
     const AVAILABLE_HEIGHT = `calc(100vh - ${HEADER_HEIGHT}px - ${OVERLAY_PADDING}px)`;
 
     const classes = {
-      wrapper: {
-        padding: 0,
-        height: `${AVAILABLE_HEIGHT}`,
-      },
-
       title: {
         display: 'flex',
         alignItems: 'center',
