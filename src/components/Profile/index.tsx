@@ -7,6 +7,7 @@ import {
   Stack,
   Avatar,
   ThemeIcon,
+  ScrollArea,
   Blockquote,
 } from '@mantine/core';
 
@@ -43,36 +44,38 @@ export function Profile() {
           </div>
         )}
 
-        <Group position='center' spacing='lg' className={group}>
-          {tags.map(({ text, color }, index) => (
-            <Badge key={index} color={color || PRIMARY_COLOR} radius='xs'>
-              {text}
-            </Badge>
-          ))}
-        </Group>
+        <ScrollArea>
+          <Group position='center' spacing='lg' className={group}>
+            {tags.map(({ text, color }, index) => (
+              <Badge key={index} color={color || PRIMARY_COLOR} radius='xs'>
+                {text}
+              </Badge>
+            ))}
+          </Group>
 
-        <Blockquote cite={`-${quote.author}`} color={getColorByShade(4)}>
-          {quote.text}
-        </Blockquote>
+          <Blockquote cite={`-${quote.author}`} color={getColorByShade(4)}>
+            {quote.text}
+          </Blockquote>
 
-        <Group position='center' spacing='lg' className={group}>
-          {links.map(({ icon, url }, index) => {
-            const LinkIcon = icon;
+          <Group position='center' spacing='lg' className={group}>
+            {links.map(({ icon, url }, index) => {
+              const LinkIcon = icon;
 
-            return (
-              <a key={index} href={url} target='_blank' rel='noreferrer'>
-                <ThemeIcon
-                  size='xl'
-                  radius='xs'
-                  variant='light'
-                  className={link}
-                >
-                  <LinkIcon />
-                </ThemeIcon>
-              </a>
-            );
-          })}
-        </Group>
+              return (
+                <a key={index} href={url} target='_blank' rel='noreferrer'>
+                  <ThemeIcon
+                    size='xl'
+                    radius='xs'
+                    variant='light'
+                    className={link}
+                  >
+                    <LinkIcon />
+                  </ThemeIcon>
+                </a>
+              );
+            })}
+          </Group>
+        </ScrollArea>
       </Stack>
     </Paper>
   );
