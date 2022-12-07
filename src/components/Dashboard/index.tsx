@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Paper, ScrollArea, Container } from '@mantine/core';
 
 import { PanelHeader } from './Header';
@@ -10,9 +11,11 @@ interface IProps {
 }
 
 export function Dashboard({ tab }: IProps) {
+  const location = useLocation();
+
   const { panel } = useCommonStyles();
 
-  const { wrapper, scrollArea } = useDashboardStyles();
+  const { wrapper, scrollArea } = useDashboardStyles(location.pathname);
 
   return (
     <Paper radius='md' withBorder className={`${panel} ${wrapper}`}>

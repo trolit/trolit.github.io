@@ -1,13 +1,10 @@
 import { createStyles } from '@mantine/core';
 
-import {
-  HEADER_HEIGHT,
-  OVERLAY_PADDING,
-  MEDIUM_SCREEN_THRESHOLD,
-} from '@/config';
+import { HOME_ROUTE } from '@/assets/constants/routes';
 import { DARK_THEME } from '@/assets/constants/themes';
+import { HEADER_HEIGHT, OVERLAY_PADDING } from '@/config';
 
-export const useDashboardStyles = () => {
+export const useDashboardStyles = (route?: string) => {
   const { classes } = createStyles((theme) => {
     const { spacing } = theme;
 
@@ -21,7 +18,7 @@ export const useDashboardStyles = () => {
       },
 
       wrapper: {
-        [`@media (max-width: ${MEDIUM_SCREEN_THRESHOLD})`]: {
+        [`@media (max-width: ${route === HOME_ROUTE ? '965px' : '884px'})`]: {
           marginTop: `${OVERLAY_PADDING}px`,
         },
       },
