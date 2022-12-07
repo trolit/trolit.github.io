@@ -1,11 +1,6 @@
 import { createStyles } from '@mantine/core';
 
-import {
-  HEADER_HEIGHT,
-  OVERLAY_PADDING,
-  DASHBOARD_PADDING,
-  MEDIUM_SCREEN_THRESHOLD,
-} from '@/config';
+import { HEADER_HEIGHT, OVERLAY_PADDING, DASHBOARD_PADDING } from '@/config';
 
 const TITLE_HEIGHT = '50px';
 
@@ -36,10 +31,6 @@ export const useHomeStyles = () => {
 
       boardItems: {
         height: `calc(${AVAILABLE_HEIGHT} - ${TITLE_HEIGHT} - ${DATE_BADGE_HEIGHT})`,
-
-        [`@media (max-width: ${MEDIUM_SCREEN_THRESHOLD})`]: {
-          minWidth: '150px',
-        },
       },
 
       firstBoardItem: {
