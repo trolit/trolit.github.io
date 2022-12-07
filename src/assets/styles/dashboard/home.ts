@@ -18,13 +18,6 @@ export const useHomeStyles = () => {
     const AVAILABLE_HEIGHT = `calc(100vh - ${HEADER_HEIGHT}px - ${OVERLAY_PADDING}px)`;
 
     const classes = {
-      wrapper: {
-        padding: 0,
-        [`@media (max-width: 965px)`]: {
-          marginTop: `${OVERLAY_PADDING}px`,
-        },
-      },
-
       title: {
         display: 'flex',
         alignItems: 'center',
