@@ -7,6 +7,30 @@ const { SOUNDTRACK } = COMMON_TAGS;
 
 const RAW_TRACKS: ITrack[] = [
   {
+    authors: ['Brian Tyler'],
+
+    title: `I Stand Alone (COD MW3)`,
+
+    date: '2022-12-08',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'belbMtTtjRg',
+  },
+
+  {
+    authors: ['Hans Zimmer'],
+
+    title: `Extraction Point (COD MW2)`,
+
+    date: '2021-11-04',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'smnJ-qM1RWk',
+  },
+
+  {
     authors: ['Hans Zimmer'],
 
     title: `Invasion (COD MW2)`,
