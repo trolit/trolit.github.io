@@ -54,7 +54,7 @@ const RAW_PROJECTS: IProject[] = [
       },
     ],
     description:
-      'New personal portfolio made from scratch during break on primary project 😴',
+      'Personal portfolio made from scratch in React with Mantine UI framework during break on primary project 😴',
     thumbnail,
     links: [GITHUB_LINK('trolit.github.io')],
   },
