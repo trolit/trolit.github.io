@@ -7,6 +7,78 @@ const { SOUNDTRACK } = COMMON_TAGS;
 
 const RAW_TRACKS: ITrack[] = [
   {
+    authors: ['Hans Zimmer'],
+
+    title: `Invasion (COD MW2)`,
+
+    date: '2021-11-04',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'H_5-Y2B7E-Y',
+  },
+
+  {
+    authors: ['Jamin Winans'],
+
+    title: `Into the Fray (The Grey)`,
+
+    date: '2021-10-23',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'W1fVn_gqIvo',
+  },
+
+  {
+    authors: ['Hans Zimmer'],
+
+    title: `Pearl Harbor`,
+
+    date: '2021-10-23',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'WSoNISj9lFQ',
+  },
+
+  {
+    authors: ['Hans Zimmer'],
+
+    title: `Enemy of my enemy is my friend (COD MW2)`,
+
+    date: '2021-12-08',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: '95obkJqXj2c',
+  },
+
+  {
+    authors: ['Nick Glennie-Smith'],
+
+    title: `Main (intro) (We Were Soldiers)`,
+
+    date: '2022-12-08',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'LdnWqqiep4U',
+  },
+
+  {
+    authors: ['J.T. Peterson'],
+
+    title: `The Trailer`,
+
+    date: '2022-12-08',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'N-ted7frO6U',
+  },
+
+  {
     authors: ['Harry Gregson-Williams'],
 
     title: `The End`,
@@ -405,7 +477,7 @@ const RAW_TRACKS: ITrack[] = [
   {
     authors: ['Hans Zimmer'],
 
-    title: `Rangers Lead The Way`,
+    title: `Rangers Lead The Way (COD MW2)`,
 
     date: '2021-11-04',
 
