@@ -81,7 +81,7 @@ const RAW_TRACKS: ITrack[] = [
   {
     authors: ['Harry Gregson-Williams'],
 
-    title: `The End`,
+    title: `The End (Man Of Fire)`,
 
     date: '2022-12-07',
 
@@ -405,7 +405,7 @@ const RAW_TRACKS: ITrack[] = [
   {
     authors: ['Johan Söderqvist', 'Patrik Andrén'],
 
-    title: `Devastation`,
+    title: `Devastation (Battlefield 5)`,
 
     date: '2021-11-12',
 
@@ -513,7 +513,7 @@ const RAW_TRACKS: ITrack[] = [
   {
     authors: ['Nick Glennie-Smith', 'Harry Gregson-Williams', 'Hans Zimmer'],
 
-    title: `Hummell Gets The Rockets`,
+    title: `Hummell Gets The Rockets (The Rock)`,
 
     date: '2022-08-06',
 
@@ -525,7 +525,7 @@ const RAW_TRACKS: ITrack[] = [
   {
     authors: ['Ramin Djawadi'],
 
-    title: `Light of the Seven`,
+    title: `Light of the Seven (GOT)`,
 
     date: '2022-08-02',
 
