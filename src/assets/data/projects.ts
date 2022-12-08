@@ -75,7 +75,7 @@ const RAW_PROJECTS: IProject[] = [
       },
     ],
     description:
-      'GitHub bot intended to provide first, early pull request review and faster further reviews done by humans. Includes type definitions and unit tests written in Jest.',
+      'GitHub bot that provides first, early PR review and fasters further reviews done by humans.',
     thumbnail,
     links: [GITHUB_LINK('Patchron')],
   },
@@ -96,7 +96,7 @@ const RAW_PROJECTS: IProject[] = [
       },
     ],
     description:
-      'Portfolio website based on TechFolios v1 template. Used from 2020, reworked in 2021.',
+      'Portfolio website based on TechFolios v1 template. Used since 2020, reworked in 2021.',
     thumbnail,
     links: [GITHUB_LINK('jekyll-portfolio#about')],
   },
@@ -119,7 +119,7 @@ const RAW_PROJECTS: IProject[] = [
         text: 'JWT',
       },
     ],
-    description: `First approach to React with Node.js as web application for storing user's notes with some unit tests done in Mocha.`,
+    description: `Web application for storing user's notes with some unit tests done in Mocha as first steps into React/Node.`,
     thumbnail,
     links: [GITHUB_LINK('tonodedo')],
   },
@@ -157,7 +157,7 @@ const RAW_PROJECTS: IProject[] = [
       },
     ],
     description:
-      'Grocery Store API frontend demonstration including sessionStorage, shopping cart, sorting and filtering.',
+      'Grocery Store app that demonstrates shopping cart, sorting and filtering features from API.',
     thumbnail,
     links: [
       GITHUB_LINK('grocery-store-angular#-grocery-store-angular'),
@@ -201,7 +201,7 @@ const RAW_PROJECTS: IProject[] = [
       },
     ],
     description:
-      'Tiny web tool that offers foreign language vocabulary learning, based on personal experience (short intervals, better effects).',
+      'Tiny tool that offers foreign language vocabulary learning. Approach based on personal experience (short intervals, better effects).',
     thumbnail,
     links: [
       GITHUB_LINK('Wordally#wordally'),
@@ -250,7 +250,7 @@ const RAW_PROJECTS: IProject[] = [
       },
     ],
     description:
-      'Mobile app made to simplify documenting any "thing" under tag(s) and then quickly compare differences in generated doc.',
+      'Mobile app made to simplify documentation process of any "thing" under tag(s) and then generate pdf doc to compare differences.',
     thumbnail,
     links: [
       GITHUB_LINK('document-and-compare#document-and-compare', 'OS-expected'),
@@ -273,7 +273,7 @@ const RAW_PROJECTS: IProject[] = [
       },
     ],
     description:
-      'Small, handy tool to give music playlists second life in format that is respected by car players.',
+      'Small, handy tool to give music playlists "second life". Based on format that is respected by cars audio players.',
     thumbnail,
     links: [GITHUB_LINK('sShuffler')],
   },
@@ -291,7 +291,7 @@ const RAW_PROJECTS: IProject[] = [
       },
     ],
     description:
-      'WYSIWYG web tool to let users easily and quickly develop repos documentation. First, stable version got released in 6 days.',
+      'WYSIWYG web tool to let users easily and quickly develop documentation scheme. First, stable version got released in 6 days.',
     thumbnail,
     links: [
       GITHUB_LINK('EzGitDoc', 'OS-expected'),
@@ -311,7 +311,7 @@ const RAW_PROJECTS: IProject[] = [
       },
     ],
     description:
-      'Complete, educational, sandbox game about programming with 40 unique levels, 4 minigames, installer and rich documentation.',
+      'Educational, sandbox game with RPG elements about programming. Has 40 unique levels, 4 minigames, installer and rich documentation.',
     thumbnail,
     links: [
       GITHUB_LINK('projectZero'),
@@ -321,7 +321,7 @@ const RAW_PROJECTS: IProject[] = [
   },
 
   {
-    name: 'NB Research Project',
+    name: 'NB Project',
     date: '2019-05-19',
     languages: [CSHARP_LANGUAGE],
     tags: [
@@ -348,8 +348,7 @@ const RAW_PROJECTS: IProject[] = [
         text: 'WinForms',
       },
     ],
-    description:
-      'Attempt on A* algorithm visualization after finding out nice article in WinForms desktop app.',
+    description: 'A* algorithm visualization done in WinForms desktop app.',
     thumbnail,
     links: [GITHUB_LINK('Inne/tree/master/Algorytm%20A_star#o-algorytmie-a')],
   },
@@ -396,7 +395,7 @@ const RAW_PROJECTS: IProject[] = [
     date: '2018-01-07',
     languages: [CSHARP_LANGUAGE],
     tags: [],
-    description: `Attempt to simulate three-rotor enigma as an project for science club. Versions before 2.0 doesn't count :p`,
+    description: `Attempt to simulate three-rotor enigma as an project for science club.`,
     thumbnail,
     links: [
       GITHUB_LINK(
@@ -415,7 +414,7 @@ const RAW_PROJECTS: IProject[] = [
       },
     ],
     description:
-      '2D game made in WinForms. Concept based on popular classic, Arcade Frogger with few enchancements like local coop.',
+      '2D game made in WinForms. Concept based on Arcade Frogger with few enchancements like local coop.',
     thumbnail,
     links: [GITHUB_LINK('Projekt-Frog#projekt-frog')],
   },
@@ -426,7 +425,7 @@ const RAW_PROJECTS: IProject[] = [
     languages: [JAVASCRIPT_LANGUAGE],
     tags: [],
     description:
-      'Page storing culinary recipes. Project was made to get familiar with gridster library and release web recipe book.',
+      'Page storing culinary recipes. Project was made to get familiar with gridster library and have web recipe book.',
     thumbnail,
     links: [WWW_LINK('http://przepisownik2016.opx.pl/', 'Source')],
   },
@@ -447,7 +446,7 @@ const RAW_PROJECTS: IProject[] = [
       },
     ],
     description:
-      'Basic CRUD implementation in car service theme in order to meet CQRS, MediatR, pagination and preview integration tests.',
+      'Basic CRUD implementation in car service theme to meet CQRS, MediatR, pagination and write some integration tests.',
     thumbnail,
     links: [GITHUB_LINK('car-themed-API#car-themed-fake-api')],
   },
