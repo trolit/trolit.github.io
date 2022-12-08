@@ -15,7 +15,7 @@ export function ProjectElement({
     ({ acronym, badgeColorInHex }, index) => (
       <Badge
         mr={5}
-        size='xs'
+        size='sm'
         radius={0}
         variant='outline'
         key={`${name}-language-${index}`}
