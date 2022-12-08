@@ -17,9 +17,9 @@ export function ProjectElement({
         mr={5}
         size='xs'
         radius={0}
-        variant='filled'
+        variant='outline'
         key={`${name}-language-${index}`}
-        style={{ backgroundColor: badgeColorInHex }}
+        style={{ borderColor: badgeColorInHex, color: badgeColorInHex }}
       >
         {acronym}
       </Badge>
