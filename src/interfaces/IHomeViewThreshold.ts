@@ -1,7 +1,7 @@
-import { HomeInterestPoint } from '@/utilities/types';
+import { HomeInterestPoints } from '@/utilities/types';
 
 export interface IHomeViewThreshold {
-  point: HomeInterestPoint;
+  points: HomeInterestPoints;
 
   value: string;
 }
