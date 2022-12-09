@@ -59,6 +59,7 @@ export function ProjectElement({
   return (
     <Element
       text={name}
+      textLineClamp={1}
       extra={renderedTags}
       postExtra={renderedLinks}
       label={renderedLanguages}
