@@ -8,9 +8,11 @@ import { useDashboardStyles } from '@/assets/styles/dashboard';
 
 interface IProps {
   tab: ReactNode;
+
+  subHeader?: ReactNode;
 }
 
-export function Dashboard({ tab }: IProps) {
+export function Dashboard({ tab, subHeader }: IProps) {
   const location = useLocation();
 
   const { panel } = useCommonStyles();
@@ -21,6 +23,8 @@ export function Dashboard({ tab }: IProps) {
     <Paper radius='md' withBorder className={`${panel} ${wrapper}`}>
       <Container px={0} fluid>
         <PanelHeader />
+
+        {subHeader}
       </Container>
 
       <Container px={0} fluid>
