@@ -59,6 +59,6 @@ export const HOME_VIEW_THRESHOLDS: IHomeViewThreshold[] = [
   },
 ];
 
-export const ACTIVE_THRESHOLD =
-  HOME_VIEW_THRESHOLDS.find(({ points }) => points === HOME_INTEREST_POINTS) ||
-  HOME_VIEW_THRESHOLDS[0];
+export const ACTIVE_THRESHOLD_VALUE =
+  HOME_VIEW_THRESHOLDS.find(({ points }) => points === HOME_INTEREST_POINTS)
+    ?.value || HOME_VIEW_THRESHOLDS[0].value;
