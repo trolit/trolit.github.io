@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Paper, ScrollArea, Container } from '@mantine/core';
+import { Paper, Container } from '@mantine/core';
 
 import { PanelHeader } from './Header';
 import { useCommonStyles } from '@/assets/styles/common';
@@ -17,7 +17,7 @@ export function Dashboard({ tab, subHeader }: IProps) {
 
   const { panel } = useCommonStyles();
 
-  const { wrapper, scrollArea } = useDashboardStyles(location.pathname);
+  const { wrapper } = useDashboardStyles(location.pathname);
 
   return (
     <Paper radius='md' withBorder className={`${panel} ${wrapper}`}>
@@ -28,9 +28,7 @@ export function Dashboard({ tab, subHeader }: IProps) {
       </Container>
 
       <Container px={0} fluid>
-        <ScrollArea className={scrollArea}>
-          <Paper>{tab}</Paper>
-        </ScrollArea>
+        <Paper>{tab}</Paper>
       </Container>
     </Paper>
   );
