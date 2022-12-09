@@ -29,3 +29,11 @@ export const JAVA_LANGUAGE: ILanguage = {
   acronym: 'Java',
   badgeColorInHex: '#d97014',
 };
+
+export const ALL_LANGUAGES = [
+  JAVA_LANGUAGE,
+  CSHARP_LANGUAGE,
+  KOTLIN_LANGUAGE,
+  JAVASCRIPT_LANGUAGE,
+  TYPESCRIPT_LANGUAGE,
+];

@@ -9,6 +9,7 @@ import {
   ThemeIcon,
   ScrollArea,
   Blockquote,
+  Anchor,
 } from '@mantine/core';
 
 import {
@@ -62,7 +63,7 @@ export function Profile() {
               const LinkIcon = icon;
 
               return (
-                <a key={index} href={url} target='_blank' rel='noreferrer'>
+                <Anchor key={index} href={url} target='_blank'>
                   <ThemeIcon
                     size='xl'
                     radius='xs'
@@ -71,7 +72,7 @@ export function Profile() {
                   >
                     <LinkIcon />
                   </ThemeIcon>
-                </a>
+                </Anchor>
               );
             })}
           </Group>

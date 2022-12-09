@@ -1,10 +1,11 @@
 import { MantineColor } from '@mantine/core';
+import { HomeInterestPoints } from '@/utilities/types';
 
 export const BACKGROUND_SRC = require('@/assets/media/background.svg').default;
 
 export const DEFAULT_IMAGE_SRC = require('@/assets/media/projects/default.jpg');
 
-export const PRIMARY_COLOR: MantineColor = 'violet';
+export const PRIMARY_COLOR: MantineColor = 'blue';
 
 export const HEADER_HEIGHT = 50;
 
@@ -18,7 +19,7 @@ export const DATE_FORMAT = 'DD/MM/YYYY';
 
 export const SMALL_SCREEN_THRESHOLD = '658px';
 
-export const HOME_INTEREST_POINTS = 5;
+export const HOME_INTEREST_POINTS: HomeInterestPoints = 6;
 
 export const HOME_ELEMENT_HEIGHT = 120;
 

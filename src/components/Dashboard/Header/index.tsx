@@ -14,9 +14,9 @@ export function PanelHeader() {
 
   const location = useLocation();
 
-  const { hiddenDesktop, h100, hiddenMobile } = useCommonStyles();
+  const { header, navigationLink } = useDashboardStyles();
 
-  const dashboardStyles = useDashboardStyles();
+  const { hiddenDesktop, h100, hiddenMobile } = useCommonStyles();
 
   const [isDrawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false);
@@ -27,14 +27,14 @@ export function PanelHeader() {
       label={name}
       icon={<Icon size={16} />}
       active={location.pathname === route}
-      className={dashboardStyles.navigationLink}
+      className={navigationLink}
       onClick={() => navigate(route)}
     />
   ));
 
   return (
     <Box>
-      <Header height={HEADER_HEIGHT} className={dashboardStyles.header}>
+      <Header height={HEADER_HEIGHT} className={header}>
         <Group noWrap position='apart' className={h100}>
           <Group noWrap spacing={0} className={`${hiddenMobile} ${h100} `}>
             {navigation}

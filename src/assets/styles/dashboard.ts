@@ -3,6 +3,7 @@ import { createStyles } from '@mantine/core';
 import { HOME_ROUTE } from '@/assets/constants/routes';
 import { DARK_THEME } from '@/assets/constants/themes';
 import { HEADER_HEIGHT, OVERLAY_PADDING } from '@/config';
+import { ACTIVE_THRESHOLD_VALUE } from '@/assets//constants/home-view-thresholds';
 
 export const useDashboardStyles = (route?: string) => {
   const { classes } = createStyles((theme) => {
@@ -18,13 +19,17 @@ export const useDashboardStyles = (route?: string) => {
       },
 
       wrapper: {
-        [`@media (max-width: ${route === HOME_ROUTE ? '959px' : '861px'})`]: {
+        [`@media (max-width: ${
+          route === HOME_ROUTE ? ACTIVE_THRESHOLD_VALUE : '861px'
+        })`]: {
           marginTop: `${OVERLAY_PADDING}px`,
         },
       },
 
       viewToggler: {
-        [`@media (max-width: ${route === HOME_ROUTE ? '959px' : '884px'})`]: {
+        [`@media (max-width: ${
+          route === HOME_ROUTE ? ACTIVE_THRESHOLD_VALUE : '884px'
+        })`]: {
           display: 'none',
         },
       },

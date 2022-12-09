@@ -20,7 +20,7 @@ export function Tracks() {
 
               <th>Title</th>
 
-              <th>Author(s)</th>
+              <th>Composer(s)</th>
 
               <th>Added on</th>
 

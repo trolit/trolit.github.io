@@ -15,11 +15,11 @@ export function ProjectElement({
     ({ acronym, badgeColorInHex }, index) => (
       <Badge
         mr={5}
-        size='xs'
+        size='sm'
         radius={0}
-        variant='filled'
+        variant='outline'
         key={`${name}-language-${index}`}
-        style={{ backgroundColor: badgeColorInHex }}
+        style={{ borderColor: badgeColorInHex, color: badgeColorInHex }}
       >
         {acronym}
       </Badge>
@@ -59,6 +59,7 @@ export function ProjectElement({
   return (
     <Element
       text={name}
+      textLineClamp={1}
       extra={renderedTags}
       postExtra={renderedLinks}
       label={renderedLanguages}
