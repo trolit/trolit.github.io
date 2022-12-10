@@ -1,44 +1,35 @@
-import dayjs, { Dayjs } from 'dayjs';
+import dayjs from 'dayjs';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { TRACKS } from '@/assets/data/tracks';
 import { HomeSegment } from '@/enums/HomeSegment';
 import { IPost } from '@/interfaces/dashboard/IPost';
 import { ITrack } from '@/interfaces/dashboard/ITrack';
 import { IProject } from '@/interfaces/dashboard/IProject';
+import { IBoardData } from '@/interfaces/dashboard/IBoardData';
 import { HOME_GROUP_BY, HOME_INTEREST_POINTS } from '@/config';
 import { getPointsOfInterest } from '@/helpers/getPointsOfInterest';
 import { ALL_DATES as POSTS_DATES, POSTS } from '@/assets/data/posts';
+import { ALL_DATES as TRACKS_DATES, TRACKS } from '@/assets/data/tracks';
 import { ALL_DATES as PROJECTS_DATES, PROJECTS } from '@/assets/data/projects';
 
 interface IState {
   activeSegment: HomeSegment;
 
-  pointsOfInterest: Dayjs[];
+  projects: IBoardData<IProject>[];
 
-  projects: IProject[][];
+  tracks: IBoardData<ITrack>[];
 
-  tracks: ITrack[][];
-
-  posts: IPost[][];
+  posts: IBoardData<IPost>[];
 }
-
-const pointsOfInterest = getPointsOfInterest(
-  [...POSTS_DATES, ...PROJECTS_DATES],
-  HOME_INTEREST_POINTS,
-  HOME_GROUP_BY,
-);
 
 const initialState: IState = {
   activeSegment: HomeSegment.PROJECTS,
 
-  pointsOfInterest,
+  projects: filterData(PROJECTS, PROJECTS_DATES),
 
-  projects: filterData(PROJECTS),
+  tracks: filterData(TRACKS, TRACKS_DATES),
 
-  tracks: filterData(TRACKS),
-
-  posts: filterData(POSTS),
+  posts: filterData(POSTS, POSTS_DATES),
 };
 
 export const homeSlice = createSlice({
@@ -55,14 +46,26 @@ export const homeSlice = createSlice({
   },
 });
 
-function filterData<T>(source: T[]) {
-  return pointsOfInterest.map((pointOfInterest) =>
-    source.filter((item: T) => {
+function filterData<T>(source: T[], dates: string[]): IBoardData<T>[] {
+  const pointsOfInterest = getPointsOfInterest(
+    dates,
+    HOME_INTEREST_POINTS,
+    HOME_GROUP_BY,
+  );
+
+  return pointsOfInterest.map((pointOfInterest) => {
+    const items = source.filter((item: T) => {
       const castedItem = item as { date: string };
 
       return pointOfInterest.isSame(dayjs(castedItem.date), HOME_GROUP_BY);
-    }),
-  );
+    });
+
+    return {
+      pointOfInterest,
+
+      items,
+    };
+  });
 }
 
 export const { setActiveSegment } = homeSlice.actions;
