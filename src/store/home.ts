@@ -2,6 +2,7 @@ import dayjs, { Dayjs } from 'dayjs';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import { TRACKS } from '@/assets/data/tracks';
+import { HomeSegment } from '@/enums/HomeSegment';
 import { IPost } from '@/interfaces/dashboard/IPost';
 import { ITrack } from '@/interfaces/dashboard/ITrack';
 import { IProject } from '@/interfaces/dashboard/IProject';
@@ -11,7 +12,7 @@ import { ALL_DATES as POSTS_DATES, POSTS } from '@/assets/data/posts';
 import { ALL_DATES as PROJECTS_DATES, PROJECTS } from '@/assets/data/projects';
 
 interface IState {
-  activeSegment: string;
+  activeSegment: HomeSegment;
 
   pointsOfInterest: Dayjs[];
 
@@ -29,7 +30,7 @@ const pointsOfInterest = getPointsOfInterest(
 );
 
 const initialState: IState = {
-  activeSegment: 'Projects',
+  activeSegment: HomeSegment.PROJECTS,
 
   pointsOfInterest,
 
@@ -46,7 +47,7 @@ export const homeSlice = createSlice({
   initialState,
 
   reducers: {
-    setActiveSegment: (state, action: PayloadAction<string>) => {
+    setActiveSegment: (state, action: PayloadAction<HomeSegment>) => {
       const segment = action.payload;
 
       state.activeSegment = segment;
