@@ -1,4 +1,4 @@
-import dayjs, { Dayjs, OpUnitType } from 'dayjs';
+import dayjs, { OpUnitType } from 'dayjs';
 
 import { dateSort } from '@/utilities/dateSort';
 
@@ -6,24 +6,22 @@ export function getPointsOfInterest(
   dates: string[],
   limit: number,
   groupBy: OpUnitType,
-) {
+): string[] {
   const sortedDates = [...dates].sort(dateSort);
 
-  const interestPoints: Dayjs[] = [];
+  const interestPoints: string[] = [];
 
   for (const date of sortedDates) {
     if (interestPoints.length === limit) {
       break;
     }
 
-    const parsedDate = dayjs(date);
-
     if (
       !interestPoints.some((interestPoint) =>
-        interestPoint.isSame(date, groupBy),
+        dayjs(interestPoint).isSame(date, groupBy),
       )
     ) {
-      interestPoints.unshift(parsedDate);
+      interestPoints.unshift(date);
     }
   }
 
