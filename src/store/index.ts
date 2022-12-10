@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import dashboardReducer from './dashboard';
+import homeReducer from './home';
 import preferencesReducer from './preferences';
 
 export const store = configureStore({
   reducer: {
-    dashboard: dashboardReducer,
+    home: homeReducer,
 
     preferences: preferencesReducer,
   },
