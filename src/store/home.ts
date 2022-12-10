@@ -15,11 +15,11 @@ import { ALL_DATES as PROJECTS_DATES, PROJECTS } from '@/assets/data/projects';
 interface IState {
   activeSegment: HomeSegment;
 
-  projects: IBoardData<IProject>[];
+  projects: IBoardData<IProject>;
 
-  tracks: IBoardData<ITrack>[];
+  tracks: IBoardData<ITrack>;
 
-  posts: IBoardData<IPost>[];
+  posts: IBoardData<IPost>;
 }
 
 const initialState: IState = {
@@ -46,26 +46,26 @@ export const homeSlice = createSlice({
   },
 });
 
-function filterData<T>(source: T[], dates: string[]): IBoardData<T>[] {
+function filterData<T>(source: T[], dates: string[]): IBoardData<T> {
   const pointsOfInterest = getPointsOfInterest(
     dates,
     HOME_INTEREST_POINTS,
     HOME_GROUP_BY,
   );
 
-  return pointsOfInterest.map((pointOfInterest) => {
-    const items = source.filter((item: T) => {
+  const arrayOfItems = pointsOfInterest.map((pointOfInterest) =>
+    source.filter((item: T) => {
       const castedItem = item as { date: string };
 
       return pointOfInterest.isSame(dayjs(castedItem.date), HOME_GROUP_BY);
-    });
+    }),
+  );
 
-    return {
-      pointOfInterest,
+  return {
+    pointsOfInterest,
 
-      items,
-    };
-  });
+    arrayOfItems,
+  };
 }
 
 export const { setActiveSegment } = homeSlice.actions;
