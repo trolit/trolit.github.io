@@ -10,7 +10,7 @@ const SUB_HEADER_HEIGHT = '50px';
 
 export const useHomeStyles = () => {
   const { classes } = createStyles((theme) => {
-    const AVAILABLE_HEIGHT = `calc(100vh - ${HEADER_HEIGHT} - ${SUB_HEADER_HEIGHT} - ${OVERLAY_PADDING}px)`;
+    const AVAILABLE_HEIGHT = `calc(100vh - ${HEADER_HEIGHT} - ${SUB_HEADER_HEIGHT} - ${OVERLAY_PADDING})`;
 
     const classes = {
       subHeader: {

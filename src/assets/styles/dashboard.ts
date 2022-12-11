@@ -22,7 +22,7 @@ export const useDashboardStyles = (route?: string) => {
         [`@media (max-width: ${
           route === HOME_ROUTE ? ACTIVE_THRESHOLD_VALUE : '861px'
         })`]: {
-          marginTop: `${OVERLAY_PADDING}px`,
+          marginTop: OVERLAY_PADDING,
         },
       },
 
@@ -36,7 +36,7 @@ export const useDashboardStyles = (route?: string) => {
 
       scrollArea: {
         borderRadius: theme.fn.radius('md'),
-        height: `calc(100vh - ${HEADER_HEIGHT} - ${OVERLAY_PADDING}px)`,
+        height: `calc(100vh - ${HEADER_HEIGHT} - ${OVERLAY_PADDING})`,
       },
 
       navigationLink: {
