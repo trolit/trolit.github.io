@@ -33,6 +33,12 @@ export const homeSlice = createSlice({
       const segment = action.payload;
 
       state.activeSegment = segment;
+
+      const { pointsOfInterest, arrayOfIndexes } = getDataBySegment(segment);
+
+      state.pointsOfInterest = pointsOfInterest;
+
+      state.arrayOfIndexes = arrayOfIndexes;
     },
   },
 });
