@@ -6,7 +6,7 @@ export const useProfileStyles = () => {
   const { classes } = createStyles((theme) => {
     const classes = {
       wrapper: {
-        height: `calc(100vh - ${OVERLAY_PADDING})`,
+        height: `calc(100vh - ${OVERLAY_PADDING}px)`,
       },
 
       titleWrapper: {

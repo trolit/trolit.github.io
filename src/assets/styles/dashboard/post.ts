@@ -6,7 +6,7 @@ export const usePostStyles = () => {
   const { classes } = createStyles((theme) => {
     const classes = {
       wrapper: {
-        padding: `calc(${DASHBOARD_PADDING} * 2)`,
+        padding: `calc(${DASHBOARD_PADDING}px * 2)`,
 
         [`@media (max-width: ${SMALL_SCREEN_THRESHOLD})`]: {
           paddingLeft: 20,
