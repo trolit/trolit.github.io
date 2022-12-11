@@ -1,4 +1,4 @@
-import { HOME_INTEREST_POINTS } from '@/config';
+import { MAX_HOME_INTEREST_POINTS } from '@/config';
 import { IHomeViewThreshold } from '@/interfaces/IHomeViewThreshold';
 
 const commonThresholdValue = '861px';
@@ -60,5 +60,5 @@ export const HOME_VIEW_THRESHOLDS: IHomeViewThreshold[] = [
 ];
 
 export const ACTIVE_THRESHOLD_VALUE =
-  HOME_VIEW_THRESHOLDS.find(({ points }) => points === HOME_INTEREST_POINTS)
+  HOME_VIEW_THRESHOLDS.find(({ points }) => points === MAX_HOME_INTEREST_POINTS)
     ?.value || HOME_VIEW_THRESHOLDS[0].value;

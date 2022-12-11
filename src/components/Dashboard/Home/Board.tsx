@@ -6,7 +6,7 @@ import { Flex, ScrollArea, Stack, Badge } from '@mantine/core';
 import {
   PRIMARY_COLOR,
   HOME_DATE_FORMATTER,
-  HOME_INTEREST_POINTS,
+  MAX_HOME_INTEREST_POINTS,
 } from '@/config';
 import { RootState } from '@/store';
 import { POSTS } from '@/assets/data/posts';
@@ -83,7 +83,7 @@ export function Board() {
       return firstBoardItem;
     }
 
-    if (index === HOME_INTEREST_POINTS - 1) {
+    if (index === MAX_HOME_INTEREST_POINTS - 1) {
       return lastBoardItem;
     }
 
