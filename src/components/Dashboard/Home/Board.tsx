@@ -78,7 +78,7 @@ export function Board() {
     });
   };
 
-  const getSpecificItemClass = (index: number): string => {
+  const specifyItemsClass = (index: number): string => {
     if (index === 0) {
       return firstBoardItem;
     }
@@ -101,9 +101,7 @@ export function Board() {
             direction='column'
             className={boardColumn}
           >
-            <ScrollArea
-              className={`${boardItems} ${getSpecificItemClass(index)}`}
-            >
+            <ScrollArea className={`${boardItems} ${specifyItemsClass(index)}`}>
               <Stack align='center'>{items}</Stack>
             </ScrollArea>
 
