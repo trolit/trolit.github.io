@@ -21,8 +21,6 @@ export const SMALL_SCREEN_THRESHOLD = '658px';
 
 export const MAX_HOME_INTEREST_POINTS: HomeInterestPoints = 4;
 
-export const HOME_ELEMENT_HEIGHT = 140;
-
 export const HOME_GROUP_BY = 'year';
 
 export const HOME_DATE_FORMATTER = 'YYYY';

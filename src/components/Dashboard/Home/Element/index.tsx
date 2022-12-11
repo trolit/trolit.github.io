@@ -2,7 +2,6 @@ import { ReactNode } from 'react';
 import { TablerIcon } from '@tabler/icons';
 import { Group, Paper, Text, ThemeIcon, Stack, Flex } from '@mantine/core';
 
-import { HOME_ELEMENT_HEIGHT } from '@/config';
 import { useCommonStyles } from '@/assets/styles/common';
 
 interface IProps {
@@ -46,7 +45,7 @@ export function Element({
     <Paper
       withBorder
       className={w100}
-      style={{ height: `${HOME_ELEMENT_HEIGHT}px`, borderLeft: 'unset' }}
+      style={{ height: '140px', borderLeft: 'unset' }}
     >
       <Group align='center' noWrap className={`${h100}`} spacing={innerSpace}>
         <ThemeIcon
