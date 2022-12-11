@@ -11,9 +11,11 @@ import { useCommonStyles } from '@/assets/styles/common';
 
 interface IProps {
   tab: ReactNode;
+
+  subHeader?: ReactNode;
 }
 
-export function MainGrid({ tab }: IProps) {
+export function MainGrid({ tab, subHeader }: IProps) {
   const { mainGrid } = useAppStyles();
 
   const { h100, w100 } = useCommonStyles();
@@ -36,7 +38,7 @@ export function MainGrid({ tab }: IProps) {
         className={`${h100} ${w100}`}
       >
         <motion.div layout className={`${h100} ${w100}`}>
-          <Dashboard tab={tab} />
+          <Dashboard tab={tab} subHeader={subHeader} />
         </motion.div>
       </Grid.Col>
     </Grid>

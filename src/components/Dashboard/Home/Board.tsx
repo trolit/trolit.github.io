@@ -1,31 +1,22 @@
-import dayjs, { Dayjs } from 'dayjs';
+import dayjs from 'dayjs';
+import { ComponentType } from 'react';
+import { useSelector } from 'react-redux';
 import { Flex, ScrollArea, Stack, Badge } from '@mantine/core';
 
 import {
   PRIMARY_COLOR,
-  HOME_GROUP_BY,
   HOME_DATE_FORMATTER,
   HOME_INTEREST_POINTS,
 } from '@/config';
+import { RootState } from '@/store';
+import { POSTS } from '@/assets/data/posts';
 import { PostElement } from './Element/Post';
 import { TRACKS } from '@/assets/data/tracks';
 import { TrackElement } from './Element/Track';
+import { HomeSegment } from '@/enums/HomeSegment';
+import { PROJECTS } from '@/assets/data/projects';
 import { ProjectElement } from './Element/Project';
 import { useHomeStyles } from '@/assets/styles/dashboard/home';
-import { getPointsOfInterest } from '@/helpers/getPointsOfInterest';
-import { ALL_DATES as POSTS_DATES, POSTS } from '@/assets/data/posts';
-import { ALL_DATES as PROJECTS_DATES, PROJECTS } from '@/assets/data/projects';
-
-function filterCollectionByPointOfInterest<T>(
-  collection: T[],
-  pointOfInterest: Dayjs,
-) {
-  return collection.filter((element: T) => {
-    const castedElement = element as { date: string };
-
-    return pointOfInterest.isSame(dayjs(castedElement.date), HOME_GROUP_BY);
-  });
-}
 
 export function Board() {
   const {
@@ -37,11 +28,55 @@ export function Board() {
     innerBoardItem,
   } = useHomeStyles();
 
-  const pointsOfInterest = getPointsOfInterest(
-    [...POSTS_DATES, ...PROJECTS_DATES],
-    HOME_INTEREST_POINTS,
-    HOME_GROUP_BY,
+  const activeSegment = useSelector(
+    (state: RootState) => state.home.activeSegment,
   );
+
+  const arrayOfIndexes = useSelector(
+    (state: RootState) => state.home.arrayOfIndexes,
+  );
+
+  const pointsOfInterest = useSelector(
+    (state: RootState) => state.home.pointsOfInterest,
+  );
+
+  const getSegmentData = () => {
+    switch (activeSegment) {
+      case HomeSegment.POSTS:
+        return {
+          key: 'post',
+          data: POSTS,
+          component: PostElement as ComponentType,
+        };
+
+      case HomeSegment.TRACKS:
+        return {
+          key: 'track',
+          data: TRACKS,
+          component: TrackElement as ComponentType,
+        };
+
+      default:
+        return {
+          key: 'project',
+          data: PROJECTS,
+          component: ProjectElement as ComponentType,
+        };
+    }
+  };
+
+  const getBoardColumnItems = (pointOfInterestIndex: number) => {
+    const { key, data, component: Component } = getSegmentData();
+
+    return arrayOfIndexes[pointOfInterestIndex].map((index) => {
+      const props = {
+        key: `${key}-${index}`,
+        item: data[index],
+      };
+
+      return <Component {...props} />;
+    });
+  };
 
   const getSpecificItemClass = (index: number): string => {
     if (index === 0) {
@@ -58,43 +93,18 @@ export function Board() {
   return (
     <Flex>
       {pointsOfInterest.map((pointOfInterest, index) => {
-        const projects = filterCollectionByPointOfInterest(
-          PROJECTS,
-          pointOfInterest,
-        ).map((project, index) => (
-          <ProjectElement key={`project-${index}`} item={project} />
-        ));
-
-        const posts = filterCollectionByPointOfInterest(
-          POSTS,
-          pointOfInterest,
-        ).map((post, index) => (
-          <PostElement key={`post-${index}`} item={post} />
-        ));
-
-        const tracks = filterCollectionByPointOfInterest(
-          TRACKS,
-          pointOfInterest,
-        ).map((track, index) => (
-          <TrackElement key={`track-${index}`} item={track} />
-        ));
+        const items = getBoardColumnItems(index);
 
         return (
           <Flex
-            key={pointOfInterest.format()}
+            key={pointOfInterest}
             direction='column'
             className={boardColumn}
           >
             <ScrollArea
               className={`${boardItems} ${getSpecificItemClass(index)}`}
             >
-              <Stack align='center'>
-                {projects}
-
-                {posts}
-
-                {tracks}
-              </Stack>
+              <Stack align='center'>{items}</Stack>
             </ScrollArea>
 
             <Badge
@@ -103,7 +113,7 @@ export function Board() {
               className={boardDate}
               color={PRIMARY_COLOR}
             >
-              {pointOfInterest.format(HOME_DATE_FORMATTER)}
+              {dayjs(pointOfInterest).format(HOME_DATE_FORMATTER)}
             </Badge>
           </Flex>
         );

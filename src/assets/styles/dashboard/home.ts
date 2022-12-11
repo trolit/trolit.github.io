@@ -2,26 +2,27 @@ import { createStyles } from '@mantine/core';
 
 import { HEADER_HEIGHT, OVERLAY_PADDING, DASHBOARD_PADDING } from '@/config';
 
-const TITLE_HEIGHT = '50px';
-
 const INNER_PADDING = '7px';
 
 const DATE_BADGE_HEIGHT = '35px';
 
+const SUB_HEADER_HEIGHT = '50px';
+
 export const useHomeStyles = () => {
   const { classes } = createStyles((theme) => {
-    const AVAILABLE_HEIGHT = `calc(100vh - ${HEADER_HEIGHT}px - ${OVERLAY_PADDING}px)`;
+    const AVAILABLE_HEIGHT = `calc(100vh - ${HEADER_HEIGHT}px - ${SUB_HEADER_HEIGHT} - ${OVERLAY_PADDING}px)`;
 
     const classes = {
-      title: {
+      subHeader: {
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center',
-        height: `${TITLE_HEIGHT}`,
+        height: SUB_HEADER_HEIGHT,
+        justifyContent: 'space-between',
+        padding: `0 ${DASHBOARD_PADDING}px`,
       },
 
       horizontalScroll: {
-        height: `calc(${AVAILABLE_HEIGHT} - ${TITLE_HEIGHT})`,
+        height: AVAILABLE_HEIGHT,
       },
 
       boardColumn: {
@@ -30,7 +31,7 @@ export const useHomeStyles = () => {
       },
 
       boardItems: {
-        height: `calc(${AVAILABLE_HEIGHT} - ${TITLE_HEIGHT} - ${DATE_BADGE_HEIGHT})`,
+        height: `calc(${AVAILABLE_HEIGHT} - ${DATE_BADGE_HEIGHT})`,
       },
 
       firstBoardItem: {

@@ -17,9 +17,11 @@ import { PRIMARY_COLOR, BACKGROUND_SRC } from '@/config';
 
 interface IProps {
   tab: ReactNode;
+
+  subHeader?: ReactNode;
 }
 
-export default function App({ tab }: IProps) {
+export default function App({ tab, subHeader }: IProps) {
   const { scrollArea, container } = useAppStyles();
 
   const { h100, w100 } = useCommonStyles();
@@ -46,7 +48,7 @@ export default function App({ tab }: IProps) {
         >
           <Container fluid className={container}>
             <Center className={`${h100} ${w100}`}>
-              <MainGrid tab={tab} />
+              <MainGrid tab={tab} subHeader={subHeader} />
             </Center>
           </Container>
         </ScrollArea>
