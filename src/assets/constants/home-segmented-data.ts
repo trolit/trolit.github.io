@@ -4,7 +4,7 @@ import { HomeSegment } from '@/enums/HomeSegment';
 import { IPost } from '@/interfaces/dashboard/IPost';
 import { ITrack } from '@/interfaces/dashboard/ITrack';
 import { IProject } from '@/interfaces/dashboard/IProject';
-import { HOME_GROUP_BY, HOME_INTEREST_POINTS } from '@/config';
+import { HOME_GROUP_BY, MAX_HOME_INTEREST_POINTS } from '@/config';
 import { getPointsOfInterest } from '@/helpers/getPointsOfInterest';
 import { ALL_DATES as POSTS_DATES, POSTS } from '@/assets/data/posts';
 import { ALL_DATES as TRACKS_DATES, TRACKS } from '@/assets/data/tracks';
@@ -43,7 +43,7 @@ const CONSTRUCTED_SEGMENTS: ISegmentData[] = [];
 for (const { value, dates, items } of homeSegments) {
   const pointsOfInterest = getPointsOfInterest(
     dates,
-    HOME_INTEREST_POINTS,
+    MAX_HOME_INTEREST_POINTS,
     HOME_GROUP_BY,
   );
 
@@ -70,7 +70,7 @@ function getArrayOfIndexes(
 ): number[][] {
   const arrayOfIndexes: number[][] = [];
 
-  for (let index = 0; index < HOME_INTEREST_POINTS; index++) {
+  for (let index = 0; index < MAX_HOME_INTEREST_POINTS; index++) {
     arrayOfIndexes.push([]);
   }
 

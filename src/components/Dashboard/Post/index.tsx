@@ -1,4 +1,4 @@
-import { Stack } from '@mantine/core';
+import { ScrollArea, Stack } from '@mantine/core';
 import { useParams, Navigate } from 'react-router-dom';
 
 import { POSTS } from '@/assets/data/posts';
@@ -6,6 +6,7 @@ import { IPost } from '@/interfaces/dashboard/IPost';
 import { POSTS_ROUTE } from '@/assets/constants/routes';
 import { usePostRenderer } from '@/services/usePostRenderer';
 import { usePostStyles } from '@/assets/styles/dashboard/post';
+import { useDashboardStyles } from '@/assets/styles/dashboard';
 
 export function Post() {
   type ExpectedParams = {
@@ -13,6 +14,8 @@ export function Post() {
   };
 
   const { wrapper } = usePostStyles();
+
+  const { scrollArea } = useDashboardStyles();
 
   const postRenderer = usePostRenderer<IPost>();
 
@@ -31,8 +34,10 @@ export function Post() {
   const post = POSTS[parsedPostId - 1];
 
   return (
-    <Stack spacing='xl' align='center' className={wrapper}>
-      {postRenderer.render(post)}
-    </Stack>
+    <ScrollArea className={scrollArea}>
+      <Stack spacing='xl' align='center' className={wrapper}>
+        {postRenderer.render(post)}
+      </Stack>
+    </ScrollArea>
   );
 }

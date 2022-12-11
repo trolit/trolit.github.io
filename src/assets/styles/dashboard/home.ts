@@ -10,15 +10,15 @@ const SUB_HEADER_HEIGHT = '50px';
 
 export const useHomeStyles = () => {
   const { classes } = createStyles((theme) => {
-    const AVAILABLE_HEIGHT = `calc(100vh - ${HEADER_HEIGHT}px - ${SUB_HEADER_HEIGHT} - ${OVERLAY_PADDING}px)`;
+    const AVAILABLE_HEIGHT = `calc(100vh - ${HEADER_HEIGHT} - ${SUB_HEADER_HEIGHT} - ${OVERLAY_PADDING})`;
 
     const classes = {
       subHeader: {
         display: 'flex',
         alignItems: 'center',
+        justifyContent: 'center',
         height: SUB_HEADER_HEIGHT,
-        justifyContent: 'space-between',
-        padding: `0 ${DASHBOARD_PADDING}px`,
+        padding: `0 ${DASHBOARD_PADDING}`,
       },
 
       horizontalScroll: {

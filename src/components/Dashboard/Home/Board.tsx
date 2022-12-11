@@ -6,7 +6,7 @@ import { Flex, ScrollArea, Stack, Badge } from '@mantine/core';
 import {
   PRIMARY_COLOR,
   HOME_DATE_FORMATTER,
-  HOME_INTEREST_POINTS,
+  MAX_HOME_INTEREST_POINTS,
 } from '@/config';
 import { RootState } from '@/store';
 import { POSTS } from '@/assets/data/posts';
@@ -78,12 +78,12 @@ export function Board() {
     });
   };
 
-  const getSpecificItemClass = (index: number): string => {
+  const specifyItemsClass = (index: number): string => {
     if (index === 0) {
       return firstBoardItem;
     }
 
-    if (index === HOME_INTEREST_POINTS - 1) {
+    if (index === MAX_HOME_INTEREST_POINTS - 1) {
       return lastBoardItem;
     }
 
@@ -101,9 +101,7 @@ export function Board() {
             direction='column'
             className={boardColumn}
           >
-            <ScrollArea
-              className={`${boardItems} ${getSpecificItemClass(index)}`}
-            >
+            <ScrollArea className={`${boardItems} ${specifyItemsClass(index)}`}>
               <Stack align='center'>{items}</Stack>
             </ScrollArea>
 

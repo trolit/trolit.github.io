@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { Paper, Title, SegmentedControl } from '@mantine/core';
+import { Paper, SegmentedControl } from '@mantine/core';
 
 import { RootState } from '@/store';
 import { PRIMARY_COLOR } from '@/config';
@@ -18,8 +18,6 @@ export function SubHeader() {
 
   return (
     <Paper radius={0} className={subHeader}>
-      <Title order={5}>Recent Activity</Title>
-
       <SegmentedControl
         value={activeSegment}
         color={PRIMARY_COLOR}
