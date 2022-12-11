@@ -21,7 +21,7 @@ export const SMALL_SCREEN_THRESHOLD = '658px';
 
 export const HOME_INTEREST_POINTS: HomeInterestPoints = 5;
 
-export const HOME_ELEMENT_HEIGHT = 120;
+export const HOME_ELEMENT_HEIGHT = 140;
 
 export const HOME_GROUP_BY = 'month';
 
