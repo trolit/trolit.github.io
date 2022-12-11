@@ -15,7 +15,7 @@ export const useDashboardStyles = (route?: string) => {
       },
 
       headerDrawerScrollArea: {
-        height: `calc(100vh - ${HEADER_HEIGHT}px - 20px)`,
+        height: `calc(100vh - ${HEADER_HEIGHT} - 20px)`,
       },
 
       wrapper: {
@@ -36,7 +36,7 @@ export const useDashboardStyles = (route?: string) => {
 
       scrollArea: {
         borderRadius: theme.fn.radius('md'),
-        height: `calc(100vh - ${HEADER_HEIGHT}px - ${OVERLAY_PADDING}px)`,
+        height: `calc(100vh - ${HEADER_HEIGHT} - ${OVERLAY_PADDING}px)`,
       },
 
       navigationLink: {
