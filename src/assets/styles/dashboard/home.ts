@@ -18,7 +18,7 @@ export const useHomeStyles = () => {
         alignItems: 'center',
         justifyContent: 'center',
         height: SUB_HEADER_HEIGHT,
-        padding: `0 ${DASHBOARD_PADDING}px`,
+        padding: `0 ${DASHBOARD_PADDING}`,
       },
 
       horizontalScroll: {
