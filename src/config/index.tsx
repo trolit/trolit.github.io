@@ -23,9 +23,9 @@ export const HOME_INTEREST_POINTS: HomeInterestPoints = 5;
 
 export const HOME_ELEMENT_HEIGHT = 140;
 
-export const HOME_GROUP_BY = 'month';
+export const HOME_GROUP_BY = 'year';
 
-export const HOME_DATE_FORMATTER = 'MM/YYYY';
+export const HOME_DATE_FORMATTER = 'YYYY';
 
 export const YOUTUBE_WATCH_URL = `https://www.youtube.com/watch?v=`;
 
