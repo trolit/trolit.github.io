@@ -26,8 +26,9 @@ export const useHomeStyles = () => {
       },
 
       boardColumn: {
-        width: '100%',
-        flexShrink: 1,
+        width: 0,
+        minWidth: 200,
+        flex: '1 1 0px',
       },
 
       boardItems: {
