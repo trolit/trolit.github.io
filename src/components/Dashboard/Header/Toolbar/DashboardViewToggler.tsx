@@ -1,4 +1,3 @@
-import { useLocation } from 'react-router-dom';
 import { ActionIcon, Tooltip } from '@mantine/core';
 import { useDispatch, useSelector } from 'react-redux';
 import { IconMinimize, IconMaximize } from '@tabler/icons';
@@ -11,9 +10,7 @@ import { useDashboardStyles } from '@/assets/styles/dashboard';
 export function DashboardViewToggler() {
   const dispatch = useDispatch();
 
-  const location = useLocation();
-
-  const { viewToggler } = useDashboardStyles(location.pathname);
+  const { viewToggler } = useDashboardStyles();
 
   const isDashboardMaximized = useSelector(
     (state: RootState) => state.preferences.isDashboardMaximized,

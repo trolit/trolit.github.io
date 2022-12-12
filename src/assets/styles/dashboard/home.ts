@@ -10,7 +10,7 @@ const SUB_HEADER_HEIGHT = '50px';
 
 export const useHomeStyles = () => {
   const { classes } = createStyles((theme) => {
-    const AVAILABLE_HEIGHT = `calc(100vh - ${HEADER_HEIGHT} - ${SUB_HEADER_HEIGHT} - ${OVERLAY_PADDING})`;
+    const AVAILABLE_HEIGHT = `calc(100vh - ${HEADER_HEIGHT} - ${SUB_HEADER_HEIGHT} - ${OVERLAY_PADDING}px)`;
 
     const classes = {
       subHeader: {
@@ -18,7 +18,7 @@ export const useHomeStyles = () => {
         alignItems: 'center',
         justifyContent: 'center',
         height: SUB_HEADER_HEIGHT,
-        padding: `0 ${DASHBOARD_PADDING}`,
+        padding: `0 ${DASHBOARD_PADDING}px`,
       },
 
       horizontalScroll: {
@@ -26,8 +26,9 @@ export const useHomeStyles = () => {
       },
 
       boardColumn: {
-        width: '100%',
-        flexShrink: 1,
+        width: 0,
+        minWidth: 200,
+        flex: '1 1 0px',
       },
 
       boardItems: {

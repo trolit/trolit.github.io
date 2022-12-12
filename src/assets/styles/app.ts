@@ -17,8 +17,8 @@ export const useAppStyles = () => {
       },
 
       mainGrid: {
-        height: `calc(100% - ${OVERLAY_PADDING})`,
-        width: `calc(100% - ${OVERLAY_PADDING})`,
+        height: `calc(100% - ${OVERLAY_PADDING}px)`,
+        width: `calc(100% - ${OVERLAY_PADDING}px + ${OVERLAY_PADDING / 2}px)`,
       },
     };
 

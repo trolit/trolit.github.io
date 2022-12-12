@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useSelector } from 'react-redux';
 
 import { RootState } from '@/store';
+import { OVERLAY_PADDING } from '@/config';
 import { Profile } from '@/components/Profile';
 import { Dashboard } from '@/components/Dashboard';
 import { useAppStyles } from '@/assets/styles/app';
@@ -25,7 +26,7 @@ export function MainGrid({ tab, subHeader }: IProps) {
   );
 
   return (
-    <Grid grow gutter='xs' align='center' className={mainGrid}>
+    <Grid grow gutter={OVERLAY_PADDING / 2} align='center' className={mainGrid}>
       {!isDashboardMaximized && (
         <Grid.Col py={0} span={3} className={`${h100} ${w100}`}>
           <Profile />
