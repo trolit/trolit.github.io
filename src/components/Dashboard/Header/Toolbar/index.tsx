@@ -2,15 +2,15 @@ import { Group } from '@mantine/core';
 import { motion } from 'framer-motion';
 
 import { ThemeSwitcher } from './ThemeSwitcher';
-import { DashboardViewToggler } from './DashboardViewToggler';
+import { ProfileCardToggler } from './ProfileCardToggler';
 
 export function Toolbar() {
   return (
     <motion.div layout>
-      <Group noWrap px='sm'>
+      <Group noWrap px='sm' spacing={5}>
         <ThemeSwitcher />
 
-        <DashboardViewToggler />
+        <ProfileCardToggler />
       </Group>
     </motion.div>
   );
