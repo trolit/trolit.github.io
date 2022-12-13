@@ -7,6 +7,7 @@ export const useProfileStyles = () => {
     const classes = {
       wrapper: {
         height: `calc(100vh - ${OVERLAY_PADDING}px)`,
+        minWidth: 300,
       },
 
       titleWrapper: {
