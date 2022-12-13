@@ -27,7 +27,7 @@ export function MainGrid({ tab, subHeader }: IProps) {
 
   return (
     <Grid grow gutter={OVERLAY_PADDING / 2} align='center' className={mainGrid}>
-      {!isProfileCardVisible && (
+      {isProfileCardVisible && (
         <Grid.Col py={0} span={3} className={`${h100} ${w100}`}>
           <Profile />
         </Grid.Col>
