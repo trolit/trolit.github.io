@@ -26,7 +26,7 @@ export const useDashboardStyles = (route?: string) => {
         },
       },
 
-      viewToggler: {
+      profileCardToggler: {
         [`@media (max-width: ${
           route === HOME_ROUTE ? ACTIVE_THRESHOLD_VALUE : '884px'
         })`]: {

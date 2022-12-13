@@ -6,13 +6,13 @@ import { DARK_THEME } from '@/assets/constants/themes';
 interface IState {
   colorScheme: ColorScheme;
 
-  isDashboardMaximized: boolean;
+  isProfileCardVisible: boolean;
 }
 
 const initialState: IState = {
   colorScheme: DARK_THEME,
 
-  isDashboardMaximized: false,
+  isProfileCardVisible: false,
 };
 
 export const preferencesSlice = createSlice({
@@ -25,13 +25,13 @@ export const preferencesSlice = createSlice({
       state.colorScheme = action.payload;
     },
 
-    toggleDashboardView: (state) => {
-      state.isDashboardMaximized = !state.isDashboardMaximized;
+    toggleProfileCard: (state) => {
+      state.isProfileCardVisible = !state.isProfileCardVisible;
     },
   },
 });
 
-export const { toggleColorScheme, toggleDashboardView } =
+export const { toggleColorScheme, toggleProfileCard } =
   preferencesSlice.actions;
 
 export default preferencesSlice.reducer;

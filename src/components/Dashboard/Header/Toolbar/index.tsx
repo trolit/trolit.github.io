@@ -2,7 +2,7 @@ import { Group } from '@mantine/core';
 import { motion } from 'framer-motion';
 
 import { ThemeSwitcher } from './ThemeSwitcher';
-import { DashboardViewToggler } from './DashboardViewToggler';
+import { ProfileCardToggler } from './ProfileCardToggler';
 
 export function Toolbar() {
   return (
@@ -10,7 +10,7 @@ export function Toolbar() {
       <Group noWrap px='sm'>
         <ThemeSwitcher />
 
-        <DashboardViewToggler />
+        <ProfileCardToggler />
       </Group>
     </motion.div>
   );

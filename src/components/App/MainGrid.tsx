@@ -21,13 +21,13 @@ export function MainGrid({ tab, subHeader }: IProps) {
 
   const { h100, w100 } = useCommonStyles();
 
-  const isDashboardMaximized = useSelector(
-    (state: RootState) => state.preferences.isDashboardMaximized,
+  const isProfileCardVisible = useSelector(
+    (state: RootState) => state.preferences.isProfileCardVisible,
   );
 
   return (
     <Grid grow gutter={OVERLAY_PADDING / 2} align='center' className={mainGrid}>
-      {!isDashboardMaximized && (
+      {!isProfileCardVisible && (
         <Grid.Col py={0} span={3} className={`${h100} ${w100}`}>
           <Profile />
         </Grid.Col>
@@ -35,7 +35,7 @@ export function MainGrid({ tab, subHeader }: IProps) {
 
       <Grid.Col
         py={0}
-        span={isDashboardMaximized ? 12 : 9}
+        span={isProfileCardVisible ? 12 : 9}
         className={`${h100} ${w100}`}
       >
         <motion.div layout className={`${h100} ${w100}`}>
