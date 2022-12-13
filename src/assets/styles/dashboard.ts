@@ -26,14 +26,6 @@ export const useDashboardStyles = (route?: string) => {
         },
       },
 
-      profileCardToggler: {
-        [`@media (max-width: ${
-          route === HOME_ROUTE ? ACTIVE_THRESHOLD_VALUE : '884px'
-        })`]: {
-          display: 'none',
-        },
-      },
-
       scrollArea: {
         borderRadius: theme.fn.radius('md'),
         height: `calc(100vh - ${HEADER_HEIGHT} - ${OVERLAY_PADDING}px)`,

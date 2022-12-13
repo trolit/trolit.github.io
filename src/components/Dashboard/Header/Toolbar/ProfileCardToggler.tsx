@@ -5,12 +5,9 @@ import { IconAddressBookOff, IconAddressBook } from '@tabler/icons';
 import { RootState } from '@/store';
 import { PRIMARY_COLOR } from '@/config';
 import { toggleProfileCard } from '@/store/preferences';
-import { useDashboardStyles } from '@/assets/styles/dashboard';
 
 export function ProfileCardToggler() {
   const dispatch = useDispatch();
-
-  const { profileCardToggler } = useDashboardStyles();
 
   const isProfileCardVisible = useSelector(
     (state: RootState) => state.preferences.isProfileCardVisible,
@@ -25,7 +22,6 @@ export function ProfileCardToggler() {
       <ActionIcon
         variant='light'
         color={PRIMARY_COLOR}
-        className={profileCardToggler}
         onClick={() => dispatch(toggleProfileCard())}
       >
         <ThemeIcon variant='gradient'>
