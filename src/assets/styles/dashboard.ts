@@ -20,7 +20,7 @@ export const useDashboardStyles = (route?: string) => {
 
       wrapper: {
         [`@media (max-width: ${
-          route === HOME_ROUTE ? ACTIVE_THRESHOLD_VALUE : '861px'
+          route === HOME_ROUTE ? ACTIVE_THRESHOLD_VALUE : '1249px'
         })`]: {
           margin: `calc(${OVERLAY_PADDING}px / 2) 0`,
         },
