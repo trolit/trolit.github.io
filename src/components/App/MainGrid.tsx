@@ -35,7 +35,7 @@ export function MainGrid({ tab, subHeader }: IProps) {
 
       <Grid.Col
         py={0}
-        span={isProfileCardVisible ? 12 : 9}
+        span={isProfileCardVisible ? 9 : 12}
         className={`${h100} ${w100}`}
       >
         <motion.div layout className={`${h100} ${w100}`}>
