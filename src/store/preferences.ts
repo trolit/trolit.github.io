@@ -12,7 +12,7 @@ interface IState {
 const initialState: IState = {
   colorScheme: DARK_THEME,
 
-  isProfileCardVisible: false,
+  isProfileCardVisible: true,
 };
 
 export const preferencesSlice = createSlice({
