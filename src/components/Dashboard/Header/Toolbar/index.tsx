@@ -7,7 +7,7 @@ import { ProfileCardToggler } from './ProfileCardToggler';
 export function Toolbar() {
   return (
     <motion.div layout>
-      <Group noWrap px='sm'>
+      <Group noWrap px='sm' spacing={5}>
         <ThemeSwitcher />
 
         <ProfileCardToggler />
