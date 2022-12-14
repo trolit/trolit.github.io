@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { Paper, SegmentedControl } from '@mantine/core';
+import { Paper, SegmentedControl, Text } from '@mantine/core';
 
 import { RootState } from '@/store';
 import { PRIMARY_COLOR } from '@/config';
@@ -7,7 +7,7 @@ import { setActiveSegment } from '@/store/home';
 import { HomeSegment } from '@/enums/HomeSegment';
 import { useHomeStyles } from '@/assets/styles/dashboard/home';
 
-export function SubHeader() {
+export function Subheader() {
   const { subHeader } = useHomeStyles();
 
   const dispatch = useDispatch();
@@ -18,6 +18,10 @@ export function SubHeader() {
 
   return (
     <Paper radius={0} className={subHeader}>
+      <Text c='dimmed' fz='sm'>
+        Recent activity
+      </Text>
+
       <SegmentedControl
         value={activeSegment}
         color={PRIMARY_COLOR}
