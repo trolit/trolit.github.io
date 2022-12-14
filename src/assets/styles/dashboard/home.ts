@@ -16,7 +16,7 @@ export const useHomeStyles = () => {
       subHeader: {
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         height: SUB_HEADER_HEIGHT,
         padding: `0 ${DASHBOARD_PADDING}px`,
       },
