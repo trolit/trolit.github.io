@@ -40,6 +40,7 @@ export default function App({ tab, subHeader }: IProps) {
         withGlobalStyles
         withNormalizeCSS
       >
+        {/* or Container -> Center -> ScrollArea -> MainGrid */}
         <ScrollArea
           className={scrollArea}
           style={{
