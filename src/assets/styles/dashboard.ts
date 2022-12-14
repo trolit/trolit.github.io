@@ -1,11 +1,9 @@
 import { createStyles } from '@mantine/core';
 
-import { HOME_ROUTE } from '@/assets/constants/routes';
 import { DARK_THEME } from '@/assets/constants/themes';
 import { HEADER_HEIGHT, OVERLAY_PADDING } from '@/config';
-import { ACTIVE_THRESHOLD_VALUE } from '@/assets//constants/home-view-thresholds';
 
-export const useDashboardStyles = (route?: string) => {
+export const useDashboardStyles = () => {
   const { classes } = createStyles((theme) => {
     const { spacing } = theme;
 
@@ -16,14 +14,6 @@ export const useDashboardStyles = (route?: string) => {
 
       headerDrawerScrollArea: {
         height: `calc(100vh - ${HEADER_HEIGHT} - 20px)`,
-      },
-
-      wrapper: {
-        [`@media (max-width: ${
-          route === HOME_ROUTE ? ACTIVE_THRESHOLD_VALUE : '1249px'
-        })`]: {
-          margin: `calc(${OVERLAY_PADDING}px / 2) 0`,
-        },
       },
 
       scrollArea: {
