@@ -7,10 +7,10 @@ import { useCommonStyles } from '@/assets/styles/common';
 interface IProps {
   tab: ReactNode;
 
-  subHeader?: ReactNode;
+  subheader?: ReactNode;
 }
 
-export function Dashboard({ tab, subHeader }: IProps) {
+export function Dashboard({ tab, subheader }: IProps) {
   const { panel } = useCommonStyles();
 
   return (
@@ -18,7 +18,7 @@ export function Dashboard({ tab, subHeader }: IProps) {
       <Container px={0} fluid>
         <PanelHeader />
 
-        {subHeader}
+        {subheader}
       </Container>
 
       <Container px={0} fluid>

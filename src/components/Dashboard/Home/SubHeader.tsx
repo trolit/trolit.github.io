@@ -7,7 +7,7 @@ import { setActiveSegment } from '@/store/home';
 import { HomeSegment } from '@/enums/HomeSegment';
 import { useHomeStyles } from '@/assets/styles/dashboard/home';
 
-export function SubHeader() {
+export function Subheader() {
   const { subHeader } = useHomeStyles();
 
   const dispatch = useDispatch();
