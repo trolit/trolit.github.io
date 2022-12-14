@@ -17,6 +17,8 @@ export const useAppStyles = () => {
       },
 
       mainGrid: {
+        display: 'inherit',
+        rowGap: OVERLAY_PADDING / 2,
         height: `calc(100% - ${OVERLAY_PADDING}px)`,
         width: `calc(100% - ${OVERLAY_PADDING}px + ${OVERLAY_PADDING / 2}px)`,
       },
