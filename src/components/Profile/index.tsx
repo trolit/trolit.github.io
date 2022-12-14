@@ -31,7 +31,12 @@ export function Profile() {
   const { wrapper, titleWrapper, group, link } = useProfileStyles();
 
   return (
-    <Paper p='lg' radius='md' withBorder className={`${panel} ${wrapper}`}>
+    <Paper
+      p='lg'
+      radius='md'
+      withBorder
+      className={`${panel} ${wrapper} ${h100}`}
+    >
       <Stack align='center' justify='center' className={h100}>
         <Avatar src={avatarSrc} size={160} radius={120} mx='auto' />
 
