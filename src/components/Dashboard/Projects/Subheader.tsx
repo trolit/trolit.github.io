@@ -17,10 +17,16 @@ export function Subheader() {
     (state: RootState) => state.projects.activeSegment,
   );
 
-  const languagesSegmentedControlData = ALL_LANGUAGES.map(({ acronym }) => ({
-    label: acronym,
-    value: acronym,
-  }));
+  const languagesSegmentedControlData = [
+    {
+      label: 'Any',
+      value: 'any',
+    },
+    ...ALL_LANGUAGES.map(({ acronym }) => ({
+      label: acronym,
+      value: acronym,
+    })),
+  ];
 
   return (
     <Paper radius={0} className={subheader}>
@@ -36,7 +42,7 @@ export function Subheader() {
 
       {activeSegment === ProjectsSegment.ALL && (
         <SegmentedControl
-          value={activeSegment}
+          value='any'
           color={PRIMARY_COLOR}
           data={languagesSegmentedControlData}
         />
