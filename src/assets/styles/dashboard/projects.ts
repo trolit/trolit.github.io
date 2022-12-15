@@ -20,6 +20,14 @@ export const useProjectsStyles = () => {
         borderRadius: theme.fn.radius('md'),
         height: `calc(100vh - ${HEADER_HEIGHT} - ${OVERLAY_PADDING}px - ${SUB_HEADER_HEIGHT})`,
       },
+
+      subheader: {
+        display: 'flex',
+        alignItems: 'center',
+        height: SUB_HEADER_HEIGHT,
+        justifyContent: 'space-between',
+        padding: `0 ${DASHBOARD_PADDING}px`,
+      },
     };
 
     return classes;
