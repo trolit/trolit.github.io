@@ -13,11 +13,11 @@ export const useHomeStyles = () => {
     const AVAILABLE_HEIGHT = `calc(100vh - ${HEADER_HEIGHT} - ${SUB_HEADER_HEIGHT} - ${OVERLAY_PADDING}px)`;
 
     const classes = {
-      subHeader: {
+      subheader: {
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'space-between',
         height: SUB_HEADER_HEIGHT,
+        justifyContent: 'space-between',
         padding: `0 ${DASHBOARD_PADDING}px`,
       },
 

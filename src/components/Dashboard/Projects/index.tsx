@@ -1,23 +1,24 @@
-import { Container, Grid, ScrollArea } from '@mantine/core';
+import { useSelector } from 'react-redux';
+import { Container, ScrollArea } from '@mantine/core';
 
-import { Element } from './Element';
+import { All } from './All';
+import { RootState } from '@/store';
+import { Featured } from './Featured';
 import { DASHBOARD_PADDING } from '@/config';
-import { PROJECTS } from '@/assets/data/projects';
-import { useDashboardStyles } from '@/assets/styles/dashboard';
+import { ProjectsSegment } from '@/enums/ProjectsSegment';
+import { useProjectsStyles } from '@/assets/styles/dashboard/projects';
 
 export function Projects() {
-  const { scrollArea } = useDashboardStyles();
+  const { scrollArea } = useProjectsStyles();
+
+  const activeSegment = useSelector(
+    (state: RootState) => state.projects.activeSegment,
+  );
 
   return (
     <ScrollArea className={scrollArea}>
-      <Container p={DASHBOARD_PADDING} fluid>
-        <Grid gutter='xl' justify='center'>
-          {PROJECTS.map((project, index) => (
-            <Grid.Col key={`project-${index}`} xs={12} lg={4}>
-              <Element item={project} />
-            </Grid.Col>
-          ))}
-        </Grid>
+      <Container pt={0} p={DASHBOARD_PADDING} fluid>
+        {activeSegment === ProjectsSegment.ALL ? <All /> : <Featured />}
       </Container>
     </ScrollArea>
   );
