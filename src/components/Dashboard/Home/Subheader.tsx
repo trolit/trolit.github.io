@@ -8,7 +8,7 @@ import { HomeSegment } from '@/enums/HomeSegment';
 import { useHomeStyles } from '@/assets/styles/dashboard/home';
 
 export function Subheader() {
-  const { subHeader } = useHomeStyles();
+  const { subheader } = useHomeStyles();
 
   const dispatch = useDispatch();
 
@@ -17,7 +17,7 @@ export function Subheader() {
   );
 
   return (
-    <Paper radius={0} className={subHeader}>
+    <Paper radius={0} className={subheader}>
       <Text c='dimmed' fz='sm'>
         Recent activity
       </Text>

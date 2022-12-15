@@ -13,7 +13,7 @@ export const useHomeStyles = () => {
     const AVAILABLE_HEIGHT = `calc(100vh - ${HEADER_HEIGHT} - ${SUB_HEADER_HEIGHT} - ${OVERLAY_PADDING}px)`;
 
     const classes = {
-      subHeader: {
+      subheader: {
         display: 'flex',
         alignItems: 'center',
         height: SUB_HEADER_HEIGHT,
