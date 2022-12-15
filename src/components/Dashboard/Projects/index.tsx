@@ -3,10 +3,10 @@ import { Container, Grid, ScrollArea } from '@mantine/core';
 import { Element } from './Element';
 import { DASHBOARD_PADDING } from '@/config';
 import { PROJECTS } from '@/assets/data/projects';
-import { useDashboardStyles } from '@/assets/styles/dashboard';
+import { useProjectsStyles } from '@/assets/styles/dashboard/projects';
 
 export function Projects() {
-  const { scrollArea } = useDashboardStyles();
+  const { scrollArea } = useProjectsStyles();
 
   return (
     <ScrollArea className={scrollArea}>
