@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
+import { ANY } from '@/assets/constants/common';
 import { ProjectsSegment } from '@/enums/ProjectsSegment';
 
 interface IState {
@@ -11,7 +12,7 @@ interface IState {
 const initialState: IState = {
   activeSegment: ProjectsSegment.ALL,
 
-  activeLanguage: 'any',
+  activeLanguage: ANY,
 };
 
 export const projectsSlice = createSlice({
