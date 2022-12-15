@@ -10,7 +10,7 @@ export function Projects() {
 
   return (
     <ScrollArea className={scrollArea}>
-      <Container p={DASHBOARD_PADDING} fluid>
+      <Container pt={0} p={DASHBOARD_PADDING} fluid>
         <Grid gutter='xl' justify='center'>
           {PROJECTS.map((project, index) => (
             <Grid.Col key={`project-${index}`} xs={12} lg={4}>
