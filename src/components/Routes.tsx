@@ -7,6 +7,7 @@ import { Posts } from './Dashboard/Posts';
 import { Tracks } from './Dashboard/Tracks';
 import { Projects } from './Dashboard/Projects';
 import { Subheader as HomeSubheader } from './Dashboard/Home/Subheader';
+import { Subheader as ProjectsSubheader } from './Dashboard/Projects/Subheader';
 
 import {
   HOME_ROUTE,
@@ -24,7 +25,10 @@ export function AppRoutes() {
         element={<App tab={<Home />} subheader={<HomeSubheader />} />}
       />
 
-      <Route path={PROJECTS_ROUTE} element={<App tab={<Projects />} />} />
+      <Route
+        path={PROJECTS_ROUTE}
+        element={<App tab={<Projects />} subheader={<ProjectsSubheader />} />}
+      />
 
       <Route path={POSTS_ROUTE}>
         <Route index element={<App tab={<Posts />} />} />
