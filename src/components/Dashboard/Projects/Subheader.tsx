@@ -3,6 +3,7 @@ import { Paper, SegmentedControl } from '@mantine/core';
 
 import { RootState } from '@/store';
 import { PRIMARY_COLOR } from '@/config';
+import { ANY } from '@/assets/constants/common';
 import { ProjectsSegment } from '@/enums/ProjectsSegment';
 import { setActiveSegment, setActiveLanguage } from '@/store/projects';
 import { useProjectsStyles } from '@/assets/styles/dashboard/projects';
@@ -24,7 +25,7 @@ export function Subheader() {
   const languagesSegmentedControlData = [
     {
       label: 'Any',
-      value: 'any',
+      value: ANY,
     },
     ...ALL_LANGUAGES.map(({ acronym }) => ({
       label: acronym,
