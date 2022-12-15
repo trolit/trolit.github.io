@@ -6,6 +6,7 @@ import { PRIMARY_COLOR } from '@/config';
 import { setActiveSegment } from '@/store/projects';
 import { ProjectsSegment } from '@/enums/ProjectsSegment';
 import { useProjectsStyles } from '@/assets/styles/dashboard/projects';
+import { ALL_LANGUAGES } from '@/assets/constants/predefined-languages';
 
 export function Subheader() {
   const { subheader } = useProjectsStyles();
@@ -15,6 +16,11 @@ export function Subheader() {
   const activeSegment = useSelector(
     (state: RootState) => state.projects.activeSegment,
   );
+
+  const languagesSegmentedControlData = ALL_LANGUAGES.map(({ acronym }) => ({
+    label: acronym,
+    value: acronym,
+  }));
 
   return (
     <Paper radius={0} className={subheader}>
@@ -27,6 +33,14 @@ export function Subheader() {
         ]}
         onChange={(value: ProjectsSegment) => dispatch(setActiveSegment(value))}
       />
+
+      {activeSegment === ProjectsSegment.ALL && (
+        <SegmentedControl
+          value={activeSegment}
+          color={PRIMARY_COLOR}
+          data={languagesSegmentedControlData}
+        />
+      )}
     </Paper>
   );
 }
