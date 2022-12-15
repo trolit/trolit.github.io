@@ -3,8 +3,8 @@ import { Paper, SegmentedControl } from '@mantine/core';
 
 import { RootState } from '@/store';
 import { PRIMARY_COLOR } from '@/config';
-import { setActiveSegment } from '@/store/projects';
 import { ProjectsSegment } from '@/enums/ProjectsSegment';
+import { setActiveSegment, setActiveLanguage } from '@/store/projects';
 import { useProjectsStyles } from '@/assets/styles/dashboard/projects';
 import { ALL_LANGUAGES } from '@/assets/constants/predefined-languages';
 
@@ -15,6 +15,10 @@ export function Subheader() {
 
   const activeSegment = useSelector(
     (state: RootState) => state.projects.activeSegment,
+  );
+
+  const activeLanguage = useSelector(
+    (state: RootState) => state.projects.activeLanguage,
   );
 
   const languagesSegmentedControlData = [
@@ -42,9 +46,10 @@ export function Subheader() {
 
       {activeSegment === ProjectsSegment.ALL && (
         <SegmentedControl
-          value='any'
+          value={activeLanguage}
           color={PRIMARY_COLOR}
           data={languagesSegmentedControlData}
+          onChange={(value: string) => dispatch(setActiveLanguage(value))}
         />
       )}
     </Paper>
