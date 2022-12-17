@@ -1,3 +1,4 @@
+import { OpUnitType } from 'dayjs';
 import { MantineColor } from '@mantine/core';
 import { HomeInterestPoints } from '@/utilities/types';
 
@@ -24,7 +25,7 @@ export const SMALL_SCREEN_THRESHOLD: string = '658px';
 
 export const MAX_HOME_INTEREST_POINTS: HomeInterestPoints = 4;
 
-export const HOME_GROUP_BY: string = 'year';
+export const HOME_GROUP_BY: OpUnitType = 'year';
 
 export const HOME_DATE_FORMATTER: string = 'YYYY';
 
