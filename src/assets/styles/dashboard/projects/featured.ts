@@ -2,13 +2,11 @@ import { createStyles } from '@mantine/core';
 
 import { DASHBOARD_PADDING, HEADER_HEIGHT, OVERLAY_PADDING } from '@/config';
 
-const SUB_HEADER_HEIGHT = '50px';
+const MIN_CARD_WIDTH = '300px';
 
 const DATE_BADGE_HEIGHT = '35px';
 
-const MAX_TEXT_HEIGHT = '150px';
-
-const MIN_CARD_WIDTH = '300px';
+const SUB_HEADER_HEIGHT = '50px';
 
 export const useFeaturedProjectsStyles = () => {
   const { classes } = createStyles((theme) => {
@@ -33,9 +31,8 @@ export const useFeaturedProjectsStyles = () => {
         height: `calc(${AVAILABLE_HEIGHT} - ${DATE_BADGE_HEIGHT})`,
       },
 
-      scrollArea: {
-        height: MAX_TEXT_HEIGHT,
-        border: '1px solid red',
+      popoverDropdown: {
+        width: `calc(${MIN_CARD_WIDTH} - 20px)`,
       },
     };
 
