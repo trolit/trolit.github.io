@@ -4,6 +4,7 @@ import { YOUTUBE_WATCH_URL } from '@/config';
 import { TRACKS } from '@/assets/data/tracks';
 import { formatDate } from '@/helpers/formatDate';
 import { useCommonStyles } from '@/assets/styles/common';
+import { Tags } from '@/components/Dashboard/common/Tags';
 
 export function Rows() {
   const tracksLength = TRACKS.length;
@@ -43,15 +44,7 @@ export function Rows() {
 
           <td>
             <Flex {...flexProps}>
-              {tags.map(({ text }, tagIndex) => (
-                <Badge
-                  size='sm'
-                  radius={0}
-                  key={`track-${index}-tag-${tagIndex}`}
-                >
-                  {text}
-                </Badge>
-              ))}
+              <Tags name={title} value={tags} badgeProps={{ size: 'sm' }} />
             </Flex>
           </td>
 
