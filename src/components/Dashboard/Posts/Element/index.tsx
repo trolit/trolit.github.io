@@ -1,7 +1,6 @@
 import {
   Flex,
   Text,
-  Badge,
   Group,
   Paper,
   Button,
@@ -14,6 +13,7 @@ import { formatDate } from '@/helpers/formatDate';
 import { IPost } from '@/interfaces/dashboard/IPost';
 import { POSTS_ROUTE } from '@/assets/constants/routes';
 import { useCommonStyles } from '@/assets/styles/common';
+import { Tags } from '@/components/Dashboard/common/Tags';
 
 interface IProps {
   id: number;
@@ -35,17 +35,11 @@ export function Element({ id, item: { name, date, tags, abstract } }: IProps) {
       </Flex>
 
       <Group p='sm' pl={0} position='left'>
-        {tags.map(({ text, color }, index) => (
-          <Badge
-            size='sm'
-            radius={0}
-            color={color}
-            variant='outline'
-            key={`badge-${text}-${index}`}
-          >
-            {text}
-          </Badge>
-        ))}
+        <Tags
+          name={name}
+          value={tags}
+          badgeProps={{ size: 'sm', variant: 'outline' }}
+        />
       </Group>
 
       <Divider my={10} />
