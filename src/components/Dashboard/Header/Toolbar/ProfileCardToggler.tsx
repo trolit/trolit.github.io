@@ -13,7 +13,7 @@ export function ProfileCardToggler() {
     (state: RootState) => state.preferences.isProfileCardVisible,
   );
 
-  const label = `${isProfileCardVisible ? 'Show' : 'Hide'} profile card`;
+  const label = `${isProfileCardVisible ? 'Hide' : 'Show'} profile card`;
 
   const Icon = isProfileCardVisible ? IconAddressBook : IconAddressBookOff;
 

@@ -25,6 +25,7 @@ import { sortByDate } from '@/helpers/sortByDate';
 import { indexToIcons } from '@/helpers/indexToIcons';
 import { IProject } from '@/interfaces/dashboard/IProject';
 import { DEFAULT_IMAGE_SRC, YOUTUBE_WATCH_URL } from '@/config';
+import { IFeaturedProject } from '@/interfaces/dashboard/IFeaturedProject';
 
 const thumbnail = DEFAULT_IMAGE_SRC;
 
@@ -36,6 +37,69 @@ const icons = [
   IconDice5,
   IconDice6,
 ];
+
+/** Featured Projects  */
+const Patchron: IFeaturedProject = {
+  name: 'Patchron',
+  date: '2022-01-18',
+  languages: [JAVASCRIPT_LANGUAGE],
+  tags: [
+    {
+      text: 'Probot',
+    },
+    {
+      text: 'jsdoc',
+    },
+    {
+      text: 'Jest',
+    },
+  ],
+  description:
+    'GitHub bot that provides first, early PR review and fasters further reviews done by humans.',
+  thumbnail,
+  links: [GITHUB_LINK('Patchron')],
+};
+
+const ProjectZero: IFeaturedProject = {
+  name: 'Project Zero',
+  date: '2019-06-16',
+  languages: [CSHARP_LANGUAGE],
+  tags: [
+    {
+      text: 'Unity 3D',
+    },
+  ],
+  description:
+    'Educational, sandbox game with RPG elements about programming. Has 40 unique levels, 4 minigames, installer and rich documentation.',
+  thumbnail,
+  links: [
+    GITHUB_LINK('projectZero'),
+    VIDEO_LINK(`${YOUTUBE_WATCH_URL}W4FGTbqTwsY`, '1 (features)'),
+    VIDEO_LINK(`${YOUTUBE_WATCH_URL}UtQ0g11_Juc`, '2 (levels)'),
+  ],
+};
+
+const EzGitDoc: IFeaturedProject = {
+  name: 'EzGitDoc',
+  date: '2020-02-23',
+  languages: [JAVASCRIPT_LANGUAGE],
+  tags: [
+    {
+      text: 'MDBootstrap',
+    },
+    {
+      text: 'LESS',
+    },
+  ],
+  description:
+    'WYSIWYG web tool to let users easily and quickly develop documentation scheme. First, stable version got released in 6 days.',
+  thumbnail,
+  links: [
+    GITHUB_LINK('EzGitDoc', 'OS-expected'),
+    DOCUMENTATION_LINK('https://os-expected.github.io/EzGitDoc-documentation/'),
+  ],
+};
+/** End of Featured Projects  */
 
 const RAW_PROJECTS: IProject[] = [
   {
@@ -59,26 +123,7 @@ const RAW_PROJECTS: IProject[] = [
     links: [GITHUB_LINK('trolit.github.io')],
   },
 
-  {
-    name: 'Patchron',
-    date: '2022-01-18',
-    languages: [JAVASCRIPT_LANGUAGE],
-    tags: [
-      {
-        text: 'Probot',
-      },
-      {
-        text: 'jsdoc',
-      },
-      {
-        text: 'Jest',
-      },
-    ],
-    description:
-      'GitHub bot that provides first, early PR review and fasters further reviews done by humans.',
-    thumbnail,
-    links: [GITHUB_LINK('Patchron')],
-  },
+  Patchron,
 
   {
     name: 'Personal portfolio Y20',
@@ -278,47 +323,9 @@ const RAW_PROJECTS: IProject[] = [
     links: [GITHUB_LINK('sShuffler')],
   },
 
-  {
-    name: 'EzGitDoc',
-    date: '2020-02-23',
-    languages: [JAVASCRIPT_LANGUAGE],
-    tags: [
-      {
-        text: 'MDBootstrap',
-      },
-      {
-        text: 'LESS',
-      },
-    ],
-    description:
-      'WYSIWYG web tool to let users easily and quickly develop documentation scheme. First, stable version got released in 6 days.',
-    thumbnail,
-    links: [
-      GITHUB_LINK('EzGitDoc', 'OS-expected'),
-      DOCUMENTATION_LINK(
-        'https://os-expected.github.io/EzGitDoc-documentation/',
-      ),
-    ],
-  },
+  EzGitDoc,
 
-  {
-    name: 'Project Zero',
-    date: '2019-06-16',
-    languages: [CSHARP_LANGUAGE],
-    tags: [
-      {
-        text: 'Unity 3D',
-      },
-    ],
-    description:
-      'Educational, sandbox game with RPG elements about programming. Has 40 unique levels, 4 minigames, installer and rich documentation.',
-    thumbnail,
-    links: [
-      GITHUB_LINK('projectZero'),
-      VIDEO_LINK(`${YOUTUBE_WATCH_URL}W4FGTbqTwsY`, '1 (features)'),
-      VIDEO_LINK(`${YOUTUBE_WATCH_URL}UtQ0g11_Juc`, '2 (levels)'),
-    ],
-  },
+  ProjectZero,
 
   {
     name: 'NB Project',
@@ -458,6 +465,21 @@ export const PROJECTS = sortByDate<IProject>(RAW_PROJECTS).map(
     thumbnail: indexToIcons(icons, index, RAW_PROJECTS.length),
   }),
 );
+
+export const FEATURED_PROJECTS = [
+  {
+    ...Patchron,
+    thumbnail: require('@/assets/media/projects/featured/patchron.jpg'),
+  },
+  {
+    ...ProjectZero,
+    thumbnail: require('@/assets/media/projects/featured/projectZero.jpg'),
+  },
+  {
+    ...EzGitDoc,
+    thumbnail: require('@/assets/media/projects/featured/ezGitDoc.png'),
+  },
+];
 
 export const ALL_DATES = Array.from(
   new Set(RAW_PROJECTS.map(({ date }) => date)),
