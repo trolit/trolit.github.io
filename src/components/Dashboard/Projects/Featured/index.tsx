@@ -5,7 +5,9 @@ import { FEATURED_PROJECTS } from '@/assets/data/projects';
 import { useFeaturedProjectsStyles } from '@/assets/styles/dashboard/projects/featured';
 
 export function Featured() {
-  const { wrapper } = useFeaturedProjectsStyles();
+  const {
+    classes: { wrapper },
+  } = useFeaturedProjectsStyles();
 
   return (
     <Group noWrap position='center' className={wrapper}>

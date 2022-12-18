@@ -24,8 +24,10 @@ interface IProps {
 export function Element({
   item: { name, date, thumbnail, languages, description, links },
 }: IProps) {
-  const { dateBadge, stack, card, popoverDropdown } =
-    useFeaturedProjectsStyles();
+  const {
+    classes: { dateBadge, stack, card },
+    constants: { MIN_CARD_WIDTH },
+  } = useFeaturedProjectsStyles();
 
   return (
     <Card p={0} withBorder shadow='sm' radius={0} className={card}>
@@ -71,7 +73,12 @@ export function Element({
             </Group>
           </Card.Section>
 
-          <Popover position='bottom' withArrow shadow='md'>
+          <Popover
+            withArrow
+            shadow='md'
+            position='bottom'
+            width={MIN_CARD_WIDTH - 30}
+          >
             <Popover.Target>
               <Container>
                 <Button size='sm' color='gray' variant='filled'>
@@ -81,7 +88,7 @@ export function Element({
             </Popover.Target>
 
             <Popover.Dropdown>
-              <Container className={popoverDropdown}>
+              <Container>
                 <Text size='sm' align='center'>
                   {description}
                 </Text>

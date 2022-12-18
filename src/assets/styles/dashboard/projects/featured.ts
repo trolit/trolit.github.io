@@ -2,7 +2,7 @@ import { createStyles } from '@mantine/core';
 
 import { DASHBOARD_PADDING, HEADER_HEIGHT, OVERLAY_PADDING } from '@/config';
 
-const MIN_CARD_WIDTH = '300px';
+const MIN_CARD_WIDTH = 300;
 
 const DATE_BADGE_HEIGHT = '35px';
 
@@ -21,23 +21,24 @@ export const useFeaturedProjectsStyles = () => {
         height: DATE_BADGE_HEIGHT,
       },
 
-      card: {
-        width: '100%',
-        height: '100%',
-        minWidth: MIN_CARD_WIDTH,
-      },
-
       stack: {
         height: `calc(${AVAILABLE_HEIGHT} - ${DATE_BADGE_HEIGHT})`,
       },
 
-      popoverDropdown: {
-        width: `calc(${MIN_CARD_WIDTH} - 20px)`,
+      card: {
+        width: '100%',
+        height: '100%',
+        minWidth: MIN_CARD_WIDTH,
       },
     };
 
     return classes;
   })();
 
-  return classes;
+  return {
+    classes,
+    constants: {
+      MIN_CARD_WIDTH,
+    },
+  };
 };
