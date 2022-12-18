@@ -34,7 +34,7 @@ export function ProjectElement({
     <Element
       text={name}
       textLineClamp={1}
-      extra={<Tags name={name} value={tags} />}
+      extra={<Tags name={name} value={tags} badgeProps={{ mr: 5 }} />}
       postExtra={renderedLinks}
       label={
         <Languages
