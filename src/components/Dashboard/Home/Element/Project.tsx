@@ -1,6 +1,7 @@
-import { Badge, ActionIcon, Group } from '@mantine/core';
+import { ActionIcon, Group } from '@mantine/core';
 
 import { Element } from '.';
+import { Tags } from '@/components/Dashboard/common/Tags';
 import { IProject } from '@/interfaces/dashboard/IProject';
 import { Languages } from '@/components/Dashboard/common/Languages';
 import { PROJECTS_NAVIGATION_ITEM } from '@/assets/constants/navigation-items';
@@ -12,19 +13,6 @@ interface IProps {
 export function ProjectElement({
   item: { name, languages, tags, links },
 }: IProps) {
-  const renderedTags = tags.map(({ text, color }, index) => (
-    <Badge
-      mr={5}
-      size='xs'
-      radius={0}
-      color={color}
-      variant='filled'
-      key={`${name}-tag-${index}`}
-    >
-      {text}
-    </Badge>
-  ));
-
   const renderedLinks = (
     <Group mt={5} spacing={5}>
       {links.map(({ icon: Icon, url }, index) => (
@@ -46,7 +34,7 @@ export function ProjectElement({
     <Element
       text={name}
       textLineClamp={1}
-      extra={renderedTags}
+      extra={<Tags projectName={name} value={tags} />}
       postExtra={renderedLinks}
       label={
         <Languages
