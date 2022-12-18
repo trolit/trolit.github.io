@@ -3,14 +3,14 @@ import { Badge, BadgeProps } from '@mantine/core';
 import { ITag } from '@/interfaces/ITag';
 
 interface IProps {
-  projectName: string;
+  name: string;
 
   value: ITag[];
 
   badgeProps?: BadgeProps;
 }
 
-export function Tags({ projectName, value, badgeProps }: IProps) {
+export function Tags({ name, value, badgeProps }: IProps) {
   return (
     <>
       {value.map(({ text, color }, index) => (
@@ -20,7 +20,7 @@ export function Tags({ projectName, value, badgeProps }: IProps) {
           radius={0}
           color={color}
           variant='filled'
-          key={`${projectName}-tag-${index}`}
+          key={`${name}-tag-${index}`}
           {...badgeProps}
         >
           {text}
