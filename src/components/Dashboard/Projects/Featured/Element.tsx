@@ -13,9 +13,9 @@ import {
   ScrollArea,
 } from '@mantine/core';
 
-import { formatDate } from '@/helpers/formatDate';
 import { Languages } from '@/components/Dashboard/common/Languages';
 import { IFeaturedProject } from '@/interfaces/dashboard/IFeaturedProject';
+import { FormattedDate } from '@/components/Dashboard/common/FormattedDate';
 import { useFeaturedProjectsStyles } from '@/assets/styles/dashboard/projects/featured';
 
 interface IProps {
@@ -39,7 +39,7 @@ export function Element({
         variant='gradient'
         className={dateBadge}
       >
-        {formatDate(date)}
+        <FormattedDate value={date} />
       </Badge>
 
       <ScrollArea type='auto'>

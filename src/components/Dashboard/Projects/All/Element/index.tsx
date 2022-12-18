@@ -3,11 +3,11 @@ import { Paper, Grid, Text, Stack, Button, Box, Group } from '@mantine/core';
 
 import { Languages } from './Languages';
 import { LinksOverlay } from './LinksOverlay';
-import { formatDate } from '@/helpers/formatDate';
 import { useCommonStyles } from '@/assets/styles/common';
 import { Tags } from '@/components/Dashboard/common/Tags';
 import { IProject } from '@/interfaces/dashboard/IProject';
 import { Thumbnail } from '@/components/Dashboard/common/Thumbnail';
+import { FormattedDate } from '@/components/Dashboard/common/FormattedDate';
 
 interface IProps {
   item: IProject;
@@ -37,7 +37,7 @@ export function Element({
               <Text>{name}</Text>
 
               <Text size='sm' c='dimmed'>
-                {formatDate(date)}
+                <FormattedDate value={date} />
               </Text>
 
               <Group spacing='sm' position='center'>

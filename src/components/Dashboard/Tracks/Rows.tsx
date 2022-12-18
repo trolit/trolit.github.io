@@ -2,9 +2,9 @@ import { Badge, Anchor, Flex, FlexProps } from '@mantine/core';
 
 import { YOUTUBE_WATCH_URL } from '@/config';
 import { TRACKS } from '@/assets/data/tracks';
-import { formatDate } from '@/helpers/formatDate';
 import { useCommonStyles } from '@/assets/styles/common';
 import { Tags } from '@/components/Dashboard/common/Tags';
+import { FormattedDate } from '@/components/Dashboard/common/FormattedDate';
 
 export function Rows() {
   const tracksLength = TRACKS.length;
@@ -40,7 +40,9 @@ export function Rows() {
             </Flex>
           </td>
 
-          <td>{formatDate(date)}</td>
+          <td>
+            <FormattedDate value={date} />
+          </td>
 
           <td>
             <Flex {...flexProps}>
