@@ -15,8 +15,6 @@ export function ActionIconLinks({ name, value, actionIconProps }: IProps) {
     <>
       {value.map(({ icon: Icon, url }, index) => (
         <ActionIcon
-          size={50}
-          color='gray'
           variant='outline'
           key={`${name}-link-${index}`}
           onClick={() => {
