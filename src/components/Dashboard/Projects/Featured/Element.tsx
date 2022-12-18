@@ -14,6 +14,7 @@ import {
 } from '@mantine/core';
 
 import { formatDate } from '@/helpers/formatDate';
+import { Languages } from '@/components/Dashboard/common/Languages';
 import { IFeaturedProject } from '@/interfaces/dashboard/IFeaturedProject';
 import { useFeaturedProjectsStyles } from '@/assets/styles/dashboard/projects/featured';
 
@@ -56,20 +57,7 @@ export function Element({
             </Title>
 
             <Group noWrap position='center'>
-              {languages.map(({ acronym, badgeColorInHex }, index) => (
-                <Badge
-                  size='lg'
-                  radius={0}
-                  variant='outline'
-                  key={`${name}-language-${index}`}
-                  style={{
-                    color: badgeColorInHex,
-                    borderColor: badgeColorInHex,
-                  }}
-                >
-                  {acronym}
-                </Badge>
-              ))}
+              <Languages projectName={name} value={languages} />
             </Group>
           </Card.Section>
 
