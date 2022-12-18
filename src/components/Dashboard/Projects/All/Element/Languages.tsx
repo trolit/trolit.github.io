@@ -3,30 +3,32 @@ import { Badge, Group } from '@mantine/core';
 import { ILanguage } from '@/interfaces/ILanguage';
 
 interface IProps {
-  languages: ILanguage[];
+  projectName: string;
+
+  value: ILanguage[];
 }
 
-export function Languages({ languages }: IProps) {
+export function Languages({ projectName, value }: IProps) {
+  if (!value.length) {
+    return <span>&nbsp;</span>;
+  }
+
   return (
     <Group spacing={5} noWrap>
-      {languages.length ? (
-        languages.map((language, index) => (
-          <Badge
-            key={`badge-${language.name}-${index}`}
-            variant='filled'
-            radius={index === 0 ? 'md' : 0}
-            style={{
-              borderTopRightRadius: 0,
-              borderBottomLeftRadius: 0,
-              backgroundColor: language.badgeColorInHex,
-            }}
-          >
-            {language.acronym}
-          </Badge>
-        ))
-      ) : (
-        <span>&nbsp;</span>
-      )}
+      {value.map(({ badgeColorInHex, acronym }, index) => (
+        <Badge
+          variant='filled'
+          radius={index === 0 ? 'md' : 0}
+          key={`${projectName}-language-${index}`}
+          style={{
+            borderTopRightRadius: 0,
+            borderBottomLeftRadius: 0,
+            backgroundColor: badgeColorInHex,
+          }}
+        >
+          {acronym}
+        </Badge>
+      ))}
     </Group>
   );
 }
