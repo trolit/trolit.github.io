@@ -27,7 +27,7 @@ export function Element({
           <LinksOverlay links={links} toggleOverlay={toggleOverlay} />
         )}
 
-        <Languages languages={languages} />
+        <Languages projectName={name} value={languages} />
 
         <Grid p='lg' className={h100}>
           <Grid.Col span={12}>
