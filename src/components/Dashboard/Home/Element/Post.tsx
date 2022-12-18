@@ -23,7 +23,7 @@ export function PostElement({ item }: IProps) {
     <Element
       icon={POSTS_NAVIGATION_ITEM.icon}
       text={name}
-      extra={<Tags name={name} value={tags} />}
+      extra={<Tags name={name} value={tags} badgeProps={{ mr: 5 }} />}
       postExtra={
         <Anchor size='xs' onClick={() => navigate(`${POSTS_ROUTE}/${id}`)}>
           (View)
