@@ -3,14 +3,14 @@ import { Badge, BadgeProps } from '@mantine/core';
 import { ILanguage } from '@/interfaces/ILanguage';
 
 interface IProps {
-  projectName: string;
+  name: string;
 
   value: ILanguage[];
 
   badgeProps?: BadgeProps;
 }
 
-export function Languages({ projectName, value, badgeProps }: IProps) {
+export function Languages({ name, value, badgeProps }: IProps) {
   return (
     <>
       {value.map(({ acronym, badgeColorInHex }, index) => (
@@ -18,7 +18,7 @@ export function Languages({ projectName, value, badgeProps }: IProps) {
           size='lg'
           radius={0}
           variant='outline'
-          key={`${projectName}-language-${index}`}
+          key={`${name}-language-${index}`}
           style={{
             color: badgeColorInHex,
             borderColor: badgeColorInHex,

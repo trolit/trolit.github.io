@@ -57,7 +57,7 @@ export function Element({
             </Title>
 
             <Group noWrap position='center'>
-              <Languages projectName={name} value={languages} />
+              <Languages name={name} value={languages} />
             </Group>
           </Card.Section>
 

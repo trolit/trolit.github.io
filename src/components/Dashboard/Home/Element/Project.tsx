@@ -38,7 +38,7 @@ export function ProjectElement({
       postExtra={renderedLinks}
       label={
         <Languages
-          projectName={name}
+          name={name}
           value={languages}
           badgeProps={{ mr: 5, size: 'sm', radius: 0, variant: 'outline' }}
         />
