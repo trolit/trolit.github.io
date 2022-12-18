@@ -77,7 +77,7 @@ export function Element({
             withArrow
             shadow='md'
             position='bottom'
-            width={MIN_CARD_WIDTH - 30}
+            width={MIN_CARD_WIDTH}
           >
             <Popover.Target>
               <Container>
