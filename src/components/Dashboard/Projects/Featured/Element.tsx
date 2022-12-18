@@ -9,12 +9,13 @@ import {
   Popover,
   Button,
   Container,
-  ActionIcon,
   ScrollArea,
 } from '@mantine/core';
 
-import { formatDate } from '@/helpers/formatDate';
+import { Languages } from '@/components/Dashboard/common/Languages';
 import { IFeaturedProject } from '@/interfaces/dashboard/IFeaturedProject';
+import { FormattedDate } from '@/components/Dashboard/common/FormattedDate';
+import { ActionIconLinks } from '@/components/Dashboard/common/ActionIconLinks';
 import { useFeaturedProjectsStyles } from '@/assets/styles/dashboard/projects/featured';
 
 interface IProps {
@@ -38,7 +39,7 @@ export function Element({
         variant='gradient'
         className={dateBadge}
       >
-        {formatDate(date)}
+        <FormattedDate value={date} />
       </Badge>
 
       <ScrollArea type='auto'>
@@ -56,20 +57,7 @@ export function Element({
             </Title>
 
             <Group noWrap position='center'>
-              {languages.map(({ acronym, badgeColorInHex }, index) => (
-                <Badge
-                  size='lg'
-                  radius={0}
-                  variant='outline'
-                  key={`${name}-language-${index}`}
-                  style={{
-                    color: badgeColorInHex,
-                    borderColor: badgeColorInHex,
-                  }}
-                >
-                  {acronym}
-                </Badge>
-              ))}
+              <Languages name={name} value={languages} />
             </Group>
           </Card.Section>
 
@@ -98,19 +86,11 @@ export function Element({
 
           <Card.Section withBorder>
             <Group py={10} noWrap spacing={15} position='center'>
-              {links.map(({ icon: Icon, url }, index) => (
-                <ActionIcon
-                  key={`${name}-link-${index}`}
-                  color='gray'
-                  variant='outline'
-                  size={50}
-                  onClick={() => {
-                    window.open(url, '_blank');
-                  }}
-                >
-                  <Icon />
-                </ActionIcon>
-              ))}
+              <ActionIconLinks
+                name={name}
+                value={links}
+                actionIconProps={{ color: 'gray', size: 50 }}
+              />
             </Group>
           </Card.Section>
         </Stack>

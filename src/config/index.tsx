@@ -21,13 +21,13 @@ export const GITHUB_USERNAME: string = 'trolit';
 // @NOTE https://day.js.org/docs/en/display/format
 export const DATE_FORMAT: string = 'DD/MM/YYYY';
 
-export const SMALL_SCREEN_THRESHOLD: string = '658px';
-
-export const MAX_HOME_INTEREST_POINTS: HomeInterestPoints = 4;
+export const HOME_DATE_FORMATTER: string = 'YYYY';
 
 export const HOME_GROUP_BY: OpUnitType = 'year';
 
-export const HOME_DATE_FORMATTER: string = 'YYYY';
+export const SMALL_SCREEN_THRESHOLD: string = '658px';
+
+export const MAX_HOME_INTEREST_POINTS: HomeInterestPoints = 4;
 
 export const YOUTUBE_WATCH_URL: string = `https://www.youtube.com/watch?v=`;
 

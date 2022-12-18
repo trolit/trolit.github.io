@@ -1,8 +1,11 @@
-import { Badge, ActionIcon, Group } from '@mantine/core';
+import { Group } from '@mantine/core';
 
 import { Element } from '.';
+import { Tags } from '@/components/Dashboard/common/Tags';
 import { IProject } from '@/interfaces/dashboard/IProject';
+import { Languages } from '@/components/Dashboard/common/Languages';
 import { PROJECTS_NAVIGATION_ITEM } from '@/assets/constants/navigation-items';
+import { ActionIconLinks } from '@/components/Dashboard/common/ActionIconLinks';
 
 interface IProps {
   item: IProject;
@@ -11,58 +14,33 @@ interface IProps {
 export function ProjectElement({
   item: { name, languages, tags, links },
 }: IProps) {
-  const renderedLanguages = languages.map(
-    ({ acronym, badgeColorInHex }, index) => (
-      <Badge
-        mr={5}
-        size='sm'
-        radius={0}
-        variant='outline'
-        key={`${name}-language-${index}`}
-        style={{ borderColor: badgeColorInHex, color: badgeColorInHex }}
-      >
-        {acronym}
-      </Badge>
-    ),
+  const label = (
+    <Languages
+      name={name}
+      value={languages}
+      badgeProps={{ mr: 5, size: 'sm', radius: 0, variant: 'outline' }}
+    />
   );
 
-  const renderedTags = tags.map(({ text, color }, index) => (
-    <Badge
-      mr={5}
-      size='xs'
-      radius={0}
-      color={color}
-      variant='filled'
-      key={`${name}-tag-${index}`}
-    >
-      {text}
-    </Badge>
-  ));
+  const extra = <Tags name={name} value={tags} badgeProps={{ mr: 5 }} />;
 
-  const renderedLinks = (
+  const postExtra = (
     <Group mt={5} spacing={5}>
-      {links.map(({ icon: Icon, url }, index) => (
-        <ActionIcon
-          key={`${name}-link-${index}`}
-          variant='subtle'
-          size={22}
-          onClick={() => {
-            window.open(url, '_blank');
-          }}
-        >
-          <Icon />
-        </ActionIcon>
-      ))}
+      <ActionIconLinks
+        name={name}
+        value={links}
+        actionIconProps={{ size: 22, variant: 'subtle' }}
+      />
     </Group>
   );
 
   return (
     <Element
       text={name}
+      extra={extra}
+      label={label}
       textLineClamp={1}
-      extra={renderedTags}
-      postExtra={renderedLinks}
-      label={renderedLanguages}
+      postExtra={postExtra}
       icon={PROJECTS_NAVIGATION_ITEM.icon}
     />
   );

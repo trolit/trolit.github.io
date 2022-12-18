@@ -10,8 +10,8 @@ import { Dispatch, SetStateAction } from 'react';
 
 import { ILink } from '@/interfaces/ILink';
 import { useCommonStyles } from '@/assets/styles/common';
-import { Link } from '@/components/Dashboard/common/Link';
 import { useProjectsStyles } from '@/assets/styles/dashboard/projects';
+import { Link } from '@/components/Dashboard/Projects/All/Element/Link';
 
 interface IProps {
   links: ILink[];

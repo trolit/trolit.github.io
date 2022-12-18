@@ -1,7 +1,6 @@
 import {
   Kbd,
   Text,
-  Badge,
   Group,
   Paper,
   Stack,
@@ -20,8 +19,8 @@ import {
   title,
   avatarSrc,
 } from '@/assets/data/profile';
-import { PRIMARY_COLOR } from '@/config';
 import { useCommonStyles } from '@/assets/styles/common';
+import { Tags } from '@/components/Dashboard/common/Tags';
 import { useProfileStyles } from '@/assets/styles/profile';
 import { getColorByShade } from '@/helpers/getColorByShade';
 
@@ -52,11 +51,11 @@ export function Profile() {
 
         <ScrollArea>
           <Group position='center' spacing='lg' className={group}>
-            {tags.map(({ text, color }, index) => (
-              <Badge key={index} color={color || PRIMARY_COLOR} radius='xs'>
-                {text}
-              </Badge>
-            ))}
+            <Tags
+              name='profile'
+              value={tags}
+              badgeProps={{ size: 'md', radius: 'xs', variant: 'light' }}
+            />
           </Group>
 
           <Blockquote cite={`-${quote.author}`} color={getColorByShade(4)}>

@@ -1,13 +1,13 @@
 import { useState } from 'react';
-import { Paper, Grid, Text, Stack, Button, Box } from '@mantine/core';
+import { Paper, Grid, Text, Stack, Button, Box, Group } from '@mantine/core';
 
-import { Tags } from './Tags';
 import { Languages } from './Languages';
 import { LinksOverlay } from './LinksOverlay';
-import { formatDate } from '@/helpers/formatDate';
 import { useCommonStyles } from '@/assets/styles/common';
+import { Tags } from '@/components/Dashboard/common/Tags';
 import { IProject } from '@/interfaces/dashboard/IProject';
 import { Thumbnail } from '@/components/Dashboard/common/Thumbnail';
+import { FormattedDate } from '@/components/Dashboard/common/FormattedDate';
 
 interface IProps {
   item: IProject;
@@ -27,7 +27,7 @@ export function Element({
           <LinksOverlay links={links} toggleOverlay={toggleOverlay} />
         )}
 
-        <Languages languages={languages} />
+        <Languages projectName={name} value={languages} />
 
         <Grid p='lg' className={h100}>
           <Grid.Col span={12}>
@@ -37,10 +37,16 @@ export function Element({
               <Text>{name}</Text>
 
               <Text size='sm' c='dimmed'>
-                {formatDate(date)}
+                <FormattedDate value={date} />
               </Text>
 
-              <Tags tags={tags} />
+              <Group spacing='sm' position='center'>
+                <Tags
+                  name={name}
+                  value={tags}
+                  badgeProps={{ size: 'sm', variant: 'outline', radius: 'md' }}
+                />
+              </Group>
 
               <Text fz='xs' style={{ flexGrow: '1' }}>
                 {description}

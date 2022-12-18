@@ -7,6 +7,54 @@ const { SOUNDTRACK } = COMMON_TAGS;
 
 const RAW_TRACKS: ITrack[] = [
   {
+    authors: ['Lorne Balfe'],
+
+    title: `Forgotten (13 Hours)`,
+
+    date: '2022-12-18',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'KXhaWmiFaW0',
+  },
+
+  {
+    authors: ['Hans Zimmer'],
+
+    title: `Tennessee (Pearl Harbor)`,
+
+    date: '2022-12-18',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'Eu9nPPJhcn4',
+  },
+
+  {
+    authors: ['Hans Zimmer', 'Geoff Zanelli', 'Blake Neely'],
+
+    title: `Honor (The Pacific)`,
+
+    date: '2022-12-18',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'YXw_GjEWFi8',
+  },
+
+  {
+    authors: ['Hans Zimmer'],
+
+    title: `Journey to the Line (Thin Red Line)`,
+
+    date: '2022-12-18',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: '5Hk_v9vfFaY',
+  },
+
+  {
     authors: ['Brian Tyler'],
 
     title: `I Stand Alone (COD MW3)`,
