@@ -1,4 +1,5 @@
 import { Container, ScrollArea } from '@mantine/core';
+
 import { Board } from './Board';
 import { useHomeStyles } from '@/assets/styles/dashboard/home';
 
