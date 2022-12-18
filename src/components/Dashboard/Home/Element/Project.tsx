@@ -2,6 +2,7 @@ import { Badge, ActionIcon, Group } from '@mantine/core';
 
 import { Element } from '.';
 import { IProject } from '@/interfaces/dashboard/IProject';
+import { Languages } from '@/components/Dashboard/common/Languages';
 import { PROJECTS_NAVIGATION_ITEM } from '@/assets/constants/navigation-items';
 
 interface IProps {
@@ -11,21 +12,6 @@ interface IProps {
 export function ProjectElement({
   item: { name, languages, tags, links },
 }: IProps) {
-  const renderedLanguages = languages.map(
-    ({ acronym, badgeColorInHex }, index) => (
-      <Badge
-        mr={5}
-        size='sm'
-        radius={0}
-        variant='outline'
-        key={`${name}-language-${index}`}
-        style={{ borderColor: badgeColorInHex, color: badgeColorInHex }}
-      >
-        {acronym}
-      </Badge>
-    ),
-  );
-
   const renderedTags = tags.map(({ text, color }, index) => (
     <Badge
       mr={5}
@@ -62,7 +48,13 @@ export function ProjectElement({
       textLineClamp={1}
       extra={renderedTags}
       postExtra={renderedLinks}
-      label={renderedLanguages}
+      label={
+        <Languages
+          projectName={name}
+          value={languages}
+          badgeProps={{ mr: 5, size: 'sm', radius: 0, variant: 'outline' }}
+        />
+      }
       icon={PROJECTS_NAVIGATION_ITEM.icon}
     />
   );
