@@ -88,7 +88,7 @@ export function Element({
             </Popover.Target>
 
             <Popover.Dropdown>
-              <Container>
+              <Container p={0}>
                 <Text size='sm' align='center'>
                   {description}
                 </Text>

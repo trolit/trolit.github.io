@@ -22,6 +22,7 @@ export const useFeaturedProjectsStyles = () => {
       },
 
       stack: {
+        position: 'relative' as const,
         height: `calc(${AVAILABLE_HEIGHT} - ${DATE_BADGE_HEIGHT})`,
       },
 
