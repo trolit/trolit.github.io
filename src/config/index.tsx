@@ -7,7 +7,7 @@ export const BACKGROUND_SRC: string =
 
 export const DEFAULT_IMAGE_SRC: string = require('@/assets/media/projects/default.jpg');
 
-export const PRIMARY_COLOR: MantineColor = 'blue';
+export const PRIMARY_COLOR: MantineColor = 'teal';
 
 export const HEADER_HEIGHT: string = '50px';
 
