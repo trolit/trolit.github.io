@@ -4,7 +4,7 @@ import { DASHBOARD_PADDING, HEADER_HEIGHT, OVERLAY_PADDING } from '@/config';
 
 const MIN_CARD_WIDTH = 300;
 
-const DATE_BADGE_HEIGHT = '35px';
+const DATE_BADGE_HEIGHT = '30px';
 
 const SUB_HEADER_HEIGHT = '50px';
 
