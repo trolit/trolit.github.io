@@ -2,8 +2,7 @@ import { OpUnitType } from 'dayjs';
 import { MantineColor } from '@mantine/core';
 import { HomeInterestPoints } from '@/utilities/types';
 
-export const BACKGROUND_SRC: string =
-  require('@/assets/media/background.svg').default;
+export const BACKGROUND_SRC: string = require('@/assets/media/background.jpg');
 
 export const DEFAULT_IMAGE_SRC: string = require('@/assets/media/projects/default.jpg');
 
