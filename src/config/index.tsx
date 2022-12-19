@@ -11,7 +11,7 @@ export const PRIMARY_COLOR: MantineColor = 'teal';
 export const HEADER_HEIGHT: string = '50px';
 
 // @NOTE to maintain center add 0.5 to the value
-export const OVERLAY_PADDING: number = 20.5;
+export const OVERLAY_PADDING: number = 30.5;
 
 export const DASHBOARD_PADDING: number = 20;
 
