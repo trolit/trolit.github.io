@@ -7,6 +7,18 @@ const { SOUNDTRACK } = COMMON_TAGS;
 
 const RAW_TRACKS: ITrack[] = [
   {
+    authors: ['Rozen', 'Reven'],
+
+    title: `The Final Battle (Elden Ring)`,
+
+    date: '2022-12-19',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'egpOubxrs7Q',
+  },
+
+  {
     authors: ['Lorne Balfe'],
 
     title: `Forgotten (13 Hours)`,
