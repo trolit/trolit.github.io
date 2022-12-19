@@ -52,7 +52,7 @@ export function Element({
                 {description}
               </Text>
 
-              {links.length && (
+              {!!links.length && (
                 <Button
                   size='sm'
                   radius='xs'
