@@ -4,7 +4,6 @@ import { YOUTUBE_WATCH_URL } from '@/config';
 import { TRACKS } from '@/assets/data/tracks';
 import { useCommonStyles } from '@/assets/styles/common';
 import { Tags } from '@/components/Dashboard/common/Tags';
-import { FormattedDate } from '@/components/Dashboard/common/FormattedDate';
 
 export function Rows() {
   const tracksLength = TRACKS.length;
@@ -20,7 +19,7 @@ export function Rows() {
 
   return (
     <>
-      {TRACKS.map(({ authors, title, date, tags, youtubeId }, index) => (
+      {TRACKS.map(({ authors, title, tags, youtubeId }, index) => (
         <tr key={`track-${index}`}>
           <td className={textCenter}>{tracksLength - index}</td>
 
@@ -38,10 +37,6 @@ export function Rows() {
                 </Badge>
               ))}
             </Flex>
-          </td>
-
-          <td>
-            <FormattedDate value={date} />
           </td>
 
           <td>

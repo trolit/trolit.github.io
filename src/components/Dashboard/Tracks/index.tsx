@@ -26,8 +26,6 @@ export function Tracks() {
 
                 <th>Composer(s)</th>
 
-                <th>Added on</th>
-
                 <th>Tag(s)</th>
 
                 <th></th>
