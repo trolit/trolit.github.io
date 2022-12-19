@@ -42,5 +42,5 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## Credits
 
-- [background](https://pixabay.com/vectors/space-astronaut-spaceship-galaxy-5756194/) ([kirillslov](https://pixabay.com/users/kirillslov-8058952/))
-- [avatar](https://wall.alphacoders.com/big.php?i=1133695) (KJ Kallio)
+- [background](https://wall.alphacoders.com/big.php?i=317353)
+- [avatar](https://wall.alphacoders.com/big.php?i=1133695)
