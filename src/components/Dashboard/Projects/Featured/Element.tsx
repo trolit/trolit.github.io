@@ -11,6 +11,7 @@ import {
   Container,
   ScrollArea,
 } from '@mantine/core';
+import { IconQuestionMark } from '@tabler/icons';
 
 import { Languages } from '@/components/Dashboard/common/Languages';
 import { IFeaturedProject } from '@/interfaces/dashboard/IFeaturedProject';
@@ -32,13 +33,7 @@ export function Element({
 
   return (
     <Card p={0} withBorder shadow='sm' radius={0} className={card}>
-      <Badge
-        size='xl'
-        fullWidth
-        radius={0}
-        variant='gradient'
-        className={dateBadge}
-      >
+      <Badge size='xl' fullWidth radius={0} variant='dot' className={dateBadge}>
         <FormattedDate value={date} />
       </Badge>
 
@@ -61,16 +56,11 @@ export function Element({
             </Group>
           </Card.Section>
 
-          <Popover
-            withArrow
-            shadow='md'
-            position='bottom'
-            width={MIN_CARD_WIDTH}
-          >
+          <Popover withArrow shadow='md' position='top' width={MIN_CARD_WIDTH}>
             <Popover.Target>
               <Container>
-                <Button size='sm' color='gray' variant='filled'>
-                  description
+                <Button radius={100} size='md' variant='filled'>
+                  <IconQuestionMark />
                 </Button>
               </Container>
             </Popover.Target>

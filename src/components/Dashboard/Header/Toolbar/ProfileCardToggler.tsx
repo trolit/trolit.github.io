@@ -24,7 +24,7 @@ export function ProfileCardToggler() {
         color={PRIMARY_COLOR}
         onClick={() => dispatch(toggleProfileCard())}
       >
-        <ThemeIcon variant='gradient'>
+        <ThemeIcon variant='filled'>
           <Icon size={25} />
         </ThemeIcon>
       </ActionIcon>

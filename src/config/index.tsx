@@ -2,17 +2,16 @@ import { OpUnitType } from 'dayjs';
 import { MantineColor } from '@mantine/core';
 import { HomeInterestPoints } from '@/utilities/types';
 
-export const BACKGROUND_SRC: string =
-  require('@/assets/media/background.svg').default;
+export const BACKGROUND_SRC: string = require('@/assets/media/background.jpg');
 
 export const DEFAULT_IMAGE_SRC: string = require('@/assets/media/projects/default.jpg');
 
-export const PRIMARY_COLOR: MantineColor = 'blue';
+export const PRIMARY_COLOR: MantineColor = 'teal';
 
 export const HEADER_HEIGHT: string = '50px';
 
 // @NOTE to maintain center add 0.5 to the value
-export const OVERLAY_PADDING: number = 20.5;
+export const OVERLAY_PADDING: number = 30.5;
 
 export const DASHBOARD_PADDING: number = 20;
 
