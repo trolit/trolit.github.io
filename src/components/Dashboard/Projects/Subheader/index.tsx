@@ -3,11 +3,10 @@ import { Paper, SegmentedControl } from '@mantine/core';
 
 import { RootState } from '@/store';
 import { PRIMARY_COLOR } from '@/config';
-import { ANY } from '@/assets/constants/common';
+import { LanguageMenu } from './LanguageMenu';
+import { setActiveSegment } from '@/store/projects';
 import { ProjectsSegment } from '@/enums/ProjectsSegment';
-import { setActiveSegment, setActiveLanguage } from '@/store/projects';
 import { useProjectsStyles } from '@/assets/styles/dashboard/projects';
-import { ALL_LANGUAGES } from '@/assets/constants/predefined-languages';
 
 export function Subheader() {
   const { subheader } = useProjectsStyles();
@@ -17,21 +16,6 @@ export function Subheader() {
   const activeSegment = useSelector(
     (state: RootState) => state.projects.activeSegment,
   );
-
-  const activeLanguage = useSelector(
-    (state: RootState) => state.projects.activeLanguage,
-  );
-
-  const languagesSegmentedControlData = [
-    {
-      label: 'Any',
-      value: ANY,
-    },
-    ...ALL_LANGUAGES.map(({ acronym }) => ({
-      label: acronym,
-      value: acronym,
-    })),
-  ];
 
   return (
     <Paper radius={0} className={subheader}>
@@ -45,14 +29,7 @@ export function Subheader() {
         onChange={(value: ProjectsSegment) => dispatch(setActiveSegment(value))}
       />
 
-      {activeSegment === ProjectsSegment.ALL && (
-        <SegmentedControl
-          value={activeLanguage}
-          color={PRIMARY_COLOR}
-          data={languagesSegmentedControlData}
-          onChange={(value: string) => dispatch(setActiveLanguage(value))}
-        />
-      )}
+      {activeSegment === ProjectsSegment.ALL && <LanguageMenu />}
     </Paper>
   );
 }
