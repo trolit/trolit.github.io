@@ -8,6 +8,9 @@ export const DEFAULT_IMAGE_SRC: string = require('@/assets/media/projects/defaul
 
 export const PRIMARY_COLOR: MantineColor = 'teal';
 
+// @NOTE Each color has 10 shades. All colors should always have 10 shades.
+export const PRIMARY_COLOR_SHADE = 7;
+
 export const HEADER_HEIGHT: string = '50px';
 
 // @NOTE to maintain center add 0.5 to the value

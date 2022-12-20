@@ -13,7 +13,7 @@ import { MainGrid } from './MainGrid';
 import { useAppStyles } from '@/assets/styles/app';
 import { toggleColorScheme } from '@/store/preferences';
 import { useCommonStyles } from '@/assets/styles/common';
-import { PRIMARY_COLOR, BACKGROUND_SRC } from '@/config';
+import { PRIMARY_COLOR, BACKGROUND_SRC, PRIMARY_COLOR_SHADE } from '@/config';
 
 interface IProps {
   tab: ReactNode;
@@ -36,7 +36,11 @@ export default function App({ tab, subheader }: IProps) {
       toggleColorScheme={toggleColorScheme}
     >
       <MantineProvider
-        theme={{ colorScheme, primaryColor: PRIMARY_COLOR }}
+        theme={{
+          colorScheme,
+          primaryColor: PRIMARY_COLOR,
+          primaryShade: PRIMARY_COLOR_SHADE,
+        }}
         withGlobalStyles
         withNormalizeCSS
       >
