@@ -1,8 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Paper, SegmentedControl, Text } from '@mantine/core';
 
+import {
+  HOME_GROUP_BY,
+  PRIMARY_COLOR,
+  MAX_HOME_INTEREST_POINTS,
+} from '@/config';
 import { RootState } from '@/store';
-import { PRIMARY_COLOR } from '@/config';
 import { setActiveSegment } from '@/store/home';
 import { HomeSegment } from '@/enums/HomeSegment';
 import { useHomeStyles } from '@/assets/styles/dashboard/home';
@@ -16,10 +20,19 @@ export function Subheader() {
     (state: RootState) => state.home.activeSegment,
   );
 
+  const textContent = (() => {
+    const value = MAX_HOME_INTEREST_POINTS > 1 ? MAX_HOME_INTEREST_POINTS : '';
+
+    const unit =
+      MAX_HOME_INTEREST_POINTS > 1 ? `${HOME_GROUP_BY}s` : HOME_GROUP_BY;
+
+    return `Recent Activity (last ${value} ${unit})`;
+  })();
+
   return (
     <Paper radius={0} className={subheader}>
       <Text c='dimmed' fz='sm'>
-        Recent activity
+        {textContent}
       </Text>
 
       <SegmentedControl

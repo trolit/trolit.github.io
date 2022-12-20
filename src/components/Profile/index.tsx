@@ -19,10 +19,10 @@ import {
   title,
   avatarSrc,
 } from '@/assets/data/profile';
+import { SHADED_COLOR } from '@/assets/constants/common';
 import { useCommonStyles } from '@/assets/styles/common';
 import { Tags } from '@/components/Dashboard/common/Tags';
 import { useProfileStyles } from '@/assets/styles/profile';
-import { getColorByShade } from '@/helpers/getColorByShade';
 
 export function Profile() {
   const { panel, h100 } = useCommonStyles();
@@ -58,7 +58,7 @@ export function Profile() {
             />
           </Group>
 
-          <Blockquote cite={`-${quote.author}`} color={getColorByShade(4)}>
+          <Blockquote cite={`-${quote.author}`} color={SHADED_COLOR}>
             {quote.text}
           </Blockquote>
 
