@@ -6,10 +6,10 @@ export const BACKGROUND_SRC: string = require('@/assets/media/background.jpg');
 
 export const DEFAULT_IMAGE_SRC: string = require('@/assets/media/projects/default.jpg');
 
-export const PRIMARY_COLOR: MantineColor = 'indigo';
+export const PRIMARY_COLOR: MantineColor = 'teal';
 
 // @NOTE Each color has 10 shades. All colors should always have 10 shades.
-export const PRIMARY_COLOR_SHADE = 9;
+export const PRIMARY_COLOR_SHADE = 8;
 
 export const HEADER_HEIGHT: string = '50px';
 
