@@ -5,7 +5,7 @@ import { ILink } from '@/interfaces/ILink';
 import { IQuote } from '@/interfaces/profile/IQuote';
 import { CUSTOM_LINK, GITHUB_LINK } from '@/assets/constants/predefined-links';
 
-export const avatarSrc = require('@/assets/media/avatar.png');
+export const avatarSrc = require('@/assets/media/avatar.jpg');
 
 export const name = 'p4w31 !d21k0w541';
 
