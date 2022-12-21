@@ -42,5 +42,5 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## Credits
 
-- [background](https://wall.alphacoders.com/big.php?i=317353)
-- [avatar](https://wall.alphacoders.com/big.php?i=1133695)
+- [background (Freepik)](https://pl.freepik.com/darmowe-wektory/tlo-swiatla-neonowego_3602483.htm)
+- [avatar (alphacoders)](https://wall.alphacoders.com/big.php?i=1133695)
