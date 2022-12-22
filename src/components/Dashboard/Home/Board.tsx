@@ -12,10 +12,10 @@ import { HomeSegment } from '@/enums/HomeSegment';
 import { PROJECTS } from '@/assets/data/projects';
 import { ProjectElement } from './Element/Project';
 import { useHomeStyles } from '@/assets/styles/dashboard/home';
-import { PRIMARY_COLOR, HOME_DATE_FORMATTER, MAX_HOME_INTEREST_POINTS } from '@/config';
+import { PRIMARY_COLOR, HOME_DATE_FORMATTER } from '@/config';
 
 export function Board() {
-  const { boardDate, boardItems, boardColumn, lastBoardItem, firstBoardItem, innerBoardItem } = useHomeStyles();
+  const { boardDate, boardItems, boardColumn } = useHomeStyles();
 
   const activeSegment = useSelector((state: RootState) => state.home.activeSegment);
 
@@ -61,18 +61,6 @@ export function Board() {
     });
   };
 
-  const specifyItemsClass = (index: number): string => {
-    if (index === 0) {
-      return firstBoardItem;
-    }
-
-    if (index === MAX_HOME_INTEREST_POINTS - 1) {
-      return lastBoardItem;
-    }
-
-    return innerBoardItem;
-  };
-
   return (
     <Flex>
       {pointsOfInterest.map((pointOfInterest, index) => {
@@ -80,7 +68,7 @@ export function Board() {
 
         return (
           <Flex key={pointOfInterest} direction='column' className={boardColumn}>
-            <ScrollArea className={`${boardItems} ${specifyItemsClass(index)}`}>
+            <ScrollArea className={boardItems}>
               <Stack align='center'>{items}</Stack>
             </ScrollArea>
 
