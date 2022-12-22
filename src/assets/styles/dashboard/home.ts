@@ -9,7 +9,7 @@ const DATE_BADGE_HEIGHT = '35px';
 const SUB_HEADER_HEIGHT = '50px';
 
 export const useHomeStyles = () => {
-  const { classes } = createStyles((theme) => {
+  const { classes } = createStyles((theme, _params, getRef) => {
     const AVAILABLE_HEIGHT = `calc(100vh - ${HEADER_HEIGHT} - ${SUB_HEADER_HEIGHT} - ${OVERLAY_PADDING}px)`;
 
     const classes = {
@@ -29,6 +29,14 @@ export const useHomeStyles = () => {
         width: 0,
         minWidth: 200,
         flex: '1 1 0px',
+
+        [`&:first-of-type .${getRef('boardDate')}`]: {
+          borderBottomLeftRadius: theme.radius.sm,
+        },
+
+        [`&:last-of-type .${getRef('boardDate')}`]: {
+          borderBottomRightRadius: theme.radius.sm,
+        },
       },
 
       boardItems: {
@@ -50,6 +58,7 @@ export const useHomeStyles = () => {
       },
 
       boardDate: {
+        ref: getRef('boardDate'),
         height: `${DATE_BADGE_HEIGHT}`,
       },
     };
