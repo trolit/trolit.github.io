@@ -1,18 +1,29 @@
 import { ColorScheme } from '@mantine/core';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
+import {
+  PRIMARY_COLOR,
+  DARK_THEME_COLOR_SHADE,
+  LIGHT_THEME_COLOR_SHADE,
+} from '@/config';
 import { DARK_THEME } from '@/assets/constants/themes';
 
 interface IState {
   colorScheme: ColorScheme;
 
   isProfileCardVisible: boolean;
+
+  shadedColor: string;
 }
 
+const initialColorScheme = DARK_THEME;
+
 const initialState: IState = {
-  colorScheme: DARK_THEME,
+  colorScheme: initialColorScheme,
 
   isProfileCardVisible: true,
+
+  shadedColor: getShadedColor(initialColorScheme),
 };
 
 export const preferencesSlice = createSlice({
@@ -22,7 +33,11 @@ export const preferencesSlice = createSlice({
 
   reducers: {
     toggleColorScheme: (state, action: PayloadAction<ColorScheme>) => {
-      state.colorScheme = action.payload;
+      const colorScheme = action.payload;
+
+      state.colorScheme = colorScheme;
+
+      state.shadedColor = getShadedColor(colorScheme);
     },
 
     toggleProfileCard: (state) => {
@@ -30,6 +45,14 @@ export const preferencesSlice = createSlice({
     },
   },
 });
+
+function getShadedColor(colorScheme: ColorScheme) {
+  return `${PRIMARY_COLOR}.${
+    colorScheme === DARK_THEME
+      ? DARK_THEME_COLOR_SHADE
+      : LIGHT_THEME_COLOR_SHADE
+  }`;
+}
 
 export const { toggleColorScheme, toggleProfileCard } =
   preferencesSlice.actions;

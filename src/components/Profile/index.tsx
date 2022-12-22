@@ -10,6 +10,7 @@ import {
   Blockquote,
   Anchor,
 } from '@mantine/core';
+import { useSelector } from 'react-redux';
 
 import {
   tags,
@@ -19,13 +20,17 @@ import {
   title,
   avatarSrc,
 } from '@/assets/data/profile';
-import { SHADED_COLOR } from '@/assets/constants/common';
+import { RootState } from '@/store';
 import { useCommonStyles } from '@/assets/styles/common';
 import { Tags } from '@/components/Dashboard/common/Tags';
 import { useProfileStyles } from '@/assets/styles/profile';
 
 export function Profile() {
   const { panel, h100 } = useCommonStyles();
+
+  const shadedColor = useSelector(
+    (state: RootState) => state.preferences.shadedColor,
+  );
 
   const { wrapper, titleWrapper, group, link } = useProfileStyles();
 
@@ -58,7 +63,7 @@ export function Profile() {
             />
           </Group>
 
-          <Blockquote cite={`-${quote.author}`} color={SHADED_COLOR}>
+          <Blockquote cite={`-${quote.author}`} color={shadedColor}>
             {quote.text}
           </Blockquote>
 

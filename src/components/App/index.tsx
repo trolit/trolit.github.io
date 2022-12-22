@@ -8,12 +8,17 @@ import {
 import { ReactNode } from 'react';
 import { useSelector } from 'react-redux';
 
+import {
+  PRIMARY_COLOR,
+  BACKGROUND_SRC,
+  DARK_THEME_COLOR_SHADE,
+  LIGHT_THEME_COLOR_SHADE,
+} from '@/config';
 import { RootState } from '@/store';
 import { MainGrid } from './MainGrid';
 import { useAppStyles } from '@/assets/styles/app';
 import { toggleColorScheme } from '@/store/preferences';
 import { useCommonStyles } from '@/assets/styles/common';
-import { PRIMARY_COLOR, BACKGROUND_SRC, PRIMARY_COLOR_SHADE } from '@/config';
 
 interface IProps {
   tab: ReactNode;
@@ -39,7 +44,10 @@ export default function App({ tab, subheader }: IProps) {
         theme={{
           colorScheme,
           primaryColor: PRIMARY_COLOR,
-          primaryShade: PRIMARY_COLOR_SHADE,
+          primaryShade: {
+            light: LIGHT_THEME_COLOR_SHADE,
+            dark: DARK_THEME_COLOR_SHADE,
+          },
         }}
         withGlobalStyles
         withNormalizeCSS

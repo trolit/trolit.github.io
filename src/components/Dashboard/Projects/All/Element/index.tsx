@@ -44,7 +44,11 @@ export function Element({
                 <Tags
                   name={name}
                   value={tags}
-                  badgeProps={{ size: 'sm', variant: 'outline', radius: 'md' }}
+                  badgeProps={{
+                    size: 'sm',
+                    radius: 'md',
+                    variant: 'outline',
+                  }}
                 />
               </Group>
 
