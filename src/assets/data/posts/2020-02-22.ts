@@ -1,10 +1,5 @@
 import { YOUTUBE_EMBED_URL } from '@/config';
-import {
-  Photo,
-  Video,
-  Header,
-  Paragraph,
-} from '@/services/usePostRenderer/components';
+import { Photo, Video, Header, Paragraph } from '@/services/usePostRenderer/components';
 import { IPost } from '@/interfaces/dashboard/IPost';
 
 export const POST: IPost = {
@@ -55,8 +50,7 @@ export const POST: IPost = {
     new Photo({
       description: 'DGBL',
 
-      sourceUrl:
-        'http://www.spencerauthor.com/game-based-learning/sketch-note-game-based-learning/',
+      sourceUrl: 'http://www.spencerauthor.com/game-based-learning/sketch-note-game-based-learning/',
 
       overrideComponentProps: {
         src: 'https://spencerauthor.com/wp-content/uploads/2018/07/sketch-note-game-based-learning.png',

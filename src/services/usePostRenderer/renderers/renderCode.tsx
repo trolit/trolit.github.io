@@ -5,11 +5,7 @@ import { Text, Container, Code } from '@mantine/core';
 
 import { Code as CodeComponent } from '../components';
 
-function render(
-  index: number,
-  codeBlock: ReactNode,
-  label?: string,
-): ReactNode {
+function render(index: number, codeBlock: ReactNode, label?: string): ReactNode {
   return (
     <Container p={0} fluid key={index} style={{ width: '100%' }}>
       {label && <Text mb={5}>{label}</Text>}

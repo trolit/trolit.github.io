@@ -21,16 +21,7 @@ export function Thumbnail({ name, value }: IProps) {
   }
 
   if (typeof value === 'string') {
-    return (
-      <Image
-        width={34}
-        height={34}
-        radius='md'
-        src={value}
-        alt={`${name} image`}
-        withPlaceholder
-      />
-    );
+    return <Image width={34} height={34} radius='md' src={value} alt={`${name} image`} withPlaceholder />;
   }
 
   const Value = value;

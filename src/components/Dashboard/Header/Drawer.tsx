@@ -24,9 +24,7 @@ export function HeaderDrawer({ isDrawerOpened, onDrawerClose }: IProps) {
 
   const { navigationLink, headerDrawerScrollArea } = useDashboardStyles();
 
-  const colorScheme = useSelector(
-    (state: RootState) => state.preferences.colorScheme,
-  );
+  const colorScheme = useSelector((state: RootState) => state.preferences.colorScheme);
 
   const navigation = NAVIGATION_ITEMS.map(({ name, route }) => {
     return (
@@ -54,11 +52,7 @@ export function HeaderDrawer({ isDrawerOpened, onDrawerClose }: IProps) {
       onClose={onDrawerClose}
       className={hiddenDesktop}
     >
-      <Divider
-        my='sm'
-        mx='-md'
-        color={colorScheme === DARK_THEME ? 'dark.5' : 'gray.1'}
-      />
+      <Divider my='sm' mx='-md' color={colorScheme === DARK_THEME ? 'dark.5' : 'gray.1'} />
 
       <ScrollArea className={headerDrawerScrollArea} mx='-md'>
         {navigation}

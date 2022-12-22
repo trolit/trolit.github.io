@@ -11,13 +11,7 @@ export function Tracks() {
     <ScrollArea className={scrollArea}>
       <Container p={DASHBOARD_PADDING} fluid>
         <ScrollArea>
-          <Table
-            striped
-            withBorder
-            fontSize='xs'
-            captionSide='top'
-            withColumnBorders
-          >
+          <Table striped withBorder fontSize='xs' captionSide='top' withColumnBorders>
             <thead>
               <tr>
                 <th></th>

@@ -1,12 +1,6 @@
-import {
-  renderCode,
-  renderPhoto,
-  renderVideo,
-  renderHeader,
-  renderParagraph,
-} from './renderers';
 import { IComponentRenderer } from './interfaces';
 import { ComponentRendererFactory } from './helpers';
+import { renderCode, renderPhoto, renderVideo, renderHeader, renderParagraph } from './renderers';
 
 export const CODE_COMPONENT_KEY = 'code';
 

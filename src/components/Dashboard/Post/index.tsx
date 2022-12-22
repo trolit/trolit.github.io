@@ -23,11 +23,7 @@ export function Post() {
 
   const parsedPostId = parseInt(postId);
 
-  if (
-    Number.isNaN(parsedPostId) ||
-    parsedPostId < 1 ||
-    parsedPostId > POSTS.length
-  ) {
+  if (Number.isNaN(parsedPostId) || parsedPostId < 1 || parsedPostId > POSTS.length) {
     return <Navigate to={POSTS_ROUTE} replace={true} />;
   }
 

@@ -18,8 +18,7 @@ export function PanelHeader() {
 
   const { hiddenDesktop, h100, hiddenMobile } = useCommonStyles();
 
-  const [isDrawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
-    useDisclosure(false);
+  const [isDrawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
 
   const navigation = NAVIGATION_ITEMS.map(({ icon: Icon, name, route }) => (
     <NavLink
@@ -40,21 +39,13 @@ export function PanelHeader() {
             {navigation}
           </Group>
 
-          <Burger
-            px='md'
-            opened={isDrawerOpened}
-            onClick={toggleDrawer}
-            className={hiddenDesktop}
-          />
+          <Burger px='md' opened={isDrawerOpened} onClick={toggleDrawer} className={hiddenDesktop} />
 
           <Toolbar />
         </Group>
       </Header>
 
-      <HeaderDrawer
-        isDrawerOpened={isDrawerOpened}
-        onDrawerClose={closeDrawer}
-      />
+      <HeaderDrawer isDrawerOpened={isDrawerOpened} onDrawerClose={closeDrawer} />
     </Box>
   );
 }

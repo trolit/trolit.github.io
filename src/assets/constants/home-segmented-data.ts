@@ -41,11 +41,7 @@ interface ISegmentData {
 const CONSTRUCTED_SEGMENTS: ISegmentData[] = [];
 
 for (const { value, dates, items } of homeSegments) {
-  const pointsOfInterest = getPointsOfInterest(
-    dates,
-    MAX_HOME_INTEREST_POINTS,
-    HOME_GROUP_BY,
-  );
+  const pointsOfInterest = getPointsOfInterest(dates, MAX_HOME_INTEREST_POINTS, HOME_GROUP_BY);
 
   const arrayOfIndexes = getArrayOfIndexes(pointsOfInterest, items);
 
@@ -58,32 +54,24 @@ for (const { value, dates, items } of homeSegments) {
 
 export function getDataBySegment(segment: HomeSegment) {
   return (
-    CONSTRUCTED_SEGMENTS.find(
-      (constructedSegment) => constructedSegment.value === segment,
-    ) || CONSTRUCTED_SEGMENTS[0]
+    CONSTRUCTED_SEGMENTS.find((constructedSegment) => constructedSegment.value === segment) || CONSTRUCTED_SEGMENTS[0]
   );
 }
 
-function getArrayOfIndexes(
-  pointsOfInterest: string[],
-  source: IProject[] | IPost[] | ITrack[],
-): number[][] {
+function getArrayOfIndexes(pointsOfInterest: string[], source: IProject[] | IPost[] | ITrack[]): number[][] {
   const arrayOfIndexes: number[][] = [];
 
   for (let index = 0; index < MAX_HOME_INTEREST_POINTS; index++) {
     arrayOfIndexes.push([]);
   }
 
-  const parsedPointsOfInterest: Dayjs[] = pointsOfInterest.map(
-    (pointOfInterest) => dayjs(pointOfInterest),
-  );
+  const parsedPointsOfInterest: Dayjs[] = pointsOfInterest.map((pointOfInterest) => dayjs(pointOfInterest));
 
   source.forEach((item: IProject | IPost | ITrack, index: number) => {
     const castedItem = item as { date: string };
 
-    const pointOfInterestIndex = parsedPointsOfInterest.findIndex(
-      (parsedPointOfInterest) =>
-        parsedPointOfInterest.isSame(dayjs(castedItem.date), HOME_GROUP_BY),
+    const pointOfInterestIndex = parsedPointsOfInterest.findIndex((parsedPointOfInterest) =>
+      parsedPointOfInterest.isSame(dayjs(castedItem.date), HOME_GROUP_BY),
     );
 
     if (~pointOfInterestIndex) {

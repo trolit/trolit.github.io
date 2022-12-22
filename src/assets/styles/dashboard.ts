@@ -40,10 +40,7 @@ export const useDashboardStyles = () => {
         },
 
         ...theme.fn.hover({
-          backgroundColor:
-            theme.colorScheme === DARK_THEME
-              ? theme.colors.dark[6]
-              : theme.colors.gray[0],
+          backgroundColor: theme.colorScheme === DARK_THEME ? theme.colors.dark[6] : theme.colors.gray[0],
         }),
 
         '&:first-of-type': {
@@ -53,8 +50,7 @@ export const useDashboardStyles = () => {
 
       link: {
         borderRadius: theme.radius.md,
-        backgroundColor:
-          theme.colorScheme === DARK_THEME ? theme.colors.dark[7] : theme.white,
+        backgroundColor: theme.colorScheme === DARK_THEME ? theme.colors.dark[7] : theme.white,
 
         '&:hover': {
           boxShadow: `${theme.shadows.md} !important`,

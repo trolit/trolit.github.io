@@ -9,26 +9,14 @@ import { Projects } from './Dashboard/Projects';
 import { Subheader as HomeSubheader } from './Dashboard/Home/Subheader';
 import { Subheader as ProjectsSubheader } from './Dashboard/Projects/Subheader';
 
-import {
-  HOME_ROUTE,
-  POSTS_ROUTE,
-  TRACKS_ROUTE,
-  PROJECTS_ROUTE,
-} from '@/assets/constants/routes';
+import { HOME_ROUTE, POSTS_ROUTE, TRACKS_ROUTE, PROJECTS_ROUTE } from '@/assets/constants/routes';
 
 export function AppRoutes() {
   return (
     <Routes>
-      <Route
-        index
-        path={HOME_ROUTE}
-        element={<App tab={<Home />} subheader={<HomeSubheader />} />}
-      />
+      <Route index path={HOME_ROUTE} element={<App tab={<Home />} subheader={<HomeSubheader />} />} />
 
-      <Route
-        path={PROJECTS_ROUTE}
-        element={<App tab={<Projects />} subheader={<ProjectsSubheader />} />}
-      />
+      <Route path={PROJECTS_ROUTE} element={<App tab={<Projects />} subheader={<ProjectsSubheader />} />} />
 
       <Route path={POSTS_ROUTE}>
         <Route index element={<App tab={<Posts />} />} />

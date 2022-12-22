@@ -13,9 +13,7 @@ interface IProps {
   item: IProject;
 }
 
-export function Element({
-  item: { name, thumbnail, date, description, languages, tags, links },
-}: IProps) {
+export function Element({ item: { name, thumbnail, date, description, languages, tags, links } }: IProps) {
   const { h100 } = useCommonStyles();
 
   const [isOverlayOpened, toggleOverlay] = useState(false);
@@ -23,9 +21,7 @@ export function Element({
   return (
     <Paper radius='md' withBorder className={h100}>
       <Box className={h100} style={{ position: 'relative' }}>
-        {isOverlayOpened && (
-          <LinksOverlay links={links} toggleOverlay={toggleOverlay} />
-        )}
+        {isOverlayOpened && <LinksOverlay links={links} toggleOverlay={toggleOverlay} />}
 
         <Languages projectName={name} value={languages} />
 

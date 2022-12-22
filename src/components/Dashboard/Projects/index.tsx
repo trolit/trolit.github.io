@@ -11,9 +11,7 @@ import { useProjectsStyles } from '@/assets/styles/dashboard/projects';
 export function Projects() {
   const { scrollArea } = useProjectsStyles();
 
-  const activeSegment = useSelector(
-    (state: RootState) => state.projects.activeSegment,
-  );
+  const activeSegment = useSelector((state: RootState) => state.projects.activeSegment);
 
   return (
     <ScrollArea className={scrollArea}>

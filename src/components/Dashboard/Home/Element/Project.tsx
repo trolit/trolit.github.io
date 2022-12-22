@@ -11,26 +11,16 @@ interface IProps {
   item: IProject;
 }
 
-export function ProjectElement({
-  item: { name, languages, tags, links },
-}: IProps) {
+export function ProjectElement({ item: { name, languages, tags, links } }: IProps) {
   const label = (
-    <Languages
-      name={name}
-      value={languages}
-      badgeProps={{ mr: 5, size: 'sm', radius: 0, variant: 'outline' }}
-    />
+    <Languages name={name} value={languages} badgeProps={{ mr: 5, size: 'sm', radius: 0, variant: 'outline' }} />
   );
 
   const extra = <Tags name={name} value={tags} badgeProps={{ mr: 5 }} />;
 
   const postExtra = (
     <Group mt={5} spacing={5}>
-      <ActionIconLinks
-        name={name}
-        value={links}
-        actionIconProps={{ size: 22, variant: 'subtle' }}
-      />
+      <ActionIconLinks name={name} value={links} actionIconProps={{ size: 22, variant: 'subtle' }} />
     </Group>
   );
 

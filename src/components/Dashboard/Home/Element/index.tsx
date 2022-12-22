@@ -42,19 +42,9 @@ export function Element({
   const innerSpace = 10;
 
   return (
-    <Paper
-      withBorder
-      className={w100}
-      style={{ height: '140px', borderLeft: 'unset' }}
-    >
+    <Paper withBorder className={w100} style={{ height: '140px', borderLeft: 'unset' }}>
       <Group align='center' noWrap className={`${h100}`} spacing={innerSpace}>
-        <ThemeIcon
-          p={5}
-          size={30}
-          radius={0}
-          className={h100}
-          variant='default'
-        >
+        <ThemeIcon p={5} size={30} radius={0} className={h100} variant='default'>
           <Icon />
         </ThemeIcon>
 

@@ -13,9 +13,7 @@ export function Subheader() {
 
   const dispatch = useDispatch();
 
-  const activeSegment = useSelector(
-    (state: RootState) => state.projects.activeSegment,
-  );
+  const activeSegment = useSelector((state: RootState) => state.projects.activeSegment);
 
   return (
     <Paper radius={0} className={subheader}>

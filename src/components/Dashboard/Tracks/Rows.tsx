@@ -28,11 +28,7 @@ export function Rows() {
           <td>
             <Flex {...flexProps}>
               {authors.map((author, authorIndex) => (
-                <Badge
-                  size='sm'
-                  radius={0}
-                  key={`track-${index}-author-${authorIndex}`}
-                >
+                <Badge size='sm' radius={0} key={`track-${index}-author-${authorIndex}`}>
                   {author}
                 </Badge>
               ))}

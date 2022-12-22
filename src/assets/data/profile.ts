@@ -11,19 +11,11 @@ export const name = 'p4w31 !d21k0w541';
 
 export const title = '';
 
-export const tags: ITag[] = [
-  { text: 'TypeScript' },
-  { text: 'JavaScript' },
-  { text: 'C#' },
-];
+export const tags: ITag[] = [{ text: 'TypeScript' }, { text: 'JavaScript' }, { text: 'C#' }];
 
 export const links: ILink[] = [
   GITHUB_LINK(''),
-  CUSTOM_LINK(
-    'https://profile-summary-for-github.com/user/trolit',
-    'GitHub Profile Summary',
-    IconChartPie,
-  ),
+  CUSTOM_LINK('https://profile-summary-for-github.com/user/trolit', 'GitHub Profile Summary', IconChartPie),
 ];
 
 export const quote: IQuote = {

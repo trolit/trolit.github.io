@@ -5,11 +5,4 @@ import { renderHeader } from './renderHeader';
 import { renderParagraph } from './renderParagraph';
 import { renderReferences } from './renderReferences';
 
-export {
-  renderCode,
-  renderPhoto,
-  renderVideo,
-  renderHeader,
-  renderParagraph,
-  renderReferences,
-};
+export { renderCode, renderPhoto, renderVideo, renderHeader, renderParagraph, renderReferences };
