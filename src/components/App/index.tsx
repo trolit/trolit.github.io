@@ -1,4 +1,3 @@
-import { ReactNode } from 'react';
 import { useSelector } from 'react-redux';
 import { Center, Container, ScrollArea, MantineProvider, ColorSchemeProvider } from '@mantine/core';
 
@@ -9,13 +8,7 @@ import { toggleColorScheme } from '@/store/preferences';
 import { useCommonStyles } from '@/assets/styles/common';
 import { PRIMARY_COLOR, BACKGROUND_SRC, DARK_THEME_COLOR_SHADE, LIGHT_THEME_COLOR_SHADE } from '@/config';
 
-interface IProps {
-  tab: ReactNode;
-
-  subheader?: ReactNode;
-}
-
-export default function App({ tab, subheader }: IProps) {
+export default function App() {
   const { scrollArea, container } = useAppStyles();
 
   const { h100, w100 } = useCommonStyles();
@@ -45,7 +38,7 @@ export default function App({ tab, subheader }: IProps) {
         >
           <Container fluid className={container}>
             <Center className={`${h100} ${w100}`}>
-              <MainGrid tab={tab} subheader={subheader} />
+              <MainGrid />
             </Center>
           </Container>
         </ScrollArea>
