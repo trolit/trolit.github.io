@@ -1,12 +1,5 @@
-import {
-  Group,
-  Stack,
-  Button,
-  Overlay,
-  ScrollArea,
-  SimpleGrid,
-} from '@mantine/core';
 import { Dispatch, SetStateAction } from 'react';
+import { Group, Stack, Button, Overlay, ScrollArea, SimpleGrid } from '@mantine/core';
 
 import { ILink } from '@/interfaces/ILink';
 import { useCommonStyles } from '@/assets/styles/common';

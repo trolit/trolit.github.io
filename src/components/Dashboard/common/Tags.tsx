@@ -14,14 +14,7 @@ export function Tags({ name, value, badgeProps }: IProps) {
   return (
     <>
       {value.map(({ text, color }, index) => (
-        <Badge
-          size='xs'
-          radius={0}
-          color={color}
-          variant='filled'
-          key={`${name}-tag-${index}`}
-          {...badgeProps}
-        >
+        <Badge size='xs' radius={0} color={color} variant='filled' key={`${name}-tag-${index}`} {...badgeProps}>
           {text}
         </Badge>
       ))}

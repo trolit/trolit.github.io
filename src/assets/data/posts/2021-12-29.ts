@@ -1,9 +1,4 @@
-import {
-  Code,
-  Photo,
-  Header,
-  Paragraph,
-} from '@/services/usePostRenderer/components';
+import { Code, Photo, Header, Paragraph } from '@/services/usePostRenderer/components';
 import { IPost } from '@/interfaces/dashboard/IPost';
 
 const title = `Update pushed commit(s) details`;

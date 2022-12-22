@@ -1,10 +1,6 @@
 import { TablerIcon } from '@tabler/icons';
 
-export const indexToIcons = (
-  data: TablerIcon[],
-  index: number,
-  length?: number,
-): TablerIcon[] => {
+export const indexToIcons = (data: TablerIcon[], index: number, length?: number): TablerIcon[] => {
   const icons: TablerIcon[] = [];
 
   const dataLength = data.length;

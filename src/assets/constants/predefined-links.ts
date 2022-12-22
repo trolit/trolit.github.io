@@ -1,12 +1,4 @@
-import {
-  IconX,
-  IconNotes,
-  IconVideo,
-  IconCamera,
-  TablerIcon,
-  IconWorldWww,
-  IconBrandGithub,
-} from '@tabler/icons';
+import { IconX, IconNotes, IconVideo, IconCamera, TablerIcon, IconWorldWww, IconBrandGithub } from '@tabler/icons';
 
 import { ILink } from '@/interfaces/ILink';
 import { GITHUB_USERNAME } from '@/config';
@@ -51,11 +43,7 @@ export const WWW_LINK = (target: string, name: string): ILink => {
   };
 };
 
-export const CUSTOM_LINK = (
-  target: string,
-  name: string,
-  icon: TablerIcon = IconX,
-): ILink => {
+export const CUSTOM_LINK = (target: string, name: string, icon: TablerIcon = IconX): ILink => {
   return {
     name,
     icon,

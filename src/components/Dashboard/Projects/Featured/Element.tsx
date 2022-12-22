@@ -1,17 +1,5 @@
-import {
-  Card,
-  Badge,
-  Text,
-  Stack,
-  Image,
-  Title,
-  Group,
-  Popover,
-  Button,
-  Container,
-  ScrollArea,
-} from '@mantine/core';
 import { IconQuestionMark } from '@tabler/icons';
+import { Card, Badge, Text, Stack, Image, Title, Group, Popover, Button, Container, ScrollArea } from '@mantine/core';
 
 import { Languages } from '@/components/Dashboard/common/Languages';
 import { IFeaturedProject } from '@/interfaces/dashboard/IFeaturedProject';
@@ -23,9 +11,7 @@ interface IProps {
   item: IFeaturedProject;
 }
 
-export function Element({
-  item: { name, date, thumbnail, languages, description, links },
-}: IProps) {
+export function Element({ item: { name, date, thumbnail, languages, description, links } }: IProps) {
   const {
     classes: { dateBadge, stack, card },
     constants: { MIN_CARD_WIDTH },
@@ -40,12 +26,7 @@ export function Element({
       <ScrollArea type='auto'>
         <Stack justify='space-between' className={stack}>
           <Card.Section py={20}>
-            <Image
-              height={250}
-              fit='contain'
-              src={thumbnail as string}
-              alt={`${name} thumbnail`}
-            />
+            <Image height={250} fit='contain' src={thumbnail as string} alt={`${name} thumbnail`} />
 
             <Title my={5} align='center' order={3} lineClamp={1}>
               {name}
@@ -56,7 +37,7 @@ export function Element({
             </Group>
           </Card.Section>
 
-          <Popover withArrow shadow='md' position='top' width={MIN_CARD_WIDTH}>
+          <Popover shadow='md' position='top' width={MIN_CARD_WIDTH}>
             <Popover.Target>
               <Container>
                 <Button radius={100} size='md' variant='filled'>
@@ -76,11 +57,7 @@ export function Element({
 
           <Card.Section withBorder>
             <Group py={10} noWrap spacing={15} position='center'>
-              <ActionIconLinks
-                name={name}
-                value={links}
-                actionIconProps={{ color: 'gray', size: 50 }}
-              />
+              <ActionIconLinks name={name} value={links} actionIconProps={{ color: 'gray', size: 50 }} />
             </Group>
           </Card.Section>
         </Stack>

@@ -1,12 +1,6 @@
-import {
-  Box,
-  Group,
-  Center,
-  ColorScheme,
-  SegmentedControl,
-} from '@mantine/core';
-import { IconSun, IconMoon, TablerIcon } from '@tabler/icons';
 import { useDispatch, useSelector } from 'react-redux';
+import { IconSun, IconMoon, TablerIcon } from '@tabler/icons';
+import { Box, Group, Center, ColorScheme, SegmentedControl } from '@mantine/core';
 
 import { RootState } from '@/store';
 import { toggleColorScheme } from '@/store/preferences';
@@ -15,9 +9,7 @@ import { DARK_THEME, LIGHT_THEME } from '@/assets/constants/themes';
 export function ThemeSwitcher() {
   const dispatch = useDispatch();
 
-  const colorScheme = useSelector(
-    (state: RootState) => state.preferences.colorScheme,
-  );
+  const colorScheme = useSelector((state: RootState) => state.preferences.colorScheme);
 
   const Label = ({ text, icon: Icon }: { text: string; icon: TablerIcon }) => (
     <Center>

@@ -10,13 +10,7 @@ interface IPrism {
 
   copiedLabel?: string;
 
-  highlightLines?: Record<
-    string,
-    {
-      color: MantineColor;
-      label?: string;
-    }
-  >;
+  highlightLines?: Record<string, { color: MantineColor; label?: string }>;
 }
 
 export interface ICode {

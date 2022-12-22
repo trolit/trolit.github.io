@@ -1,11 +1,4 @@
-import {
-  IconDice1,
-  IconDice2,
-  IconDice3,
-  IconDice4,
-  IconDice5,
-  IconDice6,
-} from '@tabler/icons';
+import { IconDice1, IconDice2, IconDice3, IconDice4, IconDice5, IconDice6 } from '@tabler/icons';
 
 import {
   WWW_LINK,
@@ -29,14 +22,7 @@ import { IFeaturedProject } from '@/interfaces/dashboard/IFeaturedProject';
 
 const thumbnail = DEFAULT_IMAGE_SRC;
 
-const icons = [
-  IconDice1,
-  IconDice2,
-  IconDice3,
-  IconDice4,
-  IconDice5,
-  IconDice6,
-];
+const icons = [IconDice1, IconDice2, IconDice3, IconDice4, IconDice5, IconDice6];
 
 /** Featured Projects  */
 const Patchron: IFeaturedProject = {
@@ -54,8 +40,7 @@ const Patchron: IFeaturedProject = {
       text: 'Jest',
     },
   ],
-  description:
-    'GitHub bot that provides first, early PR review and fasters further reviews done by humans.',
+  description: 'GitHub bot that provides first, early PR review and fasters further reviews done by humans.',
   thumbnail,
   links: [GITHUB_LINK('Patchron')],
 };
@@ -140,8 +125,7 @@ const RAW_PROJECTS: IProject[] = [
         text: 'Semantic UI',
       },
     ],
-    description:
-      'Portfolio website based on TechFolios v1 template. Used since 2020, reworked in 2021.',
+    description: 'Portfolio website based on TechFolios v1 template. Used since 2020, reworked in 2021.',
     thumbnail,
     links: [GITHUB_LINK('jekyll-portfolio#about')],
   },
@@ -201,14 +185,11 @@ const RAW_PROJECTS: IProject[] = [
         text: 'Angular Material',
       },
     ],
-    description:
-      'Grocery Store app that demonstrates shopping cart, sorting and filtering features from API.',
+    description: 'Grocery Store app that demonstrates shopping cart, sorting and filtering features from API.',
     thumbnail,
     links: [
       GITHUB_LINK('grocery-store-angular#-grocery-store-angular'),
-      GALLERY_LINK(
-        'https://github.com/trolit/grocery-store-angular#-launch-preview-',
-      ),
+      GALLERY_LINK('https://github.com/trolit/grocery-store-angular#-launch-preview-'),
     ],
   },
 
@@ -227,8 +208,7 @@ const RAW_PROJECTS: IProject[] = [
         text: 'Spring Boot 2.3.4',
       },
     ],
-    description:
-      'Grocery store API implementation in Java (JDK 14) using Spring Boot, JPA, Hibernate, Querydsl.',
+    description: 'Grocery store API implementation in Java (JDK 14) using Spring Boot, JPA, Hibernate, Querydsl.',
     thumbnail,
     links: [GITHUB_LINK('grocery-store-themed-API#-grocery-store-api-v122')],
   },
@@ -299,9 +279,7 @@ const RAW_PROJECTS: IProject[] = [
     thumbnail,
     links: [
       GITHUB_LINK('document-and-compare#document-and-compare', 'OS-expected'),
-      GALLERY_LINK(
-        'https://github.com/OS-expected/document-and-compare#screens',
-      ),
+      GALLERY_LINK('https://github.com/OS-expected/document-and-compare#screens'),
     ],
   },
 
@@ -339,11 +317,7 @@ const RAW_PROJECTS: IProject[] = [
     description:
       'Naive Bayes Classifier efficency test when TRN set contains duplicates (Bootstrap) vs TRN containing unique objects only (Monte Carlo).',
     thumbnail,
-    links: [
-      GITHUB_LINK(
-        'naive-bayes-classifiers-work#naive-bayes-classifiers-experimental-work',
-      ),
-    ],
+    links: [GITHUB_LINK('naive-bayes-classifiers-work#naive-bayes-classifiers-experimental-work')],
   },
 
   {
@@ -372,8 +346,7 @@ const RAW_PROJECTS: IProject[] = [
         text: 'uNet',
       },
     ],
-    description:
-      'Meet Unity uNet technology while extending FPS project provided by Brackeys.',
+    description: 'Meet Unity uNet technology while extending FPS project provided by Brackeys.',
     thumbnail,
     links: [GITHUB_LINK('Robots_strike#robots-strike')],
   },
@@ -387,8 +360,7 @@ const RAW_PROJECTS: IProject[] = [
         text: 'Unity 2D',
       },
     ],
-    description:
-      'Small 2D game project as personal second attempt to meet Unity IDE.',
+    description: 'Small 2D game project as personal second attempt to meet Unity IDE.',
     thumbnail,
     links: [
       GITHUB_LINK('LastHuman#last-human'),
@@ -404,11 +376,7 @@ const RAW_PROJECTS: IProject[] = [
     tags: [],
     description: `Attempt to simulate three-rotor enigma as an project for science club.`,
     thumbnail,
-    links: [
-      GITHUB_LINK(
-        'Kryptosystemy/tree/master/6.%20Enigma%20I#projekt-enigmawersja---sol3-v20',
-      ),
-    ],
+    links: [GITHUB_LINK('Kryptosystemy/tree/master/6.%20Enigma%20I#projekt-enigmawersja---sol3-v20')],
   },
 
   {
@@ -420,8 +388,7 @@ const RAW_PROJECTS: IProject[] = [
         text: 'WinForms',
       },
     ],
-    description:
-      '2D game made in WinForms. Concept based on Arcade Frogger with few enchancements like local coop.',
+    description: '2D game made in WinForms. Concept based on Arcade Frogger with few enchancements like local coop.',
     thumbnail,
     links: [GITHUB_LINK('Projekt-Frog#projekt-frog')],
   },
@@ -459,12 +426,10 @@ const RAW_PROJECTS: IProject[] = [
   },
 ];
 
-export const PROJECTS = sortByDate<IProject>(RAW_PROJECTS).map(
-  (project, index) => ({
-    ...project,
-    thumbnail: indexToIcons(icons, index, RAW_PROJECTS.length),
-  }),
-);
+export const PROJECTS = sortByDate<IProject>(RAW_PROJECTS).map((project, index) => ({
+  ...project,
+  thumbnail: indexToIcons(icons, index, RAW_PROJECTS.length),
+}));
 
 export const FEATURED_PROJECTS = [
   {
@@ -481,6 +446,4 @@ export const FEATURED_PROJECTS = [
   },
 ];
 
-export const ALL_DATES = Array.from(
-  new Set(RAW_PROJECTS.map(({ date }) => date)),
-);
+export const ALL_DATES = Array.from(new Set(RAW_PROJECTS.map(({ date }) => date)));

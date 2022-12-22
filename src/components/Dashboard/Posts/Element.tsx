@@ -1,13 +1,5 @@
-import {
-  Flex,
-  Text,
-  Group,
-  Paper,
-  Button,
-  Center,
-  Divider,
-} from '@mantine/core';
 import { useNavigate } from 'react-router-dom';
+import { Flex, Text, Group, Paper, Button, Center, Divider } from '@mantine/core';
 
 import { IPost } from '@/interfaces/dashboard/IPost';
 import { POSTS_ROUTE } from '@/assets/constants/routes';
@@ -37,11 +29,7 @@ export function Element({ id, item: { name, date, tags, abstract } }: IProps) {
       </Flex>
 
       <Group p='sm' pl={0} position='left'>
-        <Tags
-          name={name}
-          value={tags}
-          badgeProps={{ size: 'sm', variant: 'outline' }}
-        />
+        <Tags name={name} value={tags} badgeProps={{ size: 'sm', variant: 'outline' }} />
       </Group>
 
       <Divider my={10} />
@@ -51,11 +39,7 @@ export function Element({ id, item: { name, date, tags, abstract } }: IProps) {
       </Text>
 
       <Center>
-        <Button
-          size='md'
-          variant='subtle'
-          onClick={() => navigate(`${POSTS_ROUTE}/${id}`)}
-        >
+        <Button size='md' variant='subtle' onClick={() => navigate(`${POSTS_ROUTE}/${id}`)}>
           Read more
         </Button>
       </Center>

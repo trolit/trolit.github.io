@@ -22,12 +22,5 @@ export function TrackElement({ item: { authors, title, youtubeId } }: IProps) {
     </Anchor>
   );
 
-  return (
-    <Element
-      text={title}
-      label={label}
-      extra={extra}
-      icon={TRACKS_NAVIGATION_ITEM.icon}
-    />
-  );
+  return <Element text={title} label={label} extra={extra} icon={TRACKS_NAVIGATION_ITEM.icon} />;
 }

@@ -22,17 +22,11 @@ export function LanguageMenu() {
   ];
 
   const activeLanguageLabel = useSelector(
-    (state: RootState) =>
-      data.find(({ value }) => value === state.projects.activeLanguage)?.label,
+    (state: RootState) => data.find(({ value }) => value === state.projects.activeLanguage)?.label,
   );
 
   return (
-    <Menu
-      width={110}
-      withinPortal
-      position='left-start'
-      transition='pop-top-left'
-    >
+    <Menu width={110} withinPortal position='left-start' transition='pop-top-left'>
       <Menu.Target>
         <Button rightIcon={<IconChevronDown size={18} stroke={1.5} />} pr={12}>
           {activeLanguageLabel}
@@ -41,10 +35,7 @@ export function LanguageMenu() {
 
       <Menu.Dropdown>
         {data.map(({ label, value }) => (
-          <Menu.Item
-            key={`${label}-language`}
-            onClick={() => dispatch(setActiveLanguage(value))}
-          >
+          <Menu.Item key={`${label}-language`} onClick={() => dispatch(setActiveLanguage(value))}>
             {label}
           </Menu.Item>
         ))}

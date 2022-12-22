@@ -21,9 +21,7 @@ export function MainGrid({ tab, subheader }: IProps) {
 
   const { h100, w100 } = useCommonStyles();
 
-  const isProfileCardVisible = useSelector(
-    (state: RootState) => state.preferences.isProfileCardVisible,
-  );
+  const isProfileCardVisible = useSelector((state: RootState) => state.preferences.isProfileCardVisible);
 
   return (
     <Grid grow gutter={OVERLAY_PADDING / 2} align='center' className={mainGrid}>
@@ -33,11 +31,7 @@ export function MainGrid({ tab, subheader }: IProps) {
         </Grid.Col>
       )}
 
-      <Grid.Col
-        py={0}
-        span={isProfileCardVisible ? 9 : 12}
-        className={`${h100} ${w100}`}
-      >
+      <Grid.Col py={0} span={isProfileCardVisible ? 9 : 12} className={`${h100} ${w100}`}>
         <motion.div layout className={`${h100} ${w100}`}>
           <Dashboard tab={tab} subheader={subheader} />
         </motion.div>

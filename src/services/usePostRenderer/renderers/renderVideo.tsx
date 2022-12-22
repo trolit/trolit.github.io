@@ -25,13 +25,7 @@ export function renderVideo(index: number, video: Video): ReactNode {
 
   return (
     <Container key={index} fluid style={containerStyles}>
-      <iframe
-        src={src}
-        title={title}
-        frameBorder='0'
-        allowFullScreen
-        style={iframeStyles}
-      />
+      <iframe src={src} title={title} frameBorder='0' allowFullScreen style={iframeStyles} />
     </Container>
   );
 }

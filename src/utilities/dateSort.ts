@@ -1,10 +1,6 @@
 import dayjs from 'dayjs';
 
-export const dateSort = (
-  a: string,
-  b: string,
-  mode: 'desc' | 'asc' = 'desc',
-) => {
+export const dateSort = (a: string, b: string, mode: 'desc' | 'asc' = 'desc') => {
   if (mode === 'desc') {
     return dayjs(a).isBefore(dayjs(b)) ? 1 : -1;
   }

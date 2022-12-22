@@ -25,9 +25,7 @@ export function renderPhoto(index: number, photo: Photo): ReactNode {
         }
         alt={`${description || photo}`}
         withPlaceholder
-        placeholder={
-          <Text align='center'>This image contained {description}</Text>
-        }
+        placeholder={<Text align='center'>This image contained {description}</Text>}
         {...overrideComponentProps}
       />
     </div>

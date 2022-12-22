@@ -10,10 +10,7 @@ export const useProjectsStyles = () => {
     const classes = {
       overlay: {
         borderRadius: '6px',
-        backgroundColor:
-          theme.colorScheme === DARK_THEME
-            ? theme.colors.dark[6]
-            : theme.colors.gray[1],
+        backgroundColor: theme.colorScheme === DARK_THEME ? theme.colors.dark[6] : theme.colors.gray[1],
       },
 
       scrollArea: {

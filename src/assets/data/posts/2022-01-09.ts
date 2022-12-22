@@ -1,8 +1,4 @@
-import {
-  Photo,
-  Header,
-  Paragraph,
-} from '@/services/usePostRenderer/components';
+import { Photo, Header, Paragraph } from '@/services/usePostRenderer/components';
 import { IPost } from '@/interfaces/dashboard/IPost';
 
 export const POST: IPost = {
