@@ -12,7 +12,7 @@ export function Profile() {
 
   const shadedColor = useSelector((state: RootState) => state.preferences.shadedColor);
 
-  const { wrapper, titleWrapper, group, link } = useProfileStyles();
+  const { wrapper, titleWrapper, group, link, blockQuote } = useProfileStyles();
 
   return (
     <Paper p='lg' radius='md' withBorder className={`${panel} ${wrapper} ${h100}`}>
@@ -34,7 +34,7 @@ export function Profile() {
             <Tags name='profile' value={tags} badgeProps={{ size: 'md', radius: 'xs', variant: 'light' }} />
           </Group>
 
-          <Blockquote style={{ fontSize: 14 }} cite={`-${quote.author}`} color={shadedColor}>
+          <Blockquote className={blockQuote} cite={`-${quote.author}`} color={shadedColor}>
             {quote.text}
           </Blockquote>
 

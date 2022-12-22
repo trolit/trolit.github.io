@@ -16,6 +16,10 @@ export const useProfileStyles = () => {
         margin: '10px 20px',
       },
 
+      blockQuote: {
+        fontSize: 14,
+      },
+
       link: {
         '&:hover': {
           border: '2px dotted',
