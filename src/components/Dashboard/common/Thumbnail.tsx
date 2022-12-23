@@ -9,22 +9,20 @@ interface IProps {
   value: string | TablerIcon | TablerIcon[];
 }
 
-export function Thumbnail({ name, value }: IProps) {
-  if (Array.isArray(value)) {
+export function Thumbnail({ name, value: Value }: IProps) {
+  if (Array.isArray(Value)) {
     return (
       <Group>
-        {value.map((Icon, index) => (
+        {Value.map((Icon, index) => (
           <Icon size={35} key={`${name}-icon-${index}`} />
         ))}
       </Group>
     );
   }
 
-  if (typeof value === 'string') {
-    return <Image width={34} height={34} radius='md' src={value} alt={`${name} image`} withPlaceholder />;
+  if (typeof Value === 'string') {
+    return <Image width={34} height={34} radius='md' src={Value} alt={`${name} image`} withPlaceholder />;
   }
-
-  const Value = value;
 
   return <Value size={22} color={PRIMARY_COLOR} />;
 }
