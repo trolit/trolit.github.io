@@ -1,16 +1,10 @@
-import { ReactNode } from 'react';
 import { Paper, Container } from '@mantine/core';
 
 import { PanelHeader } from './Header';
+import { Outlet } from 'react-router-dom';
 import { useCommonStyles } from '@/assets/styles/common';
 
-interface IProps {
-  tab: ReactNode;
-
-  subheader?: ReactNode;
-}
-
-export function Dashboard({ tab, subheader }: IProps) {
+export function Dashboard() {
   const { panel } = useCommonStyles();
 
   return (
@@ -18,11 +12,9 @@ export function Dashboard({ tab, subheader }: IProps) {
       <Container px={0} fluid>
         <PanelHeader />
 
-        {subheader}
-      </Container>
-
-      <Container px={0} fluid>
-        <Paper>{tab}</Paper>
+        <Paper>
+          <Outlet />
+        </Paper>
       </Container>
     </Paper>
   );
