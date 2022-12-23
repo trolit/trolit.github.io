@@ -12,9 +12,7 @@ export function Dashboard() {
       <Container px={0} fluid>
         <PanelHeader />
 
-        <Paper>
-          <Outlet />
-        </Paper>
+        <Outlet />
       </Container>
     </Paper>
   );
