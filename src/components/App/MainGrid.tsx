@@ -1,11 +1,11 @@
 import { Grid } from '@mantine/core';
 import { motion } from 'framer-motion';
 import { useSelector } from 'react-redux';
-import { Outlet } from 'react-router-dom';
 
 import { RootState } from '@/store';
 import { OVERLAY_PADDING } from '@/config';
 import { Profile } from '@/components/Profile';
+import { Dashboard } from '@/components/Dashboard';
 import { useAppStyles } from '@/assets/styles/app';
 import { useCommonStyles } from '@/assets/styles/common';
 
@@ -26,7 +26,7 @@ export function MainGrid() {
 
       <Grid.Col py={0} span={isProfileCardVisible ? 9 : 12} className={`${h100} ${w100}`}>
         <motion.div layout className={`${h100} ${w100}`}>
-          <Outlet />
+          <Dashboard />
         </motion.div>
       </Grid.Col>
     </Grid>
