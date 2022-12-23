@@ -9,9 +9,9 @@ import { useCommonStyles } from '@/assets/styles/common';
 import { PRIMARY_COLOR, BACKGROUND_SRC, DARK_THEME_COLOR_SHADE, LIGHT_THEME_COLOR_SHADE } from '@/config';
 
 export default function App() {
-  const { scrollArea, container } = useAppStyles();
-
   const { h100, w100 } = useCommonStyles();
+
+  const { scrollArea, container } = useAppStyles();
 
   const colorScheme = useSelector((state: RootState) => state.preferences.colorScheme);
 
