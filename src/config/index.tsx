@@ -23,7 +23,7 @@ export const DASHBOARD_PADDING: number = 20;
 export const GITHUB_USERNAME: string = 'trolit';
 
 // @NOTE https://day.js.org/docs/en/display/format
-export const DATE_FORMAT: string = 'DD/MM/YYYY';
+export const GLOBAL_DATE_FORMAT: string = 'DD/MM/YYYY';
 
 export const HOME_DATE_FORMATTER: string = 'YYYY';
 
