@@ -1,9 +1,7 @@
-import { IconChartPie } from '@tabler/icons';
-
 import { ITag } from '@/interfaces/ITag';
 import { ILink } from '@/interfaces/ILink';
 import { IQuote } from '@/interfaces/profile/IQuote';
-import { CUSTOM_LINK, GITHUB_LINK } from '@/assets/constants/predefined-links';
+import { GITHUB_LINK } from '@/assets/constants/predefined-links';
 
 export const avatarSrc = require('@/assets/media/avatar.jpg');
 
@@ -13,10 +11,7 @@ export const title = '';
 
 export const tags: ITag[] = [{ text: 'TypeScript' }, { text: 'JavaScript' }, { text: 'C#' }];
 
-export const links: ILink[] = [
-  GITHUB_LINK(''),
-  CUSTOM_LINK('https://profile-summary-for-github.com/user/trolit', 'GitHub Profile Summary', IconChartPie),
-];
+export const links: ILink[] = [GITHUB_LINK('')];
 
 export const quote: IQuote = {
   author: 'Thomas Edison',

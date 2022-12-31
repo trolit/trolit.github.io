@@ -4,7 +4,7 @@ import { Box, Group, Center, ColorScheme, SegmentedControl } from '@mantine/core
 
 import { RootState } from '@/store';
 import { toggleColorScheme } from '@/store/preferences';
-import { DARK_THEME, LIGHT_THEME } from '@/assets/constants/themes';
+import { DARK_THEME, LIGHT_THEME } from '@/assets/constants/common';
 
 export function ThemeSwitcher() {
   const dispatch = useDispatch();

@@ -4,7 +4,7 @@ import { Drawer, Divider, ScrollArea, NavLink } from '@mantine/core';
 
 import { RootState } from '@/store';
 import { useNavigate } from 'react-router';
-import { DARK_THEME } from '@/assets/constants/themes';
+import { DARK_THEME } from '@/assets/constants/common';
 import { useCommonStyles } from '@/assets/styles/common';
 import { useDashboardStyles } from '@/assets/styles/dashboard';
 import { NAVIGATION_ITEMS } from '@/assets/constants/navigation-items';

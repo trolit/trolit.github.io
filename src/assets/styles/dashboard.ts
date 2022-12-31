@@ -1,6 +1,6 @@
 import { createStyles } from '@mantine/core';
 
-import { DARK_THEME } from '@/assets/constants/themes';
+import { DARK_THEME } from '@/assets/constants/common';
 import { HEADER_HEIGHT, OVERLAY_PADDING } from '@/config';
 
 export const useDashboardStyles = () => {

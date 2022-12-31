@@ -1,6 +1,6 @@
 import { createStyles } from '@mantine/core';
 
-import { DARK_THEME } from '@/assets/constants/themes';
+import { DARK_THEME } from '@/assets/constants/common';
 import { DASHBOARD_PADDING, HEADER_HEIGHT, OVERLAY_PADDING } from '@/config';
 
 const SUB_HEADER_HEIGHT = '50px';

@@ -13,7 +13,7 @@ export function ProfileCardToggler() {
 
   const label = `${isProfileCardVisible ? 'Hide' : 'Show'} profile card`;
 
-  const Icon = isProfileCardVisible ? IconAddressBook : IconAddressBookOff;
+  const Icon = isProfileCardVisible ? IconAddressBookOff : IconAddressBook;
 
   return (
     <Tooltip label={label} position='bottom' withArrow withinPortal>
