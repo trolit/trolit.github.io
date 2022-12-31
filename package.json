@@ -1,6 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
+  "homepage": "https://trolit.github.io",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.4.5",
