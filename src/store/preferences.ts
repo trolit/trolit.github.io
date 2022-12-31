@@ -1,7 +1,7 @@
 import { ColorScheme } from '@mantine/core';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { DARK_THEME } from '@/assets/constants/themes';
+import { DARK_THEME } from '@/assets/constants/common';
 import { PRIMARY_COLOR, DARK_THEME_COLOR_SHADE, LIGHT_THEME_COLOR_SHADE } from '@/config';
 
 interface IState {
