@@ -1,5 +1,5 @@
-import { Code, Photo, Header, Paragraph } from '@/services/usePostRenderer/components';
 import { IPost } from '@/interfaces/dashboard/IPost';
+import { Code, Photo, Header, Paragraph } from '@/services/usePostRenderer/components';
 
 export const POST: IPost = {
   name: `Enchancing (Unity) project development`,
