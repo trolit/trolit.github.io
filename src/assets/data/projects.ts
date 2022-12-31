@@ -27,7 +27,7 @@ const icons = [IconDice1, IconDice2, IconDice3, IconDice4, IconDice5, IconDice6]
 /** Featured Projects  */
 const Patchron: IFeaturedProject = {
   name: 'Patchron',
-  date: '2022-01-18',
+  date: '2022-08-03',
   languages: [JAVASCRIPT_LANGUAGE],
   tags: [
     {
@@ -47,7 +47,7 @@ const Patchron: IFeaturedProject = {
 
 const ProjectZero: IFeaturedProject = {
   name: 'Project Zero',
-  date: '2019-06-16',
+  date: '2019-11-24',
   languages: [CSHARP_LANGUAGE],
   tags: [
     {
@@ -66,7 +66,7 @@ const ProjectZero: IFeaturedProject = {
 
 const EzGitDoc: IFeaturedProject = {
   name: 'EzGitDoc',
-  date: '2020-02-23',
+  date: '2020-02-29',
   languages: [JAVASCRIPT_LANGUAGE],
   tags: [
     {
@@ -89,7 +89,7 @@ const EzGitDoc: IFeaturedProject = {
 const RAW_PROJECTS: IProject[] = [
   {
     name: 'Personal portfolio Y22',
-    date: '2022-11-04',
+    date: '2022-12-31',
     languages: [TYPESCRIPT_LANGUAGE],
     tags: [
       {
@@ -102,8 +102,7 @@ const RAW_PROJECTS: IProject[] = [
         text: 'Mantine UI',
       },
     ],
-    description:
-      'Personal portfolio made from scratch in React with Mantine UI framework during break on primary project 😴',
+    description: 'Personal portfolio made from scratch in React with Mantine UI during break from primary project 😴',
     thumbnail,
     links: [GITHUB_LINK('trolit.github.io')],
   },
@@ -132,7 +131,7 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'tonodedo',
-    date: '2021-07-09',
+    date: '2021-07-25',
     languages: [JAVASCRIPT_LANGUAGE],
     tags: [
       {
@@ -155,7 +154,7 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'Leader selection algorithm',
-    date: '2021-04-25',
+    date: '2021-07-02',
     languages: [CSHARP_LANGUAGE],
     tags: [
       {
@@ -172,7 +171,7 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'Grocery store (frontend)',
-    date: '2020-10-31',
+    date: '2020-11-26',
     languages: [TYPESCRIPT_LANGUAGE],
     tags: [
       {
@@ -195,7 +194,7 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'Grocery store (backend)',
-    date: '2020-09-21',
+    date: '2020-11-27',
     languages: [JAVA_LANGUAGE],
     tags: [
       {
@@ -215,7 +214,7 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'Wordally',
-    date: '2020-08-09',
+    date: '2020-08-13',
     languages: [JAVASCRIPT_LANGUAGE],
     tags: [
       {
@@ -237,7 +236,7 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: '3vry',
-    date: '2020-06-03',
+    date: '2020-07-21',
     languages: [KOTLIN_LANGUAGE],
     tags: [
       {
@@ -261,7 +260,7 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'Document And Compare',
-    date: '2020-04-17',
+    date: '2020-05-04',
     languages: [CSHARP_LANGUAGE],
     tags: [
       {
@@ -285,7 +284,7 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'sShuffler',
-    date: '2020-04-12',
+    date: '2020-04-13',
     languages: [CSHARP_LANGUAGE],
     tags: [
       {
@@ -307,7 +306,7 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'NB Project',
-    date: '2019-05-19',
+    date: '2019-07-17',
     languages: [CSHARP_LANGUAGE],
     tags: [
       {
@@ -322,7 +321,7 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'A*',
-    date: '2018-08-14',
+    date: '2018-08-30',
     languages: [CSHARP_LANGUAGE],
     tags: [
       {
@@ -336,7 +335,7 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'Robots Strike',
-    date: '2018-07-29',
+    date: '2018-09-19',
     languages: [CSHARP_LANGUAGE],
     tags: [
       {
@@ -353,7 +352,7 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'Last Human',
-    date: '2018-06-10',
+    date: '2018-08-03',
     languages: [CSHARP_LANGUAGE],
     tags: [
       {
@@ -371,7 +370,7 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'Projekt Enigma',
-    date: '2018-01-07',
+    date: '2018-08-14',
     languages: [CSHARP_LANGUAGE],
     tags: [],
     description: `Attempt to simulate three-rotor enigma as an project for science club.`,
@@ -381,7 +380,7 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'Projekt Frog',
-    date: '2017-11-12',
+    date: '2017-11-25',
     languages: [CSHARP_LANGUAGE],
     tags: [
       {
@@ -406,7 +405,7 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'Car Themed API',
-    date: '2020-08-15',
+    date: '2020-08-19',
     languages: [CSHARP_LANGUAGE],
     tags: [
       {
