@@ -23,9 +23,9 @@ export function AppRoutes() {
         </Route>
 
         <Route path={TRACKS_ROUTE} element={<Tracks />} />
-      </Route>
 
-      <Route path='*' element={<Navigate replace to={HOME_ROUTE} />} />
+        <Route path='*' element={<Navigate replace to={HOME_ROUTE} />} />
+      </Route>
     </Routes>
   );
 }
