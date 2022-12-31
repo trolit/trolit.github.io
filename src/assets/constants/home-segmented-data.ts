@@ -52,12 +52,6 @@ for (const { value, dates, items } of homeSegments) {
   });
 }
 
-export function getDataBySegment(segment: HomeSegment) {
-  return (
-    CONSTRUCTED_SEGMENTS.find((constructedSegment) => constructedSegment.value === segment) || CONSTRUCTED_SEGMENTS[0]
-  );
-}
-
 function getArrayOfIndexes(pointsOfInterest: string[], source: IProject[] | IPost[] | ITrack[]): number[][] {
   const arrayOfIndexes: number[][] = [];
 
@@ -80,4 +74,10 @@ function getArrayOfIndexes(pointsOfInterest: string[], source: IProject[] | IPos
   });
 
   return arrayOfIndexes;
+}
+
+export function getDataBySegment(segment: HomeSegment) {
+  return (
+    CONSTRUCTED_SEGMENTS.find((constructedSegment) => constructedSegment.value === segment) || CONSTRUCTED_SEGMENTS[0]
+  );
 }
