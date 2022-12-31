@@ -1,9 +1,6 @@
 import { sortByDate } from '@/helpers/sortByDate';
 import { ITrack } from '@/interfaces/dashboard/ITrack';
-
-import { COMMON_TAGS } from '@/assets/constants/common-tags';
-
-const { SOUNDTRACK } = COMMON_TAGS;
+import { SOUNDTRACK } from '@/assets/constants/predefined-tags';
 
 const RAW_TRACKS: ITrack[] = [
   {
