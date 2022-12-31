@@ -1,6 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
+  "homepage": "https://trolit.github.io",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.4.5",
@@ -26,7 +27,8 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "craco build"
+    "build": "craco build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
@@ -41,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "prettier": "^2.7.1"
   }
 }
