@@ -26,7 +26,7 @@ function render<T extends IBasePost>(post: T) {
 
     if (!COMPONENT_RENDERER) {
       console.error('------------------------------------------------------');
-      console.error(`Tried to render unregistered component (${key}).`);
+      console.error(`Tried to render unregistered component (key: ${key}).`);
       console.error(component);
       console.error('------------------------------------------------------');
 
