@@ -28,7 +28,6 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "browserslist": {
