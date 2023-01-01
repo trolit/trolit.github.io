@@ -4,6 +4,18 @@ import { SOUNDTRACK } from '@/assets/constants/predefined-tags';
 
 const RAW_TRACKS: ITrack[] = [
   {
+    authors: ['Sean Callery'],
+
+    title: `Main Theme (Halo the Series)`,
+
+    date: '2023-01-01',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'OUzOyM6llsw',
+  },
+
+  {
     authors: ['Rozen', 'Reven'],
 
     title: `The Final Battle (Elden Ring)`,
