@@ -19,7 +19,7 @@ export function Subheader() {
 
     const unit = MAX_HOME_INTEREST_POINTS > 1 ? `${HOME_GROUP_BY}s` : HOME_GROUP_BY;
 
-    return `Recent Activity (last ${value} ${unit})`;
+    return `Activity (last ${value} ${unit})`;
   })();
 
   return (
