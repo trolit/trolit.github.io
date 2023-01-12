@@ -4,6 +4,18 @@ import { SOUNDTRACK } from '@/assets/constants/predefined-tags';
 
 const RAW_TRACKS: ITrack[] = [
   {
+    authors: ['David Sardy'],
+
+    title: `I'm Done, Wyatt (Ida Red)`,
+
+    date: '2023-01-12',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: '23fLxZtFEk4',
+  },
+
+  {
     authors: ['Sean Callery'],
 
     title: `Main Theme (Halo the Series)`,
