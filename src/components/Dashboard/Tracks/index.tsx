@@ -5,10 +5,13 @@ import { Rows } from './Rows';
 import { DASHBOARD_PADDING } from '@/config';
 import { AUTHORS } from '@/assets/data/tracks';
 import { useDashboardStyles } from '@/assets/styles/dashboard';
+import { useTracksStyles } from '@/assets/styles/dashboard/tracks';
 import { CheckboxGroupFilterPopover } from '@/components/Dashboard/common/filter-popovers/CheckboxGroup';
 
 export function Tracks() {
   const { scrollArea } = useDashboardStyles();
+
+  const { headerCell } = useTracksStyles();
 
   const [composersFilter, setComposersFilter] = useState<string[]>([]);
 
@@ -23,7 +26,7 @@ export function Tracks() {
 
                 <th>Title</th>
 
-                <th>
+                <th className={headerCell}>
                   Composer(s)
                   <CheckboxGroupFilterPopover
                     value={composersFilter}
