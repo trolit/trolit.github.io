@@ -20,8 +20,8 @@ export function Languages({ name, value, badgeProps }: IProps) {
           variant='outline'
           key={`${name}-language-${index}`}
           style={{
-            color: badgeColorInHex,
-            borderColor: badgeColorInHex,
+            color: badgeProps?.color || badgeColorInHex,
+            borderColor: badgeProps?.color || badgeColorInHex,
           }}
           {...badgeProps}
         >
