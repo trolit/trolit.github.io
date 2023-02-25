@@ -44,7 +44,7 @@ export function CheckboxGroupFilterPopover({ value, options, onValueUpdate }: IP
 
       <Popover.Dropdown>
         <Button disabled={isValueEmpty} mb={15} fullWidth variant='filled' compact onClick={() => onValueUpdate([])}>
-          Clear
+          Clear {isValueEmpty ? '' : `(${value.length})`}
         </Button>
 
         <ScrollArea h={300}>
