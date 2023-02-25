@@ -7,7 +7,7 @@ import { Featured } from './Featured';
 import { Subheader } from './Subheader';
 import { DASHBOARD_PADDING } from '@/config';
 import { ProjectsSegment } from '@/enums/ProjectsSegment';
-import { useProjectsStyles } from '@/assets/styles/dashboard/projects';
+import { useProjectsStyles } from '@/assets/styles/dashboard/projects/common';
 
 export function Projects() {
   const { scrollArea } = useProjectsStyles();
