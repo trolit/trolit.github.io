@@ -25,6 +25,7 @@ export const useDashboardStyles = () => {
         display: 'flex',
         alignItems: 'center',
         height: '100%',
+        width: 'fit-content',
         paddingLeft: spacing.md,
         paddingRight: spacing.md,
         textDecoration: 'none',
