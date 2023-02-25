@@ -1,5 +1,7 @@
 import { createStyles } from '@mantine/core';
 
+import { PRIMARY_COLOR } from '@/config';
+
 const MIN_CARD_WIDTH = 350;
 
 export const useFeaturedProjectsStyles = () => {
@@ -11,9 +13,9 @@ export const useFeaturedProjectsStyles = () => {
         right: 0,
         zIndex: 9999,
         margin: 'auto',
-        border: '4px solid silver',
-        borderBottomLeftRadius: 40,
-        borderBottomRightRadius: 40,
+        border: `4px solid ${PRIMARY_COLOR}`,
+        borderBottomLeftRadius: 140,
+        borderBottomRightRadius: 140,
         position: 'absolute' as const,
       },
 

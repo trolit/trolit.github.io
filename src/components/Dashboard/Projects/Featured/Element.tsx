@@ -18,7 +18,7 @@ export function Element({ item: { name, date, thumbnail, languages, description,
 
   return (
     <div className={element}>
-      <Avatar size={150} radius='sm' src={thumbnail as string} alt={`${name} thumbnail`} className={avatar} />
+      <Avatar size={160} radius='sm' src={thumbnail as string} alt={`${name} thumbnail`} className={avatar} />
 
       <Card p={0} shadow='sm' className={card}>
         <BackgroundImage src='https://cdn.pixabay.com/photo/2021/02/24/20/53/abstract-6047465_1280.jpg' radius='sm'>
