@@ -1,5 +1,6 @@
 import { sortByDate } from '@/helpers/sortByDate';
 import { ITrack } from '@/interfaces/dashboard/ITrack';
+import { IFilterOption } from '@/interfaces/IFilterOption';
 import { SOUNDTRACK } from '@/assets/constants/predefined-tags';
 
 const RAW_TRACKS: ITrack[] = [
@@ -835,3 +836,17 @@ const RAW_TRACKS: ITrack[] = [
 export const TRACKS = sortByDate<ITrack>(RAW_TRACKS);
 
 export const ALL_DATES = Array.from(new Set(RAW_TRACKS.map(({ date }) => date)));
+
+export const AUTHORS = RAW_TRACKS.reduce((accumulator: IFilterOption[], track) => {
+  const { authors } = track;
+
+  for (const author of authors) {
+    if (!accumulator.some((value) => value.label === author)) {
+      accumulator.push({
+        label: author,
+      });
+    }
+  }
+
+  return accumulator;
+}, []).sort((a, b) => a.label.localeCompare(b.label));
