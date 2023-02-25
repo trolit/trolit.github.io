@@ -1,5 +1,6 @@
 import { Avatar, BackgroundImage, Paper, Card, Badge, Text, Stack, Title, Group } from '@mantine/core';
 
+import { PRIMARY_COLOR } from '@/config';
 import { Languages } from '@/components/Dashboard/common/Languages';
 import { IFeaturedProject } from '@/interfaces/dashboard/IFeaturedProject';
 import { FormattedDate } from '@/components/Dashboard/common/FormattedDate';
@@ -23,25 +24,25 @@ export function Element({ item: { name, date, thumbnail, languages, description,
         <BackgroundImage src='https://cdn.pixabay.com/photo/2021/02/24/20/53/abstract-6047465_1280.jpg' radius='sm'>
           <Stack justify='space-between' pt={100}>
             <Card.Section py={20}>
-              <Title color={'white'} align='center' order={1} lineClamp={1}>
+              <Title color='white' align='center' order={1} lineClamp={1}>
                 {name}
               </Title>
             </Card.Section>
 
             <div>
               <Group noWrap position='center'>
-                <Languages name={name} value={languages} />
+                <Languages name={name} value={languages} badgeProps={{ color: `${PRIMARY_COLOR}.1` }} />
               </Group>
 
               <Group py={10} noWrap spacing={15} position='center'>
                 <ActionIconLinks
                   name={name}
                   value={links}
-                  actionIconProps={{ color: 'blue', size: 60, variant: 'filled' }}
+                  actionIconProps={{ color: PRIMARY_COLOR, size: 60, variant: 'filled' }}
                 />
               </Group>
 
-              <Badge color='blue' fullWidth size='xl' radius={0} variant='filled' className={dateBadge}>
+              <Badge fullWidth size='xl' radius={0} variant='filled' className={dateBadge}>
                 <FormattedDate value={date} />
               </Badge>
 
