@@ -1,11 +1,16 @@
 import { Table, Container, ScrollArea } from '@mantine/core';
+import { useState } from 'react';
 
 import { Rows } from './Rows';
 import { DASHBOARD_PADDING } from '@/config';
+import { AUTHORS } from '@/assets/data/tracks';
 import { useDashboardStyles } from '@/assets/styles/dashboard';
+import { CheckboxGroupFilterPopover } from '@/components/Dashboard/common/filter-popovers/CheckboxGroup';
 
 export function Tracks() {
   const { scrollArea } = useDashboardStyles();
+
+  const [composersFilter, setComposersFilter] = useState<string[]>([]);
 
   return (
     <ScrollArea className={scrollArea}>
@@ -18,7 +23,14 @@ export function Tracks() {
 
                 <th>Title</th>
 
-                <th>Composer(s)</th>
+                <th>
+                  Composer(s)
+                  <CheckboxGroupFilterPopover
+                    value={composersFilter}
+                    options={AUTHORS}
+                    onValueUpdate={setComposersFilter}
+                  />
+                </th>
 
                 <th>Tag(s)</th>
 
@@ -27,7 +39,7 @@ export function Tracks() {
             </thead>
 
             <tbody>
-              <Rows />
+              <Rows composersFilter={composersFilter} />
             </tbody>
           </Table>
         </ScrollArea>

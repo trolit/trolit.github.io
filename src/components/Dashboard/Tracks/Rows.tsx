@@ -5,9 +5,11 @@ import { TRACKS } from '@/assets/data/tracks';
 import { useCommonStyles } from '@/assets/styles/common';
 import { Tags } from '@/components/Dashboard/common/Tags';
 
-export function Rows() {
-  const tracksLength = TRACKS.length;
+interface IProps {
+  composersFilter: string[];
+}
 
+export function Rows({ composersFilter }: IProps) {
   const { textCenter } = useCommonStyles();
 
   const flexProps: FlexProps = {
@@ -17,9 +19,15 @@ export function Rows() {
     direction: 'row',
   };
 
+  const tracks = composersFilter.length
+    ? TRACKS.filter((track) => track.authors.some((author) => composersFilter.includes(author)))
+    : TRACKS;
+
+  const tracksLength = tracks.length;
+
   return (
     <>
-      {TRACKS.map(({ authors, title, tags, youtubeId }, index) => (
+      {tracks.map(({ authors, title, tags, youtubeId }, index) => (
         <tr key={`track-${index}`}>
           <td className={textCenter}>{tracksLength - index}</td>
 
