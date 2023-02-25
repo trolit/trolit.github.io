@@ -6,7 +6,7 @@ import { PRIMARY_COLOR } from '@/config';
 import { LanguageMenu } from './LanguageMenu';
 import { setActiveSegment } from '@/store/projects';
 import { ProjectsSegment } from '@/enums/ProjectsSegment';
-import { useProjectsStyles } from '@/assets/styles/dashboard/projects';
+import { useProjectsStyles } from '@/assets/styles/dashboard/projects/common';
 
 export function Subheader() {
   const { subheader } = useProjectsStyles();

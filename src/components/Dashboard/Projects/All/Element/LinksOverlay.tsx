@@ -3,8 +3,8 @@ import { Group, Stack, Button, Overlay, ScrollArea, SimpleGrid } from '@mantine/
 
 import { ILink } from '@/interfaces/ILink';
 import { useCommonStyles } from '@/assets/styles/common';
-import { useProjectsStyles } from '@/assets/styles/dashboard/projects';
 import { Link } from '@/components/Dashboard/Projects/All/Element/Link';
+import { useProjectsStyles } from '@/assets/styles/dashboard/projects/common';
 
 interface IProps {
   links: ILink[];
