@@ -11,7 +11,7 @@ export const useFeaturedProjectsStyles = () => {
         right: 0,
         zIndex: 9999,
         margin: 'auto',
-        border: '4px solid',
+        border: '4px solid silver',
         borderBottomLeftRadius: 40,
         borderBottomRightRadius: 40,
         position: 'absolute' as const,
