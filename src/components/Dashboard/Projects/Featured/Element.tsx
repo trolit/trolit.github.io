@@ -21,7 +21,7 @@ export function Element({ item: { name, date, thumbnail, languages, description,
       <Avatar size={160} radius='sm' src={thumbnail as string} alt={`${name} thumbnail`} className={avatar} />
 
       <Card p={0} shadow='sm' className={card}>
-        <BackgroundImage src='https://cdn.pixabay.com/photo/2021/02/24/20/53/abstract-6047465_1280.jpg' radius='sm'>
+        <BackgroundImage src={require('@/assets/media/projects/background.jpg')} radius='sm'>
           <Stack justify='space-between' pt={100}>
             <Card.Section py={20}>
               <Title color='white' align='center' order={1} lineClamp={1}>

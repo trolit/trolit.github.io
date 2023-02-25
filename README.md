@@ -34,3 +34,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 - [avatar (xumaru)](https://wall.alphacoders.com/big.php?i=553440)
 - [background (rawpixel.com - Freepik)](https://pl.freepik.com/darmowe-wektory/tlo-swiatla-neonowego_3602483.htm)
+- [featured project card background](https://pixabay.com/pl/photos/streszczenie-obraz-pi%c3%b3ra-pi%c4%99kny-6047465/)
