@@ -1,8 +1,153 @@
 import { sortByDate } from '@/helpers/sortByDate';
 import { ITrack } from '@/interfaces/dashboard/ITrack';
+import { IFilterOption } from '@/interfaces/IFilterOption';
 import { SOUNDTRACK } from '@/assets/constants/predefined-tags';
 
 const RAW_TRACKS: ITrack[] = [
+  {
+    authors: ['Gustavo Santaolalla'],
+
+    title: `Untitled Soundtrack (The Last Of Us Part II)`,
+
+    date: '2023-02-25',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'QGWi4_dOBxA',
+  },
+
+  {
+    authors: ['Gustavo Santaolalla'],
+
+    title: `Longing - Redemptions (The Last Of Us Part II)`,
+
+    date: '2023-02-25',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'vTtgVk6M4Xg',
+  },
+
+  {
+    authors: ['Gustavo Santaolalla'],
+
+    title: `It Can't Last - Home (The Last Of Us Part II)`,
+
+    date: '2023-02-25',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'YqPmt5MWDuM',
+  },
+
+  {
+    authors: ['Gustavo Santaolalla'],
+
+    title: `It Can't Last (The Last Of Us Part II)`,
+
+    date: '2023-02-25',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'QTGdpUHE0jM',
+  },
+
+  {
+    authors: ['Gustavo Santaolalla'],
+
+    title: `Unbroken (The Last Of Us Part II)`,
+
+    date: '2023-02-25',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'dKChKkgAdG4',
+  },
+
+  {
+    authors: ['Sarah Schachner'],
+
+    title: `Modern Warfare (Call Of Duty MW 2019)`,
+
+    date: '2023-02-25',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'QwqnapfmrKE',
+  },
+
+  {
+    authors: ['Steven Ceballos'],
+
+    title: `Memoria`,
+
+    date: '2023-02-25',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'gye7D1F40Ls',
+  },
+
+  {
+    authors: ['Brian Tyler'],
+
+    title: `I'm Sorry (Far Cry 3)`,
+
+    date: '2023-02-25',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'KC-kTC473gQ',
+  },
+
+  {
+    authors: ['Johan Söderqvist', 'Patrik Andrén'],
+
+    title: `Triumph (Battlefield 5)`,
+
+    date: '2023-02-25',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'M8PFVaFUuR8',
+  },
+
+  {
+    authors: ['Johan Söderqvist', 'Patrik Andrén'],
+
+    title: `I Vow To Thee My Country (Battlefield 5)`,
+
+    date: '2023-02-25',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: '1XY7aktN5HQ',
+  },
+
+  {
+    authors: ['David Sardy'],
+
+    title: `I'm Done, Wyatt (Ida Red)`,
+
+    date: '2023-01-12',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: '23fLxZtFEk4',
+  },
+
+  {
+    authors: ['Sean Callery'],
+
+    title: `Main Theme (Halo the Series)`,
+
+    date: '2023-01-01',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'OUzOyM6llsw',
+  },
+
   {
     authors: ['Rozen', 'Reven'],
 
@@ -253,18 +398,6 @@ const RAW_TRACKS: ITrack[] = [
     tags: [SOUNDTRACK],
 
     youtubeId: 'sjBjmwvikVc',
-  },
-
-  {
-    authors: ['Gustavo Santaolalla', 'Mac Quayle'],
-
-    title: `The Last of Us Part 2 OST`,
-
-    date: '2021-11-12',
-
-    tags: [SOUNDTRACK],
-
-    youtubeId: 'X-swJqjzjCI',
   },
 
   {
@@ -703,3 +836,17 @@ const RAW_TRACKS: ITrack[] = [
 export const TRACKS = sortByDate<ITrack>(RAW_TRACKS);
 
 export const ALL_DATES = Array.from(new Set(RAW_TRACKS.map(({ date }) => date)));
+
+export const AUTHORS = RAW_TRACKS.reduce((accumulator: IFilterOption[], track) => {
+  const { authors } = track;
+
+  for (const author of authors) {
+    if (!accumulator.some((value) => value.label === author)) {
+      accumulator.push({
+        label: author,
+      });
+    }
+  }
+
+  return accumulator;
+}, []).sort((a, b) => a.label.localeCompare(b.label));
