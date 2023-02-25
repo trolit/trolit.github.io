@@ -22,10 +22,10 @@ export const useDashboardStyles = () => {
       },
 
       navigationLink: {
+        height: '100%',
         display: 'flex',
         alignItems: 'center',
-        height: '100%',
-        width: 'fit-content',
+        width: 'max-content',
         paddingLeft: spacing.md,
         paddingRight: spacing.md,
         textDecoration: 'none',
@@ -35,9 +35,9 @@ export const useDashboardStyles = () => {
 
         [theme.fn.smallerThan('sm')]: {
           height: 42,
+          width: '100%',
           display: 'flex',
           alignItems: 'center',
-          width: '100%',
         },
 
         ...theme.fn.hover({
