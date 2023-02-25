@@ -1,35 +1,33 @@
 import { createStyles } from '@mantine/core';
 
-import { DASHBOARD_PADDING, HEADER_HEIGHT, OVERLAY_PADDING } from '@/config';
-
-const MIN_CARD_WIDTH = 300;
-
-const DATE_BADGE_HEIGHT = '30px';
-
-const SUB_HEADER_HEIGHT = '50px';
+const MIN_CARD_WIDTH = 350;
 
 export const useFeaturedProjectsStyles = () => {
   const { classes } = createStyles((theme) => {
-    const AVAILABLE_HEIGHT = `calc(100vh - ${HEADER_HEIGHT} - ${OVERLAY_PADDING}px - ${SUB_HEADER_HEIGHT} - ${DASHBOARD_PADDING}px)`;
-
     const classes = {
-      wrapper: {
-        height: AVAILABLE_HEIGHT,
+      avatar: {
+        top: 30,
+        left: 0,
+        right: 0,
+        zIndex: 9999,
+        margin: 'auto',
+        border: '4px solid',
+        borderBottomLeftRadius: 40,
+        borderBottomRightRadius: 40,
+        position: 'absolute' as const,
+      },
+
+      element: {
+        position: 'relative' as const,
       },
 
       dateBadge: {
-        height: DATE_BADGE_HEIGHT,
-      },
-
-      stack: {
-        position: 'relative' as const,
-        height: `calc(${AVAILABLE_HEIGHT} - ${DATE_BADGE_HEIGHT})`,
+        height: 35,
       },
 
       card: {
-        width: '100%',
-        height: '100%',
-        minWidth: MIN_CARD_WIDTH,
+        marginTop: 85,
+        width: MIN_CARD_WIDTH,
       },
     };
 
