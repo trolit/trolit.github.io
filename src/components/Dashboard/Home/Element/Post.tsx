@@ -2,20 +2,16 @@ import { Anchor } from '@mantine/core';
 import { useNavigate } from 'react-router-dom';
 
 import { Element } from '.';
-import { POSTS } from '@/assets/data/posts';
-import { IPost } from '@/interfaces/dashboard/IPost';
-import { POSTS_ROUTE } from '@/assets/constants/routes';
 import { Tags } from '@/components/Dashboard/common/Tags';
+import { IExtendedPost } from '@/interfaces/dashboard/IExtendedPost';
 import { POSTS_NAVIGATION_ITEM } from '@/assets/constants/navigation-items';
 
 interface IProps {
-  item: IPost;
+  item: IExtendedPost;
 }
 
 export function PostElement({ item }: IProps) {
   const navigate = useNavigate();
-
-  const id = POSTS.indexOf(item) + 1;
 
   const { name, tags } = item;
 
@@ -25,7 +21,7 @@ export function PostElement({ item }: IProps) {
       text={name}
       extra={<Tags name={name} value={tags} badgeProps={{ mr: 5 }} />}
       postExtra={
-        <Anchor size='xs' onClick={() => navigate(`${POSTS_ROUTE}/${id}`)}>
+        <Anchor size='xs' onClick={() => navigate(item.address)}>
           (View)
         </Anchor>
       }
