@@ -44,7 +44,7 @@ export function Profile() {
 
               return (
                 <Anchor key={index} href={url} target='_blank'>
-                  <ThemeIcon size='xl' radius='xs' variant='light' className={link}>
+                  <ThemeIcon size={50} radius='xs' variant='light' className={link}>
                     <LinkIcon />
                   </ThemeIcon>
                 </Anchor>
