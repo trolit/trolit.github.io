@@ -13,7 +13,7 @@ interface IProps {
 export function PostElement({ item }: IProps) {
   const navigate = useNavigate();
 
-  const { name, tags } = item;
+  const { name, tags, address } = item;
 
   return (
     <Element
@@ -21,7 +21,7 @@ export function PostElement({ item }: IProps) {
       text={name}
       extra={<Tags name={name} value={tags} badgeProps={{ mr: 5 }} />}
       postExtra={
-        <Anchor size='xs' onClick={() => navigate(item.address)}>
+        <Anchor size='xs' onClick={() => navigate(address)}>
           (View)
         </Anchor>
       }
