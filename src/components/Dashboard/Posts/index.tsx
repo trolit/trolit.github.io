@@ -13,7 +13,7 @@ export function Posts() {
       <Container p={DASHBOARD_PADDING} fluid>
         <Stack>
           {POSTS.map((post, index) => (
-            <Element key={`post-${index}`} id={index + 1} item={post} />
+            <Element key={`post-${index}`} item={post} />
           ))}
         </Stack>
       </Container>

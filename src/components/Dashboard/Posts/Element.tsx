@@ -1,19 +1,16 @@
 import { useNavigate } from 'react-router-dom';
 import { Flex, Text, Group, Paper, Button, Center, Divider } from '@mantine/core';
 
-import { IPost } from '@/interfaces/dashboard/IPost';
-import { POSTS_ROUTE } from '@/assets/constants/routes';
 import { useCommonStyles } from '@/assets/styles/common';
 import { Tags } from '@/components/Dashboard/common/Tags';
+import { IExtendedPost } from '@/interfaces/dashboard/IExtendedPost';
 import { FormattedDate } from '@/components/Dashboard/common/FormattedDate';
 
 interface IProps {
-  id: number;
-
-  item: IPost;
+  item: IExtendedPost;
 }
 
-export function Element({ id, item: { name, date, tags, abstract } }: IProps) {
+export function Element({ item: { address, name, date, tags, abstract } }: IProps) {
   const navigate = useNavigate();
 
   const { w100 } = useCommonStyles();
@@ -39,7 +36,7 @@ export function Element({ id, item: { name, date, tags, abstract } }: IProps) {
       </Text>
 
       <Center>
-        <Button size='md' variant='subtle' onClick={() => navigate(`${POSTS_ROUTE}/${id}`)}>
+        <Button size='md' variant='subtle' onClick={() => navigate(address)}>
           Read more
         </Button>
       </Center>
