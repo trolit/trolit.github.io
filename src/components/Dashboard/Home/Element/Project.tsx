@@ -13,7 +13,7 @@ interface IProps {
 
 export function ProjectElement({ item: { name, languages, tags, links } }: IProps) {
   const label = (
-    <Languages name={name} value={languages} badgeProps={{ mr: 5, size: 'sm', radius: 0, variant: 'outline' }} />
+    <Languages name={name} value={languages} badgeProps={{ mr: 5, size: 'md', radius: 55, variant: 'outline' }} />
   );
 
   const extra = <Tags name={name} value={tags} badgeProps={{ mr: 5 }} />;
