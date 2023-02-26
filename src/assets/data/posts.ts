@@ -5,10 +5,18 @@ import { POST as POST3 } from './posts/2021-12-27';
 import { POST as POST4 } from './posts/2021-12-29';
 import { POST as POST5 } from './posts/2022-01-09';
 
-import { IPost } from '@/interfaces/dashboard/IPost';
+import { POSTS_ROUTE } from '@/assets/constants/routes';
+import { IExtendedPost } from '@/interfaces/dashboard/IExtendedPost';
+import { translateStringToAddress } from '@/helpers/translateStringToAddress';
 
-const RAW_POSTS: IPost[] = [POST1, POST2, POST3, POST4, POST5];
+const RAW_POSTS: IExtendedPost[] = [POST1, POST2, POST3, POST4, POST5].map(
+  (post) =>
+    ({
+      ...post,
+      address: translateStringToAddress(post.name, POSTS_ROUTE),
+    } as IExtendedPost),
+);
 
-export const POSTS = sortByDate<IPost>(RAW_POSTS);
+export const POSTS = sortByDate<IExtendedPost>(RAW_POSTS);
 
 export const ALL_DATES = POSTS.map(({ date }) => date);
