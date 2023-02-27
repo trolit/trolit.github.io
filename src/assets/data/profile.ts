@@ -7,7 +7,7 @@ export const avatarSrc = require('@/assets/media/avatar.jpg');
 
 export const name = 'p4w31 !d21k0w541';
 
-export const title = '';
+export const title = 'code investigator';
 
 export const tags: ITag[] = [{ text: 'TypeScript' }, { text: 'JavaScript' }, { text: 'C#' }];
 
