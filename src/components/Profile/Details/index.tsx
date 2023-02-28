@@ -16,7 +16,7 @@ export function Details() {
   };
 
   const vscPanel = {
-    name: 'VSC Setup',
+    name: 'VSC',
     children: VscPanel,
   };
 
