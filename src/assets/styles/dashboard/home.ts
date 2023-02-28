@@ -4,7 +4,7 @@ import { HEADER_HEIGHT, OVERLAY_PADDING, DASHBOARD_PADDING } from '@/config';
 
 const INNER_PADDING = '7px';
 
-const DATE_BADGE_HEIGHT = '35px';
+const DATE_BADGE_HEIGHT = '40px';
 
 const SUB_HEADER_HEIGHT = '50px';
 

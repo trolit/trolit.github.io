@@ -12,10 +12,6 @@ export const useProfileStyles = () => {
         justifyContent: 'center',
       },
 
-      group: {
-        margin: '10px 20px',
-      },
-
       blockQuote: {
         fontSize: 14,
       },
