@@ -9,7 +9,7 @@ export const name = 'p4w31 !d21k0w541';
 
 export const title = 'code investigator';
 
-export const tags: ITag[] = [{ text: 'TypeScript' }, { text: 'JavaScript' }, { text: 'C#' }];
+export const tags: ITag[] = [{ text: 'C#' }, { text: 'JavaScript' }, { text: 'TypeScript' }];
 
 export const links: ILink[] = [GITHUB_LINK('')];
 
