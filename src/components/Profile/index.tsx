@@ -12,7 +12,7 @@ export function Profile() {
 
   const shadedColor = useSelector((state: RootState) => state.preferences.shadedColor);
 
-  const { wrapper, titleWrapper, group, link, blockQuote } = useProfileStyles();
+  const { wrapper, titleWrapper, link, blockQuote } = useProfileStyles();
 
   return (
     <Paper p={0} radius='md' withBorder className={`${panel} ${wrapper} ${h100}`}>
@@ -48,7 +48,7 @@ export function Profile() {
         <div>
           <Divider color='dark.5' />
 
-          <Group py={10} position='center' spacing='lg' className={group}>
+          <Group py={10} position='center' spacing='lg'>
             {links.map(({ icon, url }, index) => {
               const LinkIcon = icon;
 
