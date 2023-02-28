@@ -18,9 +18,7 @@ export function Profile() {
     <Paper p={0} radius='md' withBorder className={`${panel} ${wrapper} ${h100}`}>
       <Stack justify='space-between' className={h100}>
         <Group grow p='lg' pb={0} noWrap>
-          <div>
-            <Avatar src={avatarSrc} alt={name} size={130} radius={120} mx='auto' />
-          </div>
+          <Avatar src={avatarSrc} alt={name} size={130} radius={50} mx='auto' />
 
           <div>
             <Text align='center' size='lg' weight={500} mb={8}>
