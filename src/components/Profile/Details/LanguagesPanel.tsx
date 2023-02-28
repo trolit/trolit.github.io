@@ -6,7 +6,7 @@ import { Tags } from '@/components/Dashboard/common/Tags';
 export function LanguagesPanel() {
   return (
     <Stack justify='flex-end'>
-      <Tags name='profile' value={tags} badgeProps={{ size: 'lg', radius: 'xs', py: 10 }} />
+      <Tags name='profile' value={tags} badgeProps={{ size: 'md', radius: 'xs', py: 10 }} />
     </Stack>
   );
 }
