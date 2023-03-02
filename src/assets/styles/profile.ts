@@ -1,10 +1,12 @@
 import { createStyles } from '@mantine/core';
 
-const PRESENTATION_GROUP_HEIGHT = '30%';
+const PRESENTATION_GROUP_HEIGHT = '30vh';
 
-const TABS_HEIGHT = '40%';
+const TABS_LIST_HEIGHT = '35px';
 
-const BLOCKQUOTE_HEIGHT = '15%';
+const BLOCKQUOTE_HEIGHT = '15vh';
+
+const LINKS_GROUP_HEIGHT = '10vh';
 
 export const useProfileStyles = () => {
   const { classes } = createStyles((theme) => {
@@ -23,15 +25,15 @@ export const useProfileStyles = () => {
       },
 
       tabs: {
-        height: TABS_HEIGHT,
+        height: `calc(100% - ${PRESENTATION_GROUP_HEIGHT} - ${BLOCKQUOTE_HEIGHT} - ${LINKS_GROUP_HEIGHT})`,
       },
 
       tabsList: {
-        height: `calc(100% * 0.15)`,
+        height: TABS_LIST_HEIGHT,
       },
 
       tabsContent: {
-        height: `calc(100% * 0.85)`,
+        height: `calc(100% - ${TABS_LIST_HEIGHT})`,
       },
 
       blockQuote: {
@@ -40,7 +42,7 @@ export const useProfileStyles = () => {
       },
 
       linksGroup: {
-        height: `calc(100% - ${PRESENTATION_GROUP_HEIGHT} - ${TABS_HEIGHT} - ${BLOCKQUOTE_HEIGHT})`,
+        height: LINKS_GROUP_HEIGHT,
       },
 
       link: {
