@@ -5,12 +5,13 @@ import { POSTS } from '@/assets/data/posts';
 import { POSTS_ROUTE } from '@/assets/constants/routes';
 import { usePostStyles } from '@/assets/styles/dashboard/post';
 import { useDashboardStyles } from '@/assets/styles/dashboard';
+import { POSTS_POST_NAME_SLUG } from '@/assets/constants/routes';
 import { useContentRenderer } from '@/services/useContentRenderer';
 import { IExtendedPost } from '@/interfaces/dashboard/IExtendedPost';
 
 export function Post() {
   type ExpectedParams = {
-    postName: string;
+    [POSTS_POST_NAME_SLUG]: string;
   };
 
   const { wrapper } = usePostStyles();
