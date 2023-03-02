@@ -1,6 +1,6 @@
 import { YOUTUBE_EMBED_URL } from '@/config';
 import { IPost } from '@/interfaces/dashboard/IPost';
-import { Photo, Video, Header, Paragraph } from '@/services/usePostRenderer/components';
+import { Photo, Video, Header, Paragraph } from '@/services/useContentRenderer/components';
 
 export const POST: IPost = {
   name: 'DGBL - future or not?',
