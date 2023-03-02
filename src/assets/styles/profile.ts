@@ -21,6 +21,7 @@ export const useProfileStyles = () => {
 
       titleWrapper: {
         display: 'flex',
+        alignItems: 'center',
         justifyContent: 'center',
       },
 

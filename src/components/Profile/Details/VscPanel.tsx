@@ -7,7 +7,7 @@ export function VscPanel() {
     <>
       <Group position='center'>
         {VSC_PANEL_DATA.map(({ name, url }) => (
-          <Anchor key={name} size='md' href={url} target='_blank'>
+          <Anchor key={`vsc-panel-${name}-link`} size='md' href={url} target='_blank'>
             {name}
           </Anchor>
         ))}

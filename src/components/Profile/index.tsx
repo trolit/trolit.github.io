@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { IconBadges } from '@tabler/icons';
-import { Kbd, Text, Group, Paper, Avatar, ThemeIcon, Blockquote, Anchor, Divider } from '@mantine/core';
+import { Kbd, Text, Group, Paper, Avatar, ThemeIcon, Blockquote, Anchor, Divider, Tooltip } from '@mantine/core';
 
 import { RootState } from '@/store';
 import { Details } from './Details';
@@ -44,15 +44,17 @@ export function Profile() {
       </Group>
 
       <Group position='center' spacing='lg' className={linksGroup}>
-        {LINKS.map(({ icon, url }, index) => {
+        {LINKS.map(({ icon, url, name }, index) => {
           const LinkIcon = icon;
 
           return (
-            <Anchor key={index} href={url} target='_blank'>
-              <ThemeIcon size={40} radius='xs' variant='default' className={link}>
-                <LinkIcon />
-              </ThemeIcon>
-            </Anchor>
+            <Tooltip key={`profile-link-${index}`} label={name}>
+              <Anchor href={url} target='_blank'>
+                <ThemeIcon size={40} radius='xs' variant='default' className={link}>
+                  <LinkIcon />
+                </ThemeIcon>
+              </Anchor>
+            </Tooltip>
           );
         })}
       </Group>

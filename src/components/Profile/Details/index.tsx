@@ -1,4 +1,5 @@
 import { Tabs, ScrollArea } from '@mantine/core';
+import { IconBrandVisualStudio, IconLego, IconVocabulary } from '@tabler/icons';
 
 import { VscPanel } from './VscPanel';
 import { AboutPanel } from './AboutPanel';
@@ -7,16 +8,19 @@ import { useProfileStyles } from '@/assets/styles/profile';
 
 export function Details() {
   const aboutPanel = {
+    icon: IconLego,
     name: 'About',
     children: AboutPanel,
   };
 
   const languagesPanel = {
+    icon: IconVocabulary,
     name: 'Languages',
     children: LanguagesPanel,
   };
 
   const vscPanel = {
+    icon: IconBrandVisualStudio,
     name: 'VSC',
     children: VscPanel,
   };
@@ -28,8 +32,13 @@ export function Details() {
   return (
     <Tabs defaultValue={aboutPanel.name.toLowerCase()} className={tabs}>
       <Tabs.List grow position='center' className={tabsList}>
-        {panels.map(({ name }) => (
-          <Tabs.Tab key={`tabs-list-${name}`} value={name.toLowerCase()} style={{ padding: 0 }}>
+        {panels.map(({ icon: Icon, name }) => (
+          <Tabs.Tab
+            rightSection={Icon ? <Icon size={20} /> : undefined}
+            key={`tabs-list-${name}`}
+            value={name.toLowerCase()}
+            style={{ padding: 0 }}
+          >
             {name}
           </Tabs.Tab>
         ))}
