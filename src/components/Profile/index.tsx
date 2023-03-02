@@ -6,7 +6,7 @@ import { RootState } from '@/store';
 import { Details } from './Details';
 import { useCommonStyles } from '@/assets/styles/common';
 import { useProfileStyles } from '@/assets/styles/profile';
-import { name, links, quote, title, avatarSrc } from '@/assets/data/profile';
+import { NAME, LINKS, QUOTE, TITLE, PATH_TO_AVATAR } from '@/assets/data/profile';
 
 export function Profile() {
   const { panel, h100 } = useCommonStyles();
@@ -18,16 +18,16 @@ export function Profile() {
   return (
     <Paper p={0} radius='md' withBorder className={`${panel} ${wrapper} ${h100}`}>
       <Group grow p='lg' noWrap className={presentationGroup}>
-        <Avatar src={avatarSrc} alt={name} size={130} radius={40} mx='auto' />
+        <Avatar src={PATH_TO_AVATAR} alt={NAME} size={130} radius={40} mx='auto' />
 
         <div>
           <Text align='center' size='lg' weight={500} mb={8}>
-            {name}
+            {NAME}
           </Text>
 
-          {title && (
+          {TITLE && (
             <Text className={titleWrapper} lineClamp={1}>
-              <IconBadges /> &nbsp; <Kbd>{title}</Kbd>
+              <IconBadges /> &nbsp; <Kbd>{TITLE}</Kbd>
             </Text>
           )}
         </div>
@@ -38,13 +38,13 @@ export function Profile() {
       <Divider />
 
       <Group position='center'>
-        <Blockquote className={blockQuote} cite={`-${quote.author}`} color={shadedColor}>
-          {quote.text}
+        <Blockquote className={blockQuote} cite={`-${QUOTE.author}`} color={shadedColor}>
+          {QUOTE.text}
         </Blockquote>
       </Group>
 
       <Group position='center' spacing='lg' className={linksGroup}>
-        {links.map(({ icon, url }, index) => {
+        {LINKS.map(({ icon, url }, index) => {
           const LinkIcon = icon;
 
           return (
