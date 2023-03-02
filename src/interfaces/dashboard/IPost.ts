@@ -1,7 +1,7 @@
 import { ITag } from '@/interfaces/ITag';
-import { IBasePost } from '@/services/usePostRenderer/interfaces';
+import { IBaseContent } from '@/services/useContentRenderer/interfaces';
 
-export interface IPost extends IBasePost {
+export interface IPost extends IBaseContent {
   name: string;
 
   abstract: string;

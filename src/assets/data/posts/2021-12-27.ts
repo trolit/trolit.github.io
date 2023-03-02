@@ -1,6 +1,6 @@
 import { PRIMARY_COLOR } from '@/config';
 import { IPost } from '@/interfaces/dashboard/IPost';
-import { Code, Header, Paragraph } from '@/services/usePostRenderer/components';
+import { Code, Header, Paragraph } from '@/services/useContentRenderer/components';
 
 export const POST: IPost = {
   name: `Flexible single line, multi-line formatting`,
