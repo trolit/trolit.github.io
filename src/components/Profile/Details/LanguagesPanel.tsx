@@ -13,7 +13,13 @@ export function LanguagesPanel() {
           </Text>
 
           <Group grow>
-            <Languages displayFullName useBadgeColorInHexAsBackground name={`${title}-languages`} value={data} />
+            <Languages
+              displayFullName
+              useBadgeColorInHexAsBackground
+              name={`${title}-languages`}
+              value={data}
+              badgeProps={{ size: 'lg' }}
+            />
           </Group>
         </div>
       ))}
