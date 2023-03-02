@@ -19,7 +19,6 @@ export const useProfileStyles = () => {
       link: {
         '&:hover': {
           border: '2px dotted',
-          filter: 'grayscale(100%)',
         },
       },
     };
