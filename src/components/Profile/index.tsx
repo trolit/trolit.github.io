@@ -37,7 +37,7 @@ export function Profile() {
 
       <Divider />
 
-      <Blockquote className={blockQuote} cite={`-${quote.author}`} color={shadedColor}>
+      <Blockquote icon={null} className={blockQuote} cite={`-${quote.author}`} color={shadedColor}>
         {quote.text}
       </Blockquote>
 

@@ -38,6 +38,7 @@ export const useProfileStyles = () => {
       blockQuote: {
         fontSize: 13,
         height: BLOCKQUOTE_HEIGHT,
+        textAlign: 'center' as const,
       },
 
       linksGroup: {
