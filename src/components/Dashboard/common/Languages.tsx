@@ -10,9 +10,11 @@ interface IProps {
   badgeProps?: BadgeProps;
 
   displayFullName?: boolean;
+
+  useBadgeColorInHexAsBackground?: boolean;
 }
 
-export function Languages({ name, displayFullName, value, badgeProps }: IProps) {
+export function Languages({ name, displayFullName, useBadgeColorInHexAsBackground, value, badgeProps }: IProps) {
   return (
     <>
       {value.map(({ name: lanuageName, acronym, badgeColorInHex }, index) => (
@@ -21,9 +23,9 @@ export function Languages({ name, displayFullName, value, badgeProps }: IProps) 
           variant='outline'
           key={`${name}-language-${index}`}
           style={{
-            color: 'white',
+            color: useBadgeColorInHexAsBackground ? 'white' : badgeProps?.color || badgeColorInHex,
             borderColor: badgeProps?.color || badgeColorInHex,
-            backgroundColor: badgeProps?.color || badgeColorInHex,
+            backgroundColor: useBadgeColorInHexAsBackground ? badgeColorInHex : '',
           }}
           {...badgeProps}
         >
