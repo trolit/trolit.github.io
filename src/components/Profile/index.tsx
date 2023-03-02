@@ -37,9 +37,11 @@ export function Profile() {
 
       <Divider />
 
-      <Blockquote icon={null} className={blockQuote} cite={`-${quote.author}`} color={shadedColor}>
-        {quote.text}
-      </Blockquote>
+      <Group position='center'>
+        <Blockquote className={blockQuote} cite={`-${quote.author}`} color={shadedColor}>
+          {quote.text}
+        </Blockquote>
+      </Group>
 
       <Group position='center' spacing='lg' className={linksGroup}>
         {links.map(({ icon, url }, index) => {
