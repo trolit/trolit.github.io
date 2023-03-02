@@ -48,8 +48,8 @@ export function Profile() {
           const LinkIcon = icon;
 
           return (
-            <Tooltip label={name}>
-              <Anchor key={`profile-link-${index}`} href={url} target='_blank'>
+            <Tooltip key={`profile-link-${index}`} label={name}>
+              <Anchor href={url} target='_blank'>
                 <ThemeIcon size={40} radius='xs' variant='default' className={link}>
                   <LinkIcon />
                 </ThemeIcon>
