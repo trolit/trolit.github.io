@@ -17,8 +17,8 @@ export function Profile() {
 
   return (
     <Paper p={0} radius='md' withBorder className={`${panel} ${wrapper} ${h100}`}>
-      <Group grow p='lg' noWrap className={presentationGroup}>
-        <Avatar src={PATH_TO_AVATAR} alt={NAME} size={130} radius={40} mx='auto' />
+      <Group position='center' p='lg' noWrap className={presentationGroup}>
+        <Avatar src={PATH_TO_AVATAR} alt={NAME} size={130} radius={20} />
 
         <div>
           <Text align='center' size='lg' weight={500} mb={8}>
