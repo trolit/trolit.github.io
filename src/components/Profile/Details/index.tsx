@@ -29,7 +29,7 @@ export function Details() {
     <Tabs defaultValue={aboutPanel.name.toLowerCase()} className={tabs}>
       <Tabs.List grow position='center' className={tabsList}>
         {panels.map(({ name }) => (
-          <Tabs.Tab key={`tabs-list-${name}`} value={name.toLowerCase()}>
+          <Tabs.Tab key={`tabs-list-${name}`} value={name.toLowerCase()} style={{ padding: 0 }}>
             {name}
           </Tabs.Tab>
         ))}
