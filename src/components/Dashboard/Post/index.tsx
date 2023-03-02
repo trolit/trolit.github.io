@@ -13,7 +13,7 @@ export function Post() {
 
   const { scrollArea } = useDashboardStyles();
 
-  const postRenderer = useContentRenderer<IExtendedPost>();
+  const contentRenderer = useContentRenderer<IExtendedPost>();
 
   const pathname = window.location.pathname;
 
@@ -23,7 +23,7 @@ export function Post() {
     return (
       <ScrollArea className={scrollArea}>
         <Stack spacing='xl' align='center' className={wrapper}>
-          {postRenderer.render(POSTS[postIndex])}
+          {contentRenderer.render(POSTS[postIndex])}
         </Stack>
       </ScrollArea>
     );
