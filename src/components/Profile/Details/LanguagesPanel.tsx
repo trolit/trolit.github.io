@@ -1,12 +1,22 @@
-import { Stack } from '@mantine/core';
+import { Group, Text, Stack } from '@mantine/core';
 
-import { tags } from '@/assets/data/profile';
-import { Tags } from '@/components/Dashboard/common/Tags';
+import { LANGUAGES_PANEL_DATA } from '@/assets/data/profile';
+import { Languages } from '@/components/Dashboard/common/Languages';
 
 export function LanguagesPanel() {
   return (
-    <Stack justify='flex-end'>
-      <Tags name='profile' value={tags} badgeProps={{ size: 'md', radius: 'xs', py: 10 }} />
+    <Stack>
+      {LANGUAGES_PANEL_DATA.filter((element) => !!element.data.length).map(({ title, data }, index) => (
+        <div key={`languages-panel-section-${index}`}>
+          <Text fz='sm' fw={700} mb={10}>
+            # {title}
+          </Text>
+
+          <Group grow>
+            <Languages displayFullName useBadgeColorInHexAsBackground name={`${title}-languages`} value={data} />
+          </Group>
+        </div>
+      ))}
     </Stack>
   );
 }

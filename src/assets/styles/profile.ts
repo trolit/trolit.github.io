@@ -32,7 +32,6 @@ export const useProfileStyles = () => {
 
       tabsContent: {
         height: `calc(100% * 0.85)`,
-        padding: '5%',
       },
 
       blockQuote: {
