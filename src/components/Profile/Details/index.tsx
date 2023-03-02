@@ -1,8 +1,9 @@
-import { Tabs } from '@mantine/core';
+import { Tabs, ScrollArea } from '@mantine/core';
 
 import { VscPanel } from './VscPanel';
 import { AboutPanel } from './AboutPanel';
 import { LanguagesPanel } from './LanguagesPanel';
+import { useProfileStyles } from '@/assets/styles/profile';
 
 export function Details() {
   const aboutPanel = {
@@ -22,9 +23,11 @@ export function Details() {
 
   const panels = [aboutPanel, languagesPanel, vscPanel];
 
+  const { tabs, tabsList, tabsContent } = useProfileStyles();
+
   return (
-    <Tabs defaultValue={aboutPanel.name.toLowerCase()} h={240}>
-      <Tabs.List grow position='center' h={40}>
+    <Tabs defaultValue={aboutPanel.name.toLowerCase()} className={tabs}>
+      <Tabs.List grow position='center' className={tabsList}>
         {panels.map(({ name }) => (
           <Tabs.Tab key={`tabs-list-${name}`} value={name.toLowerCase()}>
             {name}
@@ -32,16 +35,11 @@ export function Details() {
         ))}
       </Tabs.List>
 
-      {panels.map(({ name, children: Children }) => (
-        <Tabs.Panel
-          key={`tabs-panel-${name}`}
-          value={name.toLowerCase()}
-          children={<Children />}
-          p='lg'
-          pt='xs'
-          h={180}
-        />
-      ))}
+      <ScrollArea className={tabsContent}>
+        {panels.map(({ name, children: Children }) => (
+          <Tabs.Panel key={`tabs-panel-${name}`} value={name.toLowerCase()} children={<Children />} />
+        ))}
+      </ScrollArea>
     </Tabs>
   );
 }
