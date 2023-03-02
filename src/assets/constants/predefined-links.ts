@@ -3,7 +3,7 @@ import { IconX, IconNotes, IconVideo, IconCamera, TablerIcon, IconWorldWww, Icon
 import { ILink } from '@/interfaces/ILink';
 import { GITHUB_USERNAME } from '@/config';
 
-export const GITHUB_LINK = (target: string, username?: string): ILink => {
+export const GITHUB_LINK = (target: string = '', username?: string): ILink => {
   return {
     name: 'GitHub',
     icon: IconBrandGithub,
