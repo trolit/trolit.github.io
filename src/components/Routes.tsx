@@ -19,7 +19,7 @@ export function AppRoutes() {
         <Route path={POSTS_ROUTE}>
           <Route index element={<Posts />} />
 
-          <Route path=':postId' element={<Post />} />
+          <Route path=':postName' element={<Post />} />
         </Route>
 
         <Route path={TRACKS_ROUTE} element={<Tracks />} />
