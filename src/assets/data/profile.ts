@@ -87,7 +87,10 @@ export const VSC_PANEL_DATA = [
   },
 ];
 
-export const LINKS: ILink[] = [GITHUB_LINK(), CUSTOM_LINK('https://discord.com', 'trol_IT#8002', IconBrandDiscord)];
+export const LINKS: ILink[] = [
+  GITHUB_LINK(),
+  CUSTOM_LINK('https://discord.com', 'Discord (trol_IT#8002)', IconBrandDiscord),
+];
 
 export const QUOTE: IQuote = {
   author: 'Thomas Edison',
