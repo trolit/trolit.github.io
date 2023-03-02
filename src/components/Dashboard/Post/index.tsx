@@ -1,5 +1,5 @@
-import { Navigate } from 'react-router-dom';
 import { ScrollArea, Stack } from '@mantine/core';
+import { Navigate, useParams } from 'react-router-dom';
 
 import { POSTS } from '@/assets/data/posts';
 import { POSTS_ROUTE } from '@/assets/constants/routes';
@@ -9,15 +9,19 @@ import { useContentRenderer } from '@/services/useContentRenderer';
 import { IExtendedPost } from '@/interfaces/dashboard/IExtendedPost';
 
 export function Post() {
+  type ExpectedParams = {
+    postName: string;
+  };
+
   const { wrapper } = usePostStyles();
 
   const { scrollArea } = useDashboardStyles();
 
   const contentRenderer = useContentRenderer<IExtendedPost>();
 
-  const pathname = window.location.pathname;
+  const { postName } = useParams<keyof ExpectedParams>() as ExpectedParams;
 
-  const postIndex = POSTS.findIndex((post) => post.address === pathname);
+  const postIndex = POSTS.findIndex((post) => post.address.endsWith(postName));
 
   if (~postIndex) {
     return (
