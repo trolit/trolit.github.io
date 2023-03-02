@@ -6,8 +6,9 @@ import {
   TYPESCRIPT_LANGUAGE,
   JAVASCRIPT_LANGUAGE,
 } from '@/assets/constants/predefined-languages';
+import { IconBrandDiscord } from '@tabler/icons';
 import { IQuote } from '@/interfaces/profile/IQuote';
-import { GITHUB_LINK } from '@/assets/constants/predefined-links';
+import { GITHUB_LINK, CUSTOM_LINK } from '@/assets/constants/predefined-links';
 
 export const PATH_TO_AVATAR = require('@/assets/media/avatar.jpg');
 
@@ -86,7 +87,7 @@ export const VSC_PANEL_DATA = [
   },
 ];
 
-export const LINKS: ILink[] = [GITHUB_LINK()];
+export const LINKS: ILink[] = [GITHUB_LINK(), CUSTOM_LINK('https://discord.com', 'trol_IT#8002', IconBrandDiscord)];
 
 export const QUOTE: IQuote = {
   author: 'Thomas Edison',
