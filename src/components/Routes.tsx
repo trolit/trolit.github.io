@@ -6,7 +6,7 @@ import { Post } from './Dashboard/Post';
 import { Posts } from './Dashboard/Posts';
 import { Tracks } from './Dashboard/Tracks';
 import { Projects } from './Dashboard/Projects';
-import { HOME_ROUTE, POSTS_ROUTE, TRACKS_ROUTE, PROJECTS_ROUTE } from '@/assets/constants/routes';
+import { HOME_ROUTE, POSTS_ROUTE, TRACKS_ROUTE, PROJECTS_ROUTE, POSTS_POST_NAME_SLUG } from '@/assets/constants/routes';
 
 export function AppRoutes() {
   return (
@@ -19,7 +19,7 @@ export function AppRoutes() {
         <Route path={POSTS_ROUTE}>
           <Route index element={<Posts />} />
 
-          <Route path=':postId' element={<Post />} />
+          <Route path={`:${POSTS_POST_NAME_SLUG}`} element={<Post />} />
         </Route>
 
         <Route path={TRACKS_ROUTE} element={<Tracks />} />
