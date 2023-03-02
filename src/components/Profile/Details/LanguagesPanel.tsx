@@ -18,7 +18,7 @@ export function LanguagesPanel() {
               useBadgeColorInHexAsBackground
               name={`${title}-languages`}
               value={data}
-              badgeProps={{ size: 'lg' }}
+              badgeProps={{ size: 'lg', radius: 'sm' }}
             />
           </Group>
         </div>
