@@ -8,24 +8,26 @@ interface IProps {
   value: ILanguage[];
 
   badgeProps?: BadgeProps;
+
+  displayFullName?: boolean;
 }
 
-export function Languages({ name, value, badgeProps }: IProps) {
+export function Languages({ name, displayFullName, value, badgeProps }: IProps) {
   return (
     <>
-      {value.map(({ acronym, badgeColorInHex }, index) => (
+      {value.map(({ name: lanuageName, acronym, badgeColorInHex }, index) => (
         <Badge
-          size='lg'
           radius={0}
           variant='outline'
           key={`${name}-language-${index}`}
           style={{
-            color: badgeProps?.color || badgeColorInHex,
+            color: 'white',
             borderColor: badgeProps?.color || badgeColorInHex,
+            backgroundColor: badgeProps?.color || badgeColorInHex,
           }}
           {...badgeProps}
         >
-          {acronym}
+          {displayFullName ? lanuageName : acronym}
         </Badge>
       ))}
     </>
