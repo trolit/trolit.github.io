@@ -1,7 +1,4 @@
 import { ILink } from '@/interfaces/ILink';
-import { ILanguage } from '@/interfaces/ILanguage';
-import { IQuote } from '@/interfaces/profile/IQuote';
-import { GITHUB_LINK } from '@/assets/constants/predefined-links';
 import {
   JAVA_LANGUAGE,
   CSHARP_LANGUAGE,
@@ -9,6 +6,9 @@ import {
   TYPESCRIPT_LANGUAGE,
   JAVASCRIPT_LANGUAGE,
 } from '@/assets/constants/predefined-languages';
+import { ILanguage } from '@/interfaces/ILanguage';
+import { IQuote } from '@/interfaces/profile/IQuote';
+import { GITHUB_LINK } from '@/assets/constants/predefined-links';
 
 export const PATH_TO_AVATAR = require('@/assets/media/avatar.jpg');
 
@@ -20,7 +20,7 @@ export const FAVOURITE_LANGUAGES: ILanguage[] = [CSHARP_LANGUAGE, TYPESCRIPT_LAN
 
 export const OTHER_LANGUAGES: ILanguage[] = [KOTLIN_LANGUAGE, JAVA_LANGUAGE];
 
-export const LINKS: ILink[] = [GITHUB_LINK('')];
+export const LINKS: ILink[] = [GITHUB_LINK()];
 
 export const QUOTE: IQuote = {
   author: 'Thomas Edison',
