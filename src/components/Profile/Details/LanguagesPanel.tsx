@@ -7,18 +7,13 @@ export function LanguagesPanel() {
   return (
     <Stack>
       {LANGUAGES_PANEL_DATA.filter((element) => !!element.data.length).map(({ title, data }, index) => (
-        <div key={`languages-${index}`}>
+        <div key={`languages-panel-section-${index}`}>
           <Text fz='sm' fw={700} mb={10}>
             # {title}
           </Text>
 
           <Group grow>
-            <Languages
-              displayFullName
-              useBadgeColorInHexAsBackground
-              name={`profile-${title}-languages`}
-              value={data}
-            />
+            <Languages displayFullName useBadgeColorInHexAsBackground name={`${title}-languages`} value={data} />
           </Group>
         </div>
       ))}
