@@ -1,23 +1,23 @@
 import { ReactNode } from 'react';
 
-import { IBasePost } from './interfaces';
 import { Paragraph } from './components';
+import { IBaseContent } from './interfaces';
 import { renderReferences } from './renderers';
 import { COMPONENT_RENDERERS, PARAGRAPH_COMPONENT_KEY } from './config';
 import { renderParagraphWithReferences } from './renderers/renderParagraph';
 
 interface IRenderer<T> {
-  render: (post: T) => ReactNode;
+  render: (content: T) => ReactNode;
 }
 
-export function usePostRenderer<T extends IBasePost>(): IRenderer<T> {
+export function useContentRenderer<T extends IBaseContent>(): IRenderer<T> {
   return {
-    render: (post: T) => render<T>(post),
+    render: (content: T) => render<T>(content),
   };
 }
 
-function render<T extends IBasePost>(post: T) {
-  const { components, references } = post;
+function render<T extends IBaseContent>(content: T) {
+  const { components, references } = content;
 
   const renderedComponents = components.map((component, index) => {
     const key = component.getKey();
