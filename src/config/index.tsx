@@ -2,7 +2,7 @@ import { OpUnitType } from 'dayjs';
 import { MantineColor } from '@mantine/core';
 import { HomeInterestPoints } from '@/utilities/types';
 
-export const PRIMARY_COLOR: MantineColor = 'teal';
+export const PRIMARY_COLOR: MantineColor = 'indigo';
 
 // @NOTE Each color has 10 shades. All colors should always have 10 shades.
 export const LIGHT_THEME_COLOR_SHADE = 8;
