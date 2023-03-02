@@ -16,6 +16,17 @@ export const NAME = 'p4w31 !d21k0w541';
 
 export const TITLE = 'code investigator';
 
+export const LANGUAGES_PANEL_DATA = [
+  {
+    title: 'favourite',
+    data: [CSHARP_LANGUAGE, TYPESCRIPT_LANGUAGE, JAVASCRIPT_LANGUAGE],
+  },
+  {
+    title: 'also worked with',
+    data: [KOTLIN_LANGUAGE, JAVA_LANGUAGE],
+  },
+];
+
 export const FAVOURITE_LANGUAGES: ILanguage[] = [CSHARP_LANGUAGE, TYPESCRIPT_LANGUAGE, JAVASCRIPT_LANGUAGE];
 
 export const OTHER_LANGUAGES: ILanguage[] = [KOTLIN_LANGUAGE, JAVA_LANGUAGE];
