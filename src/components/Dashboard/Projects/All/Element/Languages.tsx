@@ -17,12 +17,14 @@ export function Languages({ projectName, value }: IProps) {
     <Group spacing={5} noWrap>
       {value.map(({ badgeColorInHex, acronym }, index) => (
         <Badge
+          size='lg'
           variant='filled'
           radius={index === 0 ? 'md' : 0}
           key={`${projectName}-language-${index}`}
           style={{
             borderTopRightRadius: 0,
             borderBottomLeftRadius: 0,
+            borderBottomRightRadius: 0,
             backgroundColor: badgeColorInHex,
           }}
         >

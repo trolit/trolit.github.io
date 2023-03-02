@@ -1,58 +1,63 @@
 import { useSelector } from 'react-redux';
-import { Kbd, Text, Group, Paper, Stack, Avatar, ThemeIcon, ScrollArea, Blockquote, Anchor } from '@mantine/core';
+import { IconBadges } from '@tabler/icons';
+import { Kbd, Text, Group, Paper, Avatar, ThemeIcon, Blockquote, Anchor, Divider, Tooltip } from '@mantine/core';
 
 import { RootState } from '@/store';
+import { Details } from './Details';
 import { useCommonStyles } from '@/assets/styles/common';
-import { Tags } from '@/components/Dashboard/common/Tags';
 import { useProfileStyles } from '@/assets/styles/profile';
-import { tags, name, links, quote, title, avatarSrc } from '@/assets/data/profile';
+import { NAME, LINKS, QUOTE, TITLE, PATH_TO_AVATAR } from '@/assets/data/profile';
 
 export function Profile() {
   const { panel, h100 } = useCommonStyles();
 
   const shadedColor = useSelector((state: RootState) => state.preferences.shadedColor);
 
-  const { wrapper, titleWrapper, group, link, blockQuote } = useProfileStyles();
+  const { wrapper, titleWrapper, link, blockQuote, presentationGroup, linksGroup } = useProfileStyles();
 
   return (
-    <Paper p='lg' radius='md' withBorder className={`${panel} ${wrapper} ${h100}`}>
-      <Stack align='center' justify='center' className={h100}>
-        <Avatar src={avatarSrc} size={160} radius={120} mx='auto' />
+    <Paper p={0} radius='md' withBorder className={`${panel} ${wrapper} ${h100}`}>
+      <Group position='center' noWrap className={presentationGroup}>
+        <Avatar src={PATH_TO_AVATAR} alt={NAME} size={130} radius={20} />
 
-        <Text align='center' size='lg' weight={500}>
-          {name}
-        </Text>
-
-        {title && (
-          <Text className={titleWrapper} lineClamp={1}>
-            <Kbd>{title}</Kbd>
+        <div>
+          <Text align='center' size='lg' weight={500} mb={8}>
+            {NAME}
           </Text>
-        )}
 
-        <ScrollArea>
-          <Group position='center' spacing='lg' className={group}>
-            <Tags name='profile' value={tags} badgeProps={{ size: 'md', radius: 'xs', variant: 'light' }} />
-          </Group>
+          {TITLE && (
+            <Text className={titleWrapper} lineClamp={1}>
+              <IconBadges /> &nbsp; <Kbd>{TITLE}</Kbd>
+            </Text>
+          )}
+        </div>
+      </Group>
 
-          <Blockquote className={blockQuote} cite={`-${quote.author}`} color={shadedColor}>
-            {quote.text}
-          </Blockquote>
+      <Details />
 
-          <Group position='center' spacing='lg' className={group}>
-            {links.map(({ icon, url }, index) => {
-              const LinkIcon = icon;
+      <Divider />
 
-              return (
-                <Anchor key={index} href={url} target='_blank'>
-                  <ThemeIcon size='xl' radius='xs' variant='light' className={link}>
-                    <LinkIcon />
-                  </ThemeIcon>
-                </Anchor>
-              );
-            })}
-          </Group>
-        </ScrollArea>
-      </Stack>
+      <Group position='center'>
+        <Blockquote className={blockQuote} cite={`-${QUOTE.author}`} color={shadedColor}>
+          {QUOTE.text}
+        </Blockquote>
+      </Group>
+
+      <Group position='center' spacing='lg' className={linksGroup}>
+        {LINKS.map(({ icon, url, name }, index) => {
+          const LinkIcon = icon;
+
+          return (
+            <Tooltip key={`profile-link-${index}`} label={name}>
+              <Anchor href={url} target='_blank'>
+                <ThemeIcon size={40} radius='xs' variant='default' className={link}>
+                  <LinkIcon />
+                </ThemeIcon>
+              </Anchor>
+            </Tooltip>
+          );
+        })}
+      </Group>
     </Paper>
   );
 }
