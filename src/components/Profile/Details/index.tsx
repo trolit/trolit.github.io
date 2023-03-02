@@ -37,7 +37,7 @@ export function Details() {
 
       <ScrollArea className={tabsContent}>
         {panels.map(({ name, children: Children }) => (
-          <Tabs.Panel key={`tabs-panel-${name}`} value={name.toLowerCase()} children={<Children />} />
+          <Tabs.Panel key={`tabs-panel-${name}`} value={name.toLowerCase()} children={<Children />} p='lg' />
         ))}
       </ScrollArea>
     </Tabs>
