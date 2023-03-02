@@ -1,20 +1,20 @@
 import { Tabs, ScrollArea } from '@mantine/core';
+import { IconBrandVisualStudio, IconLego, IconVocabulary } from '@tabler/icons';
 
 import { VscPanel } from './VscPanel';
 import { AboutPanel } from './AboutPanel';
 import { LanguagesPanel } from './LanguagesPanel';
 import { useProfileStyles } from '@/assets/styles/profile';
-import { IconBrandVisualStudio } from '@tabler/icons';
 
 export function Details() {
   const aboutPanel = {
-    icon: null,
+    icon: IconLego,
     name: 'About',
     children: AboutPanel,
   };
 
   const languagesPanel = {
-    icon: null,
+    icon: IconVocabulary,
     name: 'Languages',
     children: LanguagesPanel,
   };
