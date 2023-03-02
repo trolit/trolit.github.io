@@ -23,7 +23,7 @@ export function AboutPanel() {
       <Anchor href='http://przepisownik2016.opx.pl/' target='_blank'>
         Przepisownik 2016
       </Anchor>
-      ). Active source code investigator since the end of the year 2017. Visual Studio Code and Visual Studio are
+      ). Active source code investigator since the end of the year 2017. Visual Studio Code and Visual Studio stand for
       favourite IDEs.
     </Text>
   );
