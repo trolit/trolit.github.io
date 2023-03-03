@@ -17,6 +17,7 @@ import {
 import { sortByDate } from '@/helpers/sortByDate';
 import { indexToIcons } from '@/helpers/indexToIcons';
 import { IProject } from '@/interfaces/dashboard/IProject';
+import { PATCHRON_PROJECT_ARTICLE } from './projects/patchron';
 import { DEFAULT_IMAGE_SRC, YOUTUBE_WATCH_URL } from '@/config';
 import { IFeaturedProject } from '@/interfaces/dashboard/IFeaturedProject';
 
@@ -41,6 +42,7 @@ const Patchron: IFeaturedProject = {
   description: 'GitHub bot that provides first, early PR review and fasters further reviews done by humans.',
   thumbnail,
   links: [GITHUB_LINK('Patchron')],
+  article: PATCHRON_PROJECT_ARTICLE,
 };
 
 const ProjectZero: IFeaturedProject = {
