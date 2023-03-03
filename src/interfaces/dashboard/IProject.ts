@@ -3,6 +3,7 @@ import { TablerIcon } from '@tabler/icons';
 import { ITag } from '@/interfaces/ITag';
 import { ILink } from '@/interfaces/ILink';
 import { ILanguage } from '@/interfaces/ILanguage';
+import { IBaseContent } from '@/services/useContentRenderer/interfaces';
 
 export interface IProject {
   thumbnail: string | TablerIcon[];
@@ -18,4 +19,6 @@ export interface IProject {
   tags: ITag[];
 
   links: ILink[];
+
+  article?: IBaseContent;
 }
