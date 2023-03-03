@@ -17,12 +17,14 @@ import {
 import { sortByDate } from '@/helpers/sortByDate';
 import { indexToIcons } from '@/helpers/indexToIcons';
 import { IProject } from '@/interfaces/dashboard/IProject';
+import { PROJECTS_ROUTE } from '@/assets/constants/routes';
+import { PATCHRON_PROJECT_ARTICLE } from './projects/patchron';
 import { DEFAULT_IMAGE_SRC, YOUTUBE_WATCH_URL } from '@/config';
+import { IExtendedProject } from '@/interfaces/dashboard/IExtendedProject';
 import { IFeaturedProject } from '@/interfaces/dashboard/IFeaturedProject';
+import { translateStringToAddress } from '@/helpers/translateStringToAddress';
 
 const thumbnail = DEFAULT_IMAGE_SRC;
-
-const icons = [IconDice1, IconDice2, IconDice3, IconDice4, IconDice5, IconDice6];
 
 /** Featured Projects  */
 const Patchron: IFeaturedProject = {
@@ -43,6 +45,7 @@ const Patchron: IFeaturedProject = {
   description: 'GitHub bot that provides first, early PR review and fasters further reviews done by humans.',
   thumbnail,
   links: [GITHUB_LINK('Patchron')],
+  article: PATCHRON_PROJECT_ARTICLE,
 };
 
 const ProjectZero: IFeaturedProject = {
@@ -425,10 +428,16 @@ const RAW_PROJECTS: IProject[] = [
   },
 ];
 
-export const PROJECTS = sortByDate<IProject>(RAW_PROJECTS).map((project, index) => ({
-  ...project,
-  thumbnail: indexToIcons(icons, index, RAW_PROJECTS.length),
-}));
+const icons = [IconDice1, IconDice2, IconDice3, IconDice4, IconDice5, IconDice6];
+
+export const PROJECTS = sortByDate<IProject>(RAW_PROJECTS).map(
+  (project, index) =>
+    ({
+      ...project,
+      thumbnail: indexToIcons(icons, index, RAW_PROJECTS.length),
+      address: translateStringToAddress(project.name, PROJECTS_ROUTE),
+    } as IExtendedProject),
+);
 
 export const FEATURED_PROJECTS = [
   {

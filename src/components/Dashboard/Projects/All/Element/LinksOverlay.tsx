@@ -35,7 +35,7 @@ export function LinksOverlay({ links, toggleOverlay }: IProps) {
           radius='xs'
           color='gray'
           variant='outline'
-          style={{ alignSelf: 'flex-end' }}
+          style={{ alignSelf: 'center' }}
           onClick={() => toggleOverlay((isVisible) => !isVisible)}
         >
           show less

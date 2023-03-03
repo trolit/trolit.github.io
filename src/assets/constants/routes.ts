@@ -9,6 +9,8 @@ export const HOME_ROUTE = BASE_ROUTE;
 
 export const PROJECTS_ROUTE_NAME = 'Projects';
 
+export const PROJECTS_PROJECT_NAME_SLUG = 'projectName';
+
 export const PROJECTS_ROUTE = BASE_ROUTE.concat(PROJECTS_ROUTE_NAME.toLowerCase());
 
 // Post(s)
