@@ -5,12 +5,12 @@ import { Languages } from './Languages';
 import { LinksOverlay } from './LinksOverlay';
 import { useCommonStyles } from '@/assets/styles/common';
 import { Tags } from '@/components/Dashboard/common/Tags';
-import { IProject } from '@/interfaces/dashboard/IProject';
 import { Thumbnail } from '@/components/Dashboard/common/Thumbnail';
+import { IExtendedProject } from '@/interfaces/dashboard/IExtendedProject';
 import { FormattedDate } from '@/components/Dashboard/common/FormattedDate';
 
 interface IProps {
-  item: IProject;
+  item: IExtendedProject;
 }
 
 export function Element({ item: { name, thumbnail, date, description, languages, tags, links } }: IProps) {
