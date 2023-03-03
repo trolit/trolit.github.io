@@ -22,8 +22,6 @@ import { IFeaturedProject } from '@/interfaces/dashboard/IFeaturedProject';
 
 const thumbnail = DEFAULT_IMAGE_SRC;
 
-const icons = [IconDice1, IconDice2, IconDice3, IconDice4, IconDice5, IconDice6];
-
 /** Featured Projects  */
 const Patchron: IFeaturedProject = {
   name: 'Patchron',
@@ -424,6 +422,8 @@ const RAW_PROJECTS: IProject[] = [
     links: [GITHUB_LINK('car-themed-API#car-themed-fake-api')],
   },
 ];
+
+const icons = [IconDice1, IconDice2, IconDice3, IconDice4, IconDice5, IconDice6];
 
 export const PROJECTS = sortByDate<IProject>(RAW_PROJECTS).map((project, index) => ({
   ...project,
