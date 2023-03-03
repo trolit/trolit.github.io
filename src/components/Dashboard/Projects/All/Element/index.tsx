@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Paper, Grid, Text, Stack, Button, Box, Group } from '@mantine/core';
 
 import { Languages } from './Languages';
@@ -13,7 +14,11 @@ interface IProps {
   item: IExtendedProject;
 }
 
-export function Element({ item: { name, thumbnail, date, description, languages, tags, links } }: IProps) {
+export function Element({
+  item: { name, address, article, thumbnail, date, description, languages, tags, links },
+}: IProps) {
+  const navigate = useNavigate();
+
   const { h100 } = useCommonStyles();
 
   const [isOverlayOpened, toggleOverlay] = useState(false);
@@ -52,18 +57,24 @@ export function Element({ item: { name, thumbnail, date, description, languages,
                 {description}
               </Text>
 
-              {!!links.length && (
-                <Button
-                  size='sm'
-                  radius='xs'
-                  color='gray'
-                  variant='outline'
-                  style={{ alignSelf: 'flex-end' }}
-                  onClick={() => toggleOverlay((isVisible) => !isVisible)}
-                >
-                  show more ({links.length})
-                </Button>
-              )}
+              <Group>
+                {article && (
+                  <Button variant='light' onClick={() => navigate(address)}>
+                    read more
+                  </Button>
+                )}
+
+                {!!links.length && (
+                  <Button
+                    radius='xs'
+                    color='gray'
+                    variant='outline'
+                    onClick={() => toggleOverlay((isVisible) => !isVisible)}
+                  >
+                    show more ({links.length})
+                  </Button>
+                )}
+              </Group>
             </Stack>
           </Grid.Col>
         </Grid>
