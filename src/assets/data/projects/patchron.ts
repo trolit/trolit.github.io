@@ -21,7 +21,7 @@ export const PATCHRON_PROJECT_ARTICLE: IBaseContent = {
     }),
 
     new Paragraph({
-      value: `Project came out as curiosity to find out Probot framework and in the meantime do something bigger with Node.js, improve JavaScript experience, deeply understand how GIT identifies lines, how to translate hooked data so it can be analyzed further, how to determine whether code fragment is invalid (depending on rule), write some unit tests to test out implemented rules logic and use jsdoc to leave code documentation. `,
+      value: `Project came out as curiosity to find out Probot framework and in the meantime do something bigger with Node.js, improve JavaScript experience, deeply understand how GIT identifies lines, how to translate hooked data so it can be analyzed further, how to determine whether code fragment is invalid (depending on rule), write unit tests to test out rules logic, apply jsdoc to leave code documentation and lastly combine bot with GitHub actions. `,
     }),
 
     new Photo({
@@ -41,7 +41,7 @@ export const PATCHRON_PROJECT_ARTICLE: IBaseContent = {
     }),
 
     new Paragraph({
-      value: `More insights can be found at GitHub repository - Patchron 😃`,
+      value: `more insights can be found in Patchron's README at GitHub repository 😃`,
     }),
   ],
 
