@@ -85,6 +85,11 @@ export const VSC_PANEL_DATA = [
     name: 'Auto Close Tag',
     url: 'https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag',
   },
+
+  {
+    name: 'Import Cost',
+    url: 'https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost',
+  },
 ];
 
 export const LINKS: ILink[] = [
