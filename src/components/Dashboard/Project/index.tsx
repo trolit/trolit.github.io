@@ -30,7 +30,7 @@ export function Project() {
     if (projectArticle) {
       return (
         <ScrollArea className={scrollArea}>
-          <Stack spacing='xl' align='center' className={wrapper}>
+          <Stack spacing='xl' className={wrapper}>
             {contentRenderer.render(projectArticle)}
           </Stack>
         </ScrollArea>
