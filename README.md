@@ -1,4 +1,16 @@
-# Getting Started with Create React App
+### Personal website
+
+- [Mantine UI](https://mantine.dev/core/chip/) & TypeScript
+- toggleable profile card
+- personalized within [constants](./src/assets/constants/) and [src/config/index](./src/config/index.tsx) file.
+- content (profile, projects, posts) is configured via [assets/data](./src/assets/data/)
+- [project articles](./src/assets/data/projects/) & [posts](./src/assets/data/posts/) are generated programmatically within [useContentRenderer](./src/services/useContentRenderer/index.tsx) service. It can be expanded/configured to personal needs. It does not use `import alias` to independent it from the rest of the website.
+
+### Docs
+
+<details>
+
+<summary>Getting Started with Create React App</summary>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -30,8 +42,11 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-## Credits
+</details>
 
-- [avatar (xumaru)](https://wall.alphacoders.com/big.php?i=553440)
+<br/>
+
+### Credits
+
 - [background (rawpixel.com - Freepik)](https://pl.freepik.com/darmowe-wektory/tlo-swiatla-neonowego_3602483.htm)
 - [featured project card background](https://pixabay.com/pl/photos/streszczenie-obraz-pi%c3%b3ra-pi%c4%99kny-6047465/)
