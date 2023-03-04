@@ -13,7 +13,7 @@ export const BACKGROUND_SRC: string = require('@/assets/media/background.jpg');
 
 export const DEFAULT_IMAGE_SRC: string = require('@/assets/media/projects/default.jpg');
 
-export const HEADER_HEIGHT: string = '50px';
+export const DASHBOARD_HEADER_HEIGHT: string = '50px';
 
 // @NOTE to maintain center add 0.5 to the value
 export const OVERLAY_PADDING: number = 30.5;

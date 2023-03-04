@@ -1,6 +1,6 @@
 import { createStyles } from '@mantine/core';
 
-import { HEADER_HEIGHT, OVERLAY_PADDING, DASHBOARD_PADDING } from '@/config';
+import { DASHBOARD_HEADER_HEIGHT, OVERLAY_PADDING, DASHBOARD_PADDING } from '@/config';
 
 const INNER_PADDING = '7px';
 
@@ -14,7 +14,7 @@ export const useHomeStyles = () => {
 
     const BOARD_ITEMS_REF = getRef('boardItems');
 
-    const AVAILABLE_HEIGHT = `calc(100vh - ${HEADER_HEIGHT} - ${SUB_HEADER_HEIGHT} - ${OVERLAY_PADDING}px)`;
+    const AVAILABLE_HEIGHT = `calc(100vh - ${DASHBOARD_HEADER_HEIGHT} - ${SUB_HEADER_HEIGHT} - ${OVERLAY_PADDING}px)`;
 
     const classes = {
       subheader: {
