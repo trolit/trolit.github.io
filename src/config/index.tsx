@@ -31,7 +31,7 @@ export const HOME_GROUP_BY: OpUnitType = 'year';
 
 export const SMALL_SCREEN_THRESHOLD: string = '658px';
 
-export const MAX_HOME_INTEREST_POINTS: HomeInterestPoints = 4;
+export const MAX_HOME_INTEREST_POINTS: HomeInterestPoints = 3;
 
 export const YOUTUBE_WATCH_URL: string = `https://www.youtube.com/watch?v=`;
 
