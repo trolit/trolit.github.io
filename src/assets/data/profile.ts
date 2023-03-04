@@ -1,3 +1,5 @@
+import { IconBrandDiscord } from '@tabler/icons';
+
 import { ILink } from '@/interfaces/ILink';
 import {
   JAVA_LANGUAGE,
@@ -6,7 +8,6 @@ import {
   TYPESCRIPT_LANGUAGE,
   JAVASCRIPT_LANGUAGE,
 } from '@/assets/constants/predefined-languages';
-import { IconBrandDiscord } from '@tabler/icons';
 import { IQuote } from '@/interfaces/profile/IQuote';
 import { GITHUB_LINK, CUSTOM_LINK } from '@/assets/constants/predefined-links';
 
