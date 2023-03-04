@@ -4,7 +4,6 @@ import { POST as POST2 } from './posts/2020-03-06';
 import { POST as POST3 } from './posts/2021-12-27';
 import { POST as POST4 } from './posts/2021-12-29';
 import { POST as POST5 } from './posts/2022-01-09';
-
 import { POSTS_ROUTE } from '@/assets/constants/routes';
 import { IExtendedPost } from '@/interfaces/dashboard/IExtendedPost';
 import { translateStringToAddress } from '@/helpers/translateStringToAddress';
