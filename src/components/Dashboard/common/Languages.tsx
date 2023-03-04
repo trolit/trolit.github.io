@@ -36,9 +36,9 @@ export function Languages({
           key={`${name}-language-${index}`}
           style={{
             cursor: clickable ? 'pointer' : 'default',
-            color: useBadgeColorInHexAsBackground ? 'white' : badgeProps?.color || badgeColorInHex,
             borderColor: badgeProps?.color || badgeColorInHex,
             backgroundColor: useBadgeColorInHexAsBackground ? badgeColorInHex : '',
+            color: useBadgeColorInHexAsBackground ? 'white' : badgeProps?.color || badgeColorInHex,
           }}
           {...badgeProps}
           onClick={() => {
