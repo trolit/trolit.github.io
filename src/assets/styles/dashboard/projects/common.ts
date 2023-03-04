@@ -1,7 +1,7 @@
 import { createStyles } from '@mantine/core';
 
 import { DARK_THEME } from '@/assets/constants/common';
-import { DASHBOARD_PADDING, HEADER_HEIGHT, OVERLAY_PADDING } from '@/config';
+import { DASHBOARD_PADDING, DASHBOARD_HEADER_HEIGHT, OVERLAY_PADDING } from '@/config';
 
 const SUB_HEADER_HEIGHT = '50px';
 
@@ -15,7 +15,7 @@ export const useProjectsStyles = () => {
 
       scrollArea: {
         borderRadius: theme.fn.radius('md'),
-        height: `calc(100vh - ${HEADER_HEIGHT} - ${OVERLAY_PADDING}px - ${SUB_HEADER_HEIGHT})`,
+        height: `calc(100vh - ${DASHBOARD_HEADER_HEIGHT} - ${OVERLAY_PADDING}px - ${SUB_HEADER_HEIGHT})`,
       },
 
       subheader: {

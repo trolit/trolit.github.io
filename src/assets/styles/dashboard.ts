@@ -1,7 +1,7 @@
 import { createStyles } from '@mantine/core';
 
 import { DARK_THEME } from '@/assets/constants/common';
-import { HEADER_HEIGHT, OVERLAY_PADDING } from '@/config';
+import { DASHBOARD_HEADER_HEIGHT, OVERLAY_PADDING } from '@/config';
 
 export const useDashboardStyles = () => {
   const { classes } = createStyles((theme) => {
@@ -13,12 +13,12 @@ export const useDashboardStyles = () => {
       },
 
       headerDrawerScrollArea: {
-        height: `calc(100vh - ${HEADER_HEIGHT} - 20px)`,
+        height: `calc(100vh - ${DASHBOARD_HEADER_HEIGHT} - 20px)`,
       },
 
       scrollArea: {
         borderRadius: theme.fn.radius('md'),
-        height: `calc(100vh - ${HEADER_HEIGHT} - ${OVERLAY_PADDING}px)`,
+        height: `calc(100vh - ${DASHBOARD_HEADER_HEIGHT} - ${OVERLAY_PADDING}px)`,
       },
 
       navigationLink: {
