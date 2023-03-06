@@ -81,8 +81,7 @@ export const PATCHRON_PROJECT_ARTICLE: IBaseContent = {
     }),
 
     new Code({
-      value: `
-      - run: npm start
+      value: `run: npm start
         env:
           GITHUB_TOKEN: \${{ secrets.GITHUB_TOKEN }} # or secrets.PAT
           NODE_ENV: "github"
