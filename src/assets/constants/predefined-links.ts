@@ -3,9 +3,9 @@ import {
   IconNotes,
   IconVideo,
   IconCamera,
-  TablerIcon,
   IconWorldWww,
   IconBrandGithub,
+  Icon as TablerIcon,
 } from '@tabler/icons-react';
 
 import { ILink } from '@/interfaces/ILink';
