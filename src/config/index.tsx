@@ -1,5 +1,6 @@
 import { OpUnitType } from 'dayjs';
 import { MantineColor } from '@mantine/core';
+import { requireImage } from '@/helpers/requireImage';
 import { HomeInterestPoints } from '@/utilities/types';
 
 /* ******************
@@ -16,9 +17,9 @@ export const LIGHT_THEME_COLOR_SHADE = 8;
 
 export const DARK_THEME_COLOR_SHADE = 9;
 
-export const BACKGROUND_SRC: string = require('@/assets/media/background.jpg');
+export const BACKGROUND_SRC = requireImage('@/assets/media/background.jpg');
 
-export const DEFAULT_IMAGE_SRC: string = require('@/assets/media/projects/default.jpg');
+export const DEFAULT_IMAGE_SRC = requireImage('@/assets/media/projects/default.jpg');
 
 // @NOTE to maintain center add 0.5 to the value
 export const OVERLAY_PADDING: number = 30.5;
