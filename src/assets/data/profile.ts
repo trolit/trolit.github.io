@@ -11,7 +11,7 @@ import {
 import { IQuote } from '@/interfaces/profile/IQuote';
 import { GITHUB_LINK, CUSTOM_LINK } from '@/assets/constants/predefined-links';
 
-export const PATH_TO_AVATAR = require('@/assets/media/avatar.jpg');
+export const PATH_TO_AVATAR = new URL('@/assets/media/avatar.jpg', import.meta.url).href;
 
 export const NAME = 'p4w31 !d21k0w541';
 

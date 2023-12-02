@@ -1,5 +1,5 @@
+import { requireImage } from '@/helpers/requireImage';
 import { IBaseContent } from '@/services/useContentRenderer/interfaces';
-
 import { Code, Paragraph, Photo } from '@/services/useContentRenderer/components';
 
 export const PATCHRON_PROJECT_ARTICLE: IBaseContent = {
@@ -8,7 +8,7 @@ export const PATCHRON_PROJECT_ARTICLE: IBaseContent = {
       description: '',
 
       overrideComponentProps: {
-        src: require('@/assets/media/projects/patchron/banner.png'),
+        src: requireImage('@/assets/media/projects/patchron/banner.png'),
       },
     }),
 
@@ -100,7 +100,7 @@ export const PATCHRON_PROJECT_ARTICLE: IBaseContent = {
       description: 'StrictWorkflow rule preview',
 
       overrideComponentProps: {
-        src: require('@/assets/media/projects/patchron/example1.png'),
+        src: requireImage('@/assets/media/projects/patchron/example1.png'),
       },
     }),
 
@@ -108,7 +108,7 @@ export const PATCHRON_PROJECT_ARTICLE: IBaseContent = {
       description: 'SingleLineBlockPattern rule preview',
 
       overrideComponentProps: {
-        src: require('@/assets/media/projects/patchron/example2.png'),
+        src: requireImage('@/assets/media/projects/patchron/example2.png'),
       },
     }),
 

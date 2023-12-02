@@ -1,4 +1,5 @@
 import { IPost } from '@/interfaces/dashboard/IPost';
+import { requireImage } from '@/helpers/requireImage';
 import { Code, Photo, Header, Paragraph } from '@/services/useContentRenderer/components';
 
 const title = `Update pushed commit(s) details`;
@@ -35,7 +36,7 @@ export const POST: IPost = {
       description: '',
 
       overrideComponentProps: {
-        src: require('@/assets/media/posts/2021-12-29/1.png'),
+        src: requireImage('@/assets/media/posts/2021-12-29/1.png'),
 
         width: '400px',
       },

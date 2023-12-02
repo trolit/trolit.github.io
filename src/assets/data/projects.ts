@@ -16,6 +16,7 @@ import {
 } from '@/assets/constants/predefined-languages';
 import { sortByDate } from '@/helpers/sortByDate';
 import { indexToIcons } from '@/helpers/indexToIcons';
+import { requireImage } from '@/helpers/requireImage';
 import { IProject } from '@/interfaces/dashboard/IProject';
 import { PROJECTS_ROUTE } from '@/assets/constants/routes';
 import { PATCHRON_PROJECT_ARTICLE } from './projects/patchron';
@@ -442,15 +443,15 @@ export const PROJECTS = sortByDate<IProject>(RAW_PROJECTS).map(
 export const FEATURED_PROJECTS = [
   {
     ...Patchron,
-    thumbnail: require('@/assets/media/projects/featured/patchron.jpg'),
+    thumbnail: requireImage('@/assets/media/projects/featured/patchron.jpg'),
   },
   {
     ...ProjectZero,
-    thumbnail: require('@/assets/media/projects/featured/projectZero.jpg'),
+    thumbnail: requireImage('@/assets/media/projects/featured/projectZero.jpg'),
   },
   {
     ...EzGitDoc,
-    thumbnail: require('@/assets/media/projects/featured/ezGitDoc.png'),
+    thumbnail: requireImage('@/assets/media/projects/featured/ezGitDoc.png'),
   },
 ];
 

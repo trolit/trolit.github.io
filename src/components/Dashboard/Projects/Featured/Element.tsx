@@ -1,6 +1,7 @@
 import { Avatar, BackgroundImage, Paper, Card, Badge, Text, Stack, Title, Group } from '@mantine/core';
 
 import { PRIMARY_COLOR } from '@/config';
+import { requireImage } from '@/helpers/requireImage';
 import { Languages } from '@/components/Dashboard/common/Languages';
 import { IFeaturedProject } from '@/interfaces/dashboard/IFeaturedProject';
 import { FormattedDate } from '@/components/Dashboard/common/FormattedDate';
@@ -21,7 +22,7 @@ export function Element({ item: { name, date, thumbnail, languages, description,
       <Avatar size={160} radius='sm' src={thumbnail as string} alt={`${name} thumbnail`} className={avatar} />
 
       <Card p={0} shadow='sm' className={card}>
-        <BackgroundImage src={require('@/assets/media/projects/background.jpg')} radius='sm'>
+        <BackgroundImage src={requireImage('@/assets/media/projects/background.jpg')} radius='sm'>
           <Stack justify='space-between' pt={100}>
             <Card.Section py={20}>
               <Title color='white' align='center' order={1} lineClamp={1}>
