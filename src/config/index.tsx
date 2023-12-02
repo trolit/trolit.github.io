@@ -23,7 +23,7 @@ export const BACKGROUND_SRC = backgroundImage;
 export const DEFAULT_IMAGE_SRC = defaultProjectImage;
 
 // @NOTE to maintain center add 0.5 to the value
-export const OVERLAY_PADDING: number = 30.5;
+export const OVERLAY_PADDING: number = 15.5;
 
 export const GITHUB_USERNAME: string = 'trolit';
 
