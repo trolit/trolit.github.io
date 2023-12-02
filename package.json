@@ -2,6 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "homepage": "https://trolit.github.io",
+  "type": "module",
   "private": true,
   "dependencies": {
     "@emotion/babel-plugin": "^11.11.0",
