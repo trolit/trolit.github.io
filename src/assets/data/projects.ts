@@ -16,14 +16,16 @@ import {
 } from '@/assets/constants/predefined-languages';
 import { sortByDate } from '@/helpers/sortByDate';
 import { indexToIcons } from '@/helpers/indexToIcons';
-import { requireImage } from '@/helpers/requireImage';
 import { IProject } from '@/interfaces/dashboard/IProject';
 import { PROJECTS_ROUTE } from '@/assets/constants/routes';
 import { PATCHRON_PROJECT_ARTICLE } from './projects/patchron';
 import { DEFAULT_IMAGE_SRC, YOUTUBE_WATCH_URL } from '@/config';
+import ezGitDocImage from '@/assets/media/projects/featured/ezGitDoc.png';
+import patchronImage from '@/assets/media/projects/featured/patchron.jpg';
 import { IExtendedProject } from '@/interfaces/dashboard/IExtendedProject';
 import { IFeaturedProject } from '@/interfaces/dashboard/IFeaturedProject';
 import { translateStringToAddress } from '@/helpers/translateStringToAddress';
+import projectZeroImage from '@/assets/media/projects/featured/projectZero.jpg';
 
 const thumbnail = DEFAULT_IMAGE_SRC;
 
@@ -443,15 +445,15 @@ export const PROJECTS = sortByDate<IProject>(RAW_PROJECTS).map(
 export const FEATURED_PROJECTS = [
   {
     ...Patchron,
-    thumbnail: requireImage('@/assets/media/projects/featured/patchron.jpg'),
+    thumbnail: patchronImage,
   },
   {
     ...ProjectZero,
-    thumbnail: requireImage('@/assets/media/projects/featured/projectZero.jpg'),
+    thumbnail: projectZeroImage,
   },
   {
     ...EzGitDoc,
-    thumbnail: requireImage('@/assets/media/projects/featured/ezGitDoc.png'),
+    thumbnail: ezGitDocImage,
   },
 ];
 
