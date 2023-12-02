@@ -4,6 +4,7 @@
   "homepage": "https://trolit.github.io",
   "private": true,
   "dependencies": {
+    "@emotion/babel-plugin": "^11.11.0",
     "@emotion/react": "^11.10.5",
     "@mantine/core": "^5.7.0",
     "@mantine/hooks": "^5.7.0",
