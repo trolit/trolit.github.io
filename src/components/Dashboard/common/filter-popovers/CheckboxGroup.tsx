@@ -1,4 +1,4 @@
-import { IconFilter, IconFilterOff } from '@tabler/icons';
+import { IconFilter, IconFilterOff } from '@tabler/icons-react';
 import { Popover, Button, Checkbox, Container, ScrollArea, Text, Stack } from '@mantine/core';
 
 import { IFilterOption } from '@/interfaces/IFilterOption';

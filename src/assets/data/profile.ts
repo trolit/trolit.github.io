@@ -1,4 +1,4 @@
-import { IconBrandDiscord } from '@tabler/icons';
+import { IconBrandDiscord } from '@tabler/icons-react';
 
 import { ILink } from '@/interfaces/ILink';
 import {
@@ -8,10 +8,11 @@ import {
   TYPESCRIPT_LANGUAGE,
   JAVASCRIPT_LANGUAGE,
 } from '@/assets/constants/predefined-languages';
+import avatarImage from '@/assets/media/avatar.jpg';
 import { IQuote } from '@/interfaces/profile/IQuote';
 import { GITHUB_LINK, CUSTOM_LINK } from '@/assets/constants/predefined-links';
 
-export const PATH_TO_AVATAR = require('@/assets/media/avatar.jpg');
+export const PATH_TO_AVATAR = avatarImage;
 
 export const NAME = 'p4w31 !d21k0w541';
 

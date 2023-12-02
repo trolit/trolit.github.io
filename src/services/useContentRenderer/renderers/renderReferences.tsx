@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { IconPoint } from '@tabler/icons';
+import { IconPoint } from '@tabler/icons-react';
 import { Title, Divider, Text, Container, List, Anchor } from '@mantine/core';
 
 import { IReferences } from '../interfaces';

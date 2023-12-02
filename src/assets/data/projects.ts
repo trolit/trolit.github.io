@@ -1,4 +1,4 @@
-import { IconDice1, IconDice2, IconDice3, IconDice4, IconDice5, IconDice6 } from '@tabler/icons';
+import { IconDice1, IconDice2, IconDice3, IconDice4, IconDice5, IconDice6 } from '@tabler/icons-react';
 
 import {
   WWW_LINK,
@@ -20,9 +20,12 @@ import { IProject } from '@/interfaces/dashboard/IProject';
 import { PROJECTS_ROUTE } from '@/assets/constants/routes';
 import { PATCHRON_PROJECT_ARTICLE } from './projects/patchron';
 import { DEFAULT_IMAGE_SRC, YOUTUBE_WATCH_URL } from '@/config';
+import ezGitDocImage from '@/assets/media/projects/featured/ezGitDoc.png';
+import patchronImage from '@/assets/media/projects/featured/patchron.jpg';
 import { IExtendedProject } from '@/interfaces/dashboard/IExtendedProject';
 import { IFeaturedProject } from '@/interfaces/dashboard/IFeaturedProject';
 import { translateStringToAddress } from '@/helpers/translateStringToAddress';
+import projectZeroImage from '@/assets/media/projects/featured/projectZero.jpg';
 
 const thumbnail = DEFAULT_IMAGE_SRC;
 
@@ -442,15 +445,15 @@ export const PROJECTS = sortByDate<IProject>(RAW_PROJECTS).map(
 export const FEATURED_PROJECTS = [
   {
     ...Patchron,
-    thumbnail: require('@/assets/media/projects/featured/patchron.jpg'),
+    thumbnail: patchronImage,
   },
   {
     ...ProjectZero,
-    thumbnail: require('@/assets/media/projects/featured/projectZero.jpg'),
+    thumbnail: projectZeroImage,
   },
   {
     ...EzGitDoc,
-    thumbnail: require('@/assets/media/projects/featured/ezGitDoc.png'),
+    thumbnail: ezGitDocImage,
   },
 ];
 

@@ -1,4 +1,12 @@
-import { IconX, IconNotes, IconVideo, IconCamera, TablerIcon, IconWorldWww, IconBrandGithub } from '@tabler/icons';
+import {
+  IconX,
+  IconNotes,
+  IconVideo,
+  IconCamera,
+  IconWorldWww,
+  IconBrandGithub,
+  Icon as TablerIcon,
+} from '@tabler/icons-react';
 
 import { ILink } from '@/interfaces/ILink';
 import { GITHUB_USERNAME } from '@/config';

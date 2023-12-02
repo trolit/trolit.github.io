@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { IconSun, IconMoon, TablerIcon } from '@tabler/icons';
+import { IconSun, IconMoon, Icon as TablerIcon } from '@tabler/icons-react';
 import { Box, Group, Center, ColorScheme, SegmentedControl } from '@mantine/core';
 
 import { RootState } from '@/store';
