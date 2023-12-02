@@ -27,9 +27,9 @@
     "vite-tsconfig-paths": "^4.2.1"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "serve build",
+    "start": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
     "deploy": "gh-pages -d build"
   },
   "browserslist": {
