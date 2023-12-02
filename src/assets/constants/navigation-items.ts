@@ -1,4 +1,4 @@
-import { IconAt, IconApps, IconArticle, IconDisc } from '@tabler/icons';
+import { IconAt, IconApps, IconArticle, IconDisc } from '@tabler/icons-react';
 
 import {
   HOME_ROUTE,

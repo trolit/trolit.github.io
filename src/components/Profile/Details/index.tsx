@@ -1,5 +1,5 @@
 import { Tabs, ScrollArea } from '@mantine/core';
-import { IconBrandVisualStudio, IconLego, IconVocabulary } from '@tabler/icons';
+import { IconBrandVisualStudio, IconLego, IconVocabulary } from '@tabler/icons-react';
 
 import { VscPanel } from './VscPanel';
 import { AboutPanel } from './AboutPanel';

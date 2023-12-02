@@ -1,5 +1,5 @@
 import { Button, Menu } from '@mantine/core';
-import { IconChevronDown } from '@tabler/icons';
+import { IconChevronDown } from '@tabler/icons-react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { RootState } from '@/store';

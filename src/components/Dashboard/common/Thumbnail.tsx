@@ -1,4 +1,4 @@
-import { TablerIcon } from '@tabler/icons';
+import { TablerIcon } from '@tabler/icons-react';
 import { Group, Image } from '@mantine/core';
 
 import { PRIMARY_COLOR } from '@/config';

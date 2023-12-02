@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { TablerIcon } from '@tabler/icons';
+import { TablerIcon } from '@tabler/icons-react';
 import { Group, Paper, Text, ThemeIcon, Stack, Flex } from '@mantine/core';
 
 import { useCommonStyles } from '@/assets/styles/common';

@@ -1,4 +1,4 @@
-import { TablerIcon } from '@tabler/icons';
+import { TablerIcon } from '@tabler/icons-react';
 
 import { ITag } from '@/interfaces/ITag';
 import { ILink } from '@/interfaces/ILink';
