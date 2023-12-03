@@ -1,4 +1,4 @@
-import { TablerIcon } from '@tabler/icons';
+import { Icon as TablerIcon } from '@tabler/icons-react';
 
 export const indexToIcons = (data: TablerIcon[], index: number, length?: number): TablerIcon[] => {
   const icons: TablerIcon[] = [];

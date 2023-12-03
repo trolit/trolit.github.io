@@ -1,4 +1,5 @@
 import { IPost } from '@/interfaces/dashboard/IPost';
+import unityInspectorPreviewImage from '@/assets/media/posts/2020-03-06/1.png';
 import { Code, Photo, Header, Paragraph } from '@/services/useContentRenderer/components';
 
 export const POST: IPost = {
@@ -87,7 +88,7 @@ export const POST: IPost = {
       description: 'Unity Inspector Preview',
 
       overrideComponentProps: {
-        src: require('@/assets/media/posts/2020-03-06/1.png'),
+        src: unityInspectorPreviewImage,
       },
     }),
 

@@ -1,4 +1,4 @@
-import { TablerIcon } from '@tabler/icons';
+import { Icon as TablerIcon } from '@tabler/icons-react';
 
 export interface ILink {
   name?: string;

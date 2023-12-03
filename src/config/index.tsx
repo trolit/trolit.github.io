@@ -1,12 +1,14 @@
 import { OpUnitType } from 'dayjs';
 import { MantineColor } from '@mantine/core';
 import { HomeInterestPoints } from '@/utilities/types';
+import backgroundImage from '@/assets/media/background.jpg';
+import defaultProjectImage from '@/assets/media/projects/default.jpg';
 
 /* ******************
  * GLOBAL
  */
 
-export const PRIMARY_COLOR: MantineColor = 'indigo';
+export const PRIMARY_COLOR: MantineColor = 'blue';
 
 // @NOTE https://day.js.org/docs/en/display/format
 export const GLOBAL_DATE_FORMAT: string = 'DD/MM/YYYY';
@@ -16,12 +18,12 @@ export const LIGHT_THEME_COLOR_SHADE = 8;
 
 export const DARK_THEME_COLOR_SHADE = 9;
 
-export const BACKGROUND_SRC: string = require('@/assets/media/background.jpg');
+export const BACKGROUND_SRC = backgroundImage;
 
-export const DEFAULT_IMAGE_SRC: string = require('@/assets/media/projects/default.jpg');
+export const DEFAULT_IMAGE_SRC = defaultProjectImage;
 
 // @NOTE to maintain center add 0.5 to the value
-export const OVERLAY_PADDING: number = 30.5;
+export const OVERLAY_PADDING: number = 15.5;
 
 export const GITHUB_USERNAME: string = 'trolit';
 

@@ -23,6 +23,6 @@ export const POSTS_ROUTE = BASE_ROUTE.concat(POSTS_ROUTE_NAME.toLowerCase());
 
 // Tracks
 
-export const TRACKS_ROUTE_NAME = 'Favourite tracks';
+export const TRACKS_ROUTE_NAME = 'Music Corner';
 
 export const TRACKS_ROUTE = BASE_ROUTE.concat(TRACKS_ROUTE_NAME.toLowerCase().replace(' ', '-'));

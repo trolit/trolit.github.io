@@ -1,4 +1,7 @@
 import { IPost } from '@/interfaces/dashboard/IPost';
+import pixlrImage1 from '@/assets/media/posts/2022-01-09/1.png';
+import pixlrImage2 from '@/assets/media/posts/2022-01-09/2.png';
+import pixlrImage3 from '@/assets/media/posts/2022-01-09/3.png';
 import { Photo, Header, Paragraph } from '@/services/useContentRenderer/components';
 
 export const POST: IPost = {
@@ -29,7 +32,7 @@ export const POST: IPost = {
       description: '',
 
       overrideComponentProps: {
-        src: require('@/assets/media/posts/2022-01-09/1.png'),
+        src: pixlrImage1,
       },
     }),
 
@@ -49,7 +52,7 @@ export const POST: IPost = {
       description: 'Pixlr E',
 
       overrideComponentProps: {
-        src: require('@/assets/media/posts/2022-01-09/2.png'),
+        src: pixlrImage2,
       },
     }),
 
@@ -57,7 +60,7 @@ export const POST: IPost = {
       description: 'Pixlr X',
 
       overrideComponentProps: {
-        src: require('@/assets/media/posts/2022-01-09/3.png'),
+        src: pixlrImage3,
       },
     }),
 

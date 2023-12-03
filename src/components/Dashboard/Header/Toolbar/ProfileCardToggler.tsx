@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { ActionIcon, ThemeIcon, Tooltip } from '@mantine/core';
-import { IconAddressBookOff, IconAddressBook } from '@tabler/icons';
+import { IconAddressBookOff, IconAddressBook } from '@tabler/icons-react';
 
 import { RootState } from '@/store';
 import { PRIMARY_COLOR } from '@/config';

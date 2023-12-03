@@ -27,7 +27,7 @@ export function Tracks() {
                 <th>Title</th>
 
                 <th className={headerCell}>
-                  Composer(s)
+                  Composer(s) / Artist(s)
                   <CheckboxGroupFilterPopover
                     value={composersFilter}
                     options={AUTHORS}

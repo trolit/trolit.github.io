@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { IconBadges } from '@tabler/icons';
+import { IconBadges } from '@tabler/icons-react';
 import { Kbd, Text, Group, Paper, Avatar, ThemeIcon, Blockquote, Anchor, Divider, Tooltip } from '@mantine/core';
 
 import { RootState } from '@/store';
