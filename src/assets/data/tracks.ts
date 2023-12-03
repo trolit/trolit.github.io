@@ -5,6 +5,138 @@ import { SOUNDTRACK } from '@/assets/constants/predefined-tags';
 
 const RAW_TRACKS: ITrack[] = [
   {
+    authors: ['Rupert Gregson-Williams', 'Lorne Balfe'],
+
+    title: `Your Majesty (The Crown)`,
+
+    date: '2023-12-03',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'XamM9qS2r5Q',
+  },
+
+  {
+    authors: ['Rupert Gregson-Williams'],
+
+    title: `Duck Shoot (The Crown)`,
+
+    date: '2023-12-03',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'EjvO2y6Evhw',
+  },
+
+  {
+    authors: ['Phil Rey Gibbons', 'Felicia Farerre'],
+
+    title: `Lament For The Lost Souls`,
+
+    date: '2023-12-03',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'uKXH9vNACzY',
+  },
+
+  {
+    authors: ['Eivør Pálsdóttir', 'John Lunn', 'Danny Saul'],
+
+    title: `Until Valhalla  (The Last Kingdom: Destiny Is All)`,
+
+    date: '2023-12-03',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'r2JE_68_UFI',
+  },
+
+  {
+    authors: ['Joseph Trapanese'],
+
+    title: `A Time of Contempt  (The Witcher: Season 3)`,
+
+    date: '2023-12-03',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'kHHSoK5A4qU',
+  },
+
+  {
+    authors: ['Joseph Trapanese', 'Joey Batey'],
+
+    title: `Extraordinary Things (The Witcher: Season 3)`,
+
+    date: '2023-12-03',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'fyGsEbxxYHI',
+  },
+
+  {
+    authors: ['Lungs and Limbs'],
+
+    title: `Grim Ranger (The Walking Dead: Season 3)`,
+
+    date: '2023-12-03',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'kg6QlAhHQnk',
+  },
+
+  {
+    authors: ['Adam Skorupa', 'Krzysztof Wierzynkiewicz'],
+
+    title: `A Nearly Peaceful Place (The Witcher 2: Assassins of Kings)`,
+
+    date: '2023-12-03',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'g2AKB7g3hr0',
+  },
+
+  {
+    authors: ['Andrew Lockington'],
+
+    title: `To The Afterlife (Special Ops: Lioness)`,
+
+    date: '2023-12-03',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'Rqevakt8YdU',
+  },
+
+  {
+    authors: ['Borislav Slavov'],
+
+    title: `Raphael's Final Act (Baldur's Gate 3)`,
+
+    date: '2023-12-03',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: 'xMo7ugWudCA',
+  },
+
+  {
+    authors: ['Dodie Clark'],
+
+    title: `At Last (Final Space)`,
+
+    date: '2023-12-03',
+
+    tags: [SOUNDTRACK],
+
+    youtubeId: '91ZJkF63KZY',
+  },
+
+  {
     authors: ['Gustavo Santaolalla'],
 
     title: `Untitled Soundtrack (The Last Of Us Part II)`,
