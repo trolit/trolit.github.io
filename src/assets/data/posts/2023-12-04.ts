@@ -226,7 +226,7 @@ const filesStore = useFilesStore();
     }),
 
     new Paragraph({
-      value: `Overall (from economic POV) if I would have to implement frontend from the scratch, I wouldn't pick Composition API as it would require much more time to achieve maintainable app than using Options API. Optiosn API forces us to use specific approach which - from the start - offers maintainability and transparent code.`,
+      value: `Overall (from economic POV) if I would have to implement frontend from the scratch, I wouldn't pick Composition API as it would require much more time to achieve maintainable app than using Options API. Options API forces us to use specific approach which - from the start - offers great maintainability and transparency (in terms of reading source code).`,
     }),
   ],
 };
