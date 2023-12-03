@@ -8,7 +8,7 @@ import defaultProjectImage from '@/assets/media/projects/default.jpg';
  * GLOBAL
  */
 
-export const PRIMARY_COLOR: MantineColor = 'indigo';
+export const PRIMARY_COLOR: MantineColor = 'blue';
 
 // @NOTE https://day.js.org/docs/en/display/format
 export const GLOBAL_DATE_FORMAT: string = 'DD/MM/YYYY';
