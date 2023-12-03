@@ -5,7 +5,7 @@ import { Code, Header, Paragraph, Photo } from '@/services/useContentRenderer/co
 export const POST: IPost = {
   name: 'Vue x Composition API - try or not to try',
 
-  abstract: `Composition API is more advanced approach when working with Vue as it offers high flexibility. I've already spent few months with big hopes but started to curse myself the longer I kept working in it, but I think that I've finally found something promising and decided to share that experience.`,
+  abstract: `Composition API is more advanced approach when working with Vue as it offers high flexibility. I've already spent few months with big hopes but started to curse myself the longer I kept working in it, but I think that I've finally found something promising through example and decided to share it.`,
 
   tags: [{ text: 'Vue' }, { text: 'Composition API' }],
 
@@ -86,15 +86,15 @@ export const POST: IPost = {
     }),
 
     new Paragraph({
-      value: `I felt more comfortable with that approach but wait... It's literally Options API 😂 so why not just stick to Options API if I use Composition API like this... At that point I've adopted mindset that I'm not fan of Composition API due to the following reasons: (1) source code does not look clean like in older API, (2) when I want to reference something reactive in script I have to do it through "value", (3) it requires more imagination (refactors) than Options API.`,
+      value: `I felt more comfortable with that approach but wait... It's literally Options API 😂 so why not just stick to Options API if I use Composition API like this... At that point I've adopted negative mindset towards Composition API that (1) source code does not look clean like in older API, (2) when I want to reference something reactive in script I have to do it through "value", (3) it requires more imagination (refactors) than Options API.`,
     }),
 
     new Paragraph({
-      value: `When coworker asked "Why not Composition API" I've shared my above POV and statement that I believe that the struggle of Composition API is worth but indeed it's much more difficult to use (you either need to find & adopt some ready user/company stack concept or implement your own and accept necessity to do multiple refactors). It's flexibility is powerful but in my opinion, it costs much more time to do something "production ready" than in traditional Options API way 🤔.`,
+      value: `When coworker asked "Why not Composition API" I've shared above POV and statement that I believe that the struggle of Composition API is worth but indeed it's much more difficult to use (you either need to find & adopt some ready user/company stack concept or implement your own and accept necessity to do multiple refactors). It's flexibility is powerful but in my opinion, it costs much more time to do something "production ready" than in traditional Options API way 🤔.`,
     }),
 
     new Paragraph({
-      value: `I've slightly changed my opinion towards Composition API in December 2023. At FE I'm using vee-validate form library and I've created "defineForm" helper which I was using like this:`,
+      value: `I've slightly changed my opinion towards Composition API in December 2023. Basically, at FE I'm using vee-validate form library and in September 2023 I've created "defineForm" helper which I was using like this:`,
     }),
 
     new Code({
@@ -163,7 +163,7 @@ const onSubmit = handleSubmit.withControlled(async formData => {
     }),
 
     new Paragraph({
-      value: `Recently I've started wondering if I couldn't pack that "defineForm" helper with submit related logic (try..catch, isLoading flag, state notification for user etc.). Aand I've created "defineFormApiRequest" thanks to which above component logic got refactored to the following state:`,
+      value: `Then in December 2023 I've started wondering if I couldn't pack that "defineForm" helper with submit related logic (try..catch, isLoading flag, state notification for user etc.). Aand I've created "defineFormApiRequest" thanks to which above component logic got refactored to the following state:`,
     }),
 
     new Code({
@@ -212,7 +212,7 @@ const filesStore = useFilesStore();
     }),
 
     new Photo({
-      description: 'Strong typing test',
+      description: 'Strong typing test passed ✅',
 
       overrideComponentProps: {
         height: 600,
@@ -222,7 +222,11 @@ const filesStore = useFilesStore();
     }),
 
     new Paragraph({
-      value: `This looks much better. I've finally managed to see "light in the tunnel" that Composition API deserves a chance but I have to spend more time on refactor than in Options API. I (probably) won't afford that much time to refactor every part of itvault's frontend as I'd like to spend (already limited) time on other ideas. But this refactor made me share my experience towards Composition API that although it's harder to use, it's great place for expermineting to create much more reusable "diamons". Overall (from commercial POV) I I wouldn't pick Composition API as it would require much more time to achieve maintainable app than in Options API.`,
+      value: `This looks much better. I've finally managed to see "light in the tunnel" that Composition API deserves a chance but I have to spend more time on improvements than in Options API. I (probably) won't afford that much time to refactor every part of itvault's frontend as I'd like to spend (already limited) time on other ideas. But this refactor made me share my current experience that although Composition API is harder to use, it's great place for experimenting to create more and more reusable "diamonds".`,
+    }),
+
+    new Paragraph({
+      value: `Overall (from economic POV) if I would have to implement frontend from the scratch, I wouldn't pick Composition API as it would require much more time to achieve maintainable app than using Options API. Optiosn API forces us to use specific approach which - from the start - offers maintainability and transparent code.`,
     }),
   ],
 };
