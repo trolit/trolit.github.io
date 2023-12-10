@@ -98,7 +98,7 @@ export const POST: IPost = {
     }),
 
     new Paragraph({
-      value: `Setup "shared" module/project that will be available in frontend and backend. I am using "project references" from TypeScript (v3.0+ feature). Considering project structure like this:`,
+      value: `Setup "shared" module/project to create "common" types and constants. I am using "project references" from TypeScript (v3.0+ feature). Considering project structure like this:`,
     }),
 
     new Code({
