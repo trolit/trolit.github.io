@@ -5,9 +5,9 @@ import { Code, Header, Paragraph, Photo } from '@/services/useContentRenderer/co
 export const POST: IPost = {
   name: 'Vue x Composition API - try or not to try',
 
-  abstract: `Composition API is more advanced approach when working with Vue as it offers high flexibility. I've already spent few months with big hopes but started to curse myself the longer I kept working in it, but I think that I've finally found something promising through example and decided to share it.`,
+  abstract: `Composition API is more advanced approach when working with Vue as it offers high flexibility. I've already spent few months with big hopes but started to curse myself the longer I kept working in it, but I think that I've finally found something promising (itvault - PR #396) and decided to share it.`,
 
-  tags: [{ text: 'Vue' }, { text: 'Composition API' }],
+  tags: [{ text: 'Vue.js' }, { text: 'Composition API' }],
 
   date: '2023-12-04',
 
