@@ -27,8 +27,7 @@ export function Post() {
   if (~postIndex) {
     return (
       <ScrollArea className={scrollArea}>
-        {/* @NOTE remove stack align to have bigger control over components alignment from "contentRenderer" */}
-        <Stack spacing='xl' align='center' className={wrapper}>
+        <Stack spacing='xl' className={wrapper}>
           {contentRenderer.render(POSTS[postIndex])}
         </Stack>
       </ScrollArea>

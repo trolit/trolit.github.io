@@ -7,7 +7,7 @@ import { IReferences } from '../interfaces';
 
 function renderComponent(index: number, value: ReactNode | ReactNode[], overrideComponentProps: TextProps | undefined) {
   return (
-    <Text key={index} {...overrideComponentProps}>
+    <Text key={index} align='justify' {...overrideComponentProps}>
       {value}
     </Text>
   );
