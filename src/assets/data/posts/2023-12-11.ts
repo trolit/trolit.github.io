@@ -559,7 +559,7 @@ export const POST: IPost = {
     }),
 
     new Paragraph({
-      value: `Assuming that "Engine.IO client library" have already been added to frontend dependencies, three more things need to be covered: (1) connection initialization, (2) option to send message to the server (3) option to handle message from the server.`,
+      value: `Assuming that "Engine.IO client library" have already been added, three more things need to be covered: (1) connection initialization, (2) option to send message to the server (3) option to handle message from the server.`,
     }),
 
     new Paragraph({
@@ -662,7 +662,23 @@ export const POST: IPost = {
     }),
 
     new Paragraph({
-      value: `Everything is ready. I'm ready to inform server about entering dashboard by executing code below:`,
+      value: `Everything is ready to be used. Trigger "initializeSocket" in root (or widely used) component. In my case it's header. It appears on each page for authenticated users.`,
+    }),
+
+    new Code({
+      value: `const authStore = useAuthStore();
+      
+      onBeforeMount(() => {
+        authStore.initializeSocket();
+      });`,
+
+      prism: {
+        language: 'typescript',
+      },
+    }),
+
+    new Paragraph({
+      value: `Inform server about entering dashboard by executing code below:`,
     }),
 
     new Code({
@@ -678,7 +694,7 @@ export const POST: IPost = {
     }),
 
     new Paragraph({
-      value: `and then handling workspace update (if it occurs):`,
+      value: `and handle workspace update (if such event occurs):`,
     }),
 
     new Code({
