@@ -90,7 +90,7 @@ export const POST: IPost = {
     }),
 
     new Header({
-      value: 'Creating shared module',
+      value: 'Configuring shared module',
 
       overrideComponentProps: {
         order: 3,
@@ -98,7 +98,11 @@ export const POST: IPost = {
     }),
 
     new Paragraph({
-      value: `Setup "shared" module/project to create "common" types and constants. I am using "project references" from TypeScript (v3.0+ feature). Considering project structure like this:`,
+      value: `Setup "shared" module/project to create "common" types and constants that will be used by both sides. I am using "project references" from TypeScript (v3.0+ feature). Considering project structure like this:`,
+    }),
+
+    new Paragraph({
+      value: `Considering project structure like this:`,
     }),
 
     new Code({
@@ -340,7 +344,15 @@ export const POST: IPost = {
     }),
 
     new Paragraph({
-      value: `Engine.IO library initialization done. Handshake on valid token done. Time to solve "@TODO initialize Engine.IO send/receive logic" part. Implement connected sockets "Manager" (as single instance throughout the lifetime of an application) and class which wraps socket and includes own logic. Let's start from socket wrapper.`,
+      value: `Engine.IO library initialization done. Handshake on valid token done. Time to solve "@TODO initialize Engine.IO send/receive logic" part.`,
+    }),
+
+    new Paragraph({
+      value: `Implement connected sockets "Manager" (as single instance throughout the lifetime of an application) and class which wraps socket and includes own logic.`,
+    }),
+
+    new Paragraph({
+      value: `Let's start from socket wrapper.`,
     }),
 
     new Code({
@@ -412,7 +424,7 @@ export const POST: IPost = {
     }),
 
     new Paragraph({
-      value: `Each "SocketServiceMember" listens for incoming messages and exposes function to send message to the socket. By storing last socket's message, server can decide whether action should be sent or not, reducing redundant calls. All these "members" will be kept by "SocketServiceManager" and allow server to send events:`,
+      value: `Each "SocketServiceMember" listens for incoming messages and exposes function to send message to the socket. By storing last socket's message, server can decide whether action should be sent or not, reducing redundant calls. All these "members" will be kept by "SocketServiceManager" allowing it to send events:`,
     }),
 
     new Code({
@@ -503,7 +515,7 @@ export const POST: IPost = {
     }),
 
     new Paragraph({
-      value: `Return to server initialization to initialize Manager:`,
+      value: `Return to backend initialization to initialize Manager service:`,
     }),
 
     new Code({
@@ -528,7 +540,7 @@ export const POST: IPost = {
     }),
 
     new Paragraph({
-      value: `To send message to ServiceSocketMembers access SocketServiceManager dependency and use "sendMessage". Provide action name and data. Filter is optional. I'm going to use additional filter because in my case users only see workspaces that they are assigned to (unless they have role which allows to view all).`,
+      value: `To send message to each ServiceSocketMember access SocketServiceManager dependency and use "sendMessage". Provide action name and data. Filter is optional.`,
     }),
 
     new Code({
