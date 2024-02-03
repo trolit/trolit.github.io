@@ -1,3 +1,4 @@
+import dayjs from 'dayjs';
 import { IconDice1, IconDice2, IconDice3, IconDice4, IconDice5, IconDice6 } from '@tabler/icons-react';
 
 import {
@@ -454,14 +455,17 @@ const RAW_PROJECTS: IProject[] = [
 
 const icons = [IconDice1, IconDice2, IconDice3, IconDice4, IconDice5, IconDice6];
 
-export const PROJECTS = sortByDate<IProject>(RAW_PROJECTS).map(
-  (project, index) =>
-    ({
-      ...project,
-      thumbnail: indexToIcons(icons, index, RAW_PROJECTS.length),
-      address: translateStringToAddress(project.name, PROJECTS_ROUTE),
-    } as IExtendedProject),
-);
+export const PROJECTS = sortByDate<IProject>(RAW_PROJECTS).map((project, index) => {
+  const parsedStartDate = dayjs(project.startedAt);
+  const parsedPublishedAtDate = dayjs(project.publishedAt);
+
+  return {
+    ...project,
+    thumbnail: indexToIcons(icons, index, RAW_PROJECTS.length),
+    address: translateStringToAddress(project.name, PROJECTS_ROUTE),
+    months: dayjs(parsedPublishedAtDate).diff(parsedStartDate, 'months') || 1,
+  } as IExtendedProject;
+});
 
 export const FEATURED_PROJECTS = [
   {
