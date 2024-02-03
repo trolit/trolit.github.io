@@ -15,7 +15,7 @@ interface IProps {
 }
 
 export function Element({
-  item: { name, address, article, thumbnail, date, description, languages, tags, links },
+  item: { name, address, article, thumbnail, publishedAt, description, languages, tags, links },
 }: IProps) {
   const navigate = useNavigate();
 
@@ -38,7 +38,7 @@ export function Element({
               <Text>{name}</Text>
 
               <Text size='sm' c='dimmed'>
-                <FormattedDate value={date} />
+                <FormattedDate value={publishedAt} />
               </Text>
 
               <Group spacing='sm' position='center'>
