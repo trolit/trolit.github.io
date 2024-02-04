@@ -42,6 +42,8 @@ export function Element({
               <FormattedDate value={publishedAt} />
             </Text>
 
+            <small>published in</small>
+
             <Text size='sm' c='dimmed' underline>
               {months} {`month${months > 1 ? 's' : ''}`}
             </Text>
