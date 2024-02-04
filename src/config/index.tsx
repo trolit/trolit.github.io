@@ -23,7 +23,7 @@ export const BACKGROUND_SRC = backgroundImage;
 export const DEFAULT_IMAGE_SRC = defaultProjectImage;
 
 // @NOTE to maintain center add 0.5 to the value
-export const OVERLAY_PADDING: number = 15.5;
+export const OVERLAY_PADDING: number = 0;
 
 export const GITHUB_USERNAME: string = 'trolit';
 
@@ -40,7 +40,7 @@ export const YOUTUBE_EMBED_URL: string = `https://www.youtube.com/embed`;
 
 export const DASHBOARD_PADDING: number = 20;
 
-export const DASHBOARD_HEADER_HEIGHT: string = '50px';
+export const DASHBOARD_HEADER_HEIGHT: string = '42px';
 
 /* ******************
  * HOME
