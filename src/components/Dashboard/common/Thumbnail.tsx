@@ -12,7 +12,7 @@ interface IProps {
 export function Thumbnail({ name, value: Value }: IProps) {
   if (Array.isArray(Value)) {
     return (
-      <Group>
+      <Group spacing={2}>
         {Value.map((Icon, index) => (
           <Icon size={35} key={`${name}-icon-${index}`} />
         ))}

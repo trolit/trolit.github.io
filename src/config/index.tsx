@@ -8,7 +8,7 @@ import defaultProjectImage from '@/assets/media/projects/default.jpg';
  * GLOBAL
  */
 
-export const PRIMARY_COLOR: MantineColor = 'blue';
+export const PRIMARY_COLOR: MantineColor = 'indigo';
 
 // @NOTE https://day.js.org/docs/en/display/format
 export const GLOBAL_DATE_FORMAT: string = 'DD/MM/YYYY';
@@ -23,7 +23,7 @@ export const BACKGROUND_SRC = backgroundImage;
 export const DEFAULT_IMAGE_SRC = defaultProjectImage;
 
 // @NOTE to maintain center add 0.5 to the value
-export const OVERLAY_PADDING: number = 15.5;
+export const OVERLAY_PADDING: number = 0;
 
 export const GITHUB_USERNAME: string = 'trolit';
 
@@ -40,7 +40,11 @@ export const YOUTUBE_EMBED_URL: string = `https://www.youtube.com/embed`;
 
 export const DASHBOARD_PADDING: number = 20;
 
-export const DASHBOARD_HEADER_HEIGHT: string = '50px';
+export const DASHBOARD_HEADER_HEIGHT: string = '40px';
+
+export const PROJECTS_DURATION_OPTIONS_STEP = 4;
+
+export const PROJECTS_DURATION_OPTIONS_COUNT = 2;
 
 /* ******************
  * HOME
@@ -50,4 +54,4 @@ export const HOME_DATE_FORMAT: string = 'YYYY';
 
 export const HOME_GROUP_BY: OpUnitType = 'year';
 
-export const MAX_HOME_INTEREST_POINTS: HomeInterestPoints = 3;
+export const MAX_HOME_INTEREST_POINTS: HomeInterestPoints = 4;

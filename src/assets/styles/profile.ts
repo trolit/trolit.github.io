@@ -1,6 +1,6 @@
 import { createStyles } from '@mantine/core';
 
-const PRESENTATION_GROUP_HEIGHT = '30vh';
+const PRESENTATION_GROUP_HEIGHT = '25vh';
 
 const TABS_LIST_HEIGHT = '35px';
 
@@ -26,7 +26,7 @@ export const useProfileStyles = () => {
       },
 
       tabs: {
-        height: `calc(100% - ${PRESENTATION_GROUP_HEIGHT} - ${BLOCKQUOTE_HEIGHT} - ${LINKS_GROUP_HEIGHT})`,
+        height: `calc(100% - ${PRESENTATION_GROUP_HEIGHT} - ${BLOCKQUOTE_HEIGHT} - ${LINKS_GROUP_HEIGHT} - 1px)`,
       },
 
       tabsList: {

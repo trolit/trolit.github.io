@@ -31,11 +31,11 @@ export function LinksOverlay({ links, toggleOverlay }: IProps) {
         </ScrollArea>
 
         <Button
-          size='sm'
+          size='xs'
           radius='xs'
           color='gray'
           variant='outline'
-          style={{ alignSelf: 'center' }}
+          style={{ alignSelf: 'flex-end' }}
           onClick={() => toggleOverlay((isVisible) => !isVisible)}
         >
           show less

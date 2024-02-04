@@ -10,7 +10,9 @@ export interface IProject {
 
   name: string;
 
-  date: string;
+  startedAt: string;
+
+  publishedAt: string;
 
   description: string;
 
