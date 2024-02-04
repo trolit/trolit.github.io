@@ -7,20 +7,34 @@ import { ANY } from '@/assets/constants/common';
 import { PROJECTS } from '@/assets/data/projects';
 
 export function All() {
+  const activeDuration = useSelector((state: RootState) => state.projects.activeDuration);
   const activeLanguage = useSelector((state: RootState) => state.projects.activeLanguage);
 
-  const filteredProjects =
+  const projectsFilteredByLanguage =
     activeLanguage === ANY
       ? PROJECTS
       : PROJECTS.filter((project) => project.languages.some(({ acronym }) => acronym === activeLanguage));
 
+  const projectsFilteredByDuration =
+    activeDuration === 0
+      ? projectsFilteredByLanguage
+      : projectsFilteredByLanguage.filter(
+          (project) => project.months > activeDuration - 3 && project.months <= activeDuration,
+        );
+
   return (
     <Grid gutter='xl' justify='center'>
-      {filteredProjects.map((project, index) => (
-        <Grid.Col key={`project-${index}`} xs={12} lg={4}>
-          <Element item={project} />
-        </Grid.Col>
-      ))}
+      {projectsFilteredByDuration.length ? (
+        projectsFilteredByDuration.map((project, index) => (
+          <Grid.Col key={`project-${index}`} xs={12} lg={4}>
+            <Element item={project} />
+          </Grid.Col>
+        ))
+      ) : (
+        <div style={{ marginTop: '20px', width: '100%' }}>
+          <small>Nothing found..</small>
+        </div>
+      )}
     </Grid>
   );
 }
