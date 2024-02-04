@@ -42,6 +42,10 @@ export const DASHBOARD_PADDING: number = 20;
 
 export const DASHBOARD_HEADER_HEIGHT: string = '42px';
 
+export const PROJECTS_DURATION_OPTIONS_STEP = 4;
+
+export const PROJECTS_DURATION_OPTIONS_COUNT = 2;
+
 /* ******************
  * HOME
  */
