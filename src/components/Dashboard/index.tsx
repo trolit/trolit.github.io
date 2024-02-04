@@ -9,7 +9,7 @@ export function Dashboard() {
   const { panel } = useCommonStyles();
 
   return (
-    <Paper radius={OVERLAY_PADDING > 0 ? 'md' : 0} className={panel}>
+    <Paper radius={OVERLAY_PADDING > 0 ? 'md' : 0} withBorder={OVERLAY_PADDING > 0} className={panel}>
       <Container px={0} fluid>
         <PanelHeader />
 
