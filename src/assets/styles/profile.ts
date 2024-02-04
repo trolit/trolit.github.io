@@ -1,7 +1,7 @@
 import { OVERLAY_PADDING } from '@/config';
 import { createStyles } from '@mantine/core';
 
-const PRESENTATION_GROUP_HEIGHT = '30vh';
+const PRESENTATION_GROUP_HEIGHT = '25vh';
 
 const TABS_LIST_HEIGHT = '35px';
 
