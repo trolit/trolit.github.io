@@ -99,7 +99,7 @@ const EzGitDoc: IFeaturedProject = {
 const RAW_PROJECTS: IProject[] = [
   {
     name: 'Personal portfolio Y22',
-    startedAt: '2022-04-11',
+    startedAt: '2022-11-04',
     publishedAt: '2022-12-31',
     languages: [TYPESCRIPT_LANGUAGE],
     tags: [
