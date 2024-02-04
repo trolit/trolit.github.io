@@ -26,7 +26,7 @@ export function All() {
     <Grid gutter='xl' justify='center'>
       {projectsFilteredByDuration.length ? (
         projectsFilteredByDuration.map((project, index) => (
-          <Grid.Col key={`project-${index}`} xs={12} lg={4}>
+          <Grid.Col key={`project-${index}`} xs={12} lg={6}>
             <Element item={project} />
           </Grid.Col>
         ))

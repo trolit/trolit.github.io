@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Paper, Grid, Text, Stack, Button, Box, Group } from '@mantine/core';
+import { Paper, Grid, Text, Stack, Button, Box, Group, Badge } from '@mantine/core';
 
 import { Languages } from './Languages';
 import { LinksOverlay } from './LinksOverlay';
@@ -15,7 +15,7 @@ interface IProps {
 }
 
 export function Element({
-  item: { name, address, article, thumbnail, publishedAt, description, languages, tags, links },
+  item: { name, address, article, thumbnail, publishedAt, description, languages, tags, links, months },
 }: IProps) {
   const navigate = useNavigate();
 
@@ -30,24 +30,32 @@ export function Element({
 
         <Languages projectName={name} value={languages} />
 
-        <Grid p='lg' className={h100}>
-          <Grid.Col span={12}>
+        <Grid p='sm'>
+          <Grid.Col span={6}>
+            <Thumbnail name={name} value={thumbnail} />
+
+            <Text size='xl' style={{ marginTop: 20 }}>
+              {name}
+            </Text>
+
+            <Text size='sm' c='dimmed'>
+              <FormattedDate value={publishedAt} />
+            </Text>
+
+            <Text size='sm' c='dimmed' underline>
+              {months} {`month${months > 1 ? 's' : ''}`}
+            </Text>
+          </Grid.Col>
+
+          <Grid.Col span={6}>
             <Stack align='center' className={h100}>
-              <Thumbnail name={name} value={thumbnail} />
-
-              <Text>{name}</Text>
-
-              <Text size='sm' c='dimmed'>
-                <FormattedDate value={publishedAt} />
-              </Text>
-
               <Group spacing='sm' position='center'>
                 <Tags
                   name={name}
                   value={tags}
                   badgeProps={{
-                    size: 'sm',
-                    radius: 'md',
+                    size: 'xs',
+                    radius: 'xs',
                     variant: 'outline',
                   }}
                 />
@@ -56,28 +64,29 @@ export function Element({
               <Text fz='xs' style={{ flexGrow: '1' }}>
                 {description}
               </Text>
-
-              <Group>
-                {article && (
-                  <Button variant='light' onClick={() => navigate(address)}>
-                    read more
-                  </Button>
-                )}
-
-                {!!links.length && (
-                  <Button
-                    radius='xs'
-                    color='gray'
-                    variant='outline'
-                    onClick={() => toggleOverlay((isVisible) => !isVisible)}
-                  >
-                    show more ({links.length})
-                  </Button>
-                )}
-              </Group>
             </Stack>
           </Grid.Col>
         </Grid>
+
+        <Group position='right' mr={15} mb={15}>
+          {article && (
+            <Button size='xs' variant='light' onClick={() => navigate(address)}>
+              read more
+            </Button>
+          )}
+
+          {!!links.length && (
+            <Button
+              size='xs'
+              radius='xs'
+              color='gray'
+              variant='outline'
+              onClick={() => toggleOverlay((isVisible) => !isVisible)}
+            >
+              show more ({links.length})
+            </Button>
+          )}
+        </Group>
       </Box>
     </Paper>
   );
