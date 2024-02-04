@@ -31,7 +31,7 @@ export function Element({
         <Languages projectName={name} value={languages} />
 
         <Grid p='sm'>
-          <Grid.Col span={6}>
+          <Grid.Col span={5}>
             <Thumbnail name={name} value={thumbnail} />
 
             <Text size='xl' style={{ marginTop: 20 }}>
@@ -47,7 +47,7 @@ export function Element({
             </Text>
           </Grid.Col>
 
-          <Grid.Col span={6}>
+          <Grid.Col span={7}>
             <Stack align='center' className={h100}>
               <Group spacing='sm' position='center'>
                 <Tags
