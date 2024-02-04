@@ -28,7 +28,7 @@ export const useProfileStyles = () => {
       },
 
       tabs: {
-        height: `calc(100% - ${PRESENTATION_GROUP_HEIGHT} - ${BLOCKQUOTE_HEIGHT} - ${LINKS_GROUP_HEIGHT})`,
+        height: `calc(100% - ${PRESENTATION_GROUP_HEIGHT} - ${BLOCKQUOTE_HEIGHT} - ${LINKS_GROUP_HEIGHT} - 1px)`,
       },
 
       tabsList: {
