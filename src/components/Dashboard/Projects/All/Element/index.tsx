@@ -61,7 +61,7 @@ export function Element({
                 />
               </Group>
 
-              <Text fz='xs' style={{ flexGrow: '1' }}>
+              <Text fz='xs' style={{ borderLeft: '4px solid gray' }} pl={5}>
                 {description}
               </Text>
             </Stack>
