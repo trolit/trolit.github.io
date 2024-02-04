@@ -1,3 +1,4 @@
+import dayjs from 'dayjs';
 import { IconDice1, IconDice2, IconDice3, IconDice4, IconDice5, IconDice6 } from '@tabler/icons-react';
 
 import {
@@ -32,7 +33,8 @@ const thumbnail = DEFAULT_IMAGE_SRC;
 /** Featured Projects  */
 const Patchron: IFeaturedProject = {
   name: 'Patchron',
-  date: '2022-08-03',
+  startedAt: '2022-01-18',
+  publishedAt: '2022-08-03',
   languages: [JAVASCRIPT_LANGUAGE],
   tags: [
     {
@@ -53,7 +55,8 @@ const Patchron: IFeaturedProject = {
 
 const ProjectZero: IFeaturedProject = {
   name: 'Project Zero',
-  date: '2019-11-24',
+  startedAt: '2019-06-16',
+  publishedAt: '2019-11-24',
   languages: [CSHARP_LANGUAGE],
   tags: [
     {
@@ -72,7 +75,8 @@ const ProjectZero: IFeaturedProject = {
 
 const EzGitDoc: IFeaturedProject = {
   name: 'EzGitDoc',
-  date: '2020-02-29',
+  startedAt: '2020-02-23',
+  publishedAt: '2020-02-29',
   languages: [JAVASCRIPT_LANGUAGE],
   tags: [
     {
@@ -95,7 +99,8 @@ const EzGitDoc: IFeaturedProject = {
 const RAW_PROJECTS: IProject[] = [
   {
     name: 'Personal portfolio Y22',
-    date: '2022-12-31',
+    startedAt: '2022-11-04',
+    publishedAt: '2022-12-31',
     languages: [TYPESCRIPT_LANGUAGE],
     tags: [
       {
@@ -117,7 +122,8 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'Personal portfolio Y20',
-    date: '2021-09-29',
+    startedAt: '2021-09-29',
+    publishedAt: '2021-10-03',
     languages: [JAVASCRIPT_LANGUAGE],
     tags: [
       {
@@ -137,7 +143,8 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'tonodedo',
-    date: '2021-07-25',
+    startedAt: '2021-07-09',
+    publishedAt: '2021-07-25',
     languages: [JAVASCRIPT_LANGUAGE],
     tags: [
       {
@@ -160,7 +167,8 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'Leader selection algorithm',
-    date: '2021-07-02',
+    startedAt: '2021-04-25',
+    publishedAt: '2021-07-02',
     languages: [CSHARP_LANGUAGE],
     tags: [
       {
@@ -177,7 +185,8 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'Grocery store (frontend)',
-    date: '2020-11-26',
+    startedAt: '2020-10-31',
+    publishedAt: '2020-11-26',
     languages: [TYPESCRIPT_LANGUAGE],
     tags: [
       {
@@ -200,7 +209,8 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'Grocery store (backend)',
-    date: '2020-11-27',
+    startedAt: '2020-09-21',
+    publishedAt: '2020-11-01',
     languages: [JAVA_LANGUAGE],
     tags: [
       {
@@ -220,7 +230,8 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'Wordally',
-    date: '2020-08-13',
+    startedAt: '2020-08-09',
+    publishedAt: '2020-08-13',
     languages: [JAVASCRIPT_LANGUAGE],
     tags: [
       {
@@ -242,7 +253,8 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: '3vry',
-    date: '2020-07-21',
+    startedAt: '2020-06-03',
+    publishedAt: '2020-07-21',
     languages: [KOTLIN_LANGUAGE],
     tags: [
       {
@@ -266,7 +278,8 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'Document And Compare',
-    date: '2020-05-04',
+    startedAt: '2020-04-17',
+    publishedAt: '2020-04-28',
     languages: [CSHARP_LANGUAGE],
     tags: [
       {
@@ -290,7 +303,8 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'sShuffler',
-    date: '2020-04-13',
+    startedAt: '2020-04-12',
+    publishedAt: '2020-04-13',
     languages: [CSHARP_LANGUAGE],
     tags: [
       {
@@ -312,7 +326,8 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'NB Project',
-    date: '2019-07-17',
+    startedAt: '2019-05-19',
+    publishedAt: '2019-07-17',
     languages: [CSHARP_LANGUAGE],
     tags: [
       {
@@ -327,7 +342,8 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'A*',
-    date: '2018-08-30',
+    startedAt: '2018-08-14',
+    publishedAt: '2018-08-30',
     languages: [CSHARP_LANGUAGE],
     tags: [
       {
@@ -341,7 +357,8 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'Robots Strike',
-    date: '2018-09-19',
+    startedAt: '2018-07-29',
+    publishedAt: '2018-09-19',
     languages: [CSHARP_LANGUAGE],
     tags: [
       {
@@ -358,7 +375,8 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'Last Human',
-    date: '2018-08-03',
+    startedAt: '2018-06-11',
+    publishedAt: '2018-08-03',
     languages: [CSHARP_LANGUAGE],
     tags: [
       {
@@ -376,7 +394,8 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'Projekt Enigma',
-    date: '2018-08-14',
+    startedAt: '2018-07-01',
+    publishedAt: '2018-08-14',
     languages: [CSHARP_LANGUAGE],
     tags: [],
     description: `Attempt to simulate three-rotor enigma as an project for science club.`,
@@ -386,7 +405,8 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'Projekt Frog',
-    date: '2017-11-25',
+    startedAt: '2017-11-18',
+    publishedAt: '2017-11-25',
     languages: [CSHARP_LANGUAGE],
     tags: [
       {
@@ -400,7 +420,8 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'Przepisownik 2016',
-    date: '2016-07-19',
+    startedAt: '2016-06-20',
+    publishedAt: '2016-07-19',
     languages: [JAVASCRIPT_LANGUAGE],
     tags: [],
     description:
@@ -411,7 +432,8 @@ const RAW_PROJECTS: IProject[] = [
 
   {
     name: 'Car Themed API',
-    date: '2020-08-19',
+    startedAt: '2020-08-15',
+    publishedAt: '2020-08-22',
     languages: [CSHARP_LANGUAGE],
     tags: [
       {
@@ -433,14 +455,17 @@ const RAW_PROJECTS: IProject[] = [
 
 const icons = [IconDice1, IconDice2, IconDice3, IconDice4, IconDice5, IconDice6];
 
-export const PROJECTS = sortByDate<IProject>(RAW_PROJECTS).map(
-  (project, index) =>
-    ({
-      ...project,
-      thumbnail: indexToIcons(icons, index, RAW_PROJECTS.length),
-      address: translateStringToAddress(project.name, PROJECTS_ROUTE),
-    } as IExtendedProject),
-);
+export const PROJECTS = sortByDate<IProject>(RAW_PROJECTS).map((project, index) => {
+  const parsedStartDate = dayjs(project.startedAt);
+  const parsedPublishedAtDate = dayjs(project.publishedAt);
+
+  return {
+    ...project,
+    thumbnail: indexToIcons(icons, index, RAW_PROJECTS.length),
+    address: translateStringToAddress(project.name, PROJECTS_ROUTE),
+    months: dayjs(parsedPublishedAtDate).diff(parsedStartDate, 'months') || 1,
+  } as IExtendedProject;
+});
 
 export const FEATURED_PROJECTS = [
   {
@@ -457,4 +482,4 @@ export const FEATURED_PROJECTS = [
   },
 ];
 
-export const ALL_DATES = Array.from(new Set(RAW_PROJECTS.map(({ date }) => date)));
+export const ALL_DATES = Array.from(new Set(RAW_PROJECTS.map(({ startedAt }) => startedAt)));

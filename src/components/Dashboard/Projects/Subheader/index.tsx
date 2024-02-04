@@ -6,10 +6,11 @@ import { PRIMARY_COLOR } from '@/config';
 import { LanguageMenu } from './LanguageMenu';
 import { setActiveSegment } from '@/store/projects';
 import { ProjectsSegment } from '@/enums/ProjectsSegment';
+import { ProjectDurationMenu } from './ProjectDurationMenu';
 import { useProjectsStyles } from '@/assets/styles/dashboard/projects/common';
 
 export function Subheader() {
-  const { subheader } = useProjectsStyles();
+  const { subheader, menuWrapper } = useProjectsStyles();
 
   const dispatch = useDispatch();
 
@@ -27,7 +28,13 @@ export function Subheader() {
         onChange={(value: ProjectsSegment) => dispatch(setActiveSegment(value))}
       />
 
-      {activeSegment === ProjectsSegment.ALL && <LanguageMenu />}
+      {activeSegment === ProjectsSegment.ALL && (
+        <div className={menuWrapper}>
+          <ProjectDurationMenu />
+
+          <LanguageMenu />
+        </div>
+      )}
     </Paper>
   );
 }

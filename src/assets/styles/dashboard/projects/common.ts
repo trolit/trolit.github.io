@@ -25,6 +25,11 @@ export const useProjectsStyles = () => {
         justifyContent: 'space-between',
         padding: `0 ${DASHBOARD_PADDING}px`,
       },
+
+      menuWrapper: {
+        display: 'flex',
+        gap: '5px',
+      },
     };
 
     return classes;

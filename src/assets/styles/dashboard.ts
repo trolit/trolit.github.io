@@ -9,7 +9,7 @@ export const useDashboardStyles = () => {
 
     const classes = {
       header: {
-        borderRadius: '8px 8px 0 0',
+        borderRadius: OVERLAY_PADDING > 0 ? '8px 8px 0 0' : '0',
       },
 
       headerDrawerScrollArea: {
@@ -45,7 +45,7 @@ export const useDashboardStyles = () => {
         }),
 
         '&:first-of-type': {
-          borderTopLeftRadius: '8px',
+          borderTopLeftRadius: OVERLAY_PADDING > 0 ? '8px' : 0,
         },
       },
 

@@ -6,11 +6,15 @@ import { ProjectsSegment } from '@/enums/ProjectsSegment';
 interface IState {
   activeSegment: ProjectsSegment;
 
+  activeDuration: number;
+
   activeLanguage: string;
 }
 
 const initialState: IState = {
   activeSegment: ProjectsSegment.ALL,
+
+  activeDuration: 0,
 
   activeLanguage: ANY,
 };
@@ -27,12 +31,16 @@ export const projectsSlice = createSlice({
       state.activeSegment = segment;
     },
 
+    setActiveDuration: (state, action: PayloadAction<number>) => {
+      state.activeDuration = action.payload;
+    },
+
     setActiveLanguage: (state, action: PayloadAction<string>) => {
       state.activeLanguage = action.payload;
     },
   },
 });
 
-export const { setActiveSegment, setActiveLanguage } = projectsSlice.actions;
+export const { setActiveSegment, setActiveLanguage, setActiveDuration } = projectsSlice.actions;
 
 export default projectsSlice.reducer;

@@ -12,7 +12,7 @@ interface IProps {
   item: IFeaturedProject;
 }
 
-export function Element({ item: { name, date, thumbnail, languages, description, links } }: IProps) {
+export function Element({ item: { name, publishedAt, thumbnail, languages, description, links } }: IProps) {
   const {
     classes: { avatar, element, dateBadge, card },
   } = useFeaturedProjectsStyles();
@@ -44,7 +44,7 @@ export function Element({ item: { name, date, thumbnail, languages, description,
               </Group>
 
               <Badge fullWidth size='xl' radius={0} variant='filled' className={dateBadge}>
-                <FormattedDate value={date} />
+                <FormattedDate value={publishedAt} />
               </Badge>
 
               <Paper shadow='xl' radius='xs' p='xl' withBorder h={100}>

@@ -12,7 +12,7 @@ export function LanguageMenu() {
 
   const data = [
     {
-      label: 'Any',
+      label: 'Any lang',
       value: ANY,
     },
     ...ALL_LANGUAGES.map(({ name, acronym }) => ({
