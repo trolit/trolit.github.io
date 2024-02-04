@@ -4,6 +4,7 @@ import { Kbd, Text, Group, Paper, Avatar, ThemeIcon, Blockquote, Anchor, Divider
 
 import { RootState } from '@/store';
 import { Details } from './Details';
+import { OVERLAY_PADDING } from '@/config';
 import { useCommonStyles } from '@/assets/styles/common';
 import { useProfileStyles } from '@/assets/styles/profile';
 import { NAME, LINKS, QUOTE, TITLE, PATH_TO_AVATAR } from '@/assets/data/profile';
@@ -16,7 +17,12 @@ export function Profile() {
   const { wrapper, titleWrapper, link, blockQuote, presentationGroup, linksGroup } = useProfileStyles();
 
   return (
-    <Paper p={0} radius='md' withBorder className={`${panel} ${wrapper} ${h100}`}>
+    <Paper
+      p={0}
+      radius={OVERLAY_PADDING > 0 ? 'md' : 0}
+      withBorder={OVERLAY_PADDING > 0}
+      className={`${panel} ${wrapper} ${h100}`}
+    >
       <Group position='center' noWrap className={presentationGroup}>
         <Avatar src={PATH_TO_AVATAR} alt={NAME} size={130} radius={20} />
 
