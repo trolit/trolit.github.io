@@ -6,6 +6,7 @@ export const useAppStyles = () => {
   const { classes } = createStyles((theme) => {
     const classes = {
       scrollArea: {
+        overflow: 'hidden',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       },
