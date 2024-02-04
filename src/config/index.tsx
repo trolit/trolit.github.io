@@ -8,7 +8,7 @@ import defaultProjectImage from '@/assets/media/projects/default.jpg';
  * GLOBAL
  */
 
-export const PRIMARY_COLOR: MantineColor = 'blue';
+export const PRIMARY_COLOR: MantineColor = 'indigo';
 
 // @NOTE https://day.js.org/docs/en/display/format
 export const GLOBAL_DATE_FORMAT: string = 'DD/MM/YYYY';
@@ -40,7 +40,7 @@ export const YOUTUBE_EMBED_URL: string = `https://www.youtube.com/embed`;
 
 export const DASHBOARD_PADDING: number = 20;
 
-export const DASHBOARD_HEADER_HEIGHT: string = '42px';
+export const DASHBOARD_HEADER_HEIGHT: string = '40px';
 
 export const PROJECTS_DURATION_OPTIONS_STEP = 4;
 
