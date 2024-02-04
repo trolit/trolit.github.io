@@ -54,4 +54,4 @@ export const HOME_DATE_FORMAT: string = 'YYYY';
 
 export const HOME_GROUP_BY: OpUnitType = 'year';
 
-export const MAX_HOME_INTEREST_POINTS: HomeInterestPoints = 3;
+export const MAX_HOME_INTEREST_POINTS: HomeInterestPoints = 4;
