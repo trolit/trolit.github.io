@@ -1,3 +1,4 @@
+import { OVERLAY_PADDING } from '@/config';
 import { createStyles } from '@mantine/core';
 
 const PRESENTATION_GROUP_HEIGHT = '30vh';
@@ -13,6 +14,7 @@ export const useProfileStyles = () => {
     const classes = {
       wrapper: {
         minWidth: 300,
+        borderRight: OVERLAY_PADDING === 0 ? '1px dashed #3F484B' : '',
       },
 
       presentationGroup: {
