@@ -12,19 +12,19 @@ export function ProjectDurationMenu() {
   const data = [
     {
       label: 'Any duration',
-      value: ANY,
+      value: 0,
     },
     {
-      label: 'up to 1 month',
-      value: '1',
+      label: 'up to 3 months',
+      value: 3,
     },
     {
-      label: '6+ months',
-      value: '6',
+      label: 'up to 6 months',
+      value: 6,
     },
     {
-      label: '9+ months',
-      value: '9',
+      label: 'up to 9 months',
+      value: 9,
     },
   ];
 
