@@ -17,7 +17,7 @@ export function ProfileCardToggler() {
 
   return (
     <Tooltip label={label} position='bottom' withArrow withinPortal>
-      <ActionIcon variant='light' color={PRIMARY_COLOR} onClick={() => dispatch(toggleProfileCard())}>
+      <ActionIcon size='xs' variant='light' color={PRIMARY_COLOR} onClick={() => dispatch(toggleProfileCard())}>
         <ThemeIcon variant='filled'>
           <Icon size={25} />
         </ThemeIcon>

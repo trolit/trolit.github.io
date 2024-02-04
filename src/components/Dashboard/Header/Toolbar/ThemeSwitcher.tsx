@@ -22,6 +22,7 @@ export function ThemeSwitcher() {
   return (
     <Group position='center'>
       <SegmentedControl
+        size='xs'
         value={colorScheme}
         transitionDuration={400}
         onChange={(value: ColorScheme) => dispatch(toggleColorScheme(value))}
