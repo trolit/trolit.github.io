@@ -6,7 +6,7 @@ import { ProjectsSegment } from '@/enums/ProjectsSegment';
 interface IState {
   activeSegment: ProjectsSegment;
 
-  activeDuration: string;
+  activeDuration: number;
 
   activeLanguage: string;
 }
@@ -14,7 +14,7 @@ interface IState {
 const initialState: IState = {
   activeSegment: ProjectsSegment.ALL,
 
-  activeDuration: ANY,
+  activeDuration: 0,
 
   activeLanguage: ANY,
 };
@@ -31,7 +31,7 @@ export const projectsSlice = createSlice({
       state.activeSegment = segment;
     },
 
-    setActiveDuration: (state, action: PayloadAction<string>) => {
+    setActiveDuration: (state, action: PayloadAction<number>) => {
       state.activeDuration = action.payload;
     },
 
