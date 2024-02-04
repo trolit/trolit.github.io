@@ -19,7 +19,7 @@ export const NAME = 'p4w31 !d21k0w541';
 export const TITLE = '';
 
 export const ABOUT_ME_PANEL_DATA = {
-  text: `Passionate about computers. Started from playing around with Necro's blockmaker plugin in 2008, through some level design, making first steps in Unity 3.x, creating first page (Przepisownik 2016). Active source code investigator since the end of the year 2017. Visual Studio Code and Visual Studio stand for favourite IDEs.`,
+  text: `Passionate about computers and games. Started from playing around with Necro's blockmaker plugin for Counter Strike in 2008 and using it at own server with AMX Mod X, through some level design, making first steps in Unity 3.x to creating first page (Przepisownik 2016) and - after finding out GitHub - constantly working on personal projects. Active source code investigator since the end of the year 2017. Visual Studio Code and Visual Studio stand for favourite IDEs.`,
 
   links: [
     {
