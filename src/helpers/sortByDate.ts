@@ -1,14 +1,10 @@
 import { dateSort } from '@/utilities/dateSort';
 
-interface IElement {
-  date: string;
-}
-
-export function sortByDate<T>(collection: T[]) {
+export function sortByDate<T>(collection: T[], key: keyof T) {
   return [...collection].sort((firstItem: T, secondItem: T) => {
-    const { date: first } = firstItem as IElement;
-    const { date: second } = secondItem as IElement;
+    const { [key]: first } = firstItem;
+    const { [key]: second } = secondItem;
 
-    return dateSort(first, second);
+    return dateSort(<string>first, <string>second);
   });
 }
