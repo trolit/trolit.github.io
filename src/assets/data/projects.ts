@@ -455,7 +455,7 @@ const RAW_PROJECTS: IProject[] = [
 
 const icons = [IconDice1, IconDice2, IconDice3, IconDice4, IconDice5, IconDice6];
 
-export const PROJECTS = sortByDate<IProject>(RAW_PROJECTS).map((project, index) => {
+export const PROJECTS = sortByDate<IProject>(RAW_PROJECTS, 'startedAt').map((project, index) => {
   const parsedStartDate = dayjs(project.startedAt);
   const parsedPublishedAtDate = dayjs(project.publishedAt);
 
