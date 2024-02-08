@@ -965,7 +965,7 @@ const RAW_TRACKS: ITrack[] = [
   },
 ];
 
-export const TRACKS = sortByDate<ITrack>(RAW_TRACKS);
+export const TRACKS = sortByDate<ITrack>(RAW_TRACKS, 'date');
 
 export const ALL_DATES = Array.from(new Set(RAW_TRACKS.map(({ date }) => date)));
 

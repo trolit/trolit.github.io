@@ -18,6 +18,6 @@ const RAW_POSTS: IExtendedPost[] = [POST1, POST2, POST3, POST4, POST5, POST6, PO
     } as IExtendedPost),
 );
 
-export const POSTS = sortByDate<IExtendedPost>(RAW_POSTS);
+export const POSTS = sortByDate<IExtendedPost>(RAW_POSTS, 'date');
 
 export const ALL_DATES = POSTS.map(({ date }) => date);
