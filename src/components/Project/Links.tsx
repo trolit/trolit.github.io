@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ILink } from '@/types/ILink';
 import { Accordion, AccordionItem, Chip, Link } from '@nextui-org/react';
+import { ChevronsUpDownIcon, UnfoldVerticalIcon } from 'lucide-react';
 
 interface IProps {
   identifier: string | number;
@@ -17,7 +18,7 @@ export function Links({ identifier, value }: IProps) {
         key='1'
         aria-label='View more links'
         title={
-          <Chip radius='sm' variant='bordered' color={areLinksVisible ? 'default' : 'success'}>
+          <Chip radius='sm' className='py-4' variant='dot' color={areLinksVisible ? 'default' : 'success'}>
             More links ({value.length})
           </Chip>
         }
