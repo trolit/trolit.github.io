@@ -15,10 +15,10 @@ import {
   HOME_ROUTE,
   POSTS_ROUTE,
   PROJECTS_ROUTE,
-  MUSIC_ZONE_ROUTE,
+  SOUNDTRACKS_ROUTE,
   POSTS_ROUTE_NAME,
   PROJECTS_ROUTE_NAME,
-  MUSIC_ZONE_ROUTE_NAME,
+  SOUNDTRACKS_ROUTE_NAME,
 } from '@/assets/constants/routes';
 import { DISPLAY_NAME } from '@/data/user';
 import { ThemeSwitch } from '@/components/common/ThemeSwitch';
@@ -33,8 +33,8 @@ const MENU_ITEMS = [
     url: POSTS_ROUTE,
   },
   {
-    name: MUSIC_ZONE_ROUTE_NAME,
-    url: MUSIC_ZONE_ROUTE,
+    name: SOUNDTRACKS_ROUTE_NAME,
+    url: SOUNDTRACKS_ROUTE,
   },
 ];
 
