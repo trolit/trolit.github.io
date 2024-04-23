@@ -7,6 +7,7 @@ import {
   NavbarContent,
   NavbarMenuItem,
   NavbarMenuToggle,
+  Avatar,
 } from '@nextui-org/react';
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -48,8 +49,10 @@ export function MyNavbar() {
       className='h-12 text-white bg-gradient-to-r from-indigo-700 to-indigo-600'
     >
       <NavbarBrand>
-        <Link href={HOME_ROUTE}>
-          <h1 className='tracking-tight inline font-semibold text-indigo-800 text-[1rem]'>{DISPLAY_NAME}</h1>
+        <Link href={HOME_ROUTE} className='text-pretty tracking-tight font-semibold text-[1rem]'>
+          <Avatar src='https://avatars.githubusercontent.com/u/25982919?v=4' className='mr-2 w-9 h-9' />
+
+          <h1>{DISPLAY_NAME}</h1>
         </Link>
       </NavbarBrand>
 
@@ -60,7 +63,7 @@ export function MyNavbar() {
               isBlock
               color='secondary'
               isDisabled={pathname === item.url}
-              className='text-indigo-200'
+              className={`tracking-tight inline font-semibold text-pretty`}
               href={item.url}
             >
               {item.name}
