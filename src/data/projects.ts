@@ -201,7 +201,7 @@ const PROJECTS: IProject[] = [
   {
     name: 'sShuffler',
     language: CSHARP_LANGUAGE,
-    image: resolveImagePath('projects/sShuffler.png'),
+    image: resolveImagePath('projects/sShuffler.PNG'),
     wrapperClassName: 'lg:col-span-5',
     repositoryUrl: getGitHubUrl('sShuffler').toString(),
     startedAt: '2020-04-12',
