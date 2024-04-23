@@ -11,7 +11,7 @@ export function Signature() {
       <div className='flex items-center w-full overflow-hidden'>
         <Divider className='w-3 ml-1 bg-orange-500' />
 
-        <h1 className='inline ml-3 text-2xl font-semibold tracking-tight'>website</h1>
+        <h1 className='inline ml-3 text-2xl font-semibold tracking-tight text-white'>website</h1>
 
         <Divider className='ml-3 bg-orange-500' />
       </div>

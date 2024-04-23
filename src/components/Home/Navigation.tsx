@@ -51,7 +51,7 @@ export function Navigation({ onAboutMePress }: IProps) {
           href={href}
           description={description}
           textValue='-'
-          className='p-4'
+          className='p-4 light'
           startContent={<Icon size={30} />}
           endContent={
             href ? (
