@@ -49,9 +49,7 @@ export function MyNavbar() {
     >
       <NavbarBrand>
         <Link href={HOME_ROUTE}>
-          <h1 className='tracking-tight inline font-semibold text-indigo-800 text-[1rem] bg-clip-text text-transparent bg-gradient-to-b'>
-            {DISPLAY_NAME}
-          </h1>
+          <h1 className='tracking-tight inline font-semibold text-indigo-800 text-[1rem]'>{DISPLAY_NAME}</h1>
         </Link>
       </NavbarBrand>
 
