@@ -20,6 +20,8 @@ export interface IProject {
 
   youTubeId?: string;
 
+  youTubeVideoInSeparateLine?: boolean;
+
   language: ILanguage;
 
   tags: string[];
