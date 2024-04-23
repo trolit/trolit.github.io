@@ -1,5 +1,7 @@
-import { GITHUB_USERNAME } from '@/old/config';
+import { GITHUB_NAME } from '@/data/user';
 
-export function getGitHubUrl(repository: string, username?: string) {
-  return new URL(`/${username || GITHUB_USERNAME}/${repository}`, 'https://github.com');
+export function getGitHubUrl(repository?: string, username?: string) {
+  const REPOSITORY = repository ? `/${repository}` : '';
+
+  return new URL(`/${username || GITHUB_NAME}${REPOSITORY}`, 'https://github.com');
 }
