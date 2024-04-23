@@ -9,7 +9,7 @@ export function Projects() {
 
   return (
     <Layout>
-      <div className='grid gap-5'>
+      <div className='grid grid-cols-12 gap-5'>
         {sortedProjects.map((project, index) => {
           return (
             <div key={`project-${index}`} className={`col-span-12 ${project.wrapperClassName || 'sm:col-span-6'}`}>
