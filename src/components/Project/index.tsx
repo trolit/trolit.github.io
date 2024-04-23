@@ -90,7 +90,7 @@ export function Project({
               <iframe
                 className='w-full border-slate-600/[.4] border-3 rounded-xl aspect-video'
                 src={getYouTubeUrl(youTubeId, { embed: true }).toString()}
-              ></iframe>
+              />
             </div>
           )}
         </div>
