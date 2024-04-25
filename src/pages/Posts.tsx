@@ -7,7 +7,7 @@ import { IExtendedPost } from '@/types/IExtendedPost';
 
 export function Posts() {
   const navigate = useNavigate();
-  const sortedPosts = sortByDate<IExtendedPost>(POSTS);
+  const sortedPosts = sortByDate<IExtendedPost>(POSTS, 'date');
 
   return (
     <Layout>
