@@ -5,9 +5,11 @@ import { TagsIcon } from 'lucide-react';
 
 interface IProps {
   value: IPost;
+
+  onPress: () => void;
 }
 
-export function Post({ value: { name, abstract, date, tags } }: IProps) {
+export function Post({ value: { name, abstract, date, tags }, onPress }: IProps) {
   return (
     <Card radius='lg'>
       <CardBody>
@@ -41,7 +43,7 @@ export function Post({ value: { name, abstract, date, tags } }: IProps) {
             <p className='my-6 text-lg text-justify text-default-500'>{abstract}</p>
 
             <div className='flex justify-end'>
-              <Button color='success' variant='ghost'>
+              <Button color='success' variant='ghost' onPress={onPress}>
                 Read more
               </Button>
             </div>
