@@ -63,7 +63,9 @@ export function MyNavbar() {
               isBlock
               color='secondary'
               isDisabled={pathname === item.url}
-              className={`tracking-tight inline font-semibold text-pretty`}
+              className={`tracking-tight inline font-semibold text-pretty lowercase ${
+                pathname === item.url ? 'border-b-2' : ''
+              }`}
               href={item.url}
             >
               {item.name}
