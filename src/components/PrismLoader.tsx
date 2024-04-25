@@ -1,5 +1,6 @@
 import Prism from 'prismjs';
 import { useEffect } from 'react';
+import 'prismjs/components/prism-bash';
 import 'prismjs/components/prism-typescript';
 import '@/assets/styles/prismjs/theme-one-dark.css';
 import 'prismjs/plugins/toolbar/prism-toolbar.min.css';
