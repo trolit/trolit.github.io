@@ -47,7 +47,7 @@ const PROJECTS: IProject[] = [
 
   {
     name: 'Patchron',
-    wrapperClassName: 'lg:col-span-7',
+    wrapperClassName: 'lg:col-span-6',
     language: JAVASCRIPT_LANGUAGE,
     image: resolveProjectImagePath('patchron.jpg'),
     repositoryUrl: getGitHubUrl('patchron').toString(),
@@ -106,22 +106,9 @@ const PROJECTS: IProject[] = [
   },
 
   {
-    name: 'tonodedo',
-    wrapperClassName: 'lg:col-span-5',
-    image: resolveProjectImagePath('tonodedo.png'),
-    language: JAVASCRIPT_LANGUAGE,
-    repositoryUrl: getGitHubUrl('tonodedo').toString(),
-    startedAt: '2021-07-09',
-    estimatedDurationInMonths: 0.1,
-    tags: ['Node.js', 'React', 'MySQL', 'JWT'],
-    links: [],
-    description: `Simple todo app made in few days as task for recruitment process. Includes some unit tests done in Mocha.`,
-  },
-
-  {
     name: 'Leader selection algorithm',
     language: CSHARP_LANGUAGE,
-    wrapperClassName: 'lg:col-span-7',
+    wrapperClassName: 'lg:col-span-6',
     repositoryUrl: getGitHubUrl('leader-selection-Tanenbaum').toString(),
     startedAt: '2021-04-25',
     estimatedDurationInMonths: 2,
@@ -133,7 +120,7 @@ const PROJECTS: IProject[] = [
   {
     name: 'Grocery store (frontend)',
     language: TYPESCRIPT_LANGUAGE,
-    wrapperClassName: 'lg:col-span-5',
+    wrapperClassName: 'lg:col-span-4',
     repositoryUrl: getGitHubUrl('grocery-store-angular#-grocery-store-angular').toString(),
     startedAt: '2020-10-31',
     estimatedDurationInMonths: 1,
@@ -216,7 +203,7 @@ const PROJECTS: IProject[] = [
   {
     name: 'NB Project',
     language: CSHARP_LANGUAGE,
-    wrapperClassName: 'lg:col-span-4',
+    wrapperClassName: 'lg:col-span-5',
     repositoryUrl: getGitHubUrl('naive-bayes-classifiers-work').toString(),
     startedAt: '2019-05-19',
     estimatedDurationInMonths: 1,
@@ -227,34 +214,9 @@ const PROJECTS: IProject[] = [
   },
 
   {
-    name: 'A*',
-    language: CSHARP_LANGUAGE,
-    wrapperClassName: 'lg:col-span-4',
-    repositoryUrl: getGitHubUrl('Inne/tree/master/Algorytm%20A_star#o-algorytmie-a').toString(),
-    startedAt: '2018-08-14',
-    estimatedDurationInMonths: 1,
-    tags: ['.NET', 'WinForms'],
-    links: [],
-    description: 'Algorithm visualization made after finding out interesting article at raywenderlich.com site.',
-  },
-
-  {
-    name: 'Robots Strike',
-    language: CSHARP_LANGUAGE,
-    wrapperClassName: 'lg:col-span-4',
-    repositoryUrl: getGitHubUrl('Robots_strike').toString(),
-    startedAt: '2018-07-29',
-    estimatedDurationInMonths: 1,
-    tags: ['.NET', 'Unity 3D', 'uNet'],
-    links: [],
-    description:
-      'Project made to meet Unity uNet technology and learn more about FPS game aspects like using Raycast technology for bullets.',
-  },
-
-  {
     name: 'Last Human',
     language: CSHARP_LANGUAGE,
-    wrapperClassName: 'lg:col-span-6',
+    wrapperClassName: 'lg:col-span-7',
     image: resolveProjectImagePath('lastHuman.png'),
     repositoryUrl: getGitHubUrl('LastHuman').toString(),
     startedAt: '2018-06-11',
@@ -274,18 +236,6 @@ const PROJECTS: IProject[] = [
   },
 
   {
-    name: 'Enigma Project',
-    language: CSHARP_LANGUAGE,
-    wrapperClassName: 'lg:col-span-4',
-    repositoryUrl: getGitHubUrl('Kryptosystemy/tree/master/6.%20Enigma%20I#projekt-enigmawersja---sol3-v20').toString(),
-    startedAt: '2018-07-01',
-    estimatedDurationInMonths: 1,
-    tags: [],
-    links: [],
-    description: `My attempt in simulating three-rotor enigma as an project assigned while being in science club.`,
-  },
-
-  {
     name: 'Project Frog',
     language: CSHARP_LANGUAGE,
     wrapperClassName: 'lg:col-span-6',
@@ -302,7 +252,7 @@ const PROJECTS: IProject[] = [
   {
     name: 'Przepisownik 2016',
     language: JAVASCRIPT_LANGUAGE,
-    wrapperClassName: 'lg:col-span-4',
+    wrapperClassName: 'lg:col-span-6',
     startedAt: '2016-06-20',
     estimatedDurationInMonths: 1,
     tags: ['gridster.js'],
@@ -314,19 +264,6 @@ const PROJECTS: IProject[] = [
     ],
     description:
       'Page for storing culinary recipes. Project was made to play with gridster library and make own web recipe "book".',
-  },
-
-  {
-    name: 'Car Themed API',
-    language: CSHARP_LANGUAGE,
-    wrapperClassName: 'lg:col-span-4',
-    repositoryUrl: getGitHubUrl('car-themed-API').toString(),
-    startedAt: '2020-08-15',
-    estimatedDurationInMonths: 1,
-    tags: ['NET Core 3.1', 'MediatR', 'integration tests'],
-    links: [],
-    description:
-      'Basic CRUD implementation in car service theme to meet CQRS, MediatR, pagination and write some integration tests.',
   },
 ];
 
