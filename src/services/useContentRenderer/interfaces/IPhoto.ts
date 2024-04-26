@@ -3,6 +3,8 @@ export interface IPhoto {
 
   description: string;
 
+  showDescription?: boolean;
+
   className?: string;
 
   sourceUrl?: string;
