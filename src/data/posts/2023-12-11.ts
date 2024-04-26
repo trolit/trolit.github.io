@@ -2,7 +2,7 @@ import { IPost } from '@/types/IPost';
 import { Code, Header, Paragraph } from '@/services/useContentRenderer/components';
 
 export const POST: IPost = {
-  name: 'Real-time client server communication using Engine.IO',
+  name: 'Real-time communication using Engine.IO',
 
   abstract: `Demonstration of real-time communication implementation made for itvault (PR #397). Engine.IO can be substituted with other option. Some parts of implementation were removed or changed to keep things simple.`,
 
