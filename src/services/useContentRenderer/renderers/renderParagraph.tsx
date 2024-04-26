@@ -11,7 +11,7 @@ function renderComponent(index: number, value: ReactNode | ReactNode[], paragrap
   } = paragraph;
 
   return (
-    <div key={index} className={`leading-relaxed text-justify indent-6 text-wrap ${className}`}>
+    <div key={index} className={`leading-relaxed text-justify indent-6 text-wrap ${className} text-xl`}>
       {value}
     </div>
   );
@@ -40,7 +40,13 @@ export function renderParagraphWithReferences(index: number, paragraph: Paragrap
     }
 
     replacedValue = reactStringReplace(replacedValue.length ? replacedValue : value, match, (match: string) => (
-      <Link isExternal key={`paragraph${index}-ref${getRandomId()}`} href={url} color='secondary' className='indent-0'>
+      <Link
+        isExternal
+        key={`paragraph${index}-ref${getRandomId()}`}
+        href={url}
+        color='secondary'
+        className='text-xl indent-0'
+      >
         {match}
       </Link>
     )) as ReactNode[];
