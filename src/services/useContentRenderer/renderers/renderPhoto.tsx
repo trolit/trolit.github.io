@@ -14,6 +14,7 @@ export function renderPhoto(index: number, photo: Photo): ReactNode {
         <Image
           width={width}
           height={height}
+          loading='lazy'
           className={className}
           src={src}
           alt={description}
