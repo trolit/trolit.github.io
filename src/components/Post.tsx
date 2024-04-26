@@ -39,7 +39,7 @@ export function Post({ value: { name, abstract, date, tags }, onPress }: IProps)
             </div>
           </div>
 
-          <div className='col-span-12 sm:col-span-7'>
+          <div className='flex flex-col justify-between col-span-12 pl-2 sm:col-span-7'>
             <p className='my-6 text-lg text-justify text-default-500'>{abstract}</p>
 
             <div className='flex justify-end'>
