@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import { NextUIProvider } from '@nextui-org/react';
 
-import './index.css';
+import '@/assets/styles/index.css';
 import { RootState } from './store';
 import { AppRoutes } from './Routes';
 import { useSelector } from 'react-redux';
