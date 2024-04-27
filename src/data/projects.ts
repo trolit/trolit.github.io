@@ -1,4 +1,5 @@
 import { IProject } from '@/types/IProject';
+import { sortByDate } from '@/helpers/sortByDate';
 import { getGitHubUrl } from '@/helpers/getGitHubUrl';
 import { CSHARP_LANGUAGE, JAVASCRIPT_LANGUAGE, JAVA_LANGUAGE, KOTLIN_LANGUAGE, TYPESCRIPT_LANGUAGE } from './languages';
 import { getYouTubeUrl } from '@/helpers/getYouTubeUrl';
@@ -267,4 +268,4 @@ const PROJECTS: IProject[] = [
   },
 ];
 
-export default PROJECTS;
+export const SORTED_PROJECTS: IProject[] = sortByDate<IProject>(PROJECTS);
