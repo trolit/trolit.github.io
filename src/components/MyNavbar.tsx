@@ -22,6 +22,7 @@ import {
 } from '@/assets/constants/routes';
 import { DISPLAY_NAME } from '@/data/user';
 import { ThemeSwitch } from '@/components/common/ThemeSwitch';
+import { NAVBAR_HEIGHT, NAVBAR_MENU_CLASSNAME, NAVBAR_MENU_LINK_CLASSNAME, THEME_CLASSNAME } from '@/config';
 
 const MENU_ITEMS = [
   {
@@ -46,11 +47,12 @@ export function MyNavbar() {
     <Navbar
       isMenuOpen={isMenuOpen}
       position='static'
-      className='h-12 text-white bg-gradient-to-r from-indigo-700 to-indigo-600'
+      height={NAVBAR_HEIGHT}
+      className={`text-white ${THEME_CLASSNAME}`}
     >
       <NavbarBrand>
         <Link href={HOME_ROUTE} className='text-pretty tracking-tight font-semibold text-[1rem]'>
-          <Avatar src='https://avatars.githubusercontent.com/u/25982919?v=4' className='mr-2 w-9 h-9' />
+          <Avatar src='/src/assets/media/main.jpg' className='mr-2 w-9 h-9' />
 
           <h1>{DISPLAY_NAME}</h1>
         </Link>
@@ -61,7 +63,7 @@ export function MyNavbar() {
           <NavbarItem key={`navbar-link-${index}`}>
             <Link
               isBlock
-              color='secondary'
+              color='foreground'
               isDisabled={pathname === item.url}
               className={`tracking-tight inline font-semibold text-pretty lowercase ${
                 pathname === item.url ? 'border-b-2' : ''
@@ -84,10 +86,14 @@ export function MyNavbar() {
         <ThemeSwitch />
       </NavbarContent>
 
-      <NavbarMenu>
+      <NavbarMenu className={NAVBAR_MENU_CLASSNAME}>
         {MENU_ITEMS.map((item, index) => (
           <NavbarMenuItem key={`navbar-menu-link-${index}`}>
-            <Link color='foreground' className='w-full' href={item.url} size='lg' onPress={() => setIsMenuOpen(false)}>
+            <Link
+              className={`w-full text-2xl ${NAVBAR_MENU_LINK_CLASSNAME}`}
+              href={item.url}
+              onPress={() => setIsMenuOpen(false)}
+            >
               {item.name}
             </Link>
           </NavbarMenuItem>

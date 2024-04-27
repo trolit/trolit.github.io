@@ -1,3 +1,4 @@
+import { THEME_CLASSNAME, UNDERLINE_CLASSNAME } from '@/config';
 import { formatDate } from '@/helpers/formatDate';
 import { IPost } from '@/types/IPost';
 import { Button, Card, CardBody } from '@nextui-org/react';
@@ -15,7 +16,9 @@ export function Post({ value: { name, abstract, date, tags }, onPress }: IProps)
       <CardBody>
         <div className='grid grid-cols-12 px-2'>
           <div className='col-span-12 sm:col-span-5'>
-            <div className='tracking-tight inline font-semibold from-indigo-500 to-indigo-600 text-[2.5rem] bg-clip-text text-transparent bg-gradient-to-b'>
+            <div
+              className={`tracking-tight inline font-semibold ${THEME_CLASSNAME} text-[2.5rem] bg-clip-text text-transparent bg-gradient-to-b`}
+            >
               {name}
             </div>
 
@@ -30,7 +33,7 @@ export function Post({ value: { name, abstract, date, tags }, onPress }: IProps)
                 {tags.map((tag, index) => (
                   <span
                     key={`tag-${index}`}
-                    className='p-1 underline lowercase text-md decoration-2 decoration-indigo-600 underline-offset-8'
+                    className={`p-1 underline lowercase text-md underline-offset-8 ${UNDERLINE_CLASSNAME}`}
                   >
                     {tag.text}
                   </span>
@@ -43,7 +46,7 @@ export function Post({ value: { name, abstract, date, tags }, onPress }: IProps)
             <p className='my-6 text-lg text-justify text-default-500'>{abstract}</p>
 
             <div className='flex justify-end'>
-              <Button color='success' variant='ghost' onPress={onPress}>
+              <Button className={`${THEME_CLASSNAME} text-white`} onPress={onPress}>
                 Read more
               </Button>
             </div>

@@ -5,6 +5,7 @@ import { Links } from './Links';
 import dayjs from 'dayjs';
 import { GitBranchIcon, InfoIcon } from 'lucide-react';
 import { getYouTubeUrl } from '@/helpers/getYouTubeUrl';
+import { THEME_CLASSNAME } from '@/config';
 
 interface IProps {
   value: IProject;
@@ -105,8 +106,7 @@ export function Project({
               as={Link}
               isExternal
               href={repositoryUrl}
-              color='success'
-              variant='bordered'
+              className={`${THEME_CLASSNAME} text-white`}
               startContent={<GitBranchIcon size={20} />}
             >
               repository

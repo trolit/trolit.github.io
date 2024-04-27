@@ -44,14 +44,19 @@ export function Navigation({ onAboutMePress }: IProps) {
   ];
 
   return (
-    <Listbox items={NAV_MENU_ITEMS} variant='solid' aria-label='Actions' className='p-0 bg-slate-500/[.1] rounded-2xl'>
+    <Listbox
+      items={NAV_MENU_ITEMS}
+      variant='bordered'
+      aria-label='Actions'
+      className='p-0 bg-slate-500/[.1] rounded-2xl'
+    >
       {({ name, href, description, icon: Icon, onPress }) => (
         <ListboxItem
           key={name}
           href={href}
           description={description}
           textValue='-'
-          className='p-4 light'
+          className={`p-4 light`}
           startContent={<Icon size={30} />}
           endContent={
             href ? (

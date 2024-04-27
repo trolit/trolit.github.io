@@ -4,6 +4,7 @@ import reactStringReplace from 'react-string-replace';
 import { Paragraph } from '../components';
 import { IReferences } from '../interfaces';
 import { Link } from '@nextui-org/react';
+import { LINK_CLASSNAME } from '@/config';
 
 function renderComponent(index: number, value: ReactNode | ReactNode[], paragraph: Paragraph) {
   const {
@@ -11,7 +12,7 @@ function renderComponent(index: number, value: ReactNode | ReactNode[], paragrap
   } = paragraph;
 
   return (
-    <div key={index} className={`leading-relaxed text-justify indent-6 text-wrap ${className} text-xl`}>
+    <div key={index} className={`leading-relaxed text-justify indent-6 text-wrap ${className} text-lg`}>
       {value}
     </div>
   );
@@ -45,7 +46,7 @@ export function renderParagraphWithReferences(index: number, paragraph: Paragrap
         key={`paragraph${index}-ref${getRandomId()}`}
         href={url}
         color='secondary'
-        className='text-xl indent-0'
+        className={`indent-0 ${LINK_CLASSNAME}`}
       >
         {match}
       </Link>

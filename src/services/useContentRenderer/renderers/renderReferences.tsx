@@ -5,6 +5,7 @@ import { Listbox, ListboxItem } from '@nextui-org/react';
 import { ExternalLinkIcon } from 'lucide-react';
 import { renderHeader } from './renderHeader';
 import { Header } from '../components';
+import { REFERENCES_CLASSNAME } from '@/config';
 
 export function renderReferences(references: IReferences): ReactNode {
   const { items } = references;
@@ -19,11 +20,11 @@ export function renderReferences(references: IReferences): ReactNode {
     <div>
       {renderHeader(9999, new Header({ value: 'References' }))}
 
-      <Listbox items={filteredItems} color='secondary'>
+      <Listbox items={filteredItems}>
         {({ title, author, url }) => (
           <ListboxItem
             key={title}
-            className='p-4'
+            className={`p-4 ${REFERENCES_CLASSNAME}`}
             description={author}
             href={url}
             target='_blank'
