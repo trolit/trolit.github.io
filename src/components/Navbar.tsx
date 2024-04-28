@@ -23,6 +23,7 @@ import {
 import { DISPLAY_NAME } from '@/data/user';
 import { ThemeSwitch } from '@/components/common/ThemeSwitch';
 import { NAVBAR_HEIGHT, NAVBAR_MENU_CLASSNAME, NAVBAR_MENU_LINK_CLASSNAME, THEME_CLASSNAME } from '@/config';
+import { resolveImagePath } from '@/helpers/resolveImagePath';
 
 const MENU_ITEMS = [
   {
@@ -52,7 +53,7 @@ export function Navbar() {
     >
       <NavbarBrand>
         <Link href={HOME_ROUTE} className='text-pretty tracking-tight font-semibold text-[1rem]'>
-          <Avatar src='/src/assets/media/main.jpg' className='mr-2 w-9 h-9' />
+          <Avatar src={resolveImagePath('main.jpg')} className='mr-2 w-9 h-9' />
 
           <h1>{DISPLAY_NAME}</h1>
         </Link>

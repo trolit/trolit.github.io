@@ -77,7 +77,7 @@ export const POST: IPost = {
     }),
 
     new Photo({
-      src: resolveImagePath('/posts/2020-03-06/1.png'),
+      src: resolveImagePath('posts/2020-03-06/1.png'),
 
       description: 'Unity Inspector Preview',
     }),

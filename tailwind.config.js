@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'home-page': `url('/src/assets/media/main.jpg')`,
-        'content-page': "url('/src/assets/media/sprinkle.svg')",
+        'home-page': `url('/images/main.jpg')`,
+        'content-page': "url('/images/sprinkle.svg')",
       },
     },
   },
