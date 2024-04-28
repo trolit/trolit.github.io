@@ -13,7 +13,7 @@ interface IProps {
 
 export function Project({
   value: {
-    image,
+    sideImage,
     name,
     language,
     tags,
@@ -71,9 +71,9 @@ export function Project({
 
             {!!description && (
               <div className='mt-5'>
-                {image && (
+                {sideImage && (
                   <div className='float-left mr-5'>
-                    <Image className='object-fill' width={200} alt='NextUI hero Image' src={image} />
+                    <Image className='object-fill' width={200} alt='NextUI hero Image' src={sideImage} />
                   </div>
                 )}
 

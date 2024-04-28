@@ -2,7 +2,7 @@ import { ILink } from './ILink';
 import { ILanguage } from './ILanguage';
 
 export interface IProject {
-  image?: string;
+  sideImage?: string;
 
   name: string;
 
