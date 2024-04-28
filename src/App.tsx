@@ -5,7 +5,7 @@ import '@/assets/styles/index.css';
 import { RootState } from './store';
 import { AppRoutes } from './Routes';
 import { useSelector } from 'react-redux';
-import { MyNavbar } from './components/MyNavbar';
+import { Navbar } from './components/Navbar';
 import { HOME_ROUTE } from './assets/constants/routes';
 
 export function App() {
@@ -17,7 +17,7 @@ export function App() {
   return (
     <NextUIProvider navigate={navigate}>
       <main className={`${theme} min-h-screen text-foreground bg-background`}>
-        {location.pathname !== HOME_ROUTE && <MyNavbar />}
+        {location.pathname !== HOME_ROUTE && <Navbar />}
 
         <AppRoutes />
       </main>

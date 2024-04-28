@@ -1,6 +1,6 @@
 import {
   Link,
-  Navbar,
+  Navbar as NextUiNavbar,
   NavbarItem,
   NavbarMenu,
   NavbarBrand,
@@ -39,12 +39,12 @@ const MENU_ITEMS = [
   },
 ];
 
-export function MyNavbar() {
+export function Navbar() {
   const { pathname } = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <Navbar
+    <NextUiNavbar
       isMenuOpen={isMenuOpen}
       position='static'
       height={NAVBAR_HEIGHT}
@@ -99,6 +99,6 @@ export function MyNavbar() {
           </NavbarMenuItem>
         ))}
       </NavbarMenu>
-    </Navbar>
+    </NextUiNavbar>
   );
 }
