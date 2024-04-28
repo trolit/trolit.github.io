@@ -40,7 +40,7 @@ export function Project({
   const innerGridStructure = youTubeId && !youTubeVideoInSeparateLine ? `col-span-12 lg:col-span-6` : `col-span-12`;
 
   return (
-    <Card className='h-full'>
+    <Card>
       <CardBody>
         <div className='grid h-full grid-cols-12 gap-3 px-2'>
           <div className='col-span-12'>
