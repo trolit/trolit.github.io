@@ -1,16 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import homeReducer from './home';
-import projectsReducer from './projects';
-import preferencesReducer from './preferences';
+import generalReducer from './general';
 
 export const store = configureStore({
   reducer: {
-    home: homeReducer,
-
-    projects: projectsReducer,
-
-    preferences: preferencesReducer,
+    general: generalReducer,
   },
 });
 

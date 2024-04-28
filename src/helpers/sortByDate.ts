@@ -1,10 +1,10 @@
-import { dateSort } from '@/utilities/dateSort';
+import dayjs from 'dayjs';
 
-export function sortByDate<T>(collection: T[], key: keyof T) {
+export function sortByDate<T>(collection: T[], key = 'startedAt') {
   return [...collection].sort((firstItem: T, secondItem: T) => {
-    const { [key]: first } = firstItem;
-    const { [key]: second } = secondItem;
+    const { [key]: first } = firstItem as any;
+    const { [key]: second } = secondItem as any;
 
-    return dateSort(<string>first, <string>second);
+    return dayjs(first).isBefore(dayjs(second)) ? 1 : -1;
   });
 }

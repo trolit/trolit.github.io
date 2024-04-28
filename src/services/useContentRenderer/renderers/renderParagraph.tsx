@@ -1,27 +1,32 @@
 import { ReactNode } from 'react';
 import reactStringReplace from 'react-string-replace';
-import { Anchor, Text, TextProps } from '@mantine/core';
 
 import { Paragraph } from '../components';
 import { IReferences } from '../interfaces';
+import { Link } from '@nextui-org/react';
+import { LINK_CLASSNAME } from '@/config';
 
-function renderComponent(index: number, value: ReactNode | ReactNode[], overrideComponentProps: TextProps | undefined) {
+function renderComponent(index: number, value: ReactNode | ReactNode[], paragraph: Paragraph) {
+  const {
+    data: { className },
+  } = paragraph;
+
   return (
-    <Text key={index} align='justify' {...overrideComponentProps}>
+    <div key={index} className={`leading-relaxed text-justify indent-6 text-wrap ${className} text-lg`}>
       {value}
-    </Text>
+    </div>
   );
 }
 
 export function renderParagraphWithReferences(index: number, paragraph: Paragraph, references: IReferences) {
   const {
-    data: { value, overrideComponentProps },
+    data: { value },
   } = paragraph;
 
   const { items, renderInParagraphs } = references;
 
   if (!items?.length || !renderInParagraphs || !items.some((item) => item.match)) {
-    return renderComponent(index, value, overrideComponentProps);
+    return renderComponent(index, value, paragraph);
   }
 
   let replacedValue: ReactNode[] = [];
@@ -36,19 +41,25 @@ export function renderParagraphWithReferences(index: number, paragraph: Paragrap
     }
 
     replacedValue = reactStringReplace(replacedValue.length ? replacedValue : value, match, (match: string) => (
-      <Anchor key={`paragraph${index}-ref${getRandomId()}`} href={url} target='_blank'>
+      <Link
+        isExternal
+        key={`paragraph${index}-ref${getRandomId()}`}
+        href={url}
+        color='secondary'
+        className={`indent-0 ${LINK_CLASSNAME}`}
+      >
         {match}
-      </Anchor>
+      </Link>
     )) as ReactNode[];
   }
 
-  return renderComponent(index, replacedValue, overrideComponentProps);
+  return renderComponent(index, replacedValue, paragraph);
 }
 
 export function renderParagraph(index: number, paragraph: Paragraph): ReactNode {
   const {
-    data: { value, overrideComponentProps },
+    data: { value },
   } = paragraph;
 
-  return renderComponent(index, value, overrideComponentProps);
+  return renderComponent(index, value, paragraph);
 }

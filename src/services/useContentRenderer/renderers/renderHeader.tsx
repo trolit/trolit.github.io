@@ -1,16 +1,19 @@
 import { ReactNode } from 'react';
-import { Title } from '@mantine/core';
 
 import { Header } from '../components';
+import { THEME_CLASSNAME } from '@/config';
 
 export function renderHeader(index: number, header: Header): ReactNode {
   const {
-    data: { value, overrideComponentProps },
+    data: { value, className },
   } = header;
 
   return (
-    <Title key={index} {...overrideComponentProps}>
+    <div
+      key={index}
+      className={`tracking-tight font-semibold ${THEME_CLASSNAME} text-[3rem] bg-clip-text text-transparent bg-gradient-to-b ${className}`}
+    >
       {value}
-    </Title>
+    </div>
   );
 }
