@@ -27,6 +27,4 @@ export interface IProject {
   tags: string[];
 
   links: ILink[];
-
-  // articles
 }
