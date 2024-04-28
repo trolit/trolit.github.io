@@ -1,11 +1,11 @@
 import dayjs, { Dayjs } from 'dayjs';
 
-import { GLOBAL_DATE_FORMAT } from '@/config';
+const DEFAULT_FORMAT = 'YYYY-MM-DD';
 
 export function formatDate(date: string | Dayjs, format?: string) {
   if (typeof date === 'string') {
-    return dayjs(date).format(format || GLOBAL_DATE_FORMAT);
+    return dayjs(date).format(format || DEFAULT_FORMAT);
   }
 
-  return date.format(format || GLOBAL_DATE_FORMAT);
+  return date.format(format || DEFAULT_FORMAT);
 }

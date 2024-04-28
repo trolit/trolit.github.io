@@ -1,15 +1,12 @@
 import { BASE_ROUTE } from '@/assets/constants/routes';
 
 export function translateStringToAddress(value: string, route: string = BASE_ROUTE) {
-  const valueWithoutSpecialCharacters = removeSpecialCharacters(value);
+  const rawValue = removeSpecialCharacters(value);
 
-  return route.concat(
-    route.endsWith('/') ? '' : '/',
-    replacesSpacesWithKeyword(valueWithoutSpecialCharacters).toLowerCase(),
-  );
+  return route.concat(route.endsWith('/') ? '' : '/', replaceSpacesWithKeyword(rawValue).toLowerCase());
 }
 
-function replacesSpacesWithKeyword(value: string, keyword = '-') {
+function replaceSpacesWithKeyword(value: string, keyword = '-') {
   return value.replace(/ +/g, keyword);
 }
 

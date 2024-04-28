@@ -1,4 +1,3 @@
-import { Container } from '@mantine/core';
 import { CSSProperties, ReactNode } from 'react';
 
 import { Video } from '../components';
@@ -24,8 +23,8 @@ export function renderVideo(index: number, video: Video): ReactNode {
   } = video;
 
   return (
-    <Container key={index} fluid style={containerStyles}>
-      <iframe src={src} title={title} frameBorder='0' allowFullScreen style={iframeStyles} />
-    </Container>
+    <div key={index} style={containerStyles}>
+      <iframe src={src} title={title} allowFullScreen style={iframeStyles} />
+    </div>
   );
 }
