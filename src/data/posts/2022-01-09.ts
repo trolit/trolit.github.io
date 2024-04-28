@@ -1,7 +1,4 @@
 import { IPost } from '@/types/IPost';
-import pixlrImage1 from '@/assets/media/posts/2022-01-09/1.png';
-import pixlrImage2 from '@/assets/media/posts/2022-01-09/2.png';
-import pixlrImage3 from '@/assets/media/posts/2022-01-09/3.png';
 import { Photo, Header, Paragraph } from '@/services/useContentRenderer/components';
 import { resolveImagePath } from '@/helpers/resolveImagePath';
 
