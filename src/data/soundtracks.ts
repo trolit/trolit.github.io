@@ -2,6 +2,38 @@ import { ISoundtrack } from '@/types/ISoundtrack';
 
 export const SOUNDTRACKS: ISoundtrack[] = [
   {
+    authors: ['Solas Composer'],
+
+    title: `Lord Of Sunlight And Cinder`,
+
+    youtubeId: 'qvveu1alsmY',
+  },
+
+  {
+    authors: ['Steven Ceballos'],
+
+    title: `Memoria`,
+
+    youtubeId: 'gye7D1F40Ls',
+  },
+
+  {
+    authors: ['Johan Söderqvist', 'Patrik Andrén'],
+
+    title: `Tirailleur`,
+
+    youtubeId: '4hL3gmCKAVM',
+  },
+
+  {
+    authors: ['Phil Rey Gibbons', 'Felicia Farerre'],
+
+    title: `M'Envoler Vers Toi`,
+
+    youtubeId: 'KGJQKuEXkOc',
+  },
+
+  {
     authors: ['Rupert Gregson-Williams', 'Lorne Balfe'],
 
     title: `Your Majesty (The Crown)`,

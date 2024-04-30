@@ -10,7 +10,7 @@ export function Soundtrack({ value: { title, authors, youtubeId } }: IProps) {
   return (
     <Link
       isExternal
-      className={`h-full justify-center flex flex-col text-xl bg-slate-800/[.8] text-white p-4 rounded-xl`}
+      className={`h-full justify-center flex flex-col text-xl bg-slate-700/[.8] text-white p-4 rounded-xl`}
       href={getYouTubeUrl(youtubeId).toString()}
     >
       {title}
