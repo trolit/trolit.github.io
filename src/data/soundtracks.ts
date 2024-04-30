@@ -86,7 +86,7 @@ export const SOUNDTRACKS: ISoundtrack[] = [
 
     title: `At Last (Final Space)`,
 
-    youtubeId: '91ZJkF63KZY',
+    youtubeId: '2U71whe_EeM',
   },
 
   {
@@ -334,7 +334,7 @@ export const SOUNDTRACKS: ISoundtrack[] = [
 
     title: `Assassins Creed Theme`,
 
-    youtubeId: 'qOvw6t-cxOs',
+    youtubeId: '2KndDDQZveQ',
   },
 
   {
@@ -630,7 +630,7 @@ export const SOUNDTRACKS: ISoundtrack[] = [
 
     title: 'Experience',
 
-    youtubeId: '09yNkwbKAyw',
+    youtubeId: 'hN_q-_nGv4U',
   },
 
   {
