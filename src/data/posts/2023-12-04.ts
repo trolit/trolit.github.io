@@ -7,7 +7,7 @@ export const POST: IPost = {
 
   abstract: `Composition API is more advanced approach when working with Vue as it offers high flexibility. I've already spent few months with big hopes but started to curse myself the longer I kept working in it, but I think that I've finally found something promising (itvault - PR #396) and decided to share it.`,
 
-  tags: [{ text: 'Vue.js' }, { text: 'TypeScript' }],
+  tags: [{ text: 'Vue.js' }, { text: 'TypeScript' }, { text: 'itvault' }],
 
   date: '2023-12-04',
 
