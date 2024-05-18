@@ -1,4 +1,4 @@
-- TypeScript 4.9.5
+- TypeScript
 - [NextUI](https://nextui.org/) + [Tailwind](https://tailwindcss.com/)
 - [Lucide](https://lucide.dev/)
 - [Vite](https://vitejs.dev/)
