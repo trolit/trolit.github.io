@@ -6,7 +6,7 @@ export const POST: IPost = {
 
   abstract: `Demonstration of real-time communication implementation made for itvault (PR #397). Engine.IO can be substituted with other option. Some parts of implementation were removed or changed to keep things simple.`,
 
-  tags: [{ text: 'Vue.js' }, { text: 'Node.js' }, { text: 'TypeScript' }],
+  tags: [{ text: 'Vue.js' }, { text: 'Node.js' }, { text: 'TypeScript' }, { text: 'itvault' }],
 
   date: '2023-12-11',
 
