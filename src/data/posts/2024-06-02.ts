@@ -136,7 +136,7 @@ export const POST: IPost = {
     }),
 
     new Paragraph({
-      value: `If you are interested in contract constructor based mapper, head to owom repository as I've extracted that solution there (plus expanded it a bit). It includes an option to use IoC library to resolve mappers and allows to pass custom data. There is no reverse mapping but if you would need one, consider adding interface that - when implemented - forces mapper to define "reverseMap" function and then implementation of function that triggers it 🤔`,
+      value: `If you are interested in contract constructor based mapper, head to owom repository as I've extracted that solution there (plus expanded it a bit). It has an option to use IoC library to resolve mappers and allows to pass custom data. There is no reverse mapping but if you would need one, consider adding interface that - when implemented - forces mapper to define "reverseMap" function and then implementation of function that triggers it 🤔`,
     }),
   ],
 };
