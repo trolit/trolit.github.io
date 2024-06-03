@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { Listbox, ListboxItem } from '@nextui-org/react';
 import { BookTextIcon, BotIcon, BugIcon, HeadsetIcon, Link2Icon } from 'lucide-react';
 import {
@@ -14,6 +15,8 @@ interface IProps {
 }
 
 export function Navigation({ onAboutMePress }: IProps) {
+  const navigate = useNavigate();
+
   const NAV_MENU_ITEMS = [
     {
       icon: BotIcon,
@@ -26,6 +29,8 @@ export function Navigation({ onAboutMePress }: IProps) {
       href: PROJECTS_ROUTE,
       name: PROJECTS_ROUTE_NAME,
       description: 'List of open-source projects',
+      // @TMP (ListboxItem href stopped working)
+      onPress: () => navigate(PROJECTS_ROUTE),
     },
 
     {
@@ -33,6 +38,7 @@ export function Navigation({ onAboutMePress }: IProps) {
       href: POSTS_ROUTE,
       name: POSTS_ROUTE_NAME,
       description: 'Collection of personal notes, recommendations etc.',
+      onPress: () => navigate(POSTS_ROUTE),
     },
 
     {
@@ -40,6 +46,7 @@ export function Navigation({ onAboutMePress }: IProps) {
       href: SOUNDTRACKS_ROUTE,
       name: SOUNDTRACKS_ROUTE_NAME,
       description: 'Collection of favourite cinematic music',
+      onPress: () => navigate(SOUNDTRACKS_ROUTE),
     },
   ];
 
