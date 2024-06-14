@@ -26,16 +26,10 @@ export function Project({
     youTubeVideoInSeparateLine,
   },
 }: IProps) {
-  let duration = `${estimatedDurationInMonths} month${estimatedDurationInMonths > 1 ? 's' : ''}`;
-
   const startedAtYear = dayjs(startedAt).year();
   const publishedAt = dayjs(startedAt).add(estimatedDurationInMonths, 'months');
   const publishedAtYear = publishedAt.year();
   const isSameYear = startedAtYear === publishedAtYear;
-
-  if (estimatedDurationInMonths > 12) {
-    duration = `${dayjs(publishedAt).diff(startedAt, 'year', true).toFixed(2)} year(s)`;
-  }
 
   const innerGridStructure = youTubeId && !youTubeVideoInSeparateLine ? `col-span-12 lg:col-span-6` : `col-span-12`;
 
@@ -52,13 +46,9 @@ export function Project({
                 {language.name}
               </div>
 
-              <div className='self-start px-2 py-2 text-lg text-center sm:text-right sm:py-0'>
-                {isSameYear ? `${startedAtYear}` : `${startedAtYear}/${publishedAtYear}`}
-
-                <Divider className='my-1' />
-
-                <Chip size='md' variant='flat'>
-                  {duration}
+              <div className='self-start text-lg text-center sm:text-right'>
+                <Chip size='lg' variant='flat'>
+                  {isSameYear ? `${startedAtYear}` : `${startedAtYear}/${publishedAtYear}`}
                 </Chip>
               </div>
             </div>
