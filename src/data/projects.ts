@@ -170,7 +170,6 @@ const PROJECTS: IProject[] = [
     tags: ['Android', 'SQLite', 'Youtube API'],
     links: [],
     youTubeId: 'ZJ2wglKpu5M',
-    youTubeVideoInSeparateLine: true,
     description: `Mobile app that promotes listening to music. User configures set of artists (or playlists) and afterwards on each day gets random track according to preferences. The motivation behind taking Kotlin was to test different solution after playing with Xamarin.Forms`,
   },
 
@@ -230,7 +229,6 @@ const PROJECTS: IProject[] = [
       },
     ],
     youTubeId: 'aM6dEtEPYnU',
-    youTubeVideoInSeparateLine: true,
     description: 'Small 2D platform game project as second attempt to Unity.',
   },
 

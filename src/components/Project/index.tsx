@@ -3,7 +3,7 @@ import { Button, Card, CardBody, CardFooter, Chip, Divider, Image, Link } from '
 import { Tags } from './Tags';
 import { Links } from './Links';
 import dayjs from 'dayjs';
-import { GitBranchIcon, InfoIcon } from 'lucide-react';
+import { GitBranchIcon, InfoIcon, VideoIcon } from 'lucide-react';
 import { getYouTubeUrl } from '@/helpers/getYouTubeUrl';
 import { THEME_CLASSNAME } from '@/config';
 
@@ -23,15 +23,12 @@ export function Project({
     repositoryUrl,
     estimatedDurationInMonths,
     youTubeId,
-    youTubeVideoInSeparateLine,
   },
 }: IProps) {
   const startedAtYear = dayjs(startedAt).year();
   const publishedAt = dayjs(startedAt).add(estimatedDurationInMonths, 'months');
   const publishedAtYear = publishedAt.year();
   const isSameYear = startedAtYear === publishedAtYear;
-
-  const innerGridStructure = youTubeId && !youTubeVideoInSeparateLine ? `col-span-12 lg:col-span-6` : `col-span-12`;
 
   return (
     <Card>
@@ -54,7 +51,7 @@ export function Project({
             </div>
           </div>
 
-          <div className={`${innerGridStructure}`}>
+          <div className={`col-span-12`}>
             <h4 className='text-2xl font-medium'>{name}</h4>
 
             <Tags identifier={name} value={tags} />
@@ -75,21 +72,24 @@ export function Project({
               </div>
             )}
           </div>
-
-          {youTubeId && (
-            <div className={`flex ${innerGridStructure} items-center pl-2`}>
-              <iframe
-                className='w-full border-slate-600/[.4] border-3 rounded-xl aspect-video'
-                src={getYouTubeUrl(youTubeId, { embed: true }).toString()}
-              />
-            </div>
-          )}
         </div>
       </CardBody>
 
       <CardFooter>
-        <div className='flex items-end justify-between w-full gap-2 px-2'>
+        <div className='flex items-end justify-end w-full gap-2 px-2'>
           <div>{!!links.length && <Links identifier={name} value={links} />}</div>
+
+          {youTubeId && (
+            <Button
+              as={Link}
+              isExternal
+              href={getYouTubeUrl(youTubeId).toString()}
+              className={`${THEME_CLASSNAME} text-white`}
+              startContent={<VideoIcon size={20} />}
+            >
+              preview
+            </Button>
+          )}
 
           {!!repositoryUrl && (
             <Button
