@@ -23,17 +23,17 @@ export function Project({
       <CardBody>
         <div className='grid grid-cols-12 gap-3 px-2'>
           <div
-            className='flex items-center justify-center col-span-4 text-xl rounded-sm'
+            className='flex items-center justify-center col-span-4 text-xl rounded-xl'
             style={{ color: language.colorInHex, backgroundColor: `${language.colorInHex}70` }}
           >
             <div className={`px-4 py-1 rounded-full w-max`}>{language.name}</div>
           </div>
 
-          <div className='flex items-center justify-center col-span-5 p-2 text-white rounded-sm bg-emerald-600'>
+          <div className='flex items-center justify-center col-span-5 p-2 text-white rounded-xl bg-emerald-600'>
             <h4 className='text-2xl font-medium '>{name}</h4>
           </div>
 
-          <div className='flex items-center justify-center col-span-3 text-lg text-white bg-indigo-700 rounded-sm'>
+          <div className='flex items-center justify-center col-span-3 text-lg text-white bg-indigo-700 rounded-xl'>
             {isSameYear ? `${startedAtYear}` : `${startedAtYear}/${publishedAtYear}`}
           </div>
 
