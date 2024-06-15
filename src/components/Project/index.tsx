@@ -42,7 +42,7 @@ export function Project({
           </div>
 
           {!!description && (
-            <div className={`flex col-span-12 content`}>
+            <div className={`flex col-span-12`}>
               <div className='text-justify text-md dark:text-white/60'>
                 <InfoIcon size={50} strokeWidth={0.5} className='float-left mr-2' />
 
