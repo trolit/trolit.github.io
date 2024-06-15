@@ -1,6 +1,6 @@
 import dayjs from 'dayjs';
 import { InfoIcon } from 'lucide-react';
-import { Card, CardBody, Divider } from '@nextui-org/react';
+import { Card, CardBody, CardFooter, Divider } from '@nextui-org/react';
 
 import { Tags } from './Tags';
 import { Links } from './Links';
@@ -50,16 +50,18 @@ export function Project({
               </div>
             </div>
           )}
-
-          <div className='flex w-full col-span-12 mt-2 transition duration-300 ease-in-out justify-evenly opacity-20 hover:opacity-100'>
-            <Links identifier={name} value={links} repositoryUrl={repositoryUrl} youTubeId={youTubeId} />
-
-            <div>
-              <Divider orientation='vertical' className='border-2 border-teal-400 border-solid' />
-            </div>
-          </div>
         </div>
       </CardBody>
+
+      <CardFooter>
+        <div className='flex w-full col-span-12 mt-2 transition duration-300 ease-in-out justify-evenly opacity-20 hover:opacity-100'>
+          <Links identifier={name} value={links} repositoryUrl={repositoryUrl} youTubeId={youTubeId} />
+
+          <div>
+            <Divider orientation='vertical' className='border-2 border-teal-400 border-solid' />
+          </div>
+        </div>
+      </CardFooter>
     </Card>
   );
 }
