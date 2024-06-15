@@ -8,7 +8,7 @@ interface IProps {
 
 export function Tags({ identifier, value }: IProps) {
   return (
-    <Card>
+    <Card shadow='sm'>
       <CardBody>
         <div className='grid grid-cols-12 px-2 gap-y-2'>
           {value.map((tag, index) => (
