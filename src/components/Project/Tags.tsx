@@ -12,7 +12,7 @@ export function Tags({ identifier, value }: IProps) {
       <CardBody>
         <div className='grid grid-cols-12 px-2 gap-y-2'>
           {value.map((tag, index) => (
-            <div key={`${identifier}-tag-${index}`} className='col-span-3 text-tiny text-slate-600'>
+            <div key={`${identifier}-tag-${index}`} className='col-span-3 text-center text-tiny text-slate-600'>
               {tag}
             </div>
           ))}
