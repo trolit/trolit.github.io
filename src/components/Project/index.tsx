@@ -33,7 +33,7 @@ export function Project({
             <h4 className='text-2xl font-medium '>{name}</h4>
           </div>
 
-          <div className='flex items-center justify-center col-span-3 text-lg text-white bg-indigo-700'>
+          <div className='flex items-center justify-center col-span-3 text-lg text-white bg-indigo-700 rounded-sm'>
             {isSameYear ? `${startedAtYear}` : `${startedAtYear}/${publishedAtYear}`}
           </div>
 
