@@ -165,7 +165,7 @@ const PROJECTS: IProject[] = [
     estimatedDurationInMonths: 1,
     tags: ['WinForms', '.NET Framework'],
     links: [],
-    description: `Small utility for songs that gives "second life" by shuffling their order. It's based on format that is respected by car audio players.`,
+    description: `Song shuffler that gives tracks 2nd life by randomly rearranging provided playlist. It's based on format that is respected by car audio players.`,
   },
 
   {
