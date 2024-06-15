@@ -8,7 +8,7 @@ export function Projects() {
       <div className='grid grid-cols-12 gap-5'>
         {SORTED_PROJECTS.map((project, index) => {
           return (
-            <div key={`project-${index}`} className={`col-span-12 ${project.wrapperClassName || 'sm:col-span-6'}`}>
+            <div key={`project-${index}`} className='col-span-12 lg:col-span-6'>
               <Project value={project} />
             </div>
           );
