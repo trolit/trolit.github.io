@@ -1,29 +1,17 @@
-import { IProject } from '@/types/IProject';
-import { Button, Card, CardBody, CardFooter, Chip, Divider, Image, Link } from '@nextui-org/react';
+import dayjs from 'dayjs';
+import { InfoIcon } from 'lucide-react';
+import { Card, CardBody, Chip, Divider } from '@nextui-org/react';
+
 import { Tags } from './Tags';
 import { Links } from './Links';
-import dayjs from 'dayjs';
-import { GitBranchIcon, InfoIcon, VideoIcon } from 'lucide-react';
-import { getYouTubeUrl } from '@/helpers/getYouTubeUrl';
-import { THEME_CLASSNAME } from '@/config';
+import { IProject } from '@/types/IProject';
 
 interface IProps {
   value: IProject;
 }
 
 export function Project({
-  value: {
-    sideImage,
-    name,
-    language,
-    tags,
-    links,
-    description,
-    startedAt,
-    repositoryUrl,
-    estimatedDurationInMonths,
-    youTubeId,
-  },
+  value: { name, language, tags, links, description, startedAt, repositoryUrl, estimatedDurationInMonths, youTubeId },
 }: IProps) {
   const startedAtYear = dayjs(startedAt).year();
   const publishedAt = dayjs(startedAt).add(estimatedDurationInMonths, 'months');
@@ -51,19 +39,15 @@ export function Project({
             </div>
           </div>
 
-          <div className={`col-span-12`}>
+          <div className={`col-span-9`}>
             <h4 className='text-2xl font-medium'>{name}</h4>
 
             <Tags identifier={name} value={tags} />
+          </div>
 
+          <div className='flex col-span-12 content'>
             {!!description && (
               <div className='mt-5'>
-                {sideImage && (
-                  <div className='float-left mr-5'>
-                    <Image className='object-fill' width={200} alt='NextUI hero Image' src={sideImage} />
-                  </div>
-                )}
-
                 <div className='text-justify text-md dark:text-white/60'>
                   <InfoIcon size={50} strokeWidth={0.5} className='float-left mr-2' />
 
@@ -73,37 +57,15 @@ export function Project({
             )}
           </div>
         </div>
-      </CardBody>
 
-      <CardFooter>
-        <div className='flex items-end justify-end w-full gap-2 px-2'>
-          <div>{!!links.length && <Links identifier={name} value={links} />}</div>
+        <div className='flex w-full mt-2 transition duration-300 ease-in-out justify-evenly opacity-20 hover:opacity-100'>
+          <Links identifier={name} value={links} repositoryUrl={repositoryUrl} youTubeId={youTubeId} />
 
-          {youTubeId && (
-            <Button
-              as={Link}
-              isExternal
-              href={getYouTubeUrl(youTubeId).toString()}
-              className={`${THEME_CLASSNAME} text-white`}
-              startContent={<VideoIcon size={20} />}
-            >
-              preview
-            </Button>
-          )}
-
-          {!!repositoryUrl && (
-            <Button
-              as={Link}
-              isExternal
-              href={repositoryUrl}
-              className={`${THEME_CLASSNAME} text-white`}
-              startContent={<GitBranchIcon size={20} />}
-            >
-              repository
-            </Button>
-          )}
+          <div>
+            <Divider orientation='vertical' className='border-2 border-teal-400 border-solid' />
+          </div>
         </div>
-      </CardFooter>
+      </CardBody>
     </Card>
   );
 }

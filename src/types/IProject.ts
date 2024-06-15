@@ -2,8 +2,6 @@ import { ILink } from './ILink';
 import { ILanguage } from './ILanguage';
 
 export interface IProject {
-  sideImage?: string;
-
   name: string;
 
   wrapperClassName?: string;

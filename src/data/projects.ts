@@ -3,9 +3,6 @@ import { sortByDate } from '@/helpers/sortByDate';
 import { getGitHubUrl } from '@/helpers/getGitHubUrl';
 import { CSHARP_LANGUAGE, JAVASCRIPT_LANGUAGE, JAVA_LANGUAGE, KOTLIN_LANGUAGE, TYPESCRIPT_LANGUAGE } from './languages';
 import { getYouTubeUrl } from '@/helpers/getYouTubeUrl';
-import { resolveImagePath } from '@/helpers/resolveImagePath';
-
-const resolveProjectImagePath = (filename: string) => resolveImagePath(`projects/${filename}`);
 
 const PROJECTS: IProject[] = [
   {
@@ -50,7 +47,6 @@ const PROJECTS: IProject[] = [
     name: 'Patchron',
     wrapperClassName: 'lg:col-span-6',
     language: JAVASCRIPT_LANGUAGE,
-    sideImage: resolveProjectImagePath('patchron.jpg'),
     repositoryUrl: getGitHubUrl('patchron').toString(),
     startedAt: '2022-01-18',
     estimatedDurationInMonths: 6,
@@ -86,7 +82,6 @@ const PROJECTS: IProject[] = [
   {
     name: 'EzGitDoc',
     wrapperClassName: 'lg:col-span-7',
-    sideImage: resolveProjectImagePath('ezGitDoc.png'),
     language: JAVASCRIPT_LANGUAGE,
     repositoryUrl: getGitHubUrl('EzGitDoc', 'OS-expected').toString(),
     startedAt: '2020-02-23',
@@ -163,7 +158,6 @@ const PROJECTS: IProject[] = [
     name: '3vry',
     language: KOTLIN_LANGUAGE,
     wrapperClassName: 'lg:col-span-6',
-    sideImage: resolveProjectImagePath('3vry.png'),
     repositoryUrl: getGitHubUrl('3vry').toString(),
     startedAt: '2020-06-03',
     estimatedDurationInMonths: 1,
@@ -177,7 +171,6 @@ const PROJECTS: IProject[] = [
     name: 'Document And Compare',
     language: CSHARP_LANGUAGE,
     wrapperClassName: 'lg:col-span-6',
-    sideImage: resolveProjectImagePath('docAndCom.png'),
     repositoryUrl: getGitHubUrl('document-and-compare', 'OS-expected').toString(),
     startedAt: '2020-04-17',
     estimatedDurationInMonths: 1,
@@ -190,7 +183,6 @@ const PROJECTS: IProject[] = [
   {
     name: 'sShuffler',
     language: CSHARP_LANGUAGE,
-    sideImage: resolveProjectImagePath('sShuffler.PNG'),
     wrapperClassName: 'lg:col-span-5',
     repositoryUrl: getGitHubUrl('sShuffler').toString(),
     startedAt: '2020-04-12',
@@ -217,7 +209,6 @@ const PROJECTS: IProject[] = [
     name: 'Last Human',
     language: CSHARP_LANGUAGE,
     wrapperClassName: 'lg:col-span-7',
-    sideImage: resolveProjectImagePath('lastHuman.png'),
     repositoryUrl: getGitHubUrl('LastHuman').toString(),
     startedAt: '2018-06-11',
     estimatedDurationInMonths: 1,
@@ -236,7 +227,6 @@ const PROJECTS: IProject[] = [
     name: 'Project Frog',
     language: CSHARP_LANGUAGE,
     wrapperClassName: 'lg:col-span-6',
-    sideImage: resolveProjectImagePath('projectFrog.png'),
     repositoryUrl: getGitHubUrl('Kryptosystemy/tree/master/6.%20Enigma%20I#projekt-enigmawersja---sol3-v20').toString(),
     startedAt: '2017-11-18',
     estimatedDurationInMonths: 1,
