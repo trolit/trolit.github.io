@@ -2,8 +2,6 @@ import { ILink } from './ILink';
 import { ILanguage } from './ILanguage';
 
 export interface IProject {
-  sideImage?: string;
-
   name: string;
 
   wrapperClassName?: string;
@@ -19,8 +17,6 @@ export interface IProject {
   repositoryUrl?: string;
 
   youTubeId?: string;
-
-  youTubeVideoInSeparateLine?: boolean;
 
   language: ILanguage;
 

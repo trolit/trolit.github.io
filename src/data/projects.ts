@@ -3,9 +3,6 @@ import { sortByDate } from '@/helpers/sortByDate';
 import { getGitHubUrl } from '@/helpers/getGitHubUrl';
 import { CSHARP_LANGUAGE, JAVASCRIPT_LANGUAGE, JAVA_LANGUAGE, KOTLIN_LANGUAGE, TYPESCRIPT_LANGUAGE } from './languages';
 import { getYouTubeUrl } from '@/helpers/getYouTubeUrl';
-import { resolveImagePath } from '@/helpers/resolveImagePath';
-
-const resolveProjectImagePath = (filename: string) => resolveImagePath(`projects/${filename}`);
 
 const PROJECTS: IProject[] = [
   {
@@ -43,14 +40,13 @@ const PROJECTS: IProject[] = [
     ],
     youTubeId: 'aJ9LEZ9TF4k',
     links: [],
-    description: `Source code intelligence "bank" 🏛️. Allows to save purpose of uploaded project(s) source code and extract chosen parts on demand. Due to dealing with sensitive data, it was built in a way to provide advanced access control over app (granular permissions system, workspace insights, data flow "footprints", sessions management). It also provides implementation of real-time communication made with Engine.io, mailing system, global chat, option to store files locally or in S3 cloud (with option to easily add own provider) and custom API ("Probata") for defining integration tests which are ran over testcontainers.`,
+    description: `Keeps purpose of uploaded project(s) source code and allows to extract chosen parts on demand. It was built in a way to provide advanced access control over app (granular permissions system, workspace insights, data flow "footprints", sessions management). It also provides implementation of real-time communication with Engine.io, mailing system, global chat, option to store files locally or in S3 cloud (with option to easily add own provider) and custom API ("Probata") for defining integration tests which are ran over testcontainers.`,
   },
 
   {
     name: 'Patchron',
     wrapperClassName: 'lg:col-span-6',
     language: JAVASCRIPT_LANGUAGE,
-    sideImage: resolveProjectImagePath('patchron.jpg'),
     repositoryUrl: getGitHubUrl('patchron').toString(),
     startedAt: '2022-01-18',
     estimatedDurationInMonths: 6,
@@ -62,7 +58,7 @@ const PROJECTS: IProject[] = [
       },
     ],
     description:
-      'Bot to support (not substitute) developers by making initial pull request code review. Can be used to e.g. watch over agreed code conventions so reviewers can focus on more important aspects of code. It runs set of rules (configured via JSON file) against hooked pull request data. Rules can be easily added via base class plus bot can be ran via GitHub Actions.',
+      'Bot intended to support developers by making initial pull request code review. Can be used to e.g. watch over agreed code conventions so reviewers can focus on more important code aspects. It runs set of rules (configured via JSON file) against hooked pull request data. Rules can be easily added via base class. Bot can be ran via GitHub Actions.',
   },
 
   {
@@ -80,13 +76,12 @@ const PROJECTS: IProject[] = [
         url: getYouTubeUrl('UtQ0g11_Juc').toString(),
       },
     ],
-    description: `Top down view, educational, sandbox game with RPG elements about programming. The main motivation behind taking Unity was to face up challenge to create something complex (in childhood I've attempted to learn Unity 3.x 🤪). It has 40 unique levels (5 lands x 8 levels), 4 minigames, character creation, NPCs interaction, dev console, installer, rich documentation and much more!`,
+    description: `Top down view, educational, sandbox game with RPG elements about programming basics. The main motivation behind taking Unity was to face up challenge to create something more complex. It has 40 unique levels (5 lands x 8 levels), 4 minigames, character creation, NPCs interaction, dev console, installer, rich documentation and much more!`,
   },
 
   {
     name: 'EzGitDoc',
     wrapperClassName: 'lg:col-span-7',
-    sideImage: resolveProjectImagePath('ezGitDoc.png'),
     language: JAVASCRIPT_LANGUAGE,
     repositoryUrl: getGitHubUrl('EzGitDoc', 'OS-expected').toString(),
     startedAt: '2020-02-23',
@@ -103,7 +98,7 @@ const PROJECTS: IProject[] = [
       },
     ],
     description:
-      'WYSIWYG tool 🪛 created with JS and JQuery to setup & generate interesting templates of markdown files (e.g. repository specifications). First, stable version was released in 6 days and afterwards it received total of 16 updates including settings,  different themes, modal that allows to quickly jump to selected element or quickly swap two elements (so user does not have to drag element past N other components 😴).',
+      'WYSIWYG tool 🪛 created with JS and JQuery to setup & generate interesting templates of MD files. It received total of 16 updates including settings,  different themes, modal that allows to quickly jump to selected element or quickly swap two elements (so user does not have to drag element past N other components).',
   },
 
   {
@@ -116,30 +111,6 @@ const PROJECTS: IProject[] = [
     tags: ['WinForms', 'Distributed Systems', 'WebSocket'],
     links: [],
     description: `This desktop application demonstrates behaviour of leader election algorithm (Andrew Tanenbaum's variant) using .NET sockets mechanism and UDP protocol.`,
-  },
-
-  {
-    name: 'Grocery store (frontend)',
-    language: TYPESCRIPT_LANGUAGE,
-    wrapperClassName: 'lg:col-span-4',
-    repositoryUrl: getGitHubUrl('grocery-store-angular#-grocery-store-angular').toString(),
-    startedAt: '2020-10-31',
-    estimatedDurationInMonths: 1,
-    tags: ['Angular 10', 'RxJS', 'Angular Material'],
-    links: [],
-    description: `Short, simple frontend demonstrating shopping cart, sorting and filtering features implemented on server side in Java.`,
-  },
-
-  {
-    name: 'Grocery store (backend)',
-    language: JAVA_LANGUAGE,
-    wrapperClassName: 'lg:col-span-4',
-    repositoryUrl: getGitHubUrl('grocery-store-themed-API').toString(),
-    startedAt: '2020-09-21',
-    estimatedDurationInMonths: 1,
-    tags: ['H2', 'Maven', 'Spring Boot 2.3.4'],
-    links: [],
-    description: `Grocery store API implementation in Java (JDK 14) using Spring Boot, JPA, Hibernate, Querydsl.`,
   },
 
   {
@@ -163,22 +134,19 @@ const PROJECTS: IProject[] = [
     name: '3vry',
     language: KOTLIN_LANGUAGE,
     wrapperClassName: 'lg:col-span-6',
-    sideImage: resolveProjectImagePath('3vry.png'),
     repositoryUrl: getGitHubUrl('3vry').toString(),
     startedAt: '2020-06-03',
     estimatedDurationInMonths: 1,
     tags: ['Android', 'SQLite', 'Youtube API'],
     links: [],
     youTubeId: 'ZJ2wglKpu5M',
-    youTubeVideoInSeparateLine: true,
-    description: `Mobile app that promotes listening to music. User configures set of artists (or playlists) and afterwards on each day gets random track according to preferences. The motivation behind taking Kotlin was to test different solution after playing with Xamarin.Forms`,
+    description: `Mobile app promoting listening to music. User configures set of artists (or playlists) and afterwards - on each day - gets random track according to the configuration. The motivation behind taking Kotlin was to test different solution after experimenting with Xamarin.Forms`,
   },
 
   {
     name: 'Document And Compare',
     language: CSHARP_LANGUAGE,
     wrapperClassName: 'lg:col-span-6',
-    sideImage: resolveProjectImagePath('docAndCom.png'),
     repositoryUrl: getGitHubUrl('document-and-compare', 'OS-expected').toString(),
     startedAt: '2020-04-17',
     estimatedDurationInMonths: 1,
@@ -191,14 +159,13 @@ const PROJECTS: IProject[] = [
   {
     name: 'sShuffler',
     language: CSHARP_LANGUAGE,
-    sideImage: resolveProjectImagePath('sShuffler.PNG'),
     wrapperClassName: 'lg:col-span-5',
     repositoryUrl: getGitHubUrl('sShuffler').toString(),
     startedAt: '2020-04-12',
     estimatedDurationInMonths: 1,
     tags: ['WinForms', '.NET Framework'],
     links: [],
-    description: `Small tool that gives songs "second life" by shuffling their order. It's based on format that is respected by car audio players.`,
+    description: `Song shuffler that gives tracks 2nd life by randomly rearranging provided playlist. It's based on format that is respected by car audio players.`,
   },
 
   {
@@ -218,7 +185,6 @@ const PROJECTS: IProject[] = [
     name: 'Last Human',
     language: CSHARP_LANGUAGE,
     wrapperClassName: 'lg:col-span-7',
-    sideImage: resolveProjectImagePath('lastHuman.png'),
     repositoryUrl: getGitHubUrl('LastHuman').toString(),
     startedAt: '2018-06-11',
     estimatedDurationInMonths: 1,
@@ -230,15 +196,13 @@ const PROJECTS: IProject[] = [
       },
     ],
     youTubeId: 'aM6dEtEPYnU',
-    youTubeVideoInSeparateLine: true,
-    description: 'Small 2D platform game project as second attempt to Unity.',
+    description: 'Small 2D platform game project.',
   },
 
   {
     name: 'Project Frog',
     language: CSHARP_LANGUAGE,
     wrapperClassName: 'lg:col-span-6',
-    sideImage: resolveProjectImagePath('projectFrog.png'),
     repositoryUrl: getGitHubUrl('Kryptosystemy/tree/master/6.%20Enigma%20I#projekt-enigmawersja---sol3-v20').toString(),
     startedAt: '2017-11-18',
     estimatedDurationInMonths: 1,
@@ -261,7 +225,8 @@ const PROJECTS: IProject[] = [
         url: 'http://przepisownik2016.opx.pl/',
       },
     ],
-    description: 'Site created to store references to interesting culinary recipes.',
+    description:
+      'Site created to store references to interesting culinary recipes and to explore gridster.js after becoming owner of Nokia Lumia 820.',
   },
 ];
 
