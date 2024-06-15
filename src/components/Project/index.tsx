@@ -21,7 +21,7 @@ export function Project({
   return (
     <Card>
       <CardBody>
-        <div className='grid h-full grid-cols-12 gap-3 px-2'>
+        <div className='grid grid-cols-12 gap-3 px-2'>
           <div
             className='flex items-center justify-center col-span-4 text-xl rounded-sm'
             style={{ color: language.colorInHex, backgroundColor: `${language.colorInHex}70` }}
